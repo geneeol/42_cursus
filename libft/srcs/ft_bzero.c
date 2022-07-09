@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 19:24:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/09 13:11:09 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/09 13:25:32 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/09 13:25:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *str)
+void	ft_bzero(void *ptr, size_t n)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (i < n)
+		*((unsigned char *)ptr + i++) = 0;
 }

@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 19:24:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/09 13:11:09 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/09 13:26:46 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/09 14:34:16 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *str)
+//User responsibility for overflow issues
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+	i = 0;
+	while (i < n)
+	{
+		*((char *)dst + i) = *((char *)src + i);
+		i++;
+	}
+	return (dst);
 }

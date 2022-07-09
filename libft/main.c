@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stddef.h>
+
 #include "srcs/ft_memset.c"
+#include "srcs/ft_bzero.c"
+#include "srcs/ft_memcpy.c"
 #include "srcs/ft_strlen.c"
 #include "srcs/ft_atoi.c"
 
@@ -18,6 +21,31 @@ int	main()
 	puts(str);
 	ft_memset(str, -5, 6);
 	puts(str);
+	printf(">===============<\n\n\n");
+
+	//bzero
+	printf(">-----bzero-----<\n");
+	ft_bzero(str, 0);
+	puts(str);
+	ft_bzero(str, 5);
+	printf("str[0], str[4], str[5] ascii: %d, %d, %d\n", str[0], str[4],str[5]);
+	printf(">===============<\n\n\n");
+
+	//memcpy
+	char	dst[100];
+	char	*src = "0123456789abcdef";
+	char	*ret;
+	printf(">-----memcpy-----<\n");
+	ret = ft_memcpy(dst, src, 0);
+	printf("garbage value: %s\n", dst);
+	printf("ret: %p\n\n", ret);
+	ret = ft_memcpy(dst, src, 5);
+	printf("01234: %s\n", dst);
+	printf("ret: %p\n\n", ret);
+	ret = ft_memcpy(dst, src, 16);
+	printf("0123456789abcdef: %s\n", dst);
+	printf("dst[16]: %d\n", dst[16]);
+	printf("ret: %p\n\n", ret);
 	printf(">===============<\n\n\n");
 
 	//strlen
