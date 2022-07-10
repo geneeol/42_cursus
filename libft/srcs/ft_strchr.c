@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 13:26:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/10 12:52:29 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/10 17:07:25 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/10 17:22:56 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//User responsibility for overflow issues
-//case src = dst
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+//Shoud I cast return type?
+char	*ft_strchr(const char *str, int ch)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		*((char *)dst + i) = *((char *)src + i);
-		i++;
-	}
-	return (dst);
+	while (*str && *str != (char)ch)
+		str++;
+	if (*str == (char)ch)
+		return (str);
+	else
+		return (0);
 }

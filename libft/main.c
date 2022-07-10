@@ -65,5 +65,11 @@ int	main()
 	printf("0: %d\n", ft_atoi("0"));
 	//printf("NULL ptr: %d\n", ft_atoi(ptr));
 	printf(">===============<\n\n\n");
+
+	//strlcat
+	//segfault occurs when dst & src
+	char	*dst_a = 0;
+	char	src_a[] = "hi";
+	strlcpy(dst_a, src_a, 0);
 	return 0;
 }

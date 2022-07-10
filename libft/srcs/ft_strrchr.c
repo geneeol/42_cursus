@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 13:26:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/10 12:52:29 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/10 17:17:55 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/10 17:23:22 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//User responsibility for overflow issues
-//case src = dst
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strrchr(const char *str, int ch)
 {
-	size_t	i;
+	char	*ret;
 
-	i = 0;
-	while (i < n)
+	ret = 0;
+	while (*str)
 	{
-		*((char *)dst + i) = *((char *)src + i);
-		i++;
+		if (*str == (char)ch)
+			ret = str;
+		str++;
 	}
-	return (dst);
+	if (*str == (char)ch)
+		ret = str;
+	return (ret);
 }

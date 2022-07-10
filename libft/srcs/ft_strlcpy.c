@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 13:26:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/10 12:52:29 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/10 14:56:22 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/10 15:44:12 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//User responsibility for overflow issues
-//case src = dst
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+#include "libft.h"
+
+//Case src, dst is NULL
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	len;
 
 	i = 0;
-	while (i < n)
+	len = ft_strlen(src);
+	if (!dstsize)
+		return (len);
+	while (src[i] && i + 1 < dstsize)
 	{
-		*((char *)dst + i) = *((char *)src + i);
+		dst[i] = src[i];
 		i++;
 	}
-	return (dst);
+	dst[i] = '\0';
+	return (len);
 }
