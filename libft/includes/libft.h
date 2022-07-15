@@ -6,11 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/15 20:43:09 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/16 01:19:19 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stddef.h>
 
 int	ft_isalpha(int ch);
 int	ft_isdigit(int ch);
@@ -36,3 +39,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 int	ft_atoi(const char *str);
+
+#endif

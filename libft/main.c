@@ -69,9 +69,17 @@ int	main()
 	printf("ft_atoi overflow: %d\n", ft_atoi("2000000000000000000000000000000\n"));
 	printf("ft_atoi underflow: %d\n", ft_atoi("-2000000000000000000000000000000\n"));
 	printf("ft_atoi u_long_max: %d\n", ft_atoi("18446744073709551614"));
+	printf("ft_atoi long_min: %d\n", ft_atoi("-9223372036854775808\n"));
+	printf("ft_atoi long_max: %d\n", ft_atoi("9223372036854775807\n"));
+	printf("ft_atoi long_max - 1: %d\n", ft_atoi("9223372036854775806\n"));
 	printf(">===atoi======<\n");
 	printf("atoi overflow: %d\n", atoi("2000000000000000000000000000000\n"));
 	printf("atoi underflow: %d\n", atoi("-2000000000000000000000000000000\n"));
+	printf("atoi u_long_max: %d\n", atoi("18446744073709551614"));
+	printf("atoi long_min: %d\n", atoi("-9223372036854775808\n"));
+	printf("atoi long_max: %d\n", atoi("9223372036854775807\n"));
+	printf("atoi long_max - 1: %d\n", atoi("9223372036854775806\n"));
+
 	//printf("atoi: %d\n", atoi(ptr));
 	printf(">===============<\n\n\n");
 

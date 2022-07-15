@@ -6,9 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 18:50:57 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/07 19:30:53 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/16 01:24:02 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t len)
 {
@@ -17,7 +18,7 @@ void	*ft_memset(void *ptr, int value, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		*((unsigned char *)ptr + i) = (unsigned char)value;
+		((unsigned char *)ptr)[i] = (unsigned char)value;
 		i++;
 	}
 	return (ptr);

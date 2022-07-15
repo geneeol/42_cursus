@@ -6,9 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 13:19:20 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/10 13:19:21 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/16 01:26:56 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*memmove(void *dst, const void *src, size_t len)
 {

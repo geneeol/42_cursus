@@ -6,9 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:24:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/09 13:11:09 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/16 01:22:37 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,15 +6,16 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:25:32 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/09 13:25:33 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/16 01:25:49 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	ft_bzero(void *ptr, size_t n)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < n)
-		*((unsigned char *)ptr + i++) = 0;
+	i = -1;
+	while (i++ < n)
+		ft_memset(ptr, 0, n);
 }
