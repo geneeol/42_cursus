@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <stddef.h>
+#include "includes/libft.h"
 
 #include "srcs/ft_memset.c"
 #include "srcs/ft_bzero.c"
 #include "srcs/ft_memcpy.c"
 #include "srcs/ft_strlen.c"
+#include "srcs/ft_isdigit.c"
 #include "srcs/ft_atoi.c"
 
 
@@ -59,11 +62,17 @@ int	main()
 	printf(">----atoi-----<\n");
 	//char	*ptr = NULL;
 
-	printf("123: %d\n", ft_atoi("  123"));
+	printf("123: %d\n", ft_atoi("123"));
 	printf("2147483647: %d\n", ft_atoi("2147383647"));
 	printf("-2147384648: %d\n", ft_atoi("-2147383648"));
 	printf("0: %d\n", ft_atoi("0"));
-	//printf("NULL ptr: %d\n", ft_atoi(ptr));
+	printf("ft_atoi overflow: %d\n", ft_atoi("2000000000000000000000000000000\n"));
+	printf("ft_atoi underflow: %d\n", ft_atoi("-2000000000000000000000000000000\n"));
+	printf("ft_atoi u_long_max: %d\n", ft_atoi("18446744073709551614"));
+	printf(">===atoi======<\n");
+	printf("atoi overflow: %d\n", atoi("2000000000000000000000000000000\n"));
+	printf("atoi underflow: %d\n", atoi("-2000000000000000000000000000000\n"));
+	//printf("atoi: %d\n", atoi(ptr));
 	printf(">===============<\n\n\n");
 
 	//strlcat

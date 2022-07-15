@@ -6,11 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/07 20:11:34 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/15 20:43:04 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_space(char ch)
+//#include "libft.h"
+
+static int	is_space(char ch)
 {
 	if (ch == '\t' || ch == '\n' || ch == '\v'
 		|| ch == '\f' || ch == '\r' || ch == ' ')
@@ -19,37 +21,31 @@ int	is_space(char ch)
 		return (0);
 }
 
-int	is_number(char ch)
-{
-	if ('0' <= ch && ch <= '9')
-		return (1);
-	else
-		return (0);
-}
-
 //When a null pointer is passed as a parameter, a seg fault occurs.
+//It is same as real atoi
 //Omitting errno related matters
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	ret;
+	int			sign;
+	long long	ret;
 
-	i = 0;
 	sign = 1;
 	ret = 0;
-	while (is_space(str[i]))
-		i++;
-	if (str[i] == '-')
+	while (is_space(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+		if (*(str++) == '-')
+			sign *= -1;
+	while (ft_isdigit(*(str)))
 	{
-		sign *= -1;
-		i++;
+		if (ret >= 0 != ret * 10 + *str - '0' >= 0)
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
+		ret = ret * 10 + (*(str++) - '0');
 	}
-	while (is_number(str[i]))
-	{
-		ret *= 10;
-		ret += sign * (str[i] - '0');
-		i++;
-	}
-	return (ret);
+	return ((int)sign * ret);
 }
