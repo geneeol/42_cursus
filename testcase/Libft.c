@@ -2,14 +2,18 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include "includes/libft.h"
+#include "../Libft/libft.h"
 
-#include "srcs/ft_memset.c"
-#include "srcs/ft_bzero.c"
-#include "srcs/ft_memcpy.c"
-#include "srcs/ft_strlen.c"
-#include "srcs/ft_isdigit.c"
-#include "srcs/ft_atoi.c"
+#include "../Libft/ft_memset.c"
+#include "../Libft/ft_bzero.c"
+#include "../Libft/ft_memcpy.c"
+#include "../Libft/ft_strlen.c"
+#include "../Libft/ft_isdigit.c"
+#include "../Libft/ft_atoi.c"
+
+#include "../Libft/ft_strncmp.c"
+#include "../Libft/ft_memcmp.c"
+#include "../Libft/ft_memmove.c"
 
 
 int	main()
@@ -62,6 +66,7 @@ int	main()
 	printf(">----atoi-----<\n");
 	//char	*ptr = NULL;
 
+	/*
 	printf("123: %d\n", ft_atoi("123"));
 	printf("2147483647: %d\n", ft_atoi("2147383647"));
 	printf("-2147384648: %d\n", ft_atoi("-2147383648"));
@@ -71,6 +76,7 @@ int	main()
 	printf("ft_atoi u_long_max: %d\n", ft_atoi("18446744073709551614"));
 	printf("ft_atoi long_min: %d\n", ft_atoi("-9223372036854775808\n"));
 	printf("ft_atoi long_max: %d\n", ft_atoi("9223372036854775807\n"));
+	*/
 	printf("ft_atoi long_max - 1: %d\n", ft_atoi("9223372036854775806\n"));
 	printf(">===atoi======<\n");
 	printf("atoi overflow: %d\n", atoi("2000000000000000000000000000000\n"));
@@ -88,5 +94,41 @@ int	main()
 	char	*dst_a = 0;
 	char	src_a[] = "hi";
 	strlcpy(dst_a, src_a, 0);
+
+	//strncmp
+	char	*str1 = "abce";
+	char	*str2 = "abc";
+	printf("(abc, abc, 5): %d\n", ft_strncmp(str1, str2, 5));
+	printf("(abce, abc, 5): %d\n", ft_strncmp(str1, str2, 5));
+
+	//memcpy
+	char	ptrc1[] = "hello";
+	char	*ptrc2 = 0;
+	//memcpy(ptrc1, ptrc2, 2);
+
+	//memcmp
+	char	*pt1 = 0;
+	char	*pt2 = 0;
+
+	printf("memcmp: %d\n", memcmp(pt1, pt2, 0));
+	printf("memcmp: %d\n", memcmp("teste", "teste", 100));
+	printf("ft_memcmp: %d\n", ft_memcmp(pt1, pt2, 0));
+	printf("ft_memcmp: %d\n", ft_memcmp("teste", "teste", 6));
+	printf(">===============<\n\n\n");
+
+
+	//memmove
+	char	strmm1[50] = "Hello42World";
+	char	strmm2[50] = "Hello42World";
+	char	*ptrmm1 = 0;
+	char	*ptrmm2 = 0;
+	printf(">----memmove-----<\n");
+	printf("memmove: %s\n", memmove(strmm1, strmm1 + 3, 4));
+	printf("ft_memmove: %s\n", ft_memmove(strmm2, strmm2 + 3, 4));
+	printf("memmove: %s\n", memmove(ptrmm1, ptrmm2, 0));
+	//printf("ft_memmove: %s\n", ft_memmove(ptrmm1, ptrmm2, 0));
+	printf(">===============<\n\n\n");
+
+	
 	return 0;
 }
