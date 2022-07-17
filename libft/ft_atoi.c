@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 15:56:33 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/17 16:26:15 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 	while (ft_isdigit(*(str)))
 	{
-		if (ret > LONG_MAX / 10
-			|| (ret == LONG_MAX / 10 && *str - '0' > LONG_MAX % 10))
+		if (ret > LL_MAX / 10
+			|| (ret == LL_MAX / 10 && *str - '0' > LL_MAX % 10))
 		{
 			if (sign == 1)
 				return (-1);

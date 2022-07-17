@@ -15,6 +15,8 @@
 #include "../Libft/ft_memcmp.c"
 #include "../Libft/ft_memmove.c"
 
+#include "../Libft/ft_substr.c"
+
 
 int	main()
 {
@@ -112,8 +114,8 @@ int	main()
 
 	printf("memcmp: %d\n", memcmp(pt1, pt2, 0));
 	printf("memcmp: %d\n", memcmp("teste", "teste", 100));
-	printf("ft_memcmp: %d\n", ft_memcmp(pt1, pt2, 0));
-	printf("ft_memcmp: %d\n", ft_memcmp("teste", "teste", 6));
+	//printf("ft_memcmp: %d\n", ft_memcmp(pt1, pt2, 0));
+	//printf("ft_memcmp: %d\n", ft_memcmp("teste", "teste", 6));
 	printf(">===============<\n\n\n");
 
 
@@ -125,10 +127,23 @@ int	main()
 	printf(">----memmove-----<\n");
 	printf("memmove: %s\n", memmove(strmm1, strmm1 + 3, 4));
 	printf("ft_memmove: %s\n", ft_memmove(strmm2, strmm2 + 3, 4));
-	printf("memmove: %s\n", memmove(ptrmm1, ptrmm2, 0));
+	//printf("memmove: %s\n", memmove(ptrmm1, ptrmm2, 0));
 	//printf("ft_memmove: %s\n", ft_memmove(ptrmm1, ptrmm2, 0));
+	printf("memmove: %s\n", memmove(strmm1 + 3, strmm1, 4));
+	printf("ft_memmove: %s\n", ft_memmove(strmm2 + 3, strmm2, 4));
 	printf(">===============<\n\n\n");
 
-	
+	//substr
+	printf(">----substr-----<\n");
+	char *sub = "i just want this part #############";
+	size_t size = 22;
+	char *ret_s = ft_substr(sub, 0, size);
+
+	printf("len: %zu\n", ft_strlen(sub));
+	printf("ret_s:%s\n", ret_s);
+	if (!strncmp(ret_s, sub, size))
+		printf("Success\n");
+	else
+		printf("Fail\n");
 	return 0;
 }

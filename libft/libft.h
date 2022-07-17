@@ -6,16 +6,16 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 20:23:56 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/17 18:48:20 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define LL_MAX ((long long)(~0UL>>1))
 
 # include <stdlib.h>
 # include <stddef.h>
-# include <limits.h>
 
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
@@ -44,6 +44,10 @@ int		ft_atoi(const char *str);
 
 char	*ft_strdup(const char *str);
 void	*ft_calloc(size_t count, size_t size);
-char *ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim___(char const *s1, char const *s2);
+char	**ft_split(char const *s, char c);
 
 #endif
