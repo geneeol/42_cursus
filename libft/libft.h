@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/17 18:48:20 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/17 18:53:06 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim___(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 
 #endif
