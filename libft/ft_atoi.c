@@ -6,10 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/17 16:26:15 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/18 18:06:03 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
 static int	is_space(char ch)
@@ -24,6 +26,8 @@ static int	is_space(char ch)
 //When a null pointer is passed as a parameter, a seg fault occurs.
 //It is same as real atoi
 //Omitting errno related matters
+//ll_min is 10000~00000(2), and (int)ll_min == 0
+//So even if LL_MIN pass as param, it happens to work correctly
 int	ft_atoi(const char *str)
 {
 	int			sign;
