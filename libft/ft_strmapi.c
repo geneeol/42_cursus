@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/10 14:56:22 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/21 17:33:28 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/21 17:07:48 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/21 17:43:26 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Case src, dst is NULL
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	size_t	len;
+	char			*ret;
+	unsigned int	i;
 
+	if (!str || !f)
+		return (0);
+	ret = ft_calloc(ft_strlen(str) + 1, sizeof(char));
+	if (!ret)
+		return (0);
 	i = 0;
-	len = ft_strlen(src);
-	if (!dst_size)
-		return (len);
-	while (src[i] && i + 1 < dst_size)
+	while (str[i])
 	{
-		dst[i] = src[i];
+		ret[i] = f(i, str[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (len);
+	return (ret);
 }

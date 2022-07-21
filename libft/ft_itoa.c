@@ -6,11 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:46:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/17 18:48:03 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/21 17:38:32 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	ft_len(int n)

@@ -6,12 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/18 18:06:03 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/21 17:38:09 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static int	is_space(char ch)
