@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/21 20:52:08 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/22 20:37:03 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 # define LL_MAX ((long long)(~0UL>>1))
 
-typedef struct	s_list
+typedef struct s_list
 {
-    void	*content;
-    struct	s_list *next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 int		ft_isalpha(int ch);
@@ -66,5 +66,7 @@ void	ft_putendl_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 
 #endif
