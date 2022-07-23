@@ -2,6 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
+
+#define PATH ../Libft
+
 #include "../Libft/libft.h"
 
 #include "../Libft/ft_memset.c"
@@ -15,7 +18,22 @@
 #include "../Libft/ft_memcmp.c"
 #include "../Libft/ft_memmove.c"
 
+#include "../Libft/ft_strlcpy.c"
 #include "../Libft/ft_substr.c"
+
+#include "../Libft/ft_lstnew.c"
+#include "../Libft/ft_lstadd_front.c"
+#include "../Libft/ft_lstdelone.c"
+#include "../Libft/ft_lstsize.c"
+#include "../Libft/ft_lstlast.c"
+#include "../Libft/ft_lstadd_back.c"
+
+
+void	*lstmap_f(void *content)
+{
+	(void)content;
+	return ("OK !");
+}
 
 
 int	main()
@@ -145,5 +163,42 @@ int	main()
 		printf("Success\n");
 	else
 		printf("Fail\n");
+	printf(">===============<\n\n\n");
+
+	//lst
+	printf(">-----lst-----<\n");
+	int	content[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int	idx;
+	t_list	*head;
+	t_list	*node;
+	t_list	*curr;
+
+	head = ft_lstnew((void *)(&content[0]));
+	idx = 0;
+	while (idx++ < 10)
+	{
+		node = ft_lstnew((void *)(&content[idx]));
+		ft_lstadd_back(&head, node);
+	}
+	/*
+	while (head -> next)
+	{
+		printf("content: %d\n", *((int *)head -> content));
+		head = head -> next;
+	}
+	*/
+
+	t_list	*l = ft_lstnew(strdup(" 1 2 3 "));
+	t_list	*ret;
+
+	l->next = ft_lstnew(strdup("ss"));
+	l->next->next = ft_lstnew(strdup("-_-"));
+	ret = ft_lstmap(l, lstmap_f, NULL);
+	if (!strcmp(ret->content, "OK !") && !strcmp(ret->next->content, "OK !") && !strcmp(ret->next->next->content, "OK !") && !strcmp(l->content, " 1 2 3 ") && !strcmp(l->next->content, "ss") && !strcmp(l->next->next->content, "-_-"))
+		exit(TEST_SUCCESS);
+	SET_DIFF(" 1 2 3 ", l->content);
+	exit(TEST_FAILED);
+	}
+
 	return 0;
 }

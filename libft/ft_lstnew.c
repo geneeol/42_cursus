@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 20:47:49 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/22 20:26:52 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/23 18:36:32 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	node = (t_list *)malloc(sizeof(t_list));
 	if (!node)
 		return (0);
-	node -> content = content;
-	node -> next = 0;
+	node->content = content;
+	node->next = 0;
 	return (node);
 }

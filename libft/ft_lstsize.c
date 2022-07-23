@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 20:36:30 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/22 20:41:37 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/23 18:36:43 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst)
 	{
 		size++;
-		lst = lst -> next;
+		lst = lst->next;
 	}
 	return (size);
 }

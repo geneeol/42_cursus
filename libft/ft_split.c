@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 15:03:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/17 16:48:45 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/23 17:45:35 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ static char	**free_alloc(char **ptr, int i)
 		}
 	}
 	free(ptr);
-	ptr = 0;
 	return (0);
 }
 
