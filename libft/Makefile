@@ -64,13 +64,10 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 $(NAME): $(ALL_OBJS)
-	ar rcs $@ $^
-
+	ar rcs $@ $?
+	
 all: bonus 
 
-$(NAME_B): $(OBJS) $(OBJS_BONUS)
-	ar rcs $@ $^
-	
 bonus: 
 	make WITH_BONUS=1
 

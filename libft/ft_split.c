@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 15:03:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/23 17:45:35 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/24 14:37:12 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,13 @@ static int	ft_word_cnt(char const *str, char ch)
 
 static char	**free_alloc(char **ptr, int i)
 {
-	while (i-- >= 0)
+	while (i-- >= 1)
 	{
-		if (ptr[i])
-		{
-			free(ptr[i]);
-			ptr[i] = 0;
-		}
+		free(ptr[i]);
+		ptr[i] = 0;
 	}
 	free(ptr);
+	ptr = 0;
 	return (0);
 }
 
