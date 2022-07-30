@@ -6,13 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 14:56:22 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/21 17:33:28 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/30 20:41:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Case src, dst is NULL
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
 	size_t	i;

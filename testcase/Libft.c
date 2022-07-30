@@ -19,7 +19,9 @@
 #include "../Libft/ft_memmove.c"
 
 #include "../Libft/ft_strlcpy.c"
+#include "../Libft/ft_strlcat.c"
 #include "../Libft/ft_substr.c"
+#include "../Libft/ft_strdup.c"
 
 #include "../Libft/ft_lstnew.c"
 #include "../Libft/ft_lstadd_front.c"
@@ -109,11 +111,24 @@ int	main()
 	//printf("atoi: %d\n", atoi(ptr));
 	printf(">===============<\n\n\n");
 
-	//strlcat
+	//strlcpy
 	//segfault occurs when dst & src
 	char	*dst_a = 0;
 	char	src_a[] = "hi";
 	strlcpy(dst_a, src_a, 0);
+
+	//strlcat
+	char	*sc1 = 0;
+	char	*sc2 = 0;
+	char	*sc3 = "hello";
+	char	*sc4 = "42world";
+
+	printf(">----strlcat-----<\n");
+	//dst가 널이고 src가 널포인터가 아니면서 dst_size가 0이면 세그폴트 발생 안함
+	printf("ret: %lu\n", strlcat(sc1, sc3, 0));
+	printf("ft_ret: %lu\n", ft_strlcat(sc2, sc3, 0));
+
+	printf(">===============<\n\n\n");
 
 	//strncmp
 	char	*str1 = "abce";
@@ -187,18 +202,5 @@ int	main()
 		head = head -> next;
 	}
 	*/
-
-	t_list	*l = ft_lstnew(strdup(" 1 2 3 "));
-	t_list	*ret;
-
-	l->next = ft_lstnew(strdup("ss"));
-	l->next->next = ft_lstnew(strdup("-_-"));
-	ret = ft_lstmap(l, lstmap_f, NULL);
-	if (!strcmp(ret->content, "OK !") && !strcmp(ret->next->content, "OK !") && !strcmp(ret->next->next->content, "OK !") && !strcmp(l->content, " 1 2 3 ") && !strcmp(l->next->content, "ss") && !strcmp(l->next->next->content, "-_-"))
-		exit(TEST_SUCCESS);
-	SET_DIFF(" 1 2 3 ", l->content);
-	exit(TEST_FAILED);
-	}
-
 	return 0;
 }

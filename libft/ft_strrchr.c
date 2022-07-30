@@ -6,22 +6,22 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 17:17:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 01:28:52 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/30 21:37:20 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *str, int ch)
 {
-	char	*ret;
+	int		i;
 
-	ret = 0;
-	while (*str)
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
-		if (*str == (char)ch)
-			ret = (char *)str;
-		str++;
+		if (str[i] == (char)ch)
+			return ((char *)str + i);
+		i--;
 	}
-	if (*str == (char)ch)
-		ret = (char *)str;
-	return (ret);
+	return (0);
 }

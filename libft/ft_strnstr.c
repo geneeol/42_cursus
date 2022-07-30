@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:08:58 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 01:32:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/30 21:57:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	while (*haystack && len >= needle_len)
 	{
-		if (*haystack == *needle && !ft_memcmp(haystack, needle, needle_len))
+		if (*haystack == *needle && !ft_strncmp(haystack, needle, needle_len))
 			return ((char *)haystack);
 		haystack++;
 		len--;
