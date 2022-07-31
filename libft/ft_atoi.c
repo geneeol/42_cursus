@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/22 18:00:35 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/31 14:46:01 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ static int	is_space(char ch)
 		return (0);
 }
 
-//When a null pointer is passed as a parameter, a seg fault occurs.
-//It is same as real atoi
 //Omitting errno related matters
 //ll_min is 10000~00000(2), and (int)ll_min == 0
 //So even if LL_MIN pass as param, it happens to work correctly
+//But this function needs to be modified,
+//if it extends to a long-return-type function.
 int	ft_atoi(const char *str)
 {
 	int			sign;
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	if (*str == '-' || *str == '+')
 		if (*(str++) == '-')
 			sign *= -1;
-	while (ft_isdigit(*(str)))
+	while (ft_isdigit(*str))
 	{
 		if (ret > LL_MAX / 10
 			|| (ret == LL_MAX / 10 && *str - '0' > LL_MAX % 10))

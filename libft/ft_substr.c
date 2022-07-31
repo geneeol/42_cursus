@@ -6,13 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 20:23:39 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/24 14:05:08 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/07/31 15:25:04 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//buf_size is always bigger than or equal to 1
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
