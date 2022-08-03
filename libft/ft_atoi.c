@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:11:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/31 14:46:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/03 17:30:50 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ static int	is_space(char ch)
 		return (0);
 }
 
-//Omitting errno related matters
-//ll_min is 10000~00000(2), and (int)ll_min == 0
-//So even if LL_MIN pass as param, it happens to work correctly
-//But this function needs to be modified,
-//if it extends to a long-return-type function.
 int	ft_atoi(const char *str)
 {
 	int			sign;

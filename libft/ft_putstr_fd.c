@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 18:01:57 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/21 19:17:15 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/03 17:29:45 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	write(fd, str, ft_strlen(str));
+	while (*str)
+		ft_putchar_fd(*str++, fd);
 }
