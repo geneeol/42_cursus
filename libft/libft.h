@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/23 18:46:49 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:01:22 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stddef.h>
 # include <unistd.h>
 
-# define LL_MAX ((long long)(~0UL>>1))
+# define LL_MAX 0x7FFFFFFFFFFFFFFF
 
 typedef struct s_list
 {
