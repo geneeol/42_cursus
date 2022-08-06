@@ -2,4 +2,5 @@ a.out
 .DS_Store
 libft-unit-test
 libftTester
+libft.a
 *.o
