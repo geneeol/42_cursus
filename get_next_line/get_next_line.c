@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/07 14:13:30 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 15:41:07 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ char	*get_next_line(int fd)
 	{
 
 		//읽다가 에러 발생시 동적할당을 해제해주고 널 리턴
+		//맨 처음에는 strdup을 이용해 새로운 문자열 생성
+		//이후엔 strjoin을 이용해 prefix를 free한 후 이어붙이기
+		//
+		//buf에 개행이 있는지 검사
+		//만약 개행이 있다면 딱 개행까지만 ret에 연결후 ret리턴
+		//개행 이후부터 마지막 문자까지 rest에 저장 (substr사용)
 		if (byte_read < 0)
 		{
 			ft_free(t_line[fd]);
@@ -47,16 +53,10 @@ char	*get_next_line(int fd)
 		else
 		{
 			if (t_line[fd] -> line)
-				nl_not_in_line(t_line[fd], 
-
-
-			//맨 처음에는 strdup을 이용해 새로운 문자열 생성
-			//이후엔 strjoin을 이용해 prefix를 free한 후 이어붙이기
-			//
-			//buf에 개행이 있는지 검사
-			//만약 개행이 있다면 딱 개행까지만 ret에 연결후 ret리턴
-			//개행 이후부터 마지막 문자까지 rest에 저장 (substr사용)
-			//개행이 없다면 buf전체를 ret에 연결
+				nl_not_in_line(t_line[fd], buf, ft_strjoin); 
+			else
+				nl_not_in_line(t_line[fd], buf, ft_strdup); 
+		}
 	}
 	//eof를 만났을 때 << 이 경우 read함수에 대한 테케작성 필요
 	//일단 개행없이 buf 전체를 ret에 연결
