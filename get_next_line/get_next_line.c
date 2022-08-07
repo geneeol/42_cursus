@@ -6,21 +6,18 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/07 15:41:07 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 18:29:17 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-//아직 fd에 대한 예외처리는 고려하지 않음.
 //일단 수도 코드 작성
-//
-//
 //정적변수에 대해 고민해야하는데 음.. 정적변수를 쓰는 이유는 반복문에서 gnl을 적용해서 읽기 위해서 같다
 
 char	*get_next_line(int fd)
 {
-	static	*t_line[OPEN_MAX];
+	static	t_line	*t_strs[OPEN_MAX];
 	char	buf[BUFFER_SIZE];
 	ssize_t	byte_read;
 
@@ -30,7 +27,6 @@ char	*get_next_line(int fd)
 	byte_read = read(fd, buf, BUFFER_SIZE);
 	while (byte_read)
 	{
-
 		//읽다가 에러 발생시 동적할당을 해제해주고 널 리턴
 		//맨 처음에는 strdup을 이용해 새로운 문자열 생성
 		//이후엔 strjoin을 이용해 prefix를 free한 후 이어붙이기
@@ -38,28 +34,37 @@ char	*get_next_line(int fd)
 		//buf에 개행이 있는지 검사
 		//만약 개행이 있다면 딱 개행까지만 ret에 연결후 ret리턴
 		//개행 이후부터 마지막 문자까지 rest에 저장 (substr사용)
+		//
+		//동적할당에 실패하면 어떻게 해제할지를 고려하지 않음..
 		if (byte_read < 0)
 		{
-			ft_free(t_line[fd]);
+			ft_free(t_strs[fd]);
 			return (0);
 		}
 		if (ft_strchr(buf, '\n')) 
 		{
-			if (t_line[fd] -> line)
-				nl_in_line(t_line[fd], buf, ft_strjoin);
+			if (t_strs[fd]->line)
+				nl_in_line(t_strs[fd], buf, ft_strjoin);
 			else
-				nl_in_line(t_line[fd], buf, ft_strdup);
+				nl_in_line(t_strs[fd], buf, ft_strdup);
+			//여기서 만약 할당 실패하면?
+			return 
 		}
 		else
 		{
-			if (t_line[fd] -> line)
-				nl_not_in_line(t_line[fd], buf, ft_strjoin); 
+			if (t_strs[fd]->line)
+				nl_not_in_line(t_strs[fd], buf, ft_strjoin); 
 			else
-				nl_not_in_line(t_line[fd], buf, ft_strdup); 
+				nl_not_in_line(t_strs[fd], buf, ft_strdup); 
 		}
+		//rest가 널인지 체크하는 건 길이가 딱 맞아떨어진건지 할당 실패인지 구분이 어려움
+		if (!(t_strs[fd]->line)) 
+			return (ft_free();
 	}
-	//eof를 만났을 때 << 이 경우 read함수에 대한 테케작성 필요
+	end_of_line(t_strs[fd], buf);
+	return (t_strs[fd]->line);
+	//eof를 만났을 때 buf사이즈 크기를 어떻게 측정할 것인가?
+	//eof를 만났을 때 << 이 경우 read함수에 대한 테케작성 필요(반환값이 몇인지)
 	//일단 개행없이 buf 전체를 ret에 연결
 	//ret를 리턴 (당연히 끝에 널 추가)
-
 }

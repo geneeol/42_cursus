@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/05 19:01:22 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:50:28 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stddef.h>
 # include <unistd.h>
 
 # define LL_MAX 0x7FFFFFFFFFFFFFFF

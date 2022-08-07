@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:20:53 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/07 15:59:15 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:20:11 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,10 @@
 
 #define OPEN_MAX 49152
 
-typedef struct	
+typedef struct s_line	
+{
+	char	*line;
+	char	*rest;
+} t_line;
+
+#endif
