@@ -6,9 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 18:50:57 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 01:24:02 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 14:56:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t len)

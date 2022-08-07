@@ -6,9 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 13:25:32 by dahkang           #+#    #+#             */
-/*   Updated: 2022/07/16 20:05:56 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/07 14:56:30 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *ptr, size_t n)
