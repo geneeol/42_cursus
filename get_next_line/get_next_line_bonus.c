@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 00:17:37 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/14 23:54:29 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ static char	*line_join(t_line *line, char *buf)
 {
 	if (!(line->len))
 	{
+		line->len = gnl_strlen(buf);
 		if (line->str)
 			free(line->str);
 		line->str = 0;
-		line->len = gnl_strlen(buf);
 		return (gnl_strdup(buf));
 	}
 	else
@@ -49,7 +49,6 @@ static char	*nl_parse(t_line *line, char *buf, ssize_t buf_len)
 	ret = gnl_substr(line, 0, cut_off + 1);
 	if (!ret)
 		return (ft_free(line));
-	//끄트머리가 없는 경우가 예외케이스임
 	left = gnl_substr(line, cut_off + 1, line->len);
 	if (!(left))
 	{
@@ -58,8 +57,8 @@ static char	*nl_parse(t_line *line, char *buf, ssize_t buf_len)
 		return (ft_free(line));
 	}
 	free(line->str);
-	line->len = gnl_strlen(left);
 	line->str = left;
+	line->len = gnl_strlen(left);
 	return (ret);
 }
 
@@ -81,8 +80,6 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || fd >= OPEN_FD_MAX || BUFFER_SIZE <= 0)
 		return (0);
-	if (line[fd].str && gnl_strchr(line[fd].str, '\n'))
-		return (nl_parse(&line[fd], line[fd].str, line[fd].len));
 	byte = read(fd, buf, BUFFER_SIZE);
 	while (byte)
 	{
@@ -92,7 +89,7 @@ char	*get_next_line(int fd)
 		line[fd].str = line_join(&line[fd], buf);
 		if (!(line[fd].str))
 			return (ft_free(&line[fd]));
-		if (gnl_strchr(line[fd].str, '\n'))
+		if (gnl_strchr(buf, '\n'))
 			return (nl_parse(&line[fd], buf, byte));
 		byte = read(fd, buf, BUFFER_SIZE);
 	}
