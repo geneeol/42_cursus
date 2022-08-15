@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:20:53 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/14 23:23:40 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/15 16:48:28 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 # define OPEN_FD_MAX 49152
 
@@ -25,7 +29,7 @@ typedef struct s_line
 }	t_line;
 
 char	*get_next_line(int fd);
-char	*gnl_strchr(const char *str, int ch);
+ssize_t	gnl_get_idx(char *str, char ch);
 char	*gnl_strdup(const char *str);
 char	*gnl_strjoin(t_line *line, char *buf);
 size_t	gnl_strlen(const char *str);

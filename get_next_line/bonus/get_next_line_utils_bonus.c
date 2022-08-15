@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 16:49:08 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/14 23:55:53 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 //1. ssize_t의 max면 +1 할 때 터짐
 //2. ssize_t의 범위를 buffer_size가 넘어버리면 read 리턴값이 어케대지?
 //
+
 #include "get_next_line_bonus.h"
 
-/*
 char	*gnl_strchr(const char *str, int ch)
 {
 	while (*str && *str != (char)ch)
@@ -25,20 +25,6 @@ char	*gnl_strchr(const char *str, int ch)
 		return ((char *)str);
 	else
 		return (0);
-}
-*/
-
-ssize_t	gnl_get_idx(char *str, char ch)
-{
-	ssize_t	i;
-
-	if (!str)
-		return (-1);
-	i = -1;
-	while (str[++i])
-		if (str[i] == ch)
-			return (i);
-	return (-1);
 }
 
 size_t	gnl_strlen(const char *str)
@@ -78,8 +64,6 @@ char	*gnl_substr(t_line *line, size_t start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (start >= line->len)
-		return (gnl_strdup(""));
 	if (line->len - start >= len)
 		size = len + 1;
 	else

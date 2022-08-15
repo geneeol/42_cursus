@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/14 23:44:07 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/15 16:51:27 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 //
 #include "get_next_line.h"
 
+/*
 char	*gnl_strchr(const char *str, int ch)
 {
 	while (*str && *str != (char)ch)
@@ -24,6 +25,20 @@ char	*gnl_strchr(const char *str, int ch)
 		return ((char *)str);
 	else
 		return (0);
+}
+*/
+
+ssize_t	gnl_get_idx(char *str, char ch)
+{
+	ssize_t	i;
+
+	if (!str)
+		return (-1);
+	i = -1;
+	while (str[++i])
+		if (str[i] == ch)
+			return (i);
+	return (-1);
 }
 
 size_t	gnl_strlen(const char *str)
