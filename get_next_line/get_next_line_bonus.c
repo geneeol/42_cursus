@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 16:49:22 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/15 17:43:31 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,16 @@ static char	*nl_parse(t_line *line)
 	ret = gnl_substr(line, 0, cut_off + 1);
 	if (!ret)
 		return (ft_free(line));
-	if (cut_off == line->len)
-	{
-		line->str = 0;
-		line->len = 0;
-		return (ret);
-	}
 	left = gnl_substr(line, cut_off + 1, line->len);
-	if (!(left))
+	if (!left)
 	{
 		free(ret);
 		ret = 0;
 		return (ft_free(line));
 	}
 	free(line->str);
-	line->len = gnl_strlen(left);
 	line->str = left;
+	line->len = gnl_strlen(left);
 	return (ret);
 }
 
@@ -81,20 +75,9 @@ char	*get_eof(t_line *line)
 		line->len = 0;
 		return (ret);
 	}
-	else if (line->str)
-	{
-		free(line->str);
-		line->str = 0;
-		return (0);
-	}
 	else
-		return (0);
+		return (ft_free(line));
 }
-//뜯어 고쳐야대 ㅠ eof까지 읽었는데 읽어들인 문자열에 개행이 여러개인 케이스 등...
-//놓친 케이스가 생각보다 많음
-//1. 개행이 읽어들인 라인이 맨 마지막에 있을 때
-//2. 읽어들인 라인에 개행이 여러개 있을 때
-//3. eof까지 읽었는데 그 안에 개행이 여러개 있을 때
 
 char	*get_next_line(int fd)
 {

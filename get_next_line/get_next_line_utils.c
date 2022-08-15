@@ -6,27 +6,11 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 16:51:27 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/15 17:53:41 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//만약... byte 굉장히 크면?
-//1. ssize_t의 max면 +1 할 때 터짐
-//2. ssize_t의 범위를 buffer_size가 넘어버리면 read 리턴값이 어케대지?
-//
 #include "get_next_line.h"
-
-/*
-char	*gnl_strchr(const char *str, int ch)
-{
-	while (*str && *str != (char)ch)
-		str++;
-	if (*str == (char)ch)
-		return ((char *)str);
-	else
-		return (0);
-}
-*/
 
 ssize_t	gnl_get_idx(char *str, char ch)
 {
