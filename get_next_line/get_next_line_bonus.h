@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:20:53 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 16:48:28 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/16 20:37:41 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ typedef struct s_line
 }	t_line;
 
 char	*get_next_line(int fd);
-ssize_t	gnl_get_idx(char *str, char ch);
-char	*gnl_strdup(const char *str);
-char	*gnl_strjoin(t_line *line, char *buf);
+ssize_t	gnl_get_idx(const char *str, char ch);
 size_t	gnl_strlen(const char *str);
+char	*gnl_strdup(const char *str);
 char	*gnl_substr(t_line *line, size_t start, size_t len);
+char	*gnl_strjoin(t_line *line, const char *buf);
 
 #endif

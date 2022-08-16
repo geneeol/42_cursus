@@ -21,5 +21,7 @@ int	main(void)
 	printf("buf: %s\n", buf);
 	printf("byte: %d\n", read(fd, buf, 10)); 
 	printf("buf: %s\n", buf);
+	printf("byte: %d\n", read(fd, buf, 10)); 
+	printf("byte: %d\n", read(fd, buf, 10)); 
 	return (0);
 }

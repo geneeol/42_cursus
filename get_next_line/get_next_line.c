@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 17:55:15 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/16 19:33:50 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*line_join(t_line *line, char *buf)
 	return (0);
 }
 
-static char	*nl_parse(t_line *line)
+static char	*get_nl_line(t_line *line)
 {
 	char	*ret;
 	char	*left;
@@ -59,12 +59,12 @@ static char	*nl_parse(t_line *line)
 	return (ret);
 }
 
-char	*get_eof(t_line *line)
+char	*get_eof_line(t_line *line)
 {
 	char	*ret;
 
 	if (gnl_get_idx(line->str, '\n') != -1)
-		return (nl_parse(line));
+		return (get_nl_line(line));
 	if (line->len)
 	{
 		ret = gnl_strdup(line->str);
@@ -88,7 +88,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || fd >= OPEN_FD_MAX || BUFFER_SIZE <= 0)
 		return (0);
 	if (gnl_get_idx(line.str, '\n') != -1)
-		return (nl_parse(&line));
+		return (get_nl_line(&line));
 	byte = read(fd, buf, BUFFER_SIZE);
 	while (byte)
 	{
@@ -99,8 +99,8 @@ char	*get_next_line(int fd)
 		if (!(line.str))
 			return (ft_free(&line));
 		if (gnl_get_idx(buf, '\n') != -1)
-			return (nl_parse(&line));
+			return (get_nl_line(&line));
 		byte = read(fd, buf, BUFFER_SIZE);
 	}
-	return (get_eof(&line));
+	return (get_eof_line(&line));
 }

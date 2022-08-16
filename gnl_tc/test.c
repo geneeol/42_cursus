@@ -17,7 +17,5 @@ int	main(void)
 
 	fd = open("file", O_RDONLY);
 	printf("one line:%s\n", get_next_line(fd));
-	printf("line->str: %s\n", line->str);
-	printf("line->str: %p\n", line->str);
 	return (0);
 }

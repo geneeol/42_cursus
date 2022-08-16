@@ -6,13 +6,13 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/15 17:08:26 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/16 19:41:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-ssize_t	gnl_get_idx(char *str, char ch)
+ssize_t	gnl_get_idx(const char *str, char ch)
 {
 	ssize_t	i;
 
@@ -80,7 +80,7 @@ char	*gnl_substr(t_line *line, size_t start, size_t len)
 	return (ret);
 }
 
-char	*gnl_strjoin(t_line *line, char *buf)
+char	*gnl_strjoin(t_line *line, const char *buf)
 {
 	char	*ret;
 	size_t	size;
