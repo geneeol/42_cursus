@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/16 19:33:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/16 22:24:49 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*get_next_line(int fd)
 	char			buf[BUFFER_SIZE + 1];
 	ssize_t			byte;
 
-	if (fd < 0 || fd >= OPEN_FD_MAX || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > OPEN_FD_MAX || BUFFER_SIZE <= 0)
 		return (0);
 	if (gnl_get_idx(line.str, '\n') != -1)
 		return (get_nl_line(&line));

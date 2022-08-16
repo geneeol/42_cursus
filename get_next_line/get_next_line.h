@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:20:53 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/16 19:40:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/08/16 22:25:02 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-# define OPEN_FD_MAX 49152
+# define OPEN_FD_MAX 65535 
 
 typedef struct s_line
 {
