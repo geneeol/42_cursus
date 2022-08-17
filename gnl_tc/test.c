@@ -11,9 +11,9 @@
 
 int	main(void)
 {
-	char	buf[15];
+	//char	buf[15];
 	int		fd;
-	char	*ret;
+	//char	*ret;
 
 	fd = open("file", O_RDONLY);
 	printf("one line:%s\n", get_next_line(fd));
