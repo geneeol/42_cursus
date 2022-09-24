@@ -1,0 +1,1599 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+.DEFAULT_GOAL	libftTester/Makefile	/^.DEFAULT_GOAL	:= a$/;"	m
+ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS) $(OBJS_BONUS)$/;"	m
+ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS)$/;"	m
+ANAME	libft-unit-test/Makefile	/^ANAME		=	libft.a$/;"	m
+ASCII_BORDER	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_BORDER /;"	d
+ASCII_FOOTER	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_FOOTER /;"	d
+ASCII_FUNCTION_KO	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_FUNCTION_KO /;"	d
+ASCII_FUNCTION_KO2	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_FUNCTION_KO2 /;"	d
+ASCII_FUNCTION_OK	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_FUNCTION_OK /;"	d
+ASCII_HEADER	libft-unit-test/hardcore-mode/ascii.h	/^# define ASCII_HEADER /;"	d
+ASSERT_PUTNBR	libft-unit-test/src/test_functions.c	/^#define ASSERT_PUTNBR(/;"	d	file:
+ASSERT_RETURN_VALUE	libft-unit-test/src/test_functions.c	/^#define		ASSERT_RETURN_VALUE(/;"	d	file:
+ASSETDIR	libft-unit-test/Makefile	/^ASSETDIR	=	assets$/;"	m
+BACKTRACE_FILE	libft-unit-test/include/libft_test.h	/^# define	BACKTRACE_FILE	/;"	d
+BENCH_FAT	libft-unit-test/include/libft_test.h	/^	BENCH_FAT,$/;"	e	enum:e_values
+BENCH_LOG_FILE	libft-unit-test/include/libft_test.h	/^# define	BENCH_LOG_FILE	/;"	d
+BENCH_MEDIUM	libft-unit-test/include/libft_test.h	/^	BENCH_MEDIUM,$/;"	e	enum:e_values
+BENCH_RANDOM	libft-unit-test/include/libft_test.h	/^	BENCH_RANDOM$/;"	e	enum:e_values
+BENCH_SMALL	libft-unit-test/include/libft_test.h	/^	BENCH_SMALL,$/;"	e	enum:e_values
+BFSIZE	libft-unit-test/include/libft_test.h	/^# define	BFSIZE	/;"	d
+BG_BLACK	libftTester/utils/color.hpp	/^	BG_BLACK			= 40,$/;"	e	enum:Color
+BG_BLUE	libftTester/utils/color.hpp	/^	BG_BLUE				= 44,$/;"	e	enum:Color
+BG_CYAN	libftTester/utils/color.hpp	/^	BG_CYAN				= 46,$/;"	e	enum:Color
+BG_DEFAULT	libftTester/utils/color.hpp	/^	BG_DEFAULT			= 49,$/;"	e	enum:Color
+BG_DGRAY	libftTester/utils/color.hpp	/^	BG_DGRAY			= 100,$/;"	e	enum:Color
+BG_GREEN	libftTester/utils/color.hpp	/^	BG_GREEN			= 42,$/;"	e	enum:Color
+BG_LBLUE	libftTester/utils/color.hpp	/^	BG_LBLUE			= 104,$/;"	e	enum:Color
+BG_LCYAN	libftTester/utils/color.hpp	/^	BG_LCYAN			= 106,$/;"	e	enum:Color
+BG_LGRAY	libftTester/utils/color.hpp	/^	BG_LGRAY			= 47,$/;"	e	enum:Color
+BG_LGREEN	libftTester/utils/color.hpp	/^	BG_LGREEN			= 102,$/;"	e	enum:Color
+BG_LMAGENTA	libftTester/utils/color.hpp	/^	BG_LMAGENTA			= 105,$/;"	e	enum:Color
+BG_LRED	libftTester/utils/color.hpp	/^	BG_LRED				= 101,$/;"	e	enum:Color
+BG_LYELLOW	libftTester/utils/color.hpp	/^	BG_LYELLOW			= 103,$/;"	e	enum:Color
+BG_MAGENTA	libftTester/utils/color.hpp	/^	BG_MAGENTA			= 45,$/;"	e	enum:Color
+BG_RED	libftTester/utils/color.hpp	/^	BG_RED				= 41,$/;"	e	enum:Color
+BG_WHITE	libftTester/utils/color.hpp	/^	BG_WHITE			= 107$/;"	e	enum:Color
+BG_YELLOW	libftTester/utils/color.hpp	/^	BG_YELLOW 			= 43,$/;"	e	enum:Color
+BIG_CHAR	libft-unit-test/hardcore-mode/utils.h	/^# define BIG_CHAR /;"	d
+BLINK	libftTester/utils/color.hpp	/^	BLINK				= 5,$/;"	e	enum:Color
+BOLD	libftTester/utils/color.hpp	/^	BOLD				= 1,$/;"	e	enum:Color
+BONUS	libftTester/Makefile	/^BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap$/;"	m
+BSIZE	libft-unit-test/include/libft_test.h	/^# define	BSIZE	/;"	d
+BUF1PAGES	libft-unit-test/hardcore-mode/utils.h	/^# define BUF1PAGES /;"	d
+BUFFER_SIZE	get_next_line/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	get_next_line/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
+CALL	libft-unit-test/hardcore-mode/utils.h	/^#define CALL(/;"	d
+CC	Libft/Makefile	/^CC = cc$/;"	m
+CC	libft-unit-test/Makefile	/^CC			=	clang$/;"	m
+CC	libftTester/Makefile	/^CC		= clang++$/;"	m
+CC_SO	libft-unit-test/Makefile	/^CC_SO		=	$(CC)$/;"	m
+CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	libft-unit-test/Makefile	/^CFLAGS		=	-Werror -Wall -Wextra# -g3 -fsanitize=address$/;"	m
+CFLAGS	libftTester/Makefile	/^CFLAGS	= -g3 -ldl -std=c++11 -I utils\/ -I$(LIBFT_PATH) $/;"	m
+CHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR /;"	d	file:
+CHAR	libft-unit-test/hardcore-mode/utils.h	/^# define CHAR /;"	d
+CHARALIGN	libft-unit-test/hardcore-mode/utils.h	/^# define CHARALIGN /;"	d
+CHARBYTES	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHARBYTES /;"	d	file:
+CHARBYTES	libft-unit-test/hardcore-mode/utils.h	/^# define CHARBYTES /;"	d
+CHARBYTESLOG	libft-unit-test/hardcore-mode/utils.h	/^# define CHARBYTESLOG /;"	d
+CHAR__MAX	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR__MAX /;"	d	file:
+CHAR__MAX	libft-unit-test/hardcore-mode/utils.h	/^# define CHAR__MAX /;"	d
+CHAR__MIN	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR__MIN /;"	d	file:
+CHAR__MIN	libft-unit-test/hardcore-mode/utils.h	/^# define CHAR__MIN /;"	d
+CHECK_HPP	libftTester/utils/check.hpp	/^# define CHECK_HPP$/;"	d
+CLEAN_COLOR	libft-unit-test/Makefile	/^CLEAN_COLOR		=	9$/;"	m
+CLEAN_COLOR_T	libft-unit-test/Makefile	/^CLEAN_COLOR_T	=	196$/;"	m
+CODELINE_BUFFSIZE	libft-unit-test/src/display_test_result.c	/^#define	CODELINE_BUFFSIZE /;"	d	file:
+COLOR_BENCH_FAT	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_FAT	/;"	d
+COLOR_BENCH_MEDIUM	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_MEDIUM /;"	d
+COLOR_BENCH_PLAYER	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_PLAYER /;"	d
+COLOR_BENCH_SMALL	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_SMALL /;"	d
+COLOR_BENCH_VERSUS	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_VERSUS /;"	d
+COLOR_BENCH_WINNER	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_WINNER /;"	d
+COLOR_CLEAR	libft-unit-test/include/libft_test.h	/^# define	COLOR_CLEAR	/;"	d
+COLOR_FAILED	libft-unit-test/include/libft_test.h	/^# define	COLOR_FAILED	/;"	d
+COLOR_HPP	libftTester/utils/color.hpp	/^# define COLOR_HPP$/;"	d
+COLOR_INFO	libft-unit-test/include/libft_test.h	/^# define	COLOR_INFO	/;"	d
+COLOR_INTERUPT	libft-unit-test/include/libft_test.h	/^# define	COLOR_INTERUPT	/;"	d
+COLOR_KO	libft-unit-test/include/libft_test.h	/^# define	COLOR_KO	/;"	d
+COLOR_NPROTECTED	libft-unit-test/include/libft_test.h	/^# define	COLOR_NPROTECTED /;"	d
+COLOR_PART1	libft-unit-test/include/libft_test.h	/^# define	COLOR_PART1	/;"	d
+COLOR_PART2	libft-unit-test/include/libft_test.h	/^# define	COLOR_PART2	/;"	d
+COLOR_PART3	libft-unit-test/include/libft_test.h	/^# define	COLOR_PART3	/;"	d
+COLOR_PROTECTED	libft-unit-test/include/libft_test.h	/^# define	COLOR_PROTECTED	/;"	d
+COLOR_SET_KO	libft-unit-test/hardcore-mode/utils.h	/^	COLOR_SET_KO,$/;"	e	enum:e_color_set
+COLOR_SET_OK	libft-unit-test/hardcore-mode/utils.h	/^	COLOR_SET_OK,$/;"	e	enum:e_color_set
+COLOR_SET_RAINBOW	libft-unit-test/hardcore-mode/utils.h	/^	COLOR_SET_RAINBOW,$/;"	e	enum:e_color_set
+COLOR_SPEED_0	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_0	/;"	d
+COLOR_SPEED_05	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_05	/;"	d
+COLOR_SPEED_1	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_1	/;"	d
+COLOR_SPEED_10	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_10	/;"	d
+COLOR_SPEED_2	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_2	/;"	d
+COLOR_SPEED_5	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_5	/;"	d
+COLOR_SPEED_CRASH	libft-unit-test/include/libft_test.h	/^# define	COLOR_SPEED_CRASH /;"	d
+COLOR_SUCCESS	libft-unit-test/include/libft_test.h	/^# define	COLOR_SUCCESS	/;"	d
+COLOR_TIMEOUT	libft-unit-test/include/libft_test.h	/^# define	COLOR_TIMEOUT	/;"	d
+COLOR_WARNING	libft-unit-test/include/libft_test.h	/^# define	COLOR_WARNING	/;"	d
+CSOFLAGS	libft-unit-test/Makefile	/^CSOFLAGS	=	-shared -fPIC$/;"	m
+CSOFLAGS2	libft-unit-test/Makefile	/^CSOFLAGS2	=	$/;"	m
+Color	libftTester/utils/color.hpp	/^enum Color$/;"	g
+DIFF_FILE	libft-unit-test/include/libft_test.h	/^# define	DIFF_FILE	/;"	d
+DIM	libftTester/utils/color.hpp	/^	DIM					= 2,$/;"	e	enum:Color
+DYLD_INTERPOSE	libft-unit-test/assets/malloc.c	/^# define DYLD_INTERPOSE(/;"	d	file:
+DYLIBFLAG	libft-unit-test/Makefile	/^	DYLIBFLAG = -dynamiclib$/;"	m
+DYLIBFLAG	libft-unit-test/Makefile	/^	DYLIBFLAG = -fPIC -shared -ldl$/;"	m
+ENDL	libftTester/utils/color.hpp	/^# define ENDL /;"	d
+FG_BLACK	libftTester/utils/color.hpp	/^	FG_BLACK			= 30,$/;"	e	enum:Color
+FG_BLUE	libftTester/utils/color.hpp	/^	FG_BLUE				= 34,$/;"	e	enum:Color
+FG_CYAN	libftTester/utils/color.hpp	/^	FG_CYAN				= 36,$/;"	e	enum:Color
+FG_DEFAULT	libftTester/utils/color.hpp	/^	FG_DEFAULT			= 39,$/;"	e	enum:Color
+FG_DGRAY	libftTester/utils/color.hpp	/^	FG_DGRAY			= 90,$/;"	e	enum:Color
+FG_GREEN	libftTester/utils/color.hpp	/^	FG_GREEN			= 32,$/;"	e	enum:Color
+FG_LBLUE	libftTester/utils/color.hpp	/^	FG_LBLUE			= 94,$/;"	e	enum:Color
+FG_LCYAN	libftTester/utils/color.hpp	/^	FG_LCYAN			= 96,$/;"	e	enum:Color
+FG_LGRAY	libftTester/utils/color.hpp	/^	FG_LGRAY			= 37,$/;"	e	enum:Color
+FG_LGREEN	libftTester/utils/color.hpp	/^	FG_LGREEN			= 92,$/;"	e	enum:Color
+FG_LMAGENTA	libftTester/utils/color.hpp	/^	FG_LMAGENTA			= 95,$/;"	e	enum:Color
+FG_LRED	libftTester/utils/color.hpp	/^	FG_LRED				= 91,$/;"	e	enum:Color
+FG_LYELLOW	libftTester/utils/color.hpp	/^	FG_LYELLOW			= 93,$/;"	e	enum:Color
+FG_MAGENTA	libftTester/utils/color.hpp	/^	FG_MAGENTA			= 35,$/;"	e	enum:Color
+FG_RED	libftTester/utils/color.hpp	/^	FG_RED				= 31,$/;"	e	enum:Color
+FG_WHITE	libftTester/utils/color.hpp	/^	FG_WHITE			= 97,$/;"	e	enum:Color
+FG_YELLOW	libftTester/utils/color.hpp	/^	FG_YELLOW 			= 33,$/;"	e	enum:Color
+FOR_EACH_IMPL	libft-unit-test/hardcore-mode/utils.h	/^#define FOR_EACH_IMPL(/;"	d
+FRAMEWORK	libft-unit-test/Makefile	/^FRAMEWORK	=	$/;"	m
+GET_NEXT_LINE_BONUS_H	get_next_line/bonus/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GET_NEXT_LINE_BONUS_H	get_next_line/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GET_NEXT_LINE_H	get_next_line/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GET_STDERR	libft-unit-test/include/libft_test.h	/^# define	GET_STDERR(/;"	d
+GET_STDOUT	libft-unit-test/include/libft_test.h	/^# define	GET_STDOUT(/;"	d
+GIGABYTE	libft-unit-test/src/bench_functions.c	/^#define GIGABYTE	/;"	d	file:
+HIDDEN	libftTester/utils/color.hpp	/^	HIDDEN				= 8,$/;"	e	enum:Color
+HIMAGIC	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define HIMAGIC /;"	d	file:
+HP_TIMING_AVAIL	libft-unit-test/hardcore-mode/utils.h	/^# define HP_TIMING_AVAIL /;"	d
+IMPL	libft-unit-test/hardcore-mode/utils.h	/^#define IMPL(/;"	d
+INCDIR	libft-unit-test/Makefile	/^INCDIR		=	.\/include$/;"	m
+INCFLAG	libft-unit-test/Makefile	/^INCFLAG		=	$(addprefix -I,$(INCDIR))$/;"	m
+INIT	libft-unit-test/hardcore-mode/utils.h	/^#define INIT(/;"	d
+INIT_VSFUN	libft-unit-test/src/bench_functions.c	/^#define INIT_VSFUN(/;"	d	file:
+INVISIBLE	libft-unit-test/include/libft_test.h	/^	INVISIBLE,$/;"	e	enum:e_prot
+ITERATIONS	libft-unit-test/hardcore-mode/utils.h	/^# define ITERATIONS /;"	d
+KILOBYTE	libft-unit-test/src/bench_functions.c	/^#define KILOBYTE	/;"	d	file:
+KO_INDEX	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define KO_INDEX	/;"	d	file:
+KO_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define KO_SIZE	/;"	d	file:
+L	libft-unit-test/hardcore-mode/test-strcmp.c	/^# define L(/;"	d	file:
+LARGECHAR	libft-unit-test/hardcore-mode/utils.h	/^# define LARGECHAR /;"	d
+LEAK_HPP	libftTester/utils/leaks.hpp	/^# define LEAK_HPP$/;"	d
+LIBDIR	libft-unit-test/Makefile	/^LIBDIR		=	$/;"	m
+LIBFTDIR	libft-unit-test/Makefile	/^LIBFTDIR	=	..\/libft$/;"	m
+LIBFT_H	Libft/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_PATH	libftTester/Makefile	/^	LIBFT_PATH = \/project\/$/;"	m
+LIBFT_PATH	libftTester/Makefile	/^LIBFT_PATH		= $(PARENT_DIR)$/;"	m
+LIBFT_TEST_H	libft-unit-test/include/libft_test.h	/^# define LIBFT_TEST_H$/;"	d
+LIBMALLOC	libft-unit-test/Makefile	/^LIBMALLOC	=	malloc.dylib$/;"	m
+LIBS	libft-unit-test/Makefile	/^LIBS		=	-lncurses$/;"	m
+LINK_COLOR	libft-unit-test/Makefile	/^LINK_COLOR		=	47$/;"	m
+LINK_COLOR_T	libft-unit-test/Makefile	/^LINK_COLOR_T	=	46$/;"	m
+LL_MAX	Libft/libft.h	/^# define LL_MAX /;"	d
+LOG_FILE	libft-unit-test/include/libft_test.h	/^# define	LOG_FILE	/;"	d
+LOMAGIC	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define LOMAGIC /;"	d	file:
+LONGCHR_NULL	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define LONGCHR_NULL(/;"	d	file:
+LREG	libft-unit-test/src/test_functions.c	/^# define LREG(/;"	d	file:
+MALLOC_DEBUG	libft-unit-test/include/libft_test.h	/^# define	MALLOC_DEBUG	/;"	d
+MALLOC_FUN_NAME	libft-unit-test/assets/malloc.c	/^# define MALLOC_FUN_NAME /;"	d	file:
+MALLOC_FUN_NAME	libft-unit-test/assets/malloc.c	/^void		*MALLOC_FUN_NAME(size_t size)$/;"	f
+MALLOC_MEMSET	libft-unit-test/include/libft_test.h	/^# define	MALLOC_MEMSET	/;"	d
+MALLOC_NULL	libft-unit-test/include/libft_test.h	/^# define	MALLOC_NULL	/;"	d
+MALLOC_RESET	libft-unit-test/include/libft_test.h	/^# define	MALLOC_RESET	/;"	d
+MALLOC_SET_BYTE	libft-unit-test/include/libft_test.h	/^# define	MALLOC_SET_BYTE(/;"	d
+MALLOC_SIZE	libft-unit-test/include/libft_test.h	/^# define	MALLOC_SIZE	/;"	d
+MANDATORY	libftTester/Makefile	/^MANDATORY		= memset bzero memcpy memmove memchr memcmp strlen isalpha isdigit isalnum \\$/;"	m
+MAX	libft-unit-test/src/display_test_result.c	/^#define MAX(/;"	d	file:
+MAX_CHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define MAX_CHAR /;"	d	file:
+MAX_CHAR	libft-unit-test/hardcore-mode/test-strlen.c	/^# define MAX_CHAR /;"	d	file:
+MEGABYTE	libft-unit-test/src/bench_functions.c	/^#define MEGABYTE	/;"	d	file:
+MEMCMP	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define MEMCMP /;"	d	file:
+MEMCMP	libft-unit-test/hardcore-mode/utils.h	/^# define MEMCMP /;"	d
+MEMCPY	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define MEMCPY /;"	d	file:
+MEMCPY	libft-unit-test/hardcore-mode/utils.h	/^# define MEMCPY /;"	d
+MEMCPY_RESULT	libft-unit-test/hardcore-mode/test-memcpy.c	/^# define MEMCPY_RESULT(/;"	d	file:
+MEMSET	libft-unit-test/hardcore-mode/utils.h	/^# define MEMSET /;"	d
+MIDCHAR	libft-unit-test/hardcore-mode/utils.h	/^# define MIDCHAR /;"	d
+MIDDLE_CHAR	libft-unit-test/hardcore-mode/test-strchr.c	/^# define MIDDLE_CHAR /;"	d	file:
+MIN_PAGE_SIZE	libft-unit-test/hardcore-mode/test-memcpy.c	/^# define MIN_PAGE_SIZE /;"	d	file:
+NAME	Libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	libft-unit-test/Makefile	/^NAME		=	libtests$/;"	m
+NORME	libft-unit-test/Makefile	/^NORME		=	$(addsuffix \/*.h,$(INCDIR)) $(addprefix $(SRCDIR)\/,$(SRC))$/;"	m
+NORM_COLOR	libft-unit-test/Makefile	/^NORM_COLOR		=	153$/;"	m
+NORM_COLOR_ERR	libft-unit-test/Makefile	/^NORM_COLOR_ERR	=	160$/;"	m
+NORM_COLOR_T	libft-unit-test/Makefile	/^NORM_COLOR_T	=	141$/;"	m
+NORM_COLOR_WAR	libft-unit-test/Makefile	/^NORM_COLOR_WAR	=	214$/;"	m
+NOT_PROTECTED	libft-unit-test/include/libft_test.h	/^	NOT_PROTECTED$/;"	e	enum:e_prot
+NULLRET	libft-unit-test/hardcore-mode/test-strchr.c	/^# define NULLRET(/;"	d	file:
+N_DOCKER	libftTester/Makefile	/^	docker run -e IN_DOCKER=TRUE -dti --name mc -v $(LIBFT_PATH):\/project\/ -v $(PARENT_DIR)\/libftTester:\/project\/libftTester mi$/;"	m
+OBJ	libft-unit-test/Makefile	/^OBJ			=	$(addprefix $(OBJDIR)\/, $(addsuffix .o, $(basename $(SRC))))$/;"	m
+OBJDIR	libft-unit-test/Makefile	/^OBJDIR		=	obj$/;"	m
+OBJS	Libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OBJS_BONUS	Libft/Makefile	/^OBJS_BONUS = $(SRCS_BONUS:.c=.o)$/;"	m
+OBJ_COLOR	libft-unit-test/Makefile	/^OBJ_COLOR		=	122$/;"	m
+OBJ_COLOR_T	libft-unit-test/Makefile	/^OBJ_COLOR_T		=	123$/;"	m
+OFF_ALLOC_BYTE1	libft-unit-test/include/libft_test.h	/^# define	OFF_ALLOC_BYTE1	/;"	d
+OFF_ALLOC_BYTE2	libft-unit-test/include/libft_test.h	/^# define	OFF_ALLOC_BYTE2	/;"	d
+OFF_ALLOC_SIZE	libft-unit-test/include/libft_test.h	/^# define	OFF_ALLOC_SIZE	/;"	d
+OFF_TIME_BEGIN	libft-unit-test/include/libft_test.h	/^# define	OFF_TIME_BEGIN	/;"	d
+OFF_TIME_END	libft-unit-test/include/libft_test.h	/^# define	OFF_TIME_END	/;"	d
+OFF_TIME_MID	libft-unit-test/include/libft_test.h	/^# define	OFF_TIME_MID	/;"	d
+OK_INDEX	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define OK_INDEX	/;"	d	file:
+OK_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define OK_SIZE	/;"	d	file:
+OPEN_FD_MAX	get_next_line/bonus/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
+OPEN_FD_MAX	get_next_line/get_next_line.h	/^# define OPEN_FD_MAX /;"	d
+OPEN_FD_MAX	get_next_line/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
+OPTFLAGS	libft-unit-test/Makefile	/^OPTFLAGS	=	-O2 -funroll-loops$/;"	m
+OPT_ITERATIONS	libft-unit-test/hardcore-mode/utils.h	/^# define OPT_ITERATIONS /;"	d
+OPT_RANDOM	libft-unit-test/hardcore-mode/utils.h	/^# define OPT_RANDOM /;"	d
+OPT_SEED	libft-unit-test/hardcore-mode/utils.h	/^# define OPT_SEED /;"	d
+OS	libft-unit-test/Makefile	/^OS			:=	$(shell uname -s)$/;"	m
+PARENT_DIR	libftTester/Makefile	/^PARENT_DIR		= $(shell dirname $(shell pwd))$/;"	m
+PATH	gnl_tc/test.c	/^#define PATH /;"	d	file:
+PATH	libft_tc/Libft.c	/^#define PATH /;"	d	file:
+PATH	libft_tc/strnstr_null.c	/^#define PATH /;"	d	file:
+PRINT_DIFF_ASCII	libft-unit-test/include/libft_test.h	/^# define	PRINT_DIFF_ASCII(/;"	d
+PROTECTED	libft-unit-test/include/libft_test.h	/^	PROTECTED,$/;"	e	enum:e_prot
+RAINBOW_INDEX	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define RAINBOW_INDEX	/;"	d	file:
+RAINBOW_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define RAINBOW_SIZE	/;"	d	file:
+REG	libft-unit-test/src/test_functions.c	/^#define		REG(/;"	d	file:
+RESET_ALL	libftTester/utils/color.hpp	/^	RESET_ALL			= 0,$/;"	e	enum:Color
+RESET_BLINK	libftTester/utils/color.hpp	/^	RESET_BLINK			= 25,$/;"	e	enum:Color
+RESET_BOLD	libftTester/utils/color.hpp	/^	RESET_BOLD			= 21,$/;"	e	enum:Color
+RESET_DIFF	libft-unit-test/include/libft_test.h	/^# define	RESET_DIFF	/;"	d
+RESET_DIM	libftTester/utils/color.hpp	/^	RESET_DIM			= 22,$/;"	e	enum:Color
+RESET_HIDDEN	libftTester/utils/color.hpp	/^	RESET_HIDDEN		= 28,$/;"	e	enum:Color
+RESET_REVERSED	libftTester/utils/color.hpp	/^	RESET_REVERSED		= 27,$/;"	e	enum:Color
+RESET_UNDERLINED	libftTester/utils/color.hpp	/^	RESET_UNDERLINED	= 24,$/;"	e	enum:Color
+REVERSED	libftTester/utils/color.hpp	/^	REVERSED			= 7,$/;"	e	enum:Color
+RUNT_COLR_T	libft-unit-test/Makefile	/^RUNT_COLR_T		=	7$/;"	m
+RUN_COLOR	libft-unit-test/Makefile	/^RUN_COLOR		=	147$/;"	m
+SANDBOX	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define	SANDBOX(/;"	d	file:
+SANDBOX	libft-unit-test/include/libft_test.h	/^# define	SANDBOX(/;"	d
+SANDBOX_BENCH	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_BENCH(/;"	d
+SANDBOX_CRASH	libft-unit-test/hardcore-mode/utils.h	/^# define	SANDBOX_CRASH	/;"	d
+SANDBOX_CRASH	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_CRASH	/;"	d
+SANDBOX_HARDCORE	libft-unit-test/hardcore-mode/hardcore-main.c	/^#define SANDBOX_HARDCORE(/;"	d	file:
+SANDBOX_IRAISE	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_IRAISE(/;"	d
+SANDBOX_KO	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_KO(/;"	d
+SANDBOX_PROT	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_PROT(/;"	d
+SANDBOX_RAISE	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_RAISE(/;"	d
+SANDBOX_RESULT	libft-unit-test/hardcore-mode/utils.h	/^# define	SANDBOX_RESULT	/;"	d
+SANDBOX_RESULT	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_RESULT	/;"	d
+SANDBOX_RETURN	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_RETURN	/;"	d
+SANDBOX_SPEED	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_SPEED(/;"	d
+SANDBOX_STRINGIFY	libft-unit-test/include/libft_test.h	/^# define	SANDBOX_STRINGIFY(/;"	d
+SET_BENCHITER	libft-unit-test/include/libft_test.h	/^# define	SET_BENCHITER(/;"	d
+SET_BENCHTYPE	libft-unit-test/include/libft_test.h	/^# define	SET_BENCHTYPE(/;"	d
+SET_CURRENT_PROTECTED	libft-unit-test/include/libft_test.h	/^# define	SET_CURRENT_PROTECTED(/;"	d
+SET_CURRENT_TEST_CODE	libft-unit-test/include/libft_test.h	/^# define	SET_CURRENT_TEST_CODE(/;"	d
+SET_DIFF	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF(/;"	d
+SET_DIFF_ASCII	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_ASCII(/;"	d
+SET_DIFF_BYTES	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_BYTES(/;"	d
+SET_DIFF_CUSTOM	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_CUSTOM(/;"	d
+SET_DIFF_DOUBLE	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_DOUBLE(/;"	d
+SET_DIFF_INT	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_INT(/;"	d
+SET_DIFF_PTR	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_PTR(/;"	d
+SET_EXPLANATION	libft-unit-test/include/libft_test.h	/^# define	SET_EXPLANATION(/;"	d
+SET_TEST_TEXT	libft-unit-test/include/libft_test.h	/^# define	SET_TEST_TEXT(/;"	d
+SHARED_MEM_FILE	libft-unit-test/include/libft_test.h	/^# define	SHARED_MEM_FILE	/;"	d
+SIGSEGV_HPP	libftTester/utils/sigsegv.hpp	/^# define SIGSEGV_HPP$/;"	d
+SIMPLE_COPY	libft-unit-test/hardcore-mode/test-strcpy.c	/^#define SIMPLE_COPY(/;"	d	file:
+SIMPLE_MEMCMP	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define SIMPLE_MEMCMP /;"	d	file:
+SIMPLE_STRCMP	libft-unit-test/hardcore-mode/test-strcmp.c	/^# define SIMPLE_STRCMP /;"	d	file:
+SIMPLE_STRCPY	libft-unit-test/hardcore-mode/test-strcpy.c	/^SIMPLE_STRCPY (CHAR *dst, const CHAR *src)$/;"	f
+SKIP_SEMICOLON	libft-unit-test/src/display_test_result.c	/^#define SKIP_SEMICOLON(/;"	d	file:
+SKIP_SPACE	libft-unit-test/src/display_test_result.c	/^#define SKIP_SPACE(/;"	d	file:
+SMALL_CHAR	libft-unit-test/hardcore-mode/utils.h	/^# define SMALL_CHAR /;"	d
+SONAME	libft-unit-test/Makefile	/^SONAME		=	libft.so$/;"	m
+SRC	libft-unit-test/Makefile	/^SRC			=	src\/main.c						\\$/;"	m
+SRCDIR	libft-unit-test/Makefile	/^SRCDIR		=	.\/$/;"	m
+SRCS	Libft/Makefile	/^SRCS = ft_isalpha.c 	\\$/;"	m
+SRCS_BONUS	Libft/Makefile	/^SRCS_BONUS = ft_lstnew.c \\$/;"	m
+STDERR_TO_BUFF	libft-unit-test/include/libft_test.h	/^# define	STDERR_TO_BUFF	/;"	d
+STDOUT_TO_BUFF	libft-unit-test/include/libft_test.h	/^# define	STDOUT_TO_BUFF	/;"	d
+STRCMP	libft-unit-test/hardcore-mode/utils.h	/^# define STRCMP /;"	d
+STRCPY	libft-unit-test/hardcore-mode/utils.h	/^# define STRCPY /;"	d
+STRCPY_RESULT	libft-unit-test/hardcore-mode/test-strcpy.c	/^# define STRCPY_RESULT(/;"	d	file:
+STREQ	libft-unit-test/hardcore-mode/utils.h	/^# define STREQ(/;"	d
+STRING_1	libft-unit-test/src/test_functions.c	/^#define		STRING_1	/;"	d	file:
+STRING_2	libft-unit-test/src/test_functions.c	/^#define		STRING_2	/;"	d	file:
+STRING_3	libft-unit-test/src/test_functions.c	/^#define		STRING_3	/;"	d	file:
+STRING_4	libft-unit-test/src/test_functions.c	/^#define		STRING_4	/;"	d	file:
+STRLEN	libft-unit-test/hardcore-mode/utils.h	/^# define STRLEN /;"	d
+STRNCPY_RESULT	libft-unit-test/hardcore-mode/test-strncpy.c	/^# define STRNCPY_RESULT(/;"	d	file:
+SUBTEST_SIZE	libft-unit-test/include/libft_test.h	/^# define	SUBTEST_SIZE	/;"	d
+TESTS_PATH	libftTester/Makefile	/^TESTS_PATH		= tests\/$/;"	m
+TEST_CRASH	libft-unit-test/include/libft_test.h	/^	TEST_CRASH,$/;"	e	enum:e_values
+TEST_FAILED	libft-unit-test/hardcore-mode/utils.h	/^	TEST_FAILED,$/;"	e	enum:e_tests
+TEST_FAILED	libft-unit-test/include/libft_test.h	/^	TEST_FAILED,$/;"	e	enum:e_values
+TEST_FINISHED	libft-unit-test/include/libft_test.h	/^	TEST_FINISHED,$/;"	e	enum:e_values
+TEST_FUNCTION	libft-unit-test/hardcore-mode/utils.h	/^# define TEST_FUNCTION /;"	d
+TEST_INTERUPT	libft-unit-test/include/libft_test.h	/^	TEST_INTERUPT,$/;"	e	enum:e_values
+TEST_INVISIBLE	libft-unit-test/include/libft_test.h	/^	TEST_INVISIBLE,$/;"	e	enum:e_values
+TEST_KO	libft-unit-test/include/libft_test.h	/^	TEST_KO,$/;"	e	enum:e_values
+TEST_MISSING	libft-unit-test/include/libft_test.h	/^	TEST_MISSING,$/;"	e	enum:e_values
+TEST_NOCRASH	libft-unit-test/include/libft_test.h	/^	TEST_NOCRASH,$/;"	e	enum:e_values
+TEST_PROT	libft-unit-test/include/libft_test.h	/^	TEST_PROT,$/;"	e	enum:e_values
+TEST_SPEED	libft-unit-test/include/libft_test.h	/^	TEST_SPEED,$/;"	e	enum:e_values
+TEST_SUCCESS	libft-unit-test/hardcore-mode/utils.h	/^	TEST_SUCCESS$/;"	e	enum:e_tests
+TEST_SUCCESS	libft-unit-test/include/libft_test.h	/^	TEST_SUCCESS,$/;"	e	enum:e_values
+TEST_TIMEOUT	libft-unit-test/include/libft_test.h	/^	TEST_TIMEOUT,$/;"	e	enum:e_values
+TIMEOUT_MILLIS	libft-unit-test/include/libft_test.h	/^# define	TIMEOUT_MILLIS	/;"	d
+TIME_BEGIN	libft-unit-test/include/libft_test.h	/^# define	TIME_BEGIN	/;"	d
+TIME_DIFF_LIB	libft-unit-test/include/libft_test.h	/^# define	TIME_DIFF_LIB	/;"	d
+TIME_DIFF_SYS	libft-unit-test/include/libft_test.h	/^# define	TIME_DIFF_SYS	/;"	d
+TIME_END	libft-unit-test/include/libft_test.h	/^# define	TIME_END	/;"	d
+TIME_MID	libft-unit-test/include/libft_test.h	/^# define	TIME_MID	/;"	d
+TIME_READ_DATA	libft-unit-test/include/libft_test.h	/^# define	TIME_READ_DATA	/;"	d
+TIME_SET_DATA	libft-unit-test/include/libft_test.h	/^# define	TIME_SET_DATA	/;"	d
+TIME_SPEEDRATE	libft-unit-test/include/libft_test.h	/^# define	TIME_SPEEDRATE	/;"	d
+TMPLIB	libft-unit-test/Makefile	/^TMPLIB		=	$(ASSETDIR)\/tmp$/;"	m
+TRIM_SET_PLACEHOLDER	libft-unit-test/src/test_functions.c	/^#define TRIM_SET_PLACEHOLDER /;"	d	file:
+UCHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define UCHAR /;"	d	file:
+UCHAR	libft-unit-test/hardcore-mode/utils.h	/^# define UCHAR /;"	d
+UNAME	libftTester/Makefile	/^UNAME = $(shell uname -s)$/;"	m
+UNDERLINED	libftTester/utils/color.hpp	/^	UNDERLINED			= 4,$/;"	e	enum:Color
+UTILS	libftTester/Makefile	/^UTILS			= $(addprefix utils\/, sigsegv.cpp color.cpp check.cpp leaks.cpp)$/;"	m
+VALGRIND	libftTester/Makefile	/^	VALGRIND = valgrind -q --leak-check=full$/;"	m
+VISIBLE	libft-unit-test/include/libft_test.h	/^	VISIBLE,$/;"	e	enum:e_prot
+VOID_STDERR	libft-unit-test/include/libft_test.h	/^# define	VOID_STDERR	/;"	d
+VOID_STDOUT	libft-unit-test/include/libft_test.h	/^# define	VOID_STDOUT	/;"	d
+VPATH	libft-unit-test/Makefile	/^VPATH		=	$(VPATH_TMP:.\/=)$/;"	m
+VSOPEN	libftTester/Makefile	/^VSOPEN			= $(addprefix vs, $(MANDATORY)) $(addprefix vs, $(BONUS))$/;"	m
+WRAPNAME	libft-unit-test/Makefile	/^WRAPNAME	=	run_test$/;"	m
+_GNU_SOURCE	libft-unit-test/assets/malloc.c	/^# define _GNU_SOURCE$/;"	d	file:
+_MALLOC_DEBUG	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_DEBUG	/;"	d
+_MALLOC_DISABLE	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_DISABLE	/;"	d
+_MALLOC_ENABLE	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_ENABLE	/;"	d
+_MALLOC_MEMSET	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_MEMSET	/;"	d
+_MALLOC_NULL	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_NULL	/;"	d
+_MALLOC_RESET	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_RESET	/;"	d
+_MALLOC_SIZE	libft-unit-test/include/libft_test.h	/^# define	_MALLOC_SIZE	/;"	d
+_SANDBOX_RAISE	libft-unit-test/include/libft_test.h	/^# define	_SANDBOX_RAISE(/;"	d
+__delNum	libft-unit-test/src/test_functions.c	/^int				__delNum = 0;$/;"	v
+__i	libft-unit-test/hardcore-mode/utils.h	/^static int				__i;$/;"	v
+__start_impls	libft-unit-test/hardcore-mode/utils.h	/^static impl_t			*__start_impls;$/;"	v
+_stdout	libft-unit-test/src/main.c	/^int		_stdout;$/;"	v
+a	gnl_tc/static.c	/^	char	*a;$/;"	m	struct:s_str	file:
+a	gnl_tc/static.c	/^	int	a;$/;"	m	struct:s_line	file:
+addOne	libftTester/tests/ft_lstiter_test.cpp	/^void addOne(void * p) {++*(int*)p;}$/;"	f
+addOne	libftTester/tests/ft_lstmap_test.cpp	/^void * addOne(void * p) {void * r = malloc(sizeof(int)); *(int*)r = *(int*)p + 1; return (r);}$/;"	f
+addOne	libftTester/tests/ft_strmapi_test.cpp	/^char addOne(unsigned int i, char c) {return (i + c);}$/;"	f
+add_fun_subbench	libft-unit-test/src/bench_functions.c	/^#define			add_fun_subbench(/;"	d	file:
+add_fun_subbench_	libft-unit-test/src/bench_functions.c	/^void			add_fun_subbench_(void (*fun)(void *ptr1, void *ptr2), char *funname) {$/;"	f
+add_fun_subtest	libft-unit-test/src/test_functions.c	/^#define			add_fun_subtest(/;"	d	file:
+add_fun_subtest_	libft-unit-test/src/test_functions.c	/^void			add_fun_subtest_(void (*fun)(void *ptr), char *funname) {$/;"	f
+alloc_byte_1	libft-unit-test/include/libft_test.h	/^	char		alloc_byte_1;$/;"	m	struct:s_shared_mem_map
+alloc_byte_2	libft-unit-test/include/libft_test.h	/^	char		alloc_byte_2;$/;"	m	struct:s_shared_mem_map
+alloc_size	libft-unit-test/include/libft_test.h	/^	size_t		alloc_size;$/;"	m	struct:s_shared_mem_map
+arg	libft-unit-test/include/libft_test.h	/^	void	*arg;$/;"	m	struct:s_option
+assign_ret	Libft/ft_itoa.c	/^static void	assign_ret(char *str, int n, int is_neg)$/;"	f	file:
+b	gnl_tc/static.c	/^	char	*b;$/;"	m	struct:s_str	file:
+b	gnl_tc/static.c	/^	int	b;$/;"	m	struct:s_line	file:
+begin	libft-unit-test/include/libft_test.h	/^	uint64_t	begin;$/;"	m	struct:s_tdiff
+bench_ft_atoi	libft-unit-test/src/bench_functions.c	/^void            bench_ft_atoi(void){$/;"	f
+bench_ft_atoi_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_atoi_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_bzero	libft-unit-test/src/bench_functions.c	/^void            bench_ft_bzero(void){$/;"	f
+bench_ft_bzero_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_bzero_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_bzero_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_bzero_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_bzero_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_bzero_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memccpy	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memccpy(void){$/;"	f
+bench_ft_memccpy_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memccpy_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memccpy_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memccpy_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memccpy_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memccpy_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memchr	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memchr(void) {$/;"	f
+bench_ft_memchr_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memchr_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memchr_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memchr_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memchr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memchr_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcmp	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memcmp(void){$/;"	f
+bench_ft_memcmp_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcmp_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcmp_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcmp_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcmp_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcmp_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcpy	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memcpy(void){$/;"	f
+bench_ft_memcpy_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcpy_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcpy_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcpy_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memcpy_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memcpy_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memmove	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memmove(void){$/;"	f
+bench_ft_memmove_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memmove_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memmove_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memmove_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memmove_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memmove_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memset	libft-unit-test/src/bench_functions.c	/^void            bench_ft_memset(void) {$/;"	f
+bench_ft_memset_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memset_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memset_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memset_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_memset_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_memset_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcat	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strcat(void){$/;"	f
+bench_ft_strcat_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcat_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcat_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcat_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcat_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcat_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strchr	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strchr(void){$/;"	f
+bench_ft_strchr_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strchr_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strchr_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strchr_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strchr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strchr_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcmp	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strcmp(void){$/;"	f
+bench_ft_strcmp_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcmp_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcmp_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcmp_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcmp_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcmp_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcpy	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strcpy(void) {$/;"	f
+bench_ft_strcpy_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcpy_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcpy_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcpy_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strcpy_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strcpy_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strdup	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strdup(void) {$/;"	f
+bench_ft_strdup_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strdup_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strdup_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strdup_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strdup_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strdup_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlcat	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strlcat(void){$/;"	f
+bench_ft_strlcat_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlcat_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlcat_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlcat_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlcat_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlcat_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlen	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strlen(void) {$/;"	f
+bench_ft_strlen_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlen_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlen_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlen_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strlen_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strlen_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncat	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strncat(void){$/;"	f
+bench_ft_strncat_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncat_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncat_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncat_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncat_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncat_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncmp	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strncmp(void){$/;"	f
+bench_ft_strncmp_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncmp_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncmp_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncmp_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncmp_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncmp_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncpy	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strncpy(void){$/;"	f
+bench_ft_strncpy_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncpy_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncpy_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncpy_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strncpy_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strncpy_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strnstr	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strnstr(void){$/;"	f
+bench_ft_strnstr_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strnstr_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strnstr_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strnstr_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strnstr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strnstr_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strrchr	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strrchr(void){$/;"	f
+bench_ft_strrchr_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strrchr_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strrchr_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strrchr_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strrchr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strrchr_smallbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strstr	libft-unit-test/src/bench_functions.c	/^void            bench_ft_strstr(void){$/;"	f
+bench_ft_strstr_fatbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strstr_fatbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strstr_medbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strstr_medbench(void *ptr, void *vsptr) {$/;"	f
+bench_ft_strstr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_ft_strstr_smallbench(void *ptr, void *vsptr) {$/;"	f
+buf1	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned char	*buf1, *buf2;$/;"	v
+buf2	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned char	*buf1, *buf2;$/;"	v
+butify	libft-unit-test/src/display_test_result.c	/^static char	*butify(char *code) {$/;"	f	file:
+check	libft-unit-test/hardcore-mode/test-utils.c	/^check (int thing, int number)$/;"	f
+check	libftTester/utils/check.cpp	/^void check(bool succes)$/;"	f
+check1	libft-unit-test/hardcore-mode/test-memcmp.c	/^check1 (void)$/;"	f	file:
+check1	libft-unit-test/hardcore-mode/test-strncmp.c	/^check1 (void)$/;"	f	file:
+check2	libft-unit-test/hardcore-mode/test-strncmp.c	/^check2 (void)$/;"	f	file:
+check_result	libft-unit-test/hardcore-mode/test-memcmp.c	/^check_result (impl_t *impl, const CHAR *s1, const CHAR *s2, size_t len,$/;"	f	file:
+check_result	libft-unit-test/hardcore-mode/test-strcmp.c	/^check_result (impl_t *impl,$/;"	f	file:
+check_result	libft-unit-test/hardcore-mode/test-strncmp.c	/^check_result (impl_t *impl, const char *s1, const char *s2, size_t n,$/;"	f	file:
+check_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^check_strcmp (void)$/;"	f	file:
+code	libft-unit-test/include/libft_test.h	/^	char	*code;$/;"	m	struct:s_errs
+contains_forbidden_content	libft-unit-test/src/display_test_result.c	/^static bool	contains_forbidden_content(const char *code_line)$/;"	f	file:
+content	Libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
+content	libft-unit-test/include/libft_test.h	/^	void			*content;$/;"	m	struct:s_list
+cp	libft-unit-test/hardcore-mode/test-strcpy.c	/^char *cp;$/;"	v
+current_benchiter	libft-unit-test/src/init.c	/^int				current_benchiter = 1;$/;"	v
+current_benchtype	libft-unit-test/src/init.c	/^int				current_benchtype = 0;$/;"	v
+current_explication	libft-unit-test/src/init.c	/^char			*current_explication = "";$/;"	v
+current_fun_name	libft-unit-test/src/init.c	/^char			*current_fun_name = "";$/;"	v
+current_fun_visibility	libft-unit-test/src/init.c	/^int				current_fun_visibility = 0;$/;"	v
+current_part	libft-unit-test/src/init.c	/^int				current_part = -1;$/;"	v
+current_protected	libft-unit-test/src/init.c	/^int				current_protected = 0;$/;"	v
+current_subtest_id	libft-unit-test/src/init.c	/^int				current_subtest_id = 0;$/;"	v
+current_test	libft-unit-test/src/init.c	/^char			*current_test = "";$/;"	v
+current_test_code	libft-unit-test/src/init.c	/^char			*current_test_code = "";$/;"	v
+current_test_id	libft-unit-test/src/init.c	/^int				current_test_id = 0;$/;"	v
+data	libft-unit-test/include/libft_test.h	/^	char					data[128];$/;"	m	struct:s_tests
+data	libft-unit-test/include/libft_test.h	/^	char	*data;$/;"	m	struct:s_errs
+diff	libft-unit-test/include/libft_test.h	/^	char	*diff;$/;"	m	struct:s_errs
+disp_indent	libft-unit-test/Makefile	/^disp_indent	=	for I in `seq 1 $(MAKELEVEL)`; do \\$/;"	m
+disp_title	libft-unit-test/Makefile	/^disp_title	=	$(call disp_indent); \\$/;"	m
+display_part	libft-unit-test/src/display_test_result.c	/^static void	display_part(void) {$/;"	f	file:
+display_test_result	libft-unit-test/src/display_test_result.c	/^void    display_test_result(int value, char *explanations)$/;"	f
+dl	libft-unit-test/hardcore-mode/test-strstr.c	/^#define dl /;"	d	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memccpy.c	/^do_one_test (impl_t *impl, void *dst, const void *src, int c, size_t len,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memchr.c	/^do_one_test (impl_t *impl, const char *s, int c, size_t n, char *exp_res)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memcmp.c	/^do_one_test (impl_t *impl, const CHAR *s1, const CHAR *s2, size_t len,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memcpy.c	/^do_one_test (impl_t *impl, char *dst, const char *src,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memmove.c	/^do_one_test (impl_t *impl, char *dst, char *src, const char *orig_src,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-memset.c	/^do_one_test (impl_t *impl, char *s, int c, size_t n)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strcat.c	/^do_one_test (impl_t *impl, char *dst, const char *src)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strchr.c	/^do_one_test (impl_t *impl, const CHAR *s, int c, const CHAR *exp_res)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strcmp.c	/^do_one_test (impl_t *impl,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strcpy.c	/^do_one_test (impl_t *impl, CHAR *dst, const CHAR *src,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strlen.c	/^do_one_test (impl_t *impl, const CHAR *s, size_t exp_len)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strncat.c	/^do_one_test (impl_t *impl, char *dst, const char *src, size_t n)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strncmp.c	/^do_one_test (impl_t *impl, const char *s1, const char *s2, size_t n,$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strncpy.c	/^do_one_test (impl_t *impl, char *dst, const char *src, size_t len, size_t n)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strrchr.c	/^do_one_test (impl_t *impl, const CHAR *s, int c, CHAR *exp_res)$/;"	f	file:
+do_one_test	libft-unit-test/hardcore-mode/test-strstr.c	/^do_one_test (impl_t *impl, const char *s1, const char *s2, char *exp_result)$/;"	f	file:
+do_page_test	libft-unit-test/hardcore-mode/test-strncmp.c	/^do_page_test (size_t offset1, size_t offset2, char *s2)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memccpy.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memchr.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memcmp.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memcpy.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memmove.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-memset.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strcat.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strchr.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strcmp.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strcpy.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strlen.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strncat.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strncmp.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strncpy.c	/^do_random_tests (void)$/;"	f	file:
+do_random_tests	libft-unit-test/hardcore-mode/test-strrchr.c	/^do_random_tests (void)$/;"	f	file:
+do_srandom	libft-unit-test/hardcore-mode/hardcore-main.c	/^int				ret, do_srandom = 1;$/;"	v
+do_test	libft-unit-test/hardcore-mode/test-memccpy.c	/^do_test (size_t align1, size_t align2, int c, size_t len, size_t n,$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-memchr.c	/^do_test (size_t align, size_t pos, size_t len, int seek_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-memcmp.c	/^do_test (size_t align1, size_t align2, size_t len, int exp_result)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-memcpy.c	/^do_test (size_t align1, size_t align2, size_t len)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-memmove.c	/^do_test (size_t align1, size_t align2, size_t len)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-memset.c	/^do_test (size_t align, int c, size_t len)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strcat.c	/^do_test (size_t align1, size_t align2, size_t len1, size_t len2, int max_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strchr.c	/^do_test (size_t align, size_t pos, size_t len, int seek_char, int max_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strcmp.c	/^do_test (size_t align1, size_t align2, size_t len, int max_char,$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strcpy.c	/^do_test (size_t align1, size_t align2, size_t len, int max_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strlen.c	/^do_test (size_t align, size_t len)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strncat.c	/^do_test (size_t align1, size_t align2, size_t len1, size_t len2,$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strncmp.c	/^do_test (size_t align1, size_t align2, size_t len, size_t n, int max_char,$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strncpy.c	/^do_test (size_t align1, size_t align2, size_t len, size_t n, int max_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strrchr.c	/^do_test (size_t align, size_t pos, size_t len, int seek_char, int max_char)$/;"	f	file:
+do_test	libft-unit-test/hardcore-mode/test-strstr.c	/^do_test (size_t align1, size_t align2, size_t len1, size_t len2,$/;"	f	file:
+do_test_limit	libft-unit-test/hardcore-mode/test-strncmp.c	/^do_test_limit (size_t align1, size_t align2, size_t len, size_t n, int max_char,$/;"	f	file:
+e_color_set	libft-unit-test/hardcore-mode/utils.h	/^enum e_color_set$/;"	g
+e_prot	libft-unit-test/include/libft_test.h	/^enum		e_prot {$/;"	g
+e_tests	libft-unit-test/hardcore-mode/utils.h	/^enum e_tests {$/;"	g
+e_values	libft-unit-test/include/libft_test.h	/^enum		e_values {$/;"	g
+electric_alloc	libft-unit-test/src/main.c	/^void	*electric_alloc(size_t size)$/;"	f
+electric_alloc_rev	libft-unit-test/src/main.c	/^void	*electric_alloc_rev(size_t size)$/;"	f
+end	libft-unit-test/include/libft_test.h	/^	uint64_t	end;$/;"	m	struct:s_tdiff
+equal	libft-unit-test/hardcore-mode/test-utils.c	/^equal (const char *a, const char *b, int number)$/;"	f
+error	libft-unit-test/hardcore-mode/error.c	/^void error(int code, int a, const char *pattern, ...)$/;"	f
+errors	libft-unit-test/hardcore-mode/hardcore-main.c	/^int				errors = 0;$/;"	v
+exec_color	libft-unit-test/Makefile	/^exec_color	=	$(call disp_indent); \\$/;"	m
+f_striter	libft-unit-test/src/test_functions.c	/^void			f_striter(char *s) { *s = 'F'; }$/;"	f
+f_striteri	libft-unit-test/src/test_functions.c	/^void			f_striteri(unsigned i, char *s) { *s = i + '0'; }$/;"	f
+f_strmap	libft-unit-test/src/test_functions.c	/^char			f_strmap(char c) { return (c + 7); }$/;"	f
+f_strmapi	libft-unit-test/src/test_functions.c	/^char			f_strmapi(unsigned i, char c) { return (c + i); }$/;"	f
+fd_pipe	libft-unit-test/src/main.c	/^int		fd_pipe[2];$/;"	v
+fd_to_buffer	libft-unit-test/src/main.c	/^void	fd_to_buffer(int fd) {$/;"	f
+fg_color_to_bg	libft-unit-test/src/display_test_result.c	/^static char *fg_color_to_bg(char *color, int buffer)$/;"	f	file:
+flags	libft-unit-test/include/libft_test.h	/^	int						flags;$/;"	m	struct:s_tests
+fn	libft-unit-test/hardcore-mode/utils.h	/^	void (*fn) (void);$/;"	m	struct:__anon2
+forbidden_functions	libft-unit-test/src/display_test_result.c	/^const char		*forbidden_functions[] = {$/;"	v
+free	libftTester/utils/leaks.cpp	/^void free(void * p) throw()$/;"	f
+freeList	libftTester/tests/ft_lstadd_back_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstadd_front_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstclear_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstdelone_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstiter_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstlast_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstmap_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeList	libftTester/tests/ft_lstsize_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
+freeTab	libftTester/tests/ft_split_test.cpp	/^void freeTab(char * * tab)$/;"	f
+free_alloc	Libft/ft_lstmap.c	/^static t_list	*free_alloc(t_list **lst, void (*del)(void *))$/;"	f	file:
+free_alloc	Libft/ft_split.c	/^static char	**free_alloc(char **ptr, int i)$/;"	f	file:
+ft	libft-unit-test/hardcore-mode/hardcore-main.c	/^struct { int (*fun)(void *); char *name; void *ft; } test_table[18] = {$/;"	m	struct:__anon1	file:
+ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_bzero	Libft/ft_bzero.c	/^void	ft_bzero(void *ptr, size_t n)$/;"	f
+ft_calloc	Libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_clock	libft-unit-test/src/main.c	/^unsigned long long	ft_clock(void) {$/;"	f
+ft_convert	libft-unit-test/assets/malloc.c	/^int     ft_convert(char *buffer, int64_t n, int b, int maj)$/;"	f
+ft_exit	libft-unit-test/src/main.c	/^void	ft_exit(char *str, ...) {$/;"	f
+ft_free	get_next_line/bonus/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_free	get_next_line/get_next_line.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_free	get_next_line/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_isalnum	Libft/ft_isalnum.c	/^int	ft_isalnum(int ch)$/;"	f
+ft_isalpha	Libft/ft_isalpha.c	/^int	ft_isalpha(int ch)$/;"	f
+ft_isascii	Libft/ft_isascii.c	/^int	ft_isascii(int ch)$/;"	f
+ft_isdigit	Libft/ft_isdigit.c	/^int	ft_isdigit(int ch)$/;"	f
+ft_isprint	Libft/ft_isprint.c	/^int	ft_isprint(int ch)$/;"	f
+ft_itoa	Libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_len	Libft/ft_itoa.c	/^static int	ft_len(int n)$/;"	f	file:
+ft_lstadd_back	Libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_front	Libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
+ft_lstclear	Libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
+ft_lstdelone	Libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))$/;"	f
+ft_lstiter	Libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstlast	Libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstmap	Libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstnew	Libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstsize	Libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_memchr	Libft/ft_memchr.c	/^void	*ft_memchr(const void *str, int ch, size_t n)$/;"	f
+ft_memcmp	Libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	Libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f
+ft_memmove	Libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
+ft_memset	Libft/ft_memset.c	/^void	*ft_memset(void *ptr, int value, size_t len)$/;"	f
+ft_putchar_fd	Libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char ch, int fd)$/;"	f
+ft_putendl_fd	Libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *str, int fd)$/;"	f
+ft_putnbr_fd	Libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr_fd	Libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *str, int fd)$/;"	f
+ft_putwstr	libft-unit-test/src/additional_functions.c	/^int     ft_putwstr(wchar_t *wstr, char *buff)$/;"	f
+ft_raise	libft-unit-test/src/main.c	/^void	ft_raise(int s) {$/;"	f
+ft_sig_crash	libft-unit-test/src/signal.c	/^void		ft_sig_crash(int s) {$/;"	f
+ft_sig_failed	libft-unit-test/src/signal.c	/^void		ft_sig_failed(int s) {$/;"	f
+ft_sig_missing	libft-unit-test/src/signal.c	/^void		ft_sig_missing(int s) {$/;"	f
+ft_sig_success	libft-unit-test/src/signal.c	/^void		ft_sig_success(int s) {$/;"	f
+ft_sig_timeout	libft-unit-test/src/signal.c	/^void		ft_sig_timeout(int s) {$/;"	f
+ft_sig_user_interupt	libft-unit-test/src/signal.c	/^void		ft_sig_user_interupt(int s) {$/;"	f
+ft_split	Libft/ft_split.c	/^char	**ft_split(char const *str, char ch)$/;"	f
+ft_strchr	Libft/ft_strchr.c	/^char	*ft_strchr(const char *str, int ch)$/;"	f
+ft_strdup	Libft/ft_strdup.c	/^char	*ft_strdup(const char *str)$/;"	f
+ft_striteri	Libft/ft_striteri.c	/^void	ft_striteri(char *str, void (*f)(unsigned int, char *))$/;"	f
+ft_strjoin	Libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strlcat	Libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)$/;"	f
+ft_strlcpy	Libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)$/;"	f
+ft_strlen	Libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strmapi	Libft/ft_strmapi.c	/^char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	Libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strnstr	Libft/ft_strnstr.c	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
+ft_strrchr	Libft/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int ch)$/;"	f
+ft_strtrim	Libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_substr	Libft/ft_substr.c	/^char	*ft_substr(char const *str, unsigned int start, size_t len)$/;"	f
+ft_tolower	Libft/ft_tolower.c	/^int	ft_tolower(int ch)$/;"	f
+ft_toupper	Libft/ft_toupper.c	/^int	ft_toupper(int ch)$/;"	f
+ft_word_cnt	Libft/ft_split.c	/^static int	ft_word_cnt(char const *str, char ch)$/;"	f	file:
+fun	libft-unit-test/hardcore-mode/hardcore-main.c	/^struct { int (*fun)(void *); char *name; void *ft; } test_table[18] = {$/;"	m	struct:__anon1	file:
+fun_bench_ptr	libft-unit-test/include/libft_test.h	/^	void	(*fun_bench_ptr)(void* ptr1, void *ptr2);$/;"	m	struct:s_subbench
+fun_bench_table	libft-unit-test/src/init.c	/^t_libft_bench	fun_bench_table[] = {$/;"	v
+fun_name	libft-unit-test/include/libft_test.h	/^	char	*fun_name;$/;"	m	struct:s_bench
+fun_name	libft-unit-test/include/libft_test.h	/^	char	*fun_name;$/;"	m	struct:s_subbench
+fun_name	libft-unit-test/include/libft_test.h	/^	char	*fun_name;$/;"	m	struct:s_subtest
+fun_name	libft-unit-test/include/libft_test.h	/^	char	*fun_name;$/;"	m	struct:s_test
+fun_subbench_table	libft-unit-test/src/init.c	/^t_libft_subbench fun_subbench_table[SUBTEST_SIZE];$/;"	v
+fun_subtest_table	libft-unit-test/src/init.c	/^t_libft_subtest	fun_subtest_table[SUBTEST_SIZE];$/;"	v
+fun_test_ptr	libft-unit-test/include/libft_test.h	/^	void	(*fun_test_ptr)(void *ptr);$/;"	m	struct:s_subtest
+fun_test_ptr	libft-unit-test/include/libft_test.h	/^	void	(*fun_test_ptr)(void);$/;"	m	struct:s_bench
+fun_test_ptr	libft-unit-test/include/libft_test.h	/^	void	(*fun_test_ptr)(void);$/;"	m	struct:s_test
+fun_test_table	libft-unit-test/src/init.c	/^t_libft_test	fun_test_table[] = {$/;"	v
+func	gnl_tc/static.c	/^void	func(void)$/;"	f
+func	gnl_tc/static_param.c	/^void	func(int num)$/;"	f
+func2	gnl_tc/static.c	/^void	func2(void)$/;"	f
+func2	gnl_tc/static_param.c	/^int	func2()$/;"	f
+g_bench	libft-unit-test/src/init.c	/^char			g_bench = 0;$/;"	v
+g_delone_called	libft-unit-test/src/test_functions.c	/^static bool		g_delone_called;$/;"	v	file:
+g_diff_fd	libft-unit-test/src/init.c	/^int				g_diff_fd = 0;$/;"	v
+g_hardcore	libft-unit-test/src/main.c	/^bool	g_hardcore = false;$/;"	v
+g_help	libft-unit-test/src/init.c	/^char			g_help = 0;$/;"	v
+g_log_fd	libft-unit-test/src/init.c	/^int				g_log_fd = 0;$/;"	v
+g_nobenchlog	libft-unit-test/src/init.c	/^char			g_nobenchlog = 0;$/;"	v
+g_nospeed	libft-unit-test/src/init.c	/^char			g_nospeed = 0;$/;"	v
+g_pid	libft-unit-test/src/init.c	/^pid_t			g_pid = 0;$/;"	v
+g_pid_h	libft-unit-test/hardcore-mode/hardcore-main.c	/^pid_t			g_pid_h;$/;"	v
+g_ret	libft-unit-test/src/init.c	/^int				g_ret;$/;"	v
+g_ret_h	libft-unit-test/hardcore-mode/hardcore-main.c	/^char			g_ret_h[2];$/;"	v
+g_shared_mem	libft-unit-test/src/init.c	/^t_map			*g_shared_mem;$/;"	v
+g_time	libft-unit-test/src/init.c	/^t_tdiff			g_time;$/;"	v
+g_versus	libft-unit-test/src/init.c	/^char			*g_versus = NULL;$/;"	v
+get_diff	libft-unit-test/src/display_test_result.c	/^static char	*get_diff(void) {$/;"	f	file:
+get_eof	get_next_line/bonus/get_next_line_bonus.c	/^char	*get_eof(t_line *line)$/;"	f
+get_eof_line	get_next_line/get_next_line.c	/^char	*get_eof_line(t_line *line)$/;"	f
+get_eof_line	get_next_line/get_next_line_bonus.c	/^static char	*get_eof_line(t_line *line)$/;"	f	file:
+get_fd_buffer	libft-unit-test/src/main.c	/^char	*get_fd_buffer(int fd, char *buff, size_t size) {$/;"	f
+get_last_malloc_size	libft-unit-test/src/main.c	/^int		get_last_malloc_size(void) {$/;"	f
+get_next_code_line	libft-unit-test/src/display_test_result.c	/^char		*get_next_code_line(char **code, bool reset)$/;"	f
+get_next_line	get_next_line/bonus/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	get_next_line/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	get_next_line/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_position	libft-unit-test/hardcore-mode/ncurses-display.c	/^static void get_next_position(int *ret_x, int *ret_y)$/;"	f	file:
+get_nl_line	get_next_line/get_next_line.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
+get_nl_line	get_next_line/get_next_line_bonus.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
+get_options	libft-unit-test/src/main.c	/^char	**get_options(char **av)$/;"	f
+get_speed_color	libft-unit-test/src/display_test_result.c	/^static char	*get_speed_color(_Bool inverted) {$/;"	f	file:
+gnl_get_idx	get_next_line/get_next_line_utils.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
+gnl_get_idx	get_next_line/get_next_line_utils_bonus.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
+gnl_strchr	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strchr(const char *str, int ch)$/;"	f
+gnl_strdup	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strdup	get_next_line/get_next_line_utils.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strdup	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strjoin	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, char *buf)$/;"	f
+gnl_strjoin	get_next_line/get_next_line_utils.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
+gnl_strjoin	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
+gnl_strlen	get_next_line/bonus/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_strlen	get_next_line/get_next_line_utils.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_strlen	get_next_line/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_substr	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+gnl_substr	get_next_line/get_next_line_utils.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+gnl_substr	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+haiku_0	libft-unit-test/src/test_functions.c	/^wchar_t* haiku_0 = L"古池や蛙飛び込む水の音\\$/;"	v
+hardcore_main	libft-unit-test/hardcore-mode/hardcore-main.c	/^int		hardcore_main(void *libft_so_handler)$/;"	f
+iTest	libftTester/tests/ft_atoi_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_bzero_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_calloc_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_isalnum_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_isalpha_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_isascii_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_isdigit_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_isprint_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_itoa_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstadd_back_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstadd_front_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstclear_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstdelone_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstiter_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstlast_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstmap_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstnew_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_lstsize_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memccpy_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memchr_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memcmp_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memcpy_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memmove_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_memset_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_putchar_fd_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_putendl_fd_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_putnbr_fd_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_putstr_fd_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_split_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strchr_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strdup_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_striteri_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strjoin_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strlcat_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strlcpy_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strlen_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strmapi_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strncmp_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strnstr_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strrchr_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_strtrim_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_substr_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_tolower_test.cpp	/^int iTest = 1;$/;"	v
+iTest	libftTester/tests/ft_toupper_test.cpp	/^int iTest = 1;$/;"	v
+impl_t	libft-unit-test/hardcore-mode/utils.h	/^} impl_t;$/;"	t	typeref:struct:__anon2
+isCheater	libft-unit-test/src/display_test_result.c	/^static bool isCheater(void)$/;"	f	file:
+is_space	Libft/ft_atoi.c	/^static int	is_space(char ch)$/;"	f	file:
+is_var_declaration	libft-unit-test/src/display_test_result.c	/^static bool	is_var_declaration(const char *code_line)$/;"	f	file:
+isnumber	libft-unit-test/src/test_functions.c	/^int				isnumber(char c) { const char *numbers="0123456789"; return strchr(numbers, c) != NULL; }$/;"	f
+it	libft-unit-test/hardcore-mode/hardcore-main.c	/^char			*it = "<UNSET>";$/;"	v
+iter	libftTester/tests/ft_striteri_test.cpp	/^iter(unsigned int i, char * s) {$/;"	f
+len	get_next_line/bonus/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
+len	get_next_line/get_next_line.h	/^	size_t	len;$/;"	m	struct:s_line
+len	get_next_line/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
+line_join	get_next_line/bonus/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+line_join	get_next_line/get_next_line.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+line_join	get_next_line/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+load_bench	libft-unit-test/src/main.c	/^void	load_bench(char **function_list)$/;"	f
+load_test	libft-unit-test/src/main.c	/^void	load_test(char **function_list) {$/;"	f
+load_timer	libft-unit-test/src/main.c	/^void	load_timer(void) {$/;"	f
+login_cmp	libft-unit-test/src/display_test_result.c	/^static _Bool login_cmp(const char *l1, char *l2)$/;"	f	file:
+lolwrite	libft-unit-test/hardcore-mode/ncurses-display.c	/^static void	lolwrite(char *str, int start_x, int start_y, enum e_color_set set)$/;"	f	file:
+long_name	libft-unit-test/include/libft_test.h	/^	char	*long_name;$/;"	m	struct:s_option
+lstdel_f	libft-unit-test/src/test_functions.c	/^void			lstdel_f(void *lst) {$/;"	f
+lstdelone_f	libft-unit-test/src/test_functions.c	/^void			lstdelone_f(void *d) {$/;"	f
+lstiter_f	libft-unit-test/src/test_functions.c	/^void			lstiter_f(void *content) {$/;"	f
+lstmap_f	libft-unit-test/src/test_functions.c	/^void *		lstmap_f(void *content) {$/;"	f
+lstmap_f	libft_tc/Libft.c	/^void	*lstmap_f(void *content)$/;"	f
+lstnew	libft-unit-test/src/test_functions.c	/^t_list			*lstnew(void *d) {$/;"	f
+main	gnl_tc/eof.c	/^int	main(void)$/;"	f
+main	gnl_tc/open_max.c	/^int	main(void){$/;"	f
+main	gnl_tc/static.c	/^int	main(void)$/;"	f
+main	gnl_tc/static_param.c	/^int	main(void)$/;"	f
+main	gnl_tc/test.c	/^int	main(void)$/;"	f
+main	libft-unit-test/assets/wrapper.c	/^int		main(unused int ac, char **av) {$/;"	f
+main	libft-unit-test/src/main.c	/^int		main(unused int ac, char **av) {$/;"	f
+main	libftTester/tests/ft_atoi_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_bzero_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_calloc_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_isalnum_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_isalpha_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_isascii_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_isdigit_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_isprint_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_itoa_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstadd_back_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstadd_front_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstclear_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstdelone_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstiter_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstlast_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstmap_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstnew_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_lstsize_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memccpy_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memchr_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memcmp_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memcpy_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memmove_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_memset_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_putchar_fd_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_putendl_fd_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_putnbr_fd_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_putstr_fd_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_split_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strchr_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strdup_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_striteri_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strjoin_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strlcat_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strlcpy_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strlen_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strmapi_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strncmp_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strnstr_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strrchr_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_strtrim_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_substr_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_tolower_test.cpp	/^int main(void)$/;"	f
+main	libftTester/tests/ft_toupper_test.cpp	/^int main(void)$/;"	f
+main	libft_tc/Libft.c	/^int	main()$/;"	f
+main	libft_tc/calloc.c	/^int	main(void)$/;"	f
+main	libft_tc/memcmp_null.c	/^int	main(void)$/;"	f
+main	libft_tc/strlcat_null.c	/^int	main(void)$/;"	f
+main	libft_tc/strlcpy_null.c	/^int	main(void)$/;"	f
+main	libft_tc/strncmp_null.c	/^int	main(void)$/;"	f
+main	libft_tc/strnstr_null.c	/^int	main(void)$/;"	f
+main	libft_tc/test.c	/^int main()$/;"	f
+malloc	libftTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
+mallocList	libftTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
+mallocListAdd	libftTester/utils/leaks.cpp	/^void mallocListAdd(void * p, size_t size)$/;"	f
+mallocListRemove	libftTester/utils/leaks.cpp	/^void mallocListRemove(void * p)$/;"	f
+mcheck	libftTester/utils/check.cpp	/^void mcheck(void * p, size_t required_size)$/;"	f
+mid	libft-unit-test/include/libft_test.h	/^	uint64_t	mid;$/;"	m	struct:s_tdiff
+mtable	libft-unit-test/hardcore-mode/hardcore-main.c	/^const char *mtable[] = {$/;"	v
+name	libft-unit-test/assets/wrapper.c	/^	char	*name;$/;"	m	struct:s_sig	file:
+name	libft-unit-test/hardcore-mode/hardcore-main.c	/^struct { int (*fun)(void *); char *name; void *ft; } test_table[18] = {$/;"	m	struct:__anon1	file:
+name	libft-unit-test/hardcore-mode/utils.h	/^	const char *name;$/;"	m	struct:__anon2
+nbr_bits	libft-unit-test/src/additional_functions.c	/^int     nbr_bits(unsigned int nbr)$/;"	f
+ncurses_deinit	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_deinit(void)$/;"	f
+ncurses_init	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_init(void)$/;"	f
+ncurses_loop	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_loop(void)$/;"	f
+new	libftTester/tests/ft_atoi_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_atoi_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_bzero_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_bzero_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_calloc_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_calloc_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_isalnum_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_isalnum_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_isalpha_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_isalpha_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_isascii_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_isascii_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_isdigit_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_isdigit_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_isprint_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_isprint_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_itoa_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_itoa_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstadd_back_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstadd_back_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstadd_front_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstadd_front_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstclear_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstclear_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstdelone_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstdelone_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstiter_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstiter_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstlast_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstlast_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstmap_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstmap_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstnew_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstnew_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_lstsize_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_lstsize_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memccpy_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memccpy_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memchr_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memchr_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memcmp_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memcmp_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memcpy_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memcpy_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memmove_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memmove_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_memset_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_memset_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_putchar_fd_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_putchar_fd_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_putendl_fd_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_putendl_fd_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_putnbr_fd_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_putnbr_fd_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_putstr_fd_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_putstr_fd_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_split_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_split_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strchr_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strchr_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strdup_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strdup_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_striteri_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_striteri_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strjoin_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strjoin_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strlcat_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strlcat_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strlcpy_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strlcpy_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strlen_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strlen_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strmapi_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strmapi_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strncmp_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strncmp_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strnstr_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strnstr_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strrchr_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strrchr_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_strtrim_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_strtrim_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_substr_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_substr_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_tolower_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_tolower_test.cpp	/^#undef new$/;"	d	file:
+new	libftTester/tests/ft_toupper_test.cpp	/^#define new /;"	d	file:
+new	libftTester/tests/ft_toupper_test.cpp	/^#undef new$/;"	d	file:
+next	Libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+next	libft-unit-test/include/libft_test.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+nl_parse	get_next_line/bonus/get_next_line_bonus.c	/^static char	*nl_parse(t_line *line, char *buf, ssize_t buf_len)$/;"	f	file:
+num	libft-unit-test/assets/wrapper.c	/^	int		num;$/;"	m	struct:s_sig	file:
+olol	libft-unit-test/include/libft_test.h	/^	unsigned long long int	olol;$/;"	m	struct:s_tests
+one	libft-unit-test/hardcore-mode/test-strcpy.c	/^char one[50];$/;"	v
+operator <<	libftTester/utils/color.cpp	/^operator<<(std::ostream & os, Color c)$/;"	f
+operator ==	libftTester/utils/leaks.cpp	/^bool operator==(ptr const & p1, ptr const & p2)$/;"	f
+options	libft-unit-test/src/main.c	/^static t_option options[] = {$/;"	v	file:
+p	libftTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
+page_size	libft-unit-test/hardcore-mode/hardcore-main.c	/^size_t			page_size;$/;"	v
+part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_subtest
+part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_test
+proto_t	libft-unit-test/hardcore-mode/test-memccpy.c	/^typedef void *(*proto_t) (void *, const void *, int c, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-memchr.c	/^typedef char *(*proto_t) (const char *, int, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-memcmp.c	/^typedef int (*proto_t) (const CHAR *, const CHAR *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-memcpy.c	/^typedef char *(*proto_t) (char *, const char *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-memmove.c	/^typedef char *(*proto_t) (char *, const char *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-memset.c	/^typedef char *(*proto_t) (char *, int, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strcat.c	/^typedef char *(*proto_t) (char *, const char *);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strchr.c	/^typedef CHAR *(*proto_t) (const CHAR *, int);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strcmp.c	/^typedef int (*proto_t) (const CHAR *, const CHAR *);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strcpy.c	/^typedef CHAR *(*proto_t) (CHAR *, const CHAR *);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strlen.c	/^typedef size_t (*proto_t) (const CHAR *);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strncat.c	/^typedef char *(*proto_t) (char *, const char *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strncmp.c	/^typedef int (*proto_t) (const char *, const char *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strncpy.c	/^typedef char *(*proto_t) (char *, const char *, size_t);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strrchr.c	/^typedef CHAR *(*proto_t) (const CHAR *, int);$/;"	t	file:
+proto_t	libft-unit-test/hardcore-mode/test-strstr.c	/^typedef char *(*proto_t) (const char *, const char *);$/;"	t	file:
+ptr	libft-unit-test/include/libft_test.h	/^	void					*ptr;$/;"	m	struct:s_tests
+ptr	libftTester/utils/leaks.hpp	/^	ptr(void * _p = 0, size_t _size = 0) : p(_p), size(_size) {}$/;"	f	struct:ptr
+ptr	libftTester/utils/leaks.hpp	/^struct ptr$/;"	s
+putwchart	libft-unit-test/src/additional_functions.c	/^void    putwchart(int wchar, int *len, char *buff)$/;"	f
+rec	Libft/ft_putnbr_fd.c	/^static void	rec(int n, int fd)$/;"	f	file:
+ret	libft-unit-test/hardcore-mode/hardcore-main.c	/^int				ret, do_srandom = 1;$/;"	v
+run_subbench	libft-unit-test/src/main.c	/^void	run_subbench(void *h, void *h2)$/;"	f
+run_subtests	libft-unit-test/src/main.c	/^void	run_subtests(void *h, int start) {$/;"	f
+s	gnl_tc/static.c	/^char	*s = "hi";$/;"	v
+s_bench	libft-unit-test/include/libft_test.h	/^typedef struct	s_bench {$/;"	s
+s_errs	libft-unit-test/include/libft_test.h	/^typedef struct	s_errs {$/;"	s
+s_line	get_next_line/bonus/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
+s_line	get_next_line/get_next_line.h	/^typedef struct s_line$/;"	s
+s_line	get_next_line/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
+s_line	gnl_tc/static.c	/^typedef struct s_line	$/;"	s	file:
+s_list	Libft/libft.h	/^typedef struct s_list$/;"	s
+s_list	libft-unit-test/include/libft_test.h	/^typedef struct	s_list {$/;"	s
+s_option	libft-unit-test/include/libft_test.h	/^typedef struct	s_option$/;"	s
+s_shared_mem_map	libft-unit-test/include/libft_test.h	/^typedef struct	s_shared_mem_map$/;"	s
+s_sig	libft-unit-test/assets/wrapper.c	/^typedef struct	s_sig {$/;"	s	file:
+s_str	gnl_tc/static.c	/^typedef struct s_str$/;"	s	file:
+s_subbench	libft-unit-test/include/libft_test.h	/^typedef struct	s_subbench {$/;"	s
+s_subtest	libft-unit-test/include/libft_test.h	/^typedef struct	s_subtest {$/;"	s
+s_tdiff	libft-unit-test/include/libft_test.h	/^typedef struct	s_tdiff {$/;"	s
+s_test	libft-unit-test/include/libft_test.h	/^typedef struct	s_test {$/;"	s
+s_tests	libft-unit-test/include/libft_test.h	/^typedef struct	s_tests {$/;"	s
+sandbox	libft-unit-test/src/sandbox.c	/^void		sandbox(void) {$/;"	f
+sandbox_sig_int	libft-unit-test/src/sandbox.c	/^void		sandbox_sig_int(int s) {$/;"	f
+seed	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned int	seed = 0x42;$/;"	v
+setup_rainbow	libft-unit-test/hardcore-mode/ncurses-display.c	/^static void		setup_rainbow(int shift)$/;"	f	file:
+sfmt	libft-unit-test/hardcore-mode/utils.h	/^# define sfmt /;"	d
+short_name	libft-unit-test/include/libft_test.h	/^	char	short_name;$/;"	m	struct:s_option
+showLeaks	libftTester/utils/leaks.cpp	/^void showLeaks(void)$/;"	f
+sigs	libft-unit-test/assets/wrapper.c	/^t_sig	sigs[] = {$/;"	v
+sigsegv	libftTester/utils/sigsegv.cpp	/^void sigsegv(int signal)$/;"	f
+simple_STRLEN	libft-unit-test/hardcore-mode/test-strlen.c	/^simple_STRLEN (const CHAR *s)$/;"	f
+simple_memcmp	libft-unit-test/src/additional_functions.c	/^simple_memcmp (const char *s1, const char *s2, size_t n)$/;"	f
+simple_memset	libft-unit-test/hardcore-mode/test-memset.c	/^simple_memset (char *s, int c, size_t n)$/;"	f
+simple_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^simple_strcmp (const char *s1, const char *s2)$/;"	f
+simple_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^simple_strncmp (const char *s1, const char *s2, size_t n)$/;"	f
+single_bracket_on_line	libft-unit-test/src/display_test_result.c	/^bool		single_bracket_on_line(char *line, int n)$/;"	f
+size	libftTester/utils/leaks.hpp	/^	size_t size;$/;"	m	struct:ptr
+split_cmp_array	libft-unit-test/src/test_functions.c	/^void			split_cmp_array(char ** expected, char ** got)$/;"	f
+state	libft-unit-test/include/libft_test.h	/^	char		state;$/;"	m	struct:s_tdiff
+str	get_next_line/bonus/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
+str	get_next_line/get_next_line.h	/^	char	*str;$/;"	m	struct:s_line
+str	get_next_line/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
+str	libft-unit-test/assets/wrapper.c	/^	char	*str;$/;"	m	struct:s_sig	file:
+str_find_array	libft-unit-test/src/main.c	/^_Bool	str_find_array(char **array, char *str)$/;"	f
+stupid_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^stupid_strncmp (const char *s1, const char *s2, size_t n)$/;"	f
+t_err	libft-unit-test/include/libft_test.h	/^}				t_err;$/;"	t	typeref:struct:s_errs
+t_libft_bench	libft-unit-test/include/libft_test.h	/^}				t_libft_bench;$/;"	t	typeref:struct:s_bench
+t_libft_subbench	libft-unit-test/include/libft_test.h	/^}				t_libft_subbench;$/;"	t	typeref:struct:s_subbench
+t_libft_subtest	libft-unit-test/include/libft_test.h	/^}				t_libft_subtest;$/;"	t	typeref:struct:s_subtest
+t_libft_test	libft-unit-test/include/libft_test.h	/^}				t_libft_test;$/;"	t	typeref:struct:s_test
+t_line	get_next_line/bonus/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	get_next_line/get_next_line.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	get_next_line/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	gnl_tc/static.c	/^} t_line;$/;"	t	typeref:struct:s_line	file:
+t_list	Libft/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
+t_list	libft-unit-test/include/libft_test.h	/^}				t_list;$/;"	t	typeref:struct:s_list
+t_map	libft-unit-test/include/libft_test.h	/^}				t_map;$/;"	t	typeref:struct:s_shared_mem_map
+t_option	libft-unit-test/include/libft_test.h	/^}				t_option;$/;"	t	typeref:struct:s_option
+t_sig	libft-unit-test/assets/wrapper.c	/^}				t_sig;$/;"	t	typeref:struct:s_sig	file:
+t_str	gnl_tc/static.c	/^} t_str;$/;"	t	typeref:struct:s_str	file:
+t_tdiff	libft-unit-test/include/libft_test.h	/^}				t_tdiff;$/;"	t	typeref:struct:s_tdiff
+t_test	libft-unit-test/include/libft_test.h	/^}				t_test;$/;"	t	typeref:struct:s_tests
+test	libft-unit-test/hardcore-mode/utils.h	/^	long test;$/;"	m	struct:__anon2
+test_ft_atof	libft-unit-test/src/test_functions.c	/^void			test_ft_atof(void) {$/;"	f
+test_ft_atof_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_basic(void *ptr) {$/;"	f
+test_ft_atof_blanks1	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_blanks1(void *ptr) {$/;"	f
+test_ft_atof_blanks2	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_blanks2(void *ptr) {$/;"	f
+test_ft_atof_blanks3	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_blanks3(void *ptr) {$/;"	f
+test_ft_atof_exp1	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_exp1(void *ptr) {$/;"	f
+test_ft_atof_exp2	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_exp2(void *ptr) {$/;"	f
+test_ft_atof_inf_min	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_inf_min(void *ptr) {$/;"	f
+test_ft_atof_inf_plus	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_inf_plus(void *ptr) {$/;"	f
+test_ft_atof_max	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_max(void *ptr) {$/;"	f
+test_ft_atof_min	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_min(void *ptr) {$/;"	f
+test_ft_atof_nan	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_nan(void *ptr) {$/;"	f
+test_ft_atof_negative	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_negative(void *ptr) {$/;"	f
+test_ft_atof_null	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_null(void *ptr) {$/;"	f
+test_ft_atof_random	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_random(void *ptr) {$/;"	f
+test_ft_atof_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_zero(void *ptr) {$/;"	f
+test_ft_atoi	libft-unit-test/src/test_functions.c	/^void            test_ft_atoi(void){$/;"	f
+test_ft_atoi_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_basic(void *ptr) {$/;"	f
+test_ft_atoi_blank1	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_blank1(void *ptr) {$/;"	f
+test_ft_atoi_blank2	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_blank2(void *ptr) {$/;"	f
+test_ft_atoi_invisible	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_invisible(void *ptr) {$/;"	f
+test_ft_atoi_max_int	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_max_int(void *ptr) {$/;"	f
+test_ft_atoi_max_long	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_max_long(void *ptr) {$/;"	f
+test_ft_atoi_min_int	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_min_int(void *ptr) {$/;"	f
+test_ft_atoi_min_long	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_min_long(void *ptr) {$/;"	f
+test_ft_atoi_negative	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_negative(void *ptr) {$/;"	f
+test_ft_atoi_null	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_null(void *ptr) {$/;"	f
+test_ft_atoi_over_max_long	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_over_max_long(void *ptr) {$/;"	f
+test_ft_atoi_over_min_long	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_over_min_long(void *ptr) {$/;"	f
+test_ft_atoi_plus0	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_plus0(void *ptr) {$/;"	f
+test_ft_atoi_plus1	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_plus1(void *ptr) {$/;"	f
+test_ft_atoi_plus2	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_plus2(void *ptr) {$/;"	f
+test_ft_atoi_rand	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_rand(void *ptr) {$/;"	f
+test_ft_atoi_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_speed(void *ptr) {$/;"	f
+test_ft_atoi_string	libft-unit-test/src/test_functions.c	/^void			test_ft_atoi_string(void *ptr) {$/;"	f
+test_ft_bzero	libft-unit-test/src/test_functions.c	/^void            test_ft_bzero(void){$/;"	f
+test_ft_bzero_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_bzero_basic(void *ptr) {$/;"	f
+test_ft_bzero_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_bzero_electric_memory(void *ptr) {$/;"	f
+test_ft_bzero_null	libft-unit-test/src/test_functions.c	/^void			test_ft_bzero_null(void *ptr) {$/;"	f
+test_ft_bzero_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_bzero_speed(void *ptr) {$/;"	f
+test_ft_bzero_zero_value	libft-unit-test/src/test_functions.c	/^void			test_ft_bzero_zero_value(void *ptr) {$/;"	f
+test_ft_calloc	libft-unit-test/src/test_functions.c	/^void            test_ft_calloc(void) {$/;"	f
+test_ft_calloc_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_basic(void *ptr) {$/;"	f
+test_ft_calloc_free	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_free(void *ptr) {$/;"	f
+test_ft_calloc_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_malloc_null(void *ptr) {$/;"	f
+test_ft_calloc_size	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_size(void *ptr) {$/;"	f
+test_ft_calloc_too_big	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_too_big(void *ptr) {$/;"	f
+test_ft_calloc_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_calloc_zero(void *ptr) {$/;"	f
+test_ft_isalnum	libft-unit-test/src/test_functions.c	/^void            test_ft_isalnum(void){$/;"	f
+test_ft_isalnum_	libft-unit-test/src/test_functions.c	/^void			test_ft_isalnum_(void *ptr) {$/;"	f
+test_ft_isalpha	libft-unit-test/src/test_functions.c	/^void            test_ft_isalpha(void){$/;"	f
+test_ft_isalpha_	libft-unit-test/src/test_functions.c	/^void			test_ft_isalpha_(void *ptr) {$/;"	f
+test_ft_isascii	libft-unit-test/src/test_functions.c	/^void            test_ft_isascii(void){$/;"	f
+test_ft_isascii_	libft-unit-test/src/test_functions.c	/^void			test_ft_isascii_(void *ptr) {$/;"	f
+test_ft_isblank	libft-unit-test/src/test_functions.c	/^void			test_ft_isblank(void) {$/;"	f
+test_ft_isblank_	libft-unit-test/src/test_functions.c	/^void			test_ft_isblank_(void *ptr) {$/;"	f
+test_ft_isdigit	libft-unit-test/src/test_functions.c	/^void            test_ft_isdigit(void){$/;"	f
+test_ft_isdigit_	libft-unit-test/src/test_functions.c	/^void			test_ft_isdigit_(void *ptr) {$/;"	f
+test_ft_islower	libft-unit-test/src/test_functions.c	/^void			test_ft_islower(void) {$/;"	f
+test_ft_islower_	libft-unit-test/src/test_functions.c	/^void			test_ft_islower_(void *ptr) {$/;"	f
+test_ft_isnumber	libft-unit-test/src/test_functions.c	/^void			test_ft_isnumber(void) {$/;"	f
+test_ft_isnumber_	libft-unit-test/src/test_functions.c	/^void			test_ft_isnumber_(void *ptr) {$/;"	f
+test_ft_isprint	libft-unit-test/src/test_functions.c	/^void            test_ft_isprint(void){$/;"	f
+test_ft_isprint_	libft-unit-test/src/test_functions.c	/^void			test_ft_isprint_(void *ptr) {$/;"	f
+test_ft_isupper	libft-unit-test/src/test_functions.c	/^void			test_ft_isupper(void) {$/;"	f
+test_ft_isupper_	libft-unit-test/src/test_functions.c	/^void			test_ft_isupper_(void *ptr) {$/;"	f
+test_ft_itoa	libft-unit-test/src/test_functions.c	/^void            test_ft_itoa(void){$/;"	f
+test_ft_itoa_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_basic(void *ptr) {$/;"	f
+test_ft_itoa_free_int_min	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_free_int_min(void *ptr) {$/;"	f
+test_ft_itoa_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_malloc_null(void *ptr) {$/;"	f
+test_ft_itoa_max_int	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_max_int(void *ptr) {$/;"	f
+test_ft_itoa_min_int	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_min_int(void *ptr) {$/;"	f
+test_ft_itoa_random	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_random(void *ptr) {$/;"	f
+test_ft_itoa_size	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_size(void *ptr) {$/;"	f
+test_ft_itoa_size2	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_size2(void *ptr) {$/;"	f
+test_ft_itoa_zero_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_itoa_zero_byte(void *ptr) {$/;"	f
+test_ft_lstadd_back	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_back(void){$/;"	f
+test_ft_lstadd_back_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_back_basic(void *ptr) {$/;"	f
+test_ft_lstadd_back_free	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_back_free(void *ptr) {$/;"	f
+test_ft_lstadd_back_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_back_null(void *ptr) {$/;"	f
+test_ft_lstadd_front	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_front(void){$/;"	f
+test_ft_lstadd_front_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_front_basic(void *ptr) {$/;"	f
+test_ft_lstadd_front_free	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_front_free(void *ptr) {$/;"	f
+test_ft_lstadd_front_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstadd_front_null(void *ptr) {$/;"	f
+test_ft_lstclear	libft-unit-test/src/test_functions.c	/^void			test_ft_lstclear(void) {$/;"	f
+test_ft_lstclear_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstclear_basic(void *ptr) {$/;"	f
+test_ft_lstclear_free	libft-unit-test/src/test_functions.c	/^void			test_ft_lstclear_free(void *ptr) {$/;"	f
+test_ft_lstclear_number	libft-unit-test/src/test_functions.c	/^void			test_ft_lstclear_number(void *ptr) {$/;"	f
+test_ft_lstdelone	libft-unit-test/src/test_functions.c	/^void			test_ft_lstdelone(void) {$/;"	f
+test_ft_lstdelone_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstdelone_basic(void *ptr) {$/;"	f
+test_ft_lstiter	libft-unit-test/src/test_functions.c	/^void			test_ft_lstiter(void){$/;"	f
+test_ft_lstiter_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstiter_basic(void *ptr) {$/;"	f
+test_ft_lstiter_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstiter_null(void *ptr) {$/;"	f
+test_ft_lstlast	libft-unit-test/src/test_functions.c	/^void			test_ft_lstlast(void){$/;"	f
+test_ft_lstlast_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstlast_basic(void *ptr) {$/;"	f
+test_ft_lstlast_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstlast_null(void *ptr) {$/;"	f
+test_ft_lstmap	libft-unit-test/src/test_functions.c	/^void			test_ft_lstmap(void){$/;"	f
+test_ft_lstmap_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstmap_basic(void *ptr) {$/;"	f
+test_ft_lstmap_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstmap_malloc_null(void *ptr) {$/;"	f
+test_ft_lstmap_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstmap_null(void *ptr) {$/;"	f
+test_ft_lstnew	libft-unit-test/src/test_functions.c	/^void			test_ft_lstnew(void){$/;"	f
+test_ft_lstnew_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstnew_basic(void *ptr) {$/;"	f
+test_ft_lstnew_free	libft-unit-test/src/test_functions.c	/^void			test_ft_lstnew_free(void *ptr) {$/;"	f
+test_ft_lstnew_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstnew_malloc_null(void *ptr) {$/;"	f
+test_ft_lstnew_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstnew_null(void *ptr) {$/;"	f
+test_ft_lstsize	libft-unit-test/src/test_functions.c	/^void			test_ft_lstsize(void){$/;"	f
+test_ft_lstsize_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_lstsize_basic(void *ptr) {$/;"	f
+test_ft_lstsize_null	libft-unit-test/src/test_functions.c	/^void			test_ft_lstsize_null(void *ptr) {$/;"	f
+test_ft_memalloc	libft-unit-test/src/test_functions.c	/^void            test_ft_memalloc(void) {$/;"	f
+test_ft_memalloc_free	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_free(void *ptr) {$/;"	f
+test_ft_memalloc_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_malloc_null(void *ptr) {$/;"	f
+test_ft_memalloc_malloc_size	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_malloc_size(void *ptr) {$/;"	f
+test_ft_memalloc_size	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_size(void *ptr) {$/;"	f
+test_ft_memalloc_too_big	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_too_big(void *ptr) {$/;"	f
+test_ft_memalloc_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_memalloc_zero(void *ptr) {$/;"	f
+test_ft_memccpy	libft-unit-test/src/test_functions.c	/^void            test_ft_memccpy(void){$/;"	f
+test_ft_memccpy_basic_test	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_basic_test(void *ptr) {$/;"	f
+test_ft_memccpy_basic_test2	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_basic_test2(void *ptr) {$/;"	f
+test_ft_memccpy_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_electric_memory(void *ptr) {$/;"	f
+test_ft_memccpy_memory_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_memory_unsigned(void *ptr) {$/;"	f
+test_ft_memccpy_not_found	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_not_found(void *ptr) {$/;"	f
+test_ft_memccpy_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_null1(void *ptr) {$/;"	f
+test_ft_memccpy_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_null2(void *ptr) {$/;"	f
+test_ft_memccpy_return	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_return(void *ptr) {$/;"	f
+test_ft_memccpy_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_speed(void *ptr) {$/;"	f
+test_ft_memccpy_stop_char_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_stop_char_unsigned(void *ptr) {$/;"	f
+test_ft_memccpy_struct	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_struct(void *ptr) {$/;"	f
+test_ft_memccpy_to_small	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_to_small(void *ptr) {$/;"	f
+test_ft_memccpy_zero_value	libft-unit-test/src/test_functions.c	/^void			test_ft_memccpy_zero_value(void *ptr) {$/;"	f
+test_ft_memchr	libft-unit-test/src/test_functions.c	/^void            test_ft_memchr(void) {$/;"	f
+test_ft_memchr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_basic(void *ptr) {$/;"	f
+test_ft_memchr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_electric_memory(void *ptr) {$/;"	f
+test_ft_memchr_faraway	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_faraway(void *ptr) {$/;"	f
+test_ft_memchr_not_found1	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_not_found1(void *ptr) {$/;"	f
+test_ft_memchr_not_found2	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_not_found2(void *ptr) {$/;"	f
+test_ft_memchr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_null(void *ptr) {$/;"	f
+test_ft_memchr_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_null_byte(void *ptr) {$/;"	f
+test_ft_memchr_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_speed(void *ptr) {$/;"	f
+test_ft_memchr_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_memchr_unsigned(void *ptr) {$/;"	f
+test_ft_memcmp	libft-unit-test/src/test_functions.c	/^void            test_ft_memcmp(void){$/;"	f
+test_ft_memcmp_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_basic(void *ptr) {$/;"	f
+test_ft_memcmp_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_basic1(void *ptr) {$/;"	f
+test_ft_memcmp_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_basic2(void *ptr) {$/;"	f
+test_ft_memcmp_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_basic3(void *ptr) {$/;"	f
+test_ft_memcmp_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_electric_memory(void *ptr) {$/;"	f
+test_ft_memcmp_hidden	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_hidden(void *ptr) {$/;"	f
+test_ft_memcmp_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_null1(void *ptr) {$/;"	f
+test_ft_memcmp_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_null2(void *ptr) {$/;"	f
+test_ft_memcmp_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_null_byte(void *ptr) {$/;"	f
+test_ft_memcmp_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_speed(void *ptr) {$/;"	f
+test_ft_memcmp_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_memcmp_unsigned(void *ptr) {$/;"	f
+test_ft_memcpy	libft-unit-test/src/test_functions.c	/^void            test_ft_memcpy(void){$/;"	f
+test_ft_memcpy_basic_test	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_basic_test(void *ptr) {$/;"	f
+test_ft_memcpy_basic_test2	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_basic_test2(void *ptr) {$/;"	f
+test_ft_memcpy_double_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_double_null1(void *ptr) {$/;"	f
+test_ft_memcpy_double_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_double_null2(void *ptr) {$/;"	f
+test_ft_memcpy_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_electric_memory(void *ptr) {$/;"	f
+test_ft_memcpy_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_null1(void *ptr) {$/;"	f
+test_ft_memcpy_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_null2(void *ptr) {$/;"	f
+test_ft_memcpy_return	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_return(void *ptr) {$/;"	f
+test_ft_memcpy_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_speed(void *ptr) {$/;"	f
+test_ft_memcpy_struct	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_struct(void *ptr) {$/;"	f
+test_ft_memcpy_to_small	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_to_small(void *ptr) {$/;"	f
+test_ft_memcpy_zero_value	libft-unit-test/src/test_functions.c	/^void			test_ft_memcpy_zero_value(void *ptr) {$/;"	f
+test_ft_memdel	libft-unit-test/src/test_functions.c	/^void            test_ft_memdel(void) {$/;"	f
+test_ft_memdel_free	libft-unit-test/src/test_functions.c	/^void			test_ft_memdel_free(void *ptr) {$/;"	f
+test_ft_memdel_null	libft-unit-test/src/test_functions.c	/^void			test_ft_memdel_null(void *ptr) {$/;"	f
+test_ft_memdel_test	libft-unit-test/src/test_functions.c	/^void			test_ft_memdel_test(void *ptr) {$/;"	f
+test_ft_memmove	libft-unit-test/src/test_functions.c	/^void            test_ft_memmove(void){$/;"	f
+test_ft_memmove_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_basic(void *ptr) {$/;"	f
+test_ft_memmove_double_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_double_null1(void *ptr) {$/;"	f
+test_ft_memmove_double_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_double_null2(void *ptr) {$/;"	f
+test_ft_memmove_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_electric_memory(void *ptr) {$/;"	f
+test_ft_memmove_hard	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_hard(void *ptr) {$/;"	f
+test_ft_memmove_long_int	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_long_int(void *ptr) {$/;"	f
+test_ft_memmove_malloc	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_malloc(void *ptr) {$/;"	f
+test_ft_memmove_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_null1(void *ptr) {$/;"	f
+test_ft_memmove_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_null2(void *ptr) {$/;"	f
+test_ft_memmove_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_null_byte(void *ptr) {$/;"	f
+test_ft_memmove_overlap	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_overlap(void *ptr) {$/;"	f
+test_ft_memmove_overlap_rev	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_overlap_rev(void *ptr) {$/;"	f
+test_ft_memmove_return	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_return(void *ptr) {$/;"	f
+test_ft_memmove_same_pointer	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_same_pointer(void *ptr) {$/;"	f
+test_ft_memmove_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memmove_speed(void *ptr) {$/;"	f
+test_ft_memset	libft-unit-test/src/test_functions.c	/^void            test_ft_memset(void) {$/;"	f
+test_ft_memset_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_basic(void *ptr) {$/;"	f
+test_ft_memset_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_electric_memory(void *ptr) {$/;"	f
+test_ft_memset_fat	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_fat(void *ptr) {$/;"	f
+test_ft_memset_null	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_null(void *ptr) {$/;"	f
+test_ft_memset_return	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_return(void *ptr) {$/;"	f
+test_ft_memset_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_speed(void *ptr) {$/;"	f
+test_ft_memset_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_unsigned(void *ptr) {$/;"	f
+test_ft_memset_zero_value	libft-unit-test/src/test_functions.c	/^void			test_ft_memset_zero_value(void *ptr) {$/;"	f
+test_ft_putchar	libft-unit-test/src/test_functions.c	/^void            test_ft_putchar(void){$/;"	f
+test_ft_putchar_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putchar_ascii(void *ptr) {$/;"	f
+test_ft_putchar_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putchar_basic(void *ptr) {$/;"	f
+test_ft_putchar_fd	libft-unit-test/src/test_functions.c	/^void            test_ft_putchar_fd(void){$/;"	f
+test_ft_putchar_fd_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putchar_fd_ascii(void *ptr) {$/;"	f
+test_ft_putchar_fd_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putchar_fd_basic(void *ptr) {$/;"	f
+test_ft_putchar_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_putchar_unicode(void *ptr) {$/;"	f
+test_ft_putendl	libft-unit-test/src/test_functions.c	/^void            test_ft_putendl(void){$/;"	f
+test_ft_putendl_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_ascii(void *ptr) {$/;"	f
+test_ft_putendl_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_basic(void *ptr) {$/;"	f
+test_ft_putendl_fd	libft-unit-test/src/test_functions.c	/^void            test_ft_putendl_fd(void){$/;"	f
+test_ft_putendl_fd_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_fd_ascii(void *ptr) {$/;"	f
+test_ft_putendl_fd_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_fd_basic(void *ptr) {$/;"	f
+test_ft_putendl_fd_null	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_fd_null(void *ptr) {$/;"	f
+test_ft_putendl_fd_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_fd_unicode(void *ptr) {$/;"	f
+test_ft_putendl_null	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_null(void *ptr) {$/;"	f
+test_ft_putendl_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_putendl_unicode(void *ptr) {$/;"	f
+test_ft_putnbr	libft-unit-test/src/test_functions.c	/^void            test_ft_putnbr(void){$/;"	f
+test_ft_putnbr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_basic(void *ptr) {$/;"	f
+test_ft_putnbr_fd	libft-unit-test/src/test_functions.c	/^void            test_ft_putnbr_fd(void){$/;"	f
+test_ft_putnbr_fd_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_fd_basic(void *ptr) {$/;"	f
+test_ft_putnbr_fd_int_max	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_fd_int_max(void *ptr) {$/;"	f
+test_ft_putnbr_fd_int_min	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_fd_int_min(void *ptr) {$/;"	f
+test_ft_putnbr_fd_itoa	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_fd_itoa(void *ptr) {$/;"	f
+test_ft_putnbr_fd_random	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_fd_random(void *ptr) {$/;"	f
+test_ft_putnbr_int_max	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_int_max(void *ptr) {$/;"	f
+test_ft_putnbr_int_min	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_int_min(void *ptr) {$/;"	f
+test_ft_putnbr_itoa	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_itoa(void *ptr) {$/;"	f
+test_ft_putnbr_random	libft-unit-test/src/test_functions.c	/^void			test_ft_putnbr_random(void *ptr) {$/;"	f
+test_ft_putstr	libft-unit-test/src/test_functions.c	/^void            test_ft_putstr(void){$/;"	f
+test_ft_putstr_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_ascii(void *ptr) {$/;"	f
+test_ft_putstr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_basic(void *ptr) {$/;"	f
+test_ft_putstr_fd	libft-unit-test/src/test_functions.c	/^void            test_ft_putstr_fd(void){$/;"	f
+test_ft_putstr_fd_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_fd_ascii(void *ptr) {$/;"	f
+test_ft_putstr_fd_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_fd_basic(void *ptr) {$/;"	f
+test_ft_putstr_fd_null	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_fd_null(void *ptr) {$/;"	f
+test_ft_putstr_fd_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_fd_unicode(void *ptr) {$/;"	f
+test_ft_putstr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_null(void *ptr) {$/;"	f
+test_ft_putstr_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_putstr_unicode(void *ptr) {$/;"	f
+test_ft_split	libft-unit-test/src/test_functions.c	/^void            test_ft_split(void) {$/;"	f
+test_ft_split_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_split_basic(void *ptr) {$/;"	f
+test_ft_split_begin	libft-unit-test/src/test_functions.c	/^void			test_ft_split_begin(void *ptr) {$/;"	f
+test_ft_split_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_split_empty(void *ptr) {$/;"	f
+test_ft_split_end	libft-unit-test/src/test_functions.c	/^void			test_ft_split_end(void *ptr) {$/;"	f
+test_ft_split_free	libft-unit-test/src/test_functions.c	/^void			test_ft_split_free(void *ptr) {$/;"	f
+test_ft_split_full	libft-unit-test/src/test_functions.c	/^void			test_ft_split_full(void *ptr) {$/;"	f
+test_ft_split_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_split_malloc_null(void *ptr) {$/;"	f
+test_ft_split_null	libft-unit-test/src/test_functions.c	/^void			test_ft_split_null(void *ptr) {$/;"	f
+test_ft_split_space	libft-unit-test/src/test_functions.c	/^void			test_ft_split_space(void *ptr) {$/;"	f
+test_ft_split_terminator	libft-unit-test/src/test_functions.c	/^void			test_ft_split_terminator(void *ptr) {$/;"	f
+test_ft_split_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_split_zero(void *ptr) {$/;"	f
+test_ft_strcat	libft-unit-test/src/test_functions.c	/^void            test_ft_strcat(void){$/;"	f
+test_ft_strcat_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_basic(void *ptr) {$/;"	f
+test_ft_strcat_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_electric_memory(void *ptr) {$/;"	f
+test_ft_strcat_empty1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_empty1(void *ptr) {$/;"	f
+test_ft_strcat_empty2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_empty2(void *ptr) {$/;"	f
+test_ft_strcat_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_null1(void *ptr) {$/;"	f
+test_ft_strcat_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_null2(void *ptr) {$/;"	f
+test_ft_strcat_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_null_byte(void *ptr) {$/;"	f
+test_ft_strcat_overflow	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_overflow(void *ptr) {$/;"	f
+test_ft_strcat_return	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_return(void *ptr) {$/;"	f
+test_ft_strcat_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_speed(void *ptr) {$/;"	f
+test_ft_strcat_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strcat_unicode(void *ptr) {$/;"	f
+test_ft_strchr	libft-unit-test/src/test_functions.c	/^void            test_ft_strchr(void){$/;"	f
+test_ft_strchr_after_0	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_after_0(void *ptr) {$/;"	f
+test_ft_strchr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_basic(void *ptr) {$/;"	f
+test_ft_strchr_before_0	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_before_0(void *ptr) {$/;"	f
+test_ft_strchr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_electric_memory(void *ptr) {$/;"	f
+test_ft_strchr_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_empty(void *ptr) {$/;"	f
+test_ft_strchr_first	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_first(void *ptr) {$/;"	f
+test_ft_strchr_not_found	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_not_found(void *ptr) {$/;"	f
+test_ft_strchr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_null(void *ptr) {$/;"	f
+test_ft_strchr_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_speed(void *ptr) {$/;"	f
+test_ft_strchr_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_unicode(void *ptr) {$/;"	f
+test_ft_strchr_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strchr_zero(void *ptr) {$/;"	f
+test_ft_strclr	libft-unit-test/src/test_functions.c	/^void            test_ft_strclr(void){$/;"	f
+test_ft_strclr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strclr_basic(void *ptr) {$/;"	f
+test_ft_strclr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strclr_null(void *ptr) {$/;"	f
+test_ft_strcmp	libft-unit-test/src/test_functions.c	/^void            test_ft_strcmp(void){$/;"	f
+test_ft_strcmp_after_0	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_after_0(void *ptr) {$/;"	f
+test_ft_strcmp_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_ascii(void *ptr) {$/;"	f
+test_ft_strcmp_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_basic1(void *ptr) {$/;"	f
+test_ft_strcmp_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_basic2(void *ptr) {$/;"	f
+test_ft_strcmp_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_basic3(void *ptr) {$/;"	f
+test_ft_strcmp_basic4	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_basic4(void *ptr) {$/;"	f
+test_ft_strcmp_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_electric_memory(void *ptr) {$/;"	f
+test_ft_strcmp_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_null1(void *ptr) {$/;"	f
+test_ft_strcmp_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_null2(void *ptr) {$/;"	f
+test_ft_strcmp_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_speed(void *ptr) {$/;"	f
+test_ft_strcmp_unsigned	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_unsigned(void *ptr) {$/;"	f
+test_ft_strcmp_zero1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_zero1(void *ptr) {$/;"	f
+test_ft_strcmp_zero2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcmp_zero2(void *ptr) {$/;"	f
+test_ft_strcpy	libft-unit-test/src/test_functions.c	/^void            test_ft_strcpy(void) {$/;"	f
+test_ft_strcpy_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_basic(void *ptr) {$/;"	f
+test_ft_strcpy_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_electric_memory(void *ptr) {$/;"	f
+test_ft_strcpy_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_empty(void *ptr) {$/;"	f
+test_ft_strcpy_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_null1(void *ptr) {$/;"	f
+test_ft_strcpy_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_null2(void *ptr) {$/;"	f
+test_ft_strcpy_overflow	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_overflow(void *ptr) {$/;"	f
+test_ft_strcpy_return	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_return(void *ptr) {$/;"	f
+test_ft_strcpy_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_speed(void *ptr) {$/;"	f
+test_ft_strcpy_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_unicode(void *ptr) {$/;"	f
+test_ft_strcpy_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strcpy_zero(void *ptr) {$/;"	f
+test_ft_strdel	libft-unit-test/src/test_functions.c	/^void            test_ft_strdel(void){$/;"	f
+test_ft_strdel_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strdel_free(void *ptr) {$/;"	f
+test_ft_strdel_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strdel_null(void *ptr) {$/;"	f
+test_ft_strdel_test	libft-unit-test/src/test_functions.c	/^void			test_ft_strdel_test(void *ptr) {$/;"	f
+test_ft_strdup	libft-unit-test/src/test_functions.c	/^void            test_ft_strdup(void) {$/;"	f
+test_ft_strdup_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_basic(void *ptr) {$/;"	f
+test_ft_strdup_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_electric_memory(void *ptr) {$/;"	f
+test_ft_strdup_last_char	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_last_char(void *ptr) {$/;"	f
+test_ft_strdup_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_malloc_null(void *ptr) {$/;"	f
+test_ft_strdup_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_null(void *ptr) {$/;"	f
+test_ft_strdup_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_size(void *ptr) {$/;"	f
+test_ft_strdup_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_speed(void *ptr) {$/;"	f
+test_ft_strdup_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strdup_zero(void *ptr) {$/;"	f
+test_ft_strequ	libft-unit-test/src/test_functions.c	/^void            test_ft_strequ(void){$/;"	f
+test_ft_strequ_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_basic(void *ptr) {$/;"	f
+test_ft_strequ_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_basic2(void *ptr) {$/;"	f
+test_ft_strequ_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_electric_memory(void *ptr) {$/;"	f
+test_ft_strequ_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_null1(void *ptr) {$/;"	f
+test_ft_strequ_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_null2(void *ptr) {$/;"	f
+test_ft_strequ_same_pointer	libft-unit-test/src/test_functions.c	/^void			test_ft_strequ_same_pointer(void *ptr) {$/;"	f
+test_ft_striter	libft-unit-test/src/test_functions.c	/^void            test_ft_striter(void){$/;"	f
+test_ft_striter_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_striter_basic(void *ptr) {$/;"	f
+test_ft_striter_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_striter_electric_memory(void *ptr) {$/;"	f
+test_ft_striter_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_striter_null1(void *ptr) {$/;"	f
+test_ft_striter_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_striter_null2(void *ptr) {$/;"	f
+test_ft_striteri	libft-unit-test/src/test_functions.c	/^void            test_ft_striteri(void){$/;"	f
+test_ft_striteri_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_striteri_basic(void *ptr) {$/;"	f
+test_ft_striteri_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_striteri_electric_memory(void *ptr) {$/;"	f
+test_ft_striteri_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_striteri_null1(void *ptr) {$/;"	f
+test_ft_striteri_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_striteri_null2(void *ptr) {$/;"	f
+test_ft_strjoin	libft-unit-test/src/test_functions.c	/^void            test_ft_strjoin(void){$/;"	f
+test_ft_strjoin_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_basic(void *ptr) {$/;"	f
+test_ft_strjoin_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_free(void *ptr) {$/;"	f
+test_ft_strjoin_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_malloc_null(void *ptr) {$/;"	f
+test_ft_strjoin_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_null1(void *ptr) {$/;"	f
+test_ft_strjoin_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_null2(void *ptr) {$/;"	f
+test_ft_strjoin_overlap	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_overlap(void *ptr) {$/;"	f
+test_ft_strjoin_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strjoin_zero(void *ptr) {$/;"	f
+test_ft_strlcat	libft-unit-test/src/test_functions.c	/^void            test_ft_strlcat(void){$/;"	f
+test_ft_strlcat_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_basic(void *ptr) {$/;"	f
+test_ft_strlcat_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_basic1(void *ptr) {$/;"	f
+test_ft_strlcat_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_basic2(void *ptr) {$/;"	f
+test_ft_strlcat_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_electric_memory(void *ptr) {$/;"	f
+test_ft_strlcat_empty1	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_empty1(void *ptr) {$/;"	f
+test_ft_strlcat_empty2	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_empty2(void *ptr) {$/;"	f
+test_ft_strlcat_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_null1(void *ptr) {$/;"	f
+test_ft_strlcat_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_null2(void *ptr) {$/;"	f
+test_ft_strlcat_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_null_byte(void *ptr) {$/;"	f
+test_ft_strlcat_return	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_return(void *ptr) {$/;"	f
+test_ft_strlcat_return_value	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_return_value(void *ptr) {$/;"	f
+test_ft_strlcat_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_size(void *ptr) {$/;"	f
+test_ft_strlcat_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strlcat_speed(void *ptr) {$/;"	f
+test_ft_strlcpy	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy(void) {$/;"	f
+test_ft_strlcpy_basic	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_basic(void *ptr) {$/;"	f
+test_ft_strlcpy_min	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_min(void *ptr) {$/;"	f
+test_ft_strlcpy_null	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_null(void *ptr) {$/;"	f
+test_ft_strlcpy_overflow	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_overflow(void *ptr) {$/;"	f
+test_ft_strlcpy_return	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_return(void *ptr) {$/;"	f
+test_ft_strlcpy_zero	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_zero(void *ptr) {$/;"	f
+test_ft_strlcpy_zerosize	libft-unit-test/src/test_functions.c	/^void		test_ft_strlcpy_zerosize(void *ptr) {$/;"	f
+test_ft_strlen	libft-unit-test/src/test_functions.c	/^void            test_ft_strlen(void){$/;"	f
+test_ft_strlen_bad_opti	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_bad_opti(void *ptr) {$/;"	f
+test_ft_strlen_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_basic(void *ptr) {$/;"	f
+test_ft_strlen_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_electric_memory(void *ptr) {$/;"	f
+test_ft_strlen_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_empty(void *ptr) {$/;"	f
+test_ft_strlen_little	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_little(void *ptr) {$/;"	f
+test_ft_strlen_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_null(void *ptr) {$/;"	f
+test_ft_strlen_random	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_random(void *ptr) {$/;"	f
+test_ft_strlen_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_speed(void *ptr) {$/;"	f
+test_ft_strlen_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_unicode(void *ptr) {$/;"	f
+test_ft_strlen_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strlen_zero(void *ptr) {$/;"	f
+test_ft_strmap	libft-unit-test/src/test_functions.c	/^void            test_ft_strmap(void){$/;"	f
+test_ft_strmap_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_basic(void *ptr) {$/;"	f
+test_ft_strmap_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_free(void *ptr) {$/;"	f
+test_ft_strmap_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_malloc_null(void *ptr) {$/;"	f
+test_ft_strmap_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_null1(void *ptr) {$/;"	f
+test_ft_strmap_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_null2(void *ptr) {$/;"	f
+test_ft_strmap_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_size(void *ptr) {$/;"	f
+test_ft_strmap_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strmap_zero(void *ptr) {$/;"	f
+test_ft_strmapi	libft-unit-test/src/test_functions.c	/^void            test_ft_strmapi(void){$/;"	f
+test_ft_strmapi_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_basic(void *ptr) {$/;"	f
+test_ft_strmapi_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_free(void *ptr) {$/;"	f
+test_ft_strmapi_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_malloc_null(void *ptr) {$/;"	f
+test_ft_strmapi_malloc_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_malloc_size(void *ptr) {$/;"	f
+test_ft_strmapi_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_null1(void *ptr) {$/;"	f
+test_ft_strmapi_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_null2(void *ptr) {$/;"	f
+test_ft_strmapi_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_size(void *ptr) {$/;"	f
+test_ft_strmapi_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strmapi_zero(void *ptr) {$/;"	f
+test_ft_strncat	libft-unit-test/src/test_functions.c	/^void            test_ft_strncat(void){$/;"	f
+test_ft_strncat_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_basic(void *ptr) {$/;"	f
+test_ft_strncat_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_basic1(void *ptr) {$/;"	f
+test_ft_strncat_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_basic2(void *ptr) {$/;"	f
+test_ft_strncat_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_electric_memory(void *ptr) {$/;"	f
+test_ft_strncat_empty1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_empty1(void *ptr) {$/;"	f
+test_ft_strncat_empty2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_empty2(void *ptr) {$/;"	f
+test_ft_strncat_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_null1(void *ptr) {$/;"	f
+test_ft_strncat_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_null2(void *ptr) {$/;"	f
+test_ft_strncat_null_byte	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_null_byte(void *ptr) {$/;"	f
+test_ft_strncat_return	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_return(void *ptr) {$/;"	f
+test_ft_strncat_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_speed(void *ptr) {$/;"	f
+test_ft_strncat_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strncat_unicode(void *ptr) {$/;"	f
+test_ft_strncmp	libft-unit-test/src/test_functions.c	/^void            test_ft_strncmp(void){$/;"	f
+test_ft_strncmp_ascii	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_ascii(void *ptr) {$/;"	f
+test_ft_strncmp_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_basic1(void *ptr) {$/;"	f
+test_ft_strncmp_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_basic2(void *ptr) {$/;"	f
+test_ft_strncmp_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_basic3(void *ptr) {$/;"	f
+test_ft_strncmp_basic4	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_basic4(void *ptr) {$/;"	f
+test_ft_strncmp_biglittle	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_biglittle(void *ptr) {$/;"	f
+test_ft_strncmp_cast	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_cast(void *ptr) {$/;"	f
+test_ft_strncmp_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_electric_memory(void *ptr) {$/;"	f
+test_ft_strncmp_hidden	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_hidden(void *ptr) {$/;"	f
+test_ft_strncmp_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_null1(void *ptr) {$/;"	f
+test_ft_strncmp_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_null2(void *ptr) {$/;"	f
+test_ft_strncmp_over_len	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_over_len(void *ptr) {$/;"	f
+test_ft_strncmp_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_speed(void *ptr) {$/;"	f
+test_ft_strncmp_zero1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_zero1(void *ptr) {$/;"	f
+test_ft_strncmp_zero2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncmp_zero2(void *ptr) {$/;"	f
+test_ft_strncpy	libft-unit-test/src/test_functions.c	/^void            test_ft_strncpy(void){$/;"	f
+test_ft_strncpy_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_basic(void *ptr) {$/;"	f
+test_ft_strncpy_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_electric_memory(void *ptr) {$/;"	f
+test_ft_strncpy_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_empty(void *ptr) {$/;"	f
+test_ft_strncpy_fill	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_fill(void *ptr) {$/;"	f
+test_ft_strncpy_final_0	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_final_0(void *ptr) {$/;"	f
+test_ft_strncpy_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_null1(void *ptr) {$/;"	f
+test_ft_strncpy_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_null2(void *ptr) {$/;"	f
+test_ft_strncpy_number_0	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_number_0(void *ptr) {$/;"	f
+test_ft_strncpy_return	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_return(void *ptr) {$/;"	f
+test_ft_strncpy_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_speed(void *ptr) {$/;"	f
+test_ft_strncpy_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_unicode(void *ptr) {$/;"	f
+test_ft_strncpy_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strncpy_zero(void *ptr) {$/;"	f
+test_ft_strndup	libft-unit-test/src/test_functions.c	/^void            test_ft_strndup(void){$/;"	f
+test_ft_strndup_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_basic(void *ptr) {$/;"	f
+test_ft_strndup_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_basic2(void *ptr) {$/;"	f
+test_ft_strndup_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_electric_memory(void *ptr) {$/;"	f
+test_ft_strndup_last_char	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_last_char(void *ptr) {$/;"	f
+test_ft_strndup_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_malloc_null(void *ptr) {$/;"	f
+test_ft_strndup_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_null(void *ptr) {$/;"	f
+test_ft_strndup_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_size(void *ptr) {$/;"	f
+test_ft_strndup_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strndup_zero(void *ptr) {$/;"	f
+test_ft_strnequ	libft-unit-test/src/test_functions.c	/^void            test_ft_strnequ(void){$/;"	f
+test_ft_strnequ_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_basic(void *ptr) {$/;"	f
+test_ft_strnequ_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_basic2(void *ptr) {$/;"	f
+test_ft_strnequ_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_electric_memory(void *ptr) {$/;"	f
+test_ft_strnequ_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_null1(void *ptr) {$/;"	f
+test_ft_strnequ_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_null2(void *ptr) {$/;"	f
+test_ft_strnequ_same_pointer	libft-unit-test/src/test_functions.c	/^void			test_ft_strnequ_same_pointer(void *ptr) {$/;"	f
+test_ft_strnew	libft-unit-test/src/test_functions.c	/^void            test_ft_strnew(void){$/;"	f
+test_ft_strnew_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strnew_free(void *ptr) {$/;"	f
+test_ft_strnew_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strnew_malloc_null(void *ptr) {$/;"	f
+test_ft_strnew_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strnew_size(void *ptr) {$/;"	f
+test_ft_strnew_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strnew_zero(void *ptr) {$/;"	f
+test_ft_strnstr	libft-unit-test/src/test_functions.c	/^void            test_ft_strnstr(void){$/;"	f
+test_ft_strnstr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_basic(void *ptr) {$/;"	f
+test_ft_strnstr_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_basic2(void *ptr) {$/;"	f
+test_ft_strnstr_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_basic3(void *ptr) {$/;"	f
+test_ft_strnstr_basic4	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_basic4(void *ptr) {$/;"	f
+test_ft_strnstr_basic5	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_basic5(void *ptr) {$/;"	f
+test_ft_strnstr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_electric_memory(void *ptr) {$/;"	f
+test_ft_strnstr_found	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_found(void *ptr) {$/;"	f
+test_ft_strnstr_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_null1(void *ptr) {$/;"	f
+test_ft_strnstr_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_null2(void *ptr) {$/;"	f
+test_ft_strnstr_same_ptr	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_same_ptr(void *ptr) {$/;"	f
+test_ft_strnstr_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_speed(void *ptr) {$/;"	f
+test_ft_strnstr_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_zero(void *ptr) {$/;"	f
+test_ft_strnstr_zero_len1	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_zero_len1(void *ptr) {$/;"	f
+test_ft_strnstr_zero_len2	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_zero_len2(void *ptr) {$/;"	f
+test_ft_strnstr_zero_len3	libft-unit-test/src/test_functions.c	/^void			test_ft_strnstr_zero_len3(void *ptr) {$/;"	f
+test_ft_strrchr	libft-unit-test/src/test_functions.c	/^void            test_ft_strrchr(void) {$/;"	f
+test_ft_strrchr_basic1	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_basic1(void *ptr) {$/;"	f
+test_ft_strrchr_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_basic2(void *ptr) {$/;"	f
+test_ft_strrchr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_electric_memory(void *ptr) {$/;"	f
+test_ft_strrchr_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_empty(void *ptr) {$/;"	f
+test_ft_strrchr_not_found	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_not_found(void *ptr) {$/;"	f
+test_ft_strrchr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_null(void *ptr) {$/;"	f
+test_ft_strrchr_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_speed(void *ptr) {$/;"	f
+test_ft_strrchr_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_unicode(void *ptr) {$/;"	f
+test_ft_strrchr_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strrchr_zero(void *ptr) {$/;"	f
+test_ft_strstr	libft-unit-test/src/test_functions.c	/^void            test_ft_strstr(void){$/;"	f
+test_ft_strstr_bad_boyer_moore	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_bad_boyer_moore(void *ptr) {$/;"	f
+test_ft_strstr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_basic(void *ptr) {$/;"	f
+test_ft_strstr_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_basic2(void *ptr) {$/;"	f
+test_ft_strstr_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_basic3(void *ptr) {$/;"	f
+test_ft_strstr_basic4	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_basic4(void *ptr) {$/;"	f
+test_ft_strstr_basic5	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_basic5(void *ptr) {$/;"	f
+test_ft_strstr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_electric_memory(void *ptr) {$/;"	f
+test_ft_strstr_not_found	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_not_found(void *ptr) {$/;"	f
+test_ft_strstr_null1	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_null1(void *ptr) {$/;"	f
+test_ft_strstr_null2	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_null2(void *ptr) {$/;"	f
+test_ft_strstr_same_ptr	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_same_ptr(void *ptr) {$/;"	f
+test_ft_strstr_speed	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_speed(void *ptr) {$/;"	f
+test_ft_strstr_unicode	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_unicode(void *ptr) {$/;"	f
+test_ft_strstr_zero_len	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_zero_len(void *ptr) {$/;"	f
+test_ft_strstr_zero_len1	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_zero_len1(void *ptr) {$/;"	f
+test_ft_strstr_zero_len2	libft-unit-test/src/test_functions.c	/^void			test_ft_strstr_zero_len2(void *ptr) {$/;"	f
+test_ft_strtrim	libft-unit-test/src/test_functions.c	/^void            test_ft_strtrim(void){$/;"	f
+test_ft_strtrim_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_basic(void *ptr) {$/;"	f
+test_ft_strtrim_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_basic2(void *ptr) {$/;"	f
+test_ft_strtrim_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_basic3(void *ptr) {$/;"	f
+test_ft_strtrim_blank	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_blank(void *ptr) {$/;"	f
+test_ft_strtrim_empty	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_empty(void *ptr) {$/;"	f
+test_ft_strtrim_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_free(void *ptr) {$/;"	f
+test_ft_strtrim_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_malloc_null(void *ptr) {$/;"	f
+test_ft_strtrim_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_null(void *ptr) {$/;"	f
+test_ft_strtrim_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_size(void *ptr) {$/;"	f
+test_ft_strtrim_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrim_zero(void *ptr) {$/;"	f
+test_ft_strtrimc	libft-unit-test/src/test_functions.c	/^void            test_ft_strtrimc(void){$/;"	f
+test_ft_strtrimc_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_basic(void *ptr) {$/;"	f
+test_ft_strtrimc_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_basic2(void *ptr) {$/;"	f
+test_ft_strtrimc_basic3	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_basic3(void *ptr) {$/;"	f
+test_ft_strtrimc_free	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_free(void *ptr) {$/;"	f
+test_ft_strtrimc_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_malloc_null(void *ptr) {$/;"	f
+test_ft_strtrimc_not_found	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_not_found(void *ptr) {$/;"	f
+test_ft_strtrimc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_null(void *ptr) {$/;"	f
+test_ft_strtrimc_size	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_size(void *ptr) {$/;"	f
+test_ft_strtrimc_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_strtrimc_zero(void *ptr) {$/;"	f
+test_ft_substr	libft-unit-test/src/test_functions.c	/^void            test_ft_substr(void){$/;"	f
+test_ft_substr_all	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_all(void *ptr) {$/;"	f
+test_ft_substr_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_basic(void *ptr) {$/;"	f
+test_ft_substr_basic2	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_basic2(void *ptr) {$/;"	f
+test_ft_substr_big_start	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_big_start(void *ptr) {$/;"	f
+test_ft_substr_electric_memory	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_electric_memory(void *ptr) {$/;"	f
+test_ft_substr_malloc_null	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_malloc_null(void *ptr) {$/;"	f
+test_ft_substr_null	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_null(void *ptr) {$/;"	f
+test_ft_substr_size	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_size(void *ptr) {$/;"	f
+test_ft_substr_zero	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_zero(void *ptr) {$/;"	f
+test_ft_substr_zero_len	libft-unit-test/src/test_functions.c	/^void			test_ft_substr_zero_len(void *ptr) {$/;"	f
+test_ft_tolower	libft-unit-test/src/test_functions.c	/^void            test_ft_tolower(void){$/;"	f
+test_ft_tolower_	libft-unit-test/src/test_functions.c	/^void			test_ft_tolower_(void *ptr) {$/;"	f
+test_ft_toupper	libft-unit-test/src/test_functions.c	/^void            test_ft_toupper(void) {$/;"	f
+test_ft_toupper_	libft-unit-test/src/test_functions.c	/^void			test_ft_toupper_(void *ptr) {$/;"	f
+test_init	libft-unit-test/hardcore-mode/test-init.c	/^void test_init (size_t min_page_size) __attribute__((overloadable))$/;"	f
+test_init	libft-unit-test/hardcore-mode/test-init.c	/^void test_init (void) __attribute__((overloadable))$/;"	f
+test_main_memccpy	libft-unit-test/hardcore-mode/test-memccpy.c	/^test_main_memccpy (void *ft_memccpy)$/;"	f
+test_main_memchr	libft-unit-test/hardcore-mode/test-memchr.c	/^test_main_memchr (void*ft_memchr)$/;"	f
+test_main_memcmp	libft-unit-test/hardcore-mode/test-memcmp.c	/^test_main_memcmp (void *ft_memcmp)$/;"	f
+test_main_memcpy	libft-unit-test/hardcore-mode/test-memcpy.c	/^test_main_memcpy (void *ft_memcpy)$/;"	f
+test_main_memmove	libft-unit-test/hardcore-mode/test-memmove.c	/^test_main_memmove (void *ft_memmove)$/;"	f
+test_main_memset	libft-unit-test/hardcore-mode/test-memset.c	/^test_main_memset (void *ft_memset)$/;"	f
+test_main_strcat	libft-unit-test/hardcore-mode/test-strcat.c	/^test_main_strcat (void *ft_strcat)$/;"	f
+test_main_strchr	libft-unit-test/hardcore-mode/test-strchr.c	/^test_main_strchr (void *ft_strchr)$/;"	f
+test_main_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^test_main_strcmp (void *ft_strcmp)$/;"	f
+test_main_strcpy	libft-unit-test/hardcore-mode/test-strcpy.c	/^test_main_strcpy(void *ft_strcpy)$/;"	f
+test_main_strlen	libft-unit-test/hardcore-mode/test-strlen.c	/^test_main_strlen (void *ft_strlen)$/;"	f
+test_main_strncat	libft-unit-test/hardcore-mode/test-strncat.c	/^test_main_strncat (void *ft_strncat)$/;"	f
+test_main_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^test_main_strncmp (void *ft_strncmp)$/;"	f
+test_main_strncpy	libft-unit-test/hardcore-mode/test-strncpy.c	/^test_main_strncpy (void *ft_strncpy)$/;"	f
+test_main_strrchr	libft-unit-test/hardcore-mode/test-strrchr.c	/^test_main_strrchr (void *ft_strrchr)$/;"	f
+test_main_strstr	libft-unit-test/hardcore-mode/test-strstr.c	/^test_main_strstr (void *ft_strstr)$/;"	f
+test_memccpy	libft-unit-test/hardcore-mode/test-memccpy.c	/^test_memccpy (void *ft_memccpy)$/;"	f	file:
+test_memchr	libft-unit-test/hardcore-mode/test-memchr.c	/^test_memchr (void *ft_memchr)$/;"	f	file:
+test_memcmp	libft-unit-test/hardcore-mode/test-memcmp.c	/^test_memcmp (void *ft_memcmp)$/;"	f	file:
+test_memcpy	libft-unit-test/hardcore-mode/test-memcpy.c	/^test_memcpy (void *ft_memcpy)$/;"	f	file:
+test_memmove	libft-unit-test/hardcore-mode/test-memmove.c	/^test_memmove (void *ft_memmove)$/;"	f	file:
+test_memset	libft-unit-test/hardcore-mode/test-memset.c	/^test_memset (void *ft_memset)$/;"	f	file:
+test_strcat	libft-unit-test/hardcore-mode/test-strcat.c	/^test_strcat (void *ft)$/;"	f	file:
+test_strchr	libft-unit-test/hardcore-mode/test-strchr.c	/^test_strchr (void *ft)$/;"	f	file:
+test_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^static void test_strcmp (void)$/;"	f	file:
+test_strcpy	libft-unit-test/hardcore-mode/test-strcpy.c	/^test_strcpy (void)$/;"	f	file:
+test_strncat	libft-unit-test/hardcore-mode/test-strncat.c	/^test_strncat (void *ft)$/;"	f	file:
+test_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^test_strncmp (void *ft_strncmp)$/;"	f	file:
+test_strncpy	libft-unit-test/hardcore-mode/test-strncpy.c	/^test_strncpy (void *ft)$/;"	f	file:
+test_strrchr	libft-unit-test/hardcore-mode/test-strrchr.c	/^test_strrchr (void *ft)$/;"	f	file:
+test_strstr	libft-unit-test/hardcore-mode/test-strstr.c	/^test_strstr (void *ft)$/;"	f	file:
+test_table	libft-unit-test/hardcore-mode/hardcore-main.c	/^struct { int (*fun)(void *); char *name; void *ft; } test_table[18] = {$/;"	v	typeref:struct:__anon1
+time_begin	libft-unit-test/include/libft_test.h	/^	size_t		time_begin;$/;"	m	struct:s_shared_mem_map
+time_end	libft-unit-test/include/libft_test.h	/^	size_t		time_end;$/;"	m	struct:s_shared_mem_map
+time_mid	libft-unit-test/include/libft_test.h	/^	size_t		time_mid;$/;"	m	struct:s_shared_mem_map
+timer	libft-unit-test/src/main.c	/^void	*timer(void *t) {$/;"	f
+title	libftTester/utils/check.hpp	/^#define title(/;"	d
+total_subtest	libft-unit-test/src/init.c	/^int				total_subtest = 0;$/;"	v
+two	libft-unit-test/hardcore-mode/test-strcpy.c	/^char two[50];$/;"	v
+type	libft-unit-test/include/libft_test.h	/^	int		type;$/;"	m	struct:s_errs
+unsandbox	libft-unit-test/src/sandbox.c	/^void		unsandbox(void) {$/;"	f
+unused	libft-unit-test/include/libft_test.h	/^# define	unused	/;"	d
+updateRankingFile	libft-unit-test/src/display_test_result.c	/^static void updateRankingFile(int total_player_points)$/;"	f	file:
+usage	libft-unit-test/src/main.c	/^static void	usage() {$/;"	f	file:
+verbose_color	libft-unit-test/src/display_test_result.c	/^static char	*verbose_color(int type) {$/;"	f	file:
+verbose_type	libft-unit-test/src/display_test_result.c	/^static char	*verbose_type(int type) {$/;"	f	file:
+visible	libft-unit-test/include/libft_test.h	/^	_Bool	visible;$/;"	m	struct:s_bench
+visible	libft-unit-test/include/libft_test.h	/^	_Bool	visible;$/;"	m	struct:s_subbench
+visible	libft-unit-test/include/libft_test.h	/^	_Bool	visible;$/;"	m	struct:s_subtest
+visible	libft-unit-test/include/libft_test.h	/^	_Bool	visible;$/;"	m	struct:s_test
+write_borders	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	write_borders(void)$/;"	f
+write_box	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	write_box(void)$/;"	f
+write_result	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	write_result(char *fun, bool succeed)$/;"	f
