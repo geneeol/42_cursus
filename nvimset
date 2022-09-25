@@ -1,4 +1,6 @@
- "syntax on
+if has("syntax")
+	syntax on
+endif
 
 filetype on                 "파일종류 자동인식
 filetype indent on          "파일 종류에 따른 구문강조
