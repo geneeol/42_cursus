@@ -51,6 +51,7 @@ BUFFER_SIZE	get_next_line/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
 BUFFER_SIZE	get_next_line/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
 CALL	libft-unit-test/hardcore-mode/utils.h	/^#define CALL(/;"	d
 CC	Libft/Makefile	/^CC = cc$/;"	m
+CC	ft_printf/Makefile	/^CC = cc$/;"	m
 CC	libft-unit-test/Makefile	/^CC			=	clang$/;"	m
 CC	libftTester/Makefile	/^CC		= clang++$/;"	m
 CC_SO	libft-unit-test/Makefile	/^CC_SO		=	$(CC)$/;"	m
@@ -570,6 +571,7 @@ ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
 ft_bzero	Libft/ft_bzero.c	/^void	ft_bzero(void *ptr, size_t n)$/;"	f
 ft_calloc	Libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
 ft_clock	libft-unit-test/src/main.c	/^unsigned long long	ft_clock(void) {$/;"	f
+ft_conversion	ft_printf/ft_printf.c	/^static int	ft_conversion(const char *format, int i, va_list ap)$/;"	f	file:
 ft_convert	libft-unit-test/assets/malloc.c	/^int     ft_convert(char *buffer, int64_t n, int b, int maj)$/;"	f
 ft_exit	libft-unit-test/src/main.c	/^void	ft_exit(char *str, ...) {$/;"	f
 ft_free	get_next_line/bonus/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
@@ -596,6 +598,7 @@ ft_memcmp	Libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size
 ft_memcpy	Libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f
 ft_memmove	Libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
 ft_memset	Libft/ft_memset.c	/^void	*ft_memset(void *ptr, int value, size_t len)$/;"	f
+ft_printf	ft_printf/ft_printf.c	/^int	ft_printf(const char *format, ...)$/;"	f
 ft_putchar_fd	Libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char ch, int fd)$/;"	f
 ft_putendl_fd	Libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *str, int fd)$/;"	f
 ft_putnbr_fd	Libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
@@ -616,6 +619,7 @@ ft_strjoin	Libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)
 ft_strlcat	Libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)$/;"	f
 ft_strlcpy	Libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)$/;"	f
 ft_strlen	Libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f
+ft_strlen	ft_printf/ft_printf.c	/^int	ft_strlen(char *str)$/;"	f
 ft_strmapi	Libft/ft_strmapi.c	/^char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))$/;"	f
 ft_strncmp	Libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
 ft_strnstr	Libft/ft_strnstr.c	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
@@ -817,6 +821,7 @@ main	libft_tc/strlcpy_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strncmp_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strnstr_null.c	/^int	main(void)$/;"	f
 main	libft_tc/test.c	/^int main()$/;"	f
+main	printf_tc/main.c	/^int	main(void)$/;"	f
 malloc	libftTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
 mallocList	libftTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
 mallocListAdd	libftTester/utils/leaks.cpp	/^void mallocListAdd(void * p, size_t size)$/;"	f
@@ -932,6 +937,9 @@ p	libftTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
 page_size	libft-unit-test/hardcore-mode/hardcore-main.c	/^size_t			page_size;$/;"	v
 part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_subtest
 part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_test
+print_addr	ft_printf/ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
+print_char	ft_printf/ft_printf.c	/^static int	print_char(char ch)$/;"	f	file:
+print_str	ft_printf/ft_printf.c	/^static int	print_str(char *str)$/;"	f	file:
 proto_t	libft-unit-test/hardcore-mode/test-memccpy.c	/^typedef void *(*proto_t) (void *, const void *, int c, size_t);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-memchr.c	/^typedef char *(*proto_t) (const char *, int, size_t);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-memcmp.c	/^typedef int (*proto_t) (const CHAR *, const CHAR *, size_t);$/;"	t	file:
