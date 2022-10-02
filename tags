@@ -947,7 +947,7 @@ part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_test
 pf_conversion	ft_printf/ft_printf.c	/^static int	pf_conversion(const char *format, va_list ap)$/;"	f	file:
 pf_itoa	ft_printf/ft_printf_utils.c	/^void	pf_itoa(int n, char *str, int flag)$/;"	f
 pf_itoa_hex	ft_printf/ft_printf_utils.c	/^void	pf_itoa_hex(unsigned long long n, char *str, char button)$/;"	f
-pf_len	ft_printf/ft_printf_utils.c	/^int	pf_len(unsigned long long n, int scale)$/;"	f
+pf_len	ft_printf/ft_printf_utils.c	/^int	pf_len(long long n, int scale)$/;"	f
 print_addr	ft_printf/ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
 print_char	ft_printf/ft_printf_str.c	/^int	print_char(char ch)$/;"	f
 print_decimal	ft_printf/ft_printf_numeric.c	/^int	print_decimal(int n)$/;"	f
