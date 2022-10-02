@@ -56,6 +56,7 @@ CC	libft-unit-test/Makefile	/^CC			=	clang$/;"	m
 CC	libftTester/Makefile	/^CC		= clang++$/;"	m
 CC_SO	libft-unit-test/Makefile	/^CC_SO		=	$(CC)$/;"	m
 CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	ft_printf/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	libft-unit-test/Makefile	/^CFLAGS		=	-Werror -Wall -Wextra# -g3 -fsanitize=address$/;"	m
 CFLAGS	libftTester/Makefile	/^CFLAGS	= -g3 -ldl -std=c++11 -I utils\/ -I$(LIBFT_PATH) $/;"	m
 CHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR /;"	d	file:
@@ -130,12 +131,14 @@ FG_WHITE	libftTester/utils/color.hpp	/^	FG_WHITE			= 97,$/;"	e	enum:Color
 FG_YELLOW	libftTester/utils/color.hpp	/^	FG_YELLOW 			= 33,$/;"	e	enum:Color
 FOR_EACH_IMPL	libft-unit-test/hardcore-mode/utils.h	/^#define FOR_EACH_IMPL(/;"	d
 FRAMEWORK	libft-unit-test/Makefile	/^FRAMEWORK	=	$/;"	m
+FT_PRINTF_H	ft_printf/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
 GET_NEXT_LINE_BONUS_H	get_next_line/bonus/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
 GET_NEXT_LINE_BONUS_H	get_next_line/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
 GET_NEXT_LINE_H	get_next_line/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
 GET_STDERR	libft-unit-test/include/libft_test.h	/^# define	GET_STDERR(/;"	d
 GET_STDOUT	libft-unit-test/include/libft_test.h	/^# define	GET_STDOUT(/;"	d
 GIGABYTE	libft-unit-test/src/bench_functions.c	/^#define GIGABYTE	/;"	d	file:
+HEADER	ft_printf/Makefile	/^HEADER = ft_printf.h$/;"	m
 HIDDEN	libftTester/utils/color.hpp	/^	HIDDEN				= 8,$/;"	e	enum:Color
 HIMAGIC	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define HIMAGIC /;"	d	file:
 HP_TIMING_AVAIL	libft-unit-test/hardcore-mode/utils.h	/^# define HP_TIMING_AVAIL /;"	d
@@ -190,6 +193,7 @@ MIDCHAR	libft-unit-test/hardcore-mode/utils.h	/^# define MIDCHAR /;"	d
 MIDDLE_CHAR	libft-unit-test/hardcore-mode/test-strchr.c	/^# define MIDDLE_CHAR /;"	d	file:
 MIN_PAGE_SIZE	libft-unit-test/hardcore-mode/test-memcpy.c	/^# define MIN_PAGE_SIZE /;"	d	file:
 NAME	Libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	ft_printf/Makefile	/^NAME = libftprintf.a$/;"	m
 NAME	libft-unit-test/Makefile	/^NAME		=	libtests$/;"	m
 NORME	libft-unit-test/Makefile	/^NORME		=	$(addsuffix \/*.h,$(INCDIR)) $(addprefix $(SRCDIR)\/,$(SRC))$/;"	m
 NORM_COLOR	libft-unit-test/Makefile	/^NORM_COLOR		=	153$/;"	m
@@ -202,6 +206,7 @@ N_DOCKER	libftTester/Makefile	/^	docker run -e IN_DOCKER=TRUE -dti --name mc -v 
 OBJ	libft-unit-test/Makefile	/^OBJ			=	$(addprefix $(OBJDIR)\/, $(addsuffix .o, $(basename $(SRC))))$/;"	m
 OBJDIR	libft-unit-test/Makefile	/^OBJDIR		=	obj$/;"	m
 OBJS	Libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OBJS	ft_printf/Makefile	/^OBJS = $(SRCS:c=o) $/;"	m
 OBJS_BONUS	Libft/Makefile	/^OBJS_BONUS = $(SRCS_BONUS:.c=.o)$/;"	m
 OBJ_COLOR	libft-unit-test/Makefile	/^OBJ_COLOR		=	122$/;"	m
 OBJ_COLOR_T	libft-unit-test/Makefile	/^OBJ_COLOR_T		=	123$/;"	m
@@ -282,6 +287,7 @@ SONAME	libft-unit-test/Makefile	/^SONAME		=	libft.so$/;"	m
 SRC	libft-unit-test/Makefile	/^SRC			=	src\/main.c						\\$/;"	m
 SRCDIR	libft-unit-test/Makefile	/^SRCDIR		=	.\/$/;"	m
 SRCS	Libft/Makefile	/^SRCS = ft_isalpha.c 	\\$/;"	m
+SRCS	ft_printf/Makefile	/^SRCS = ft_printf.c \\$/;"	m
 SRCS_BONUS	Libft/Makefile	/^SRCS_BONUS = ft_lstnew.c \\$/;"	m
 STDERR_TO_BUFF	libft-unit-test/include/libft_test.h	/^# define	STDERR_TO_BUFF	/;"	d
 STDOUT_TO_BUFF	libft-unit-test/include/libft_test.h	/^# define	STDOUT_TO_BUFF	/;"	d
@@ -571,7 +577,6 @@ ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
 ft_bzero	Libft/ft_bzero.c	/^void	ft_bzero(void *ptr, size_t n)$/;"	f
 ft_calloc	Libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
 ft_clock	libft-unit-test/src/main.c	/^unsigned long long	ft_clock(void) {$/;"	f
-ft_conversion	ft_printf/ft_printf.c	/^static int	ft_conversion(const char *format, int i, va_list ap)$/;"	f	file:
 ft_convert	libft-unit-test/assets/malloc.c	/^int     ft_convert(char *buffer, int64_t n, int b, int maj)$/;"	f
 ft_exit	libft-unit-test/src/main.c	/^void	ft_exit(char *str, ...) {$/;"	f
 ft_free	get_next_line/bonus/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
@@ -821,6 +826,8 @@ main	libft_tc/strlcpy_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strncmp_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strnstr_null.c	/^int	main(void)$/;"	f
 main	libft_tc/test.c	/^int main()$/;"	f
+main	printf_tc/error.c	/^int	main(void)$/;"	f
+main	printf_tc/hex.c	/^int	main(void)$/;"	f
 main	printf_tc/main.c	/^int	main(void)$/;"	f
 malloc	libftTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
 mallocList	libftTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
@@ -937,9 +944,16 @@ p	libftTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
 page_size	libft-unit-test/hardcore-mode/hardcore-main.c	/^size_t			page_size;$/;"	v
 part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_subtest
 part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_test
+pf_conversion	ft_printf/ft_printf.c	/^static int	pf_conversion(const char *format, va_list ap)$/;"	f	file:
+pf_itoa	ft_printf/ft_printf_utils.c	/^void	pf_itoa(int n, char *str, int flag)$/;"	f
+pf_itoa_hex	ft_printf/ft_printf_utils.c	/^void	pf_itoa_hex(unsigned long long n, char *str, char button)$/;"	f
+pf_len	ft_printf/ft_printf_utils.c	/^int	pf_len(unsigned long long n, int scale)$/;"	f
 print_addr	ft_printf/ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
-print_char	ft_printf/ft_printf.c	/^static int	print_char(char ch)$/;"	f	file:
-print_str	ft_printf/ft_printf.c	/^static int	print_str(char *str)$/;"	f	file:
+print_char	ft_printf/ft_printf_str.c	/^int	print_char(char ch)$/;"	f
+print_decimal	ft_printf/ft_printf_numeric.c	/^int	print_decimal(int n)$/;"	f
+print_hex	ft_printf/ft_printf_numeric.c	/^int	print_hex(unsigned int n, char button)$/;"	f
+print_str	ft_printf/ft_printf_str.c	/^int	print_str(char *str)$/;"	f
+print_udecimal	ft_printf/ft_printf_numeric.c	/^int	print_udecimal(unsigned int n)$/;"	f
 proto_t	libft-unit-test/hardcore-mode/test-memccpy.c	/^typedef void *(*proto_t) (void *, const void *, int c, size_t);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-memchr.c	/^typedef char *(*proto_t) (const char *, int, size_t);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-memcmp.c	/^typedef int (*proto_t) (const CHAR *, const CHAR *, size_t);$/;"	t	file:

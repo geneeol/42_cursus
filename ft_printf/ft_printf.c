@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:59:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/01 21:44:39 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/10/02 22:21:26 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,70 +26,90 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-static int	print_char(char ch)
-{
-	return (write(1, &ch, 1));
-}
+//1. itoa로 하기 (쉬움)
+//2. 재귀로 하기 (어려움)
 
-static int	print_str(char *str)
+/*
+int	rec(unsigned long long nb)
 {
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	const char *hex ="0123456789abcdef";
+	int	ret;
+	int	err;
+
+	ret = 0;
+	err = 0;
+	if (nb / 16 <= 0)
+		return (write(1, &hex[nb % 16], 1));
+	if (rec(nb / 16) == -1)
+		return (-1);
+	ret += rec(nb / 16);
+	write(1, &hex[nb % 16], 1);
+	printf("rec ret: %d\n", ret);
+	return (ret);
 }
+*/
 
 static int	print_addr(void *ptr)
 {
+	char	str[20];
 	unsigned long long	addr;
 
 	addr = (unsigned long long)ptr;
-	return (print_hex(addr, 'x'));
+	if (write(1, "0x", 2) > 0)
+	{
+		pf_itoa_hex(addr, str, 'x');
+		if (write(1, str, ft_strlen(str)) > 0)
+			return (ft_strlen(str) + 2);
+	}
+	return (-1);
 }
 
-
-static int	ft_conversion(const char *format, int i, va_list ap)
+static int	pf_conversion(const char *format, va_list ap)
 {
-	if (format[i] == 'c') 
+	if (!*format)
+		return (-1);
+	if (*format == 'c') 
 		return (print_char(va_arg(ap, int)));
-	else if (format[i] == 's')
+	else if (*format == 's')
 		return (print_str(va_arg(ap, char *)));
-	else if (format[i] == 'p')
+	else if (*format == 'p')
 		return (print_addr(va_arg(ap, void *)));
-	else if (format[i] == 'd' || format[i] == 'i')
+	else if (*format == 'd' || *format == 'i')
 		return (print_decimal(va_arg(ap, int)));
-	else if (format[i] == 'u')
+	else if (*format == 'u')
 		return (print_udecimal(va_arg(ap, unsigned int)));
-	else if (format[i] == 'x' || format[i] == 'X')
-		return (print_hex(va_arg(ap, unsigned int), format[i]));
-	else if (format[i] == '%')
+	else if (*format== 'x' || *format == 'X')
+		return (print_hex(va_arg(ap, unsigned int), *format));
+	else if (*format == '%')
 		return (write(1, "%", 1));
-	return (0);
+	else 
+		return (-1);
 }
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	setoff;
-	int	tmp;
+	int	ret;
+	int	converted_len;
 	va_list ap;
 
-	i = 0;
-	setoff = 0;
+	ret = 0;
 	va_start(ap, format);
-	while (format[i])
+	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			tmp = ft_conversion(format, i + 1, ap);
-			if (tmp < 0)
+			converted_len = pf_conversion(++format, ap);
+			if (converted_len < 0)
 				return (-1);
-			i += 2;
-			setoff += tmp - 2;
+			ret += converted_len;
+			format++;
 		}
 		else
-			if (write(1, &format[i++], 1) < 0)
+			if (write(1, format++, 1) < 0)
 				return (-1);
+			else
+				ret++;
 	}
 	va_end(ap);
-	return (i + setoff);
+	return (ret);
 }

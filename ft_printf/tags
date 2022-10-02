@@ -5,9 +5,21 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 CC	Makefile	/^CC = cc$/;"	m
-ft_conversion	ft_printf.c	/^static int	ft_conversion(const char *format, int i, va_list ap)$/;"	f	file:
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+FT_PRINTF_H	ft_printf.h	/^# define FT_PRINTF_H$/;"	d
+HEADER	Makefile	/^HEADER = ft_printf.h$/;"	m
+NAME	Makefile	/^NAME = libftprintf.a$/;"	m
+OBJS	Makefile	/^OBJS = $(SRCS:c=o) $/;"	m
+SRCS	Makefile	/^SRCS = ft_printf.c \\$/;"	m
 ft_printf	ft_printf.c	/^int	ft_printf(const char *format, ...)$/;"	f
 ft_strlen	ft_printf.c	/^int	ft_strlen(char *str)$/;"	f
+pf_conversion	ft_printf.c	/^static int	pf_conversion(const char *format, va_list ap)$/;"	f	file:
+pf_itoa	ft_printf_utils.c	/^void	pf_itoa(int n, char *str, int flag)$/;"	f
+pf_itoa_hex	ft_printf_utils.c	/^void	pf_itoa_hex(unsigned long long n, char *str, char button)$/;"	f
+pf_len	ft_printf_utils.c	/^int	pf_len(long long n, int scale)$/;"	f
 print_addr	ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
-print_char	ft_printf.c	/^static int	print_char(char ch)$/;"	f	file:
-print_str	ft_printf.c	/^static int	print_str(char *str)$/;"	f	file:
+print_char	ft_printf_str.c	/^int	print_char(char ch)$/;"	f
+print_decimal	ft_printf_numeric.c	/^int	print_decimal(int n)$/;"	f
+print_hex	ft_printf_numeric.c	/^int	print_hex(unsigned int n, char button)$/;"	f
+print_str	ft_printf_str.c	/^int	print_str(char *str)$/;"	f
+print_udecimal	ft_printf_numeric.c	/^int	print_udecimal(unsigned int n)$/;"	f
