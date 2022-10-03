@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/22 20:28:42 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/23 18:35:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_char(char ch)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	return (write(1, &ch, 1));
-}
-
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	new->next = *lst;
+	*lst = new;
 }

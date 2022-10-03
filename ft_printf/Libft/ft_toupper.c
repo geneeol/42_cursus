@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/10 16:33:32 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/10 16:37:40 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int	print_char(char ch)
+int	ft_toupper(int ch)
 {
-	return (write(1, &ch, 1));
-}
+	int	diff;
 
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	diff = 'a' - 'A';
+	if ('a' <= ch && ch <= 'z')
+		return (ch - diff);
+	else
+		return (ch);
 }

@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/16 19:50:21 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/16 19:57:30 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_char(char ch)
+char	*ft_strdup(const char *str)
 {
-	return (write(1, &ch, 1));
-}
+	char	*ret;
+	size_t	size;
 
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	size = ft_strlen(str) + 1;
+	ret = (char *)malloc(sizeof(char) * size);
+	if (!ret)
+		return (0);
+	ft_strlcpy(ret, str, size);
+	return (ret);
 }

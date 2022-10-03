@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/23 17:05:49 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/23 19:26:07 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_char(char ch)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	return (write(1, &ch, 1));
-}
+	t_list	*curr;
 
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	if (!*lst)
+		*lst = new;
+	else
+	{
+		curr = ft_lstlast(*lst);
+		curr->next = new;
+	}
 }

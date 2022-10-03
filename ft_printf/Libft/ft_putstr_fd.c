@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/21 18:01:57 by dahkang           #+#    #+#             */
+/*   Updated: 2022/08/03 17:29:45 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_char(char ch)
+void	ft_putstr_fd(char *str, int fd)
 {
-	return (write(1, &ch, 1));
-}
-
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	while (*str)
+		ft_putchar_fd(*str++, fd);
 }

@@ -6,52 +6,15 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:59:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/02 22:21:26 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/10/03 22:54:52 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-
-#include <stdio.h>
-
-//libft 꼭 가져올 것
-int	ft_strlen(char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
-
-//1. itoa로 하기 (쉬움)
-//2. 재귀로 하기 (어려움)
-
-/*
-int	rec(unsigned long long nb)
-{
-	const char *hex ="0123456789abcdef";
-	int	ret;
-	int	err;
-
-	ret = 0;
-	err = 0;
-	if (nb / 16 <= 0)
-		return (write(1, &hex[nb % 16], 1));
-	if (rec(nb / 16) == -1)
-		return (-1);
-	ret += rec(nb / 16);
-	write(1, &hex[nb % 16], 1);
-	printf("rec ret: %d\n", ret);
-	return (ret);
-}
-*/
 
 static int	print_addr(void *ptr)
 {
-	char	str[20];
+	char				str[20];
 	unsigned long long	addr;
 
 	addr = (unsigned long long)ptr;
@@ -66,9 +29,7 @@ static int	print_addr(void *ptr)
 
 static int	pf_conversion(const char *format, va_list ap)
 {
-	if (!*format)
-		return (-1);
-	if (*format == 'c') 
+	if (*format == 'c')
 		return (print_char(va_arg(ap, int)));
 	else if (*format == 's')
 		return (print_str(va_arg(ap, char *)));
@@ -78,19 +39,19 @@ static int	pf_conversion(const char *format, va_list ap)
 		return (print_decimal(va_arg(ap, int)));
 	else if (*format == 'u')
 		return (print_udecimal(va_arg(ap, unsigned int)));
-	else if (*format== 'x' || *format == 'X')
+	else if (*format == 'x' || *format == 'X')
 		return (print_hex(va_arg(ap, unsigned int), *format));
 	else if (*format == '%')
 		return (write(1, "%", 1));
-	else 
+	else
 		return (-1);
 }
 
 int	ft_printf(const char *format, ...)
 {
-	int	ret;
-	int	converted_len;
-	va_list ap;
+	int		ret;
+	int		converted_len;
+	va_list	ap;
 
 	ret = 0;
 	va_start(ap, format);
@@ -105,10 +66,11 @@ int	ft_printf(const char *format, ...)
 			format++;
 		}
 		else
+		{
 			if (write(1, format++, 1) < 0)
 				return (-1);
-			else
-				ret++;
+			ret++;
+		}
 	}
 	va_end(ap);
 	return (ret);

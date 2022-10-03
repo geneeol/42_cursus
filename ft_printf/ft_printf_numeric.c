@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:47:35 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/02 22:40:41 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/10/03 15:29:52 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,23 @@
 int	print_decimal(int n)
 {
 	char	str[15];
-	pf_itoa(n, str, 0);
+
+	pf_itoa(n, str);
 	return (write(1, str, ft_strlen(str)));
 }
 
 int	print_udecimal(unsigned int n)
 {
 	char	str[15];
-	pf_itoa(n, str, 1);
+
+	pf_itoa_u(n, str);
 	return (write(1, str, ft_strlen(str)));
 }
 
 int	print_hex(unsigned int n, char button)
 {
 	char	str[15];
-	pf_itoa_hex((unsigned int)n, str, button);
+
+	pf_itoa_hex((unsigned long long)n, str, button);
 	return (write(1, str, ft_strlen(str)));
 }

@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 14:28:29 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/03 22:55:55 by dahkang          ###   ########.fr       */
+/*   Created: 2022/07/21 17:07:48 by dahkang           #+#    #+#             */
+/*   Updated: 2022/07/21 17:43:26 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	print_char(char ch)
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	return (write(1, &ch, 1));
-}
+	char			*ret;
+	unsigned int	i;
 
-int	print_str(char *str)
-{
-	if (!str)
-		str = "(null)";
-	return (write(1, str, ft_strlen(str)));
+	if (!str || !f)
+		return (0);
+	ret = ft_calloc(ft_strlen(str) + 1, sizeof(char));
+	if (!ret)
+		return (0);
+	i = 0;
+	while (str[i])
+	{
+		ret[i] = f(i, str[i]);
+		i++;
+	}
+	return (ret);
 }
