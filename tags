@@ -4,7 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.DEFAULT_GOAL	ft_printf/printfTester/Makefile	/^.DEFAULT_GOAL	:= m$/;"	m
 .DEFAULT_GOAL	libftTester/Makefile	/^.DEFAULT_GOAL	:= a$/;"	m
 ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS) $(OBJS_BONUS)$/;"	m
 ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS)$/;"	m
@@ -27,64 +26,41 @@ BENCH_MEDIUM	libft-unit-test/include/libft_test.h	/^	BENCH_MEDIUM,$/;"	e	enum:e_
 BENCH_RANDOM	libft-unit-test/include/libft_test.h	/^	BENCH_RANDOM$/;"	e	enum:e_values
 BENCH_SMALL	libft-unit-test/include/libft_test.h	/^	BENCH_SMALL,$/;"	e	enum:e_values
 BFSIZE	libft-unit-test/include/libft_test.h	/^# define	BFSIZE	/;"	d
-BG_BLACK	ft_printf/printfTester/utils/color.hpp	/^	BG_BLACK			= 40,$/;"	e	enum:Color
 BG_BLACK	libftTester/utils/color.hpp	/^	BG_BLACK			= 40,$/;"	e	enum:Color
-BG_BLUE	ft_printf/printfTester/utils/color.hpp	/^	BG_BLUE				= 44,$/;"	e	enum:Color
 BG_BLUE	libftTester/utils/color.hpp	/^	BG_BLUE				= 44,$/;"	e	enum:Color
-BG_CYAN	ft_printf/printfTester/utils/color.hpp	/^	BG_CYAN				= 46,$/;"	e	enum:Color
 BG_CYAN	libftTester/utils/color.hpp	/^	BG_CYAN				= 46,$/;"	e	enum:Color
-BG_DEFAULT	ft_printf/printfTester/utils/color.hpp	/^	BG_DEFAULT			= 49,$/;"	e	enum:Color
 BG_DEFAULT	libftTester/utils/color.hpp	/^	BG_DEFAULT			= 49,$/;"	e	enum:Color
-BG_DGRAY	ft_printf/printfTester/utils/color.hpp	/^	BG_DGRAY			= 100,$/;"	e	enum:Color
 BG_DGRAY	libftTester/utils/color.hpp	/^	BG_DGRAY			= 100,$/;"	e	enum:Color
-BG_GREEN	ft_printf/printfTester/utils/color.hpp	/^	BG_GREEN			= 42,$/;"	e	enum:Color
 BG_GREEN	libftTester/utils/color.hpp	/^	BG_GREEN			= 42,$/;"	e	enum:Color
-BG_LBLUE	ft_printf/printfTester/utils/color.hpp	/^	BG_LBLUE			= 104,$/;"	e	enum:Color
 BG_LBLUE	libftTester/utils/color.hpp	/^	BG_LBLUE			= 104,$/;"	e	enum:Color
-BG_LCYAN	ft_printf/printfTester/utils/color.hpp	/^	BG_LCYAN			= 106,$/;"	e	enum:Color
 BG_LCYAN	libftTester/utils/color.hpp	/^	BG_LCYAN			= 106,$/;"	e	enum:Color
-BG_LGRAY	ft_printf/printfTester/utils/color.hpp	/^	BG_LGRAY			= 47,$/;"	e	enum:Color
 BG_LGRAY	libftTester/utils/color.hpp	/^	BG_LGRAY			= 47,$/;"	e	enum:Color
-BG_LGREEN	ft_printf/printfTester/utils/color.hpp	/^	BG_LGREEN			= 102,$/;"	e	enum:Color
 BG_LGREEN	libftTester/utils/color.hpp	/^	BG_LGREEN			= 102,$/;"	e	enum:Color
-BG_LMAGENTA	ft_printf/printfTester/utils/color.hpp	/^	BG_LMAGENTA			= 105,$/;"	e	enum:Color
 BG_LMAGENTA	libftTester/utils/color.hpp	/^	BG_LMAGENTA			= 105,$/;"	e	enum:Color
-BG_LRED	ft_printf/printfTester/utils/color.hpp	/^	BG_LRED				= 101,$/;"	e	enum:Color
 BG_LRED	libftTester/utils/color.hpp	/^	BG_LRED				= 101,$/;"	e	enum:Color
-BG_LYELLOW	ft_printf/printfTester/utils/color.hpp	/^	BG_LYELLOW			= 103,$/;"	e	enum:Color
 BG_LYELLOW	libftTester/utils/color.hpp	/^	BG_LYELLOW			= 103,$/;"	e	enum:Color
-BG_MAGENTA	ft_printf/printfTester/utils/color.hpp	/^	BG_MAGENTA			= 45,$/;"	e	enum:Color
 BG_MAGENTA	libftTester/utils/color.hpp	/^	BG_MAGENTA			= 45,$/;"	e	enum:Color
-BG_RED	ft_printf/printfTester/utils/color.hpp	/^	BG_RED				= 41,$/;"	e	enum:Color
 BG_RED	libftTester/utils/color.hpp	/^	BG_RED				= 41,$/;"	e	enum:Color
-BG_WHITE	ft_printf/printfTester/utils/color.hpp	/^	BG_WHITE			= 107$/;"	e	enum:Color
 BG_WHITE	libftTester/utils/color.hpp	/^	BG_WHITE			= 107$/;"	e	enum:Color
-BG_YELLOW	ft_printf/printfTester/utils/color.hpp	/^	BG_YELLOW 			= 43,$/;"	e	enum:Color
 BG_YELLOW	libftTester/utils/color.hpp	/^	BG_YELLOW 			= 43,$/;"	e	enum:Color
 BIG_CHAR	libft-unit-test/hardcore-mode/utils.h	/^# define BIG_CHAR /;"	d
-BLINK	ft_printf/printfTester/utils/color.hpp	/^	BLINK				= 5,$/;"	e	enum:Color
 BLINK	libftTester/utils/color.hpp	/^	BLINK				= 5,$/;"	e	enum:Color
-BOLD	ft_printf/printfTester/utils/color.hpp	/^	BOLD				= 1,$/;"	e	enum:Color
 BOLD	libftTester/utils/color.hpp	/^	BOLD				= 1,$/;"	e	enum:Color
-BONUS	ft_printf/printfTester/Makefile	/^BONUS			= minus 0 dot sharp space +$/;"	m
 BONUS	libftTester/Makefile	/^BONUS			= lstnew lstadd_front lstsize lstlast lstadd_back lstdelone lstclear lstiter lstmap$/;"	m
 BSIZE	libft-unit-test/include/libft_test.h	/^# define	BSIZE	/;"	d
 BUF1PAGES	libft-unit-test/hardcore-mode/utils.h	/^# define BUF1PAGES /;"	d
 BUFFER_SIZE	get_next_line/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
 BUFFER_SIZE	get_next_line/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
-B_SIZE	ft_printf/printfTester/utils/print.hpp	/^# define B_SIZE /;"	d
 CALL	libft-unit-test/hardcore-mode/utils.h	/^#define CALL(/;"	d
 CC	Libft/Makefile	/^CC = cc$/;"	m
 CC	ft_printf/Libft/Makefile	/^CC = cc$/;"	m
 CC	ft_printf/Makefile	/^CC = cc$/;"	m
-CC	ft_printf/printfTester/Makefile	/^CC				= clang++ -std=c11 -Wno-everything$/;"	m
 CC	libft-unit-test/Makefile	/^CC			=	clang$/;"	m
 CC	libftTester/Makefile	/^CC		= clang++$/;"	m
 CC_SO	libft-unit-test/Makefile	/^CC_SO		=	$(CC)$/;"	m
 CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	ft_printf/Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	ft_printf/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
-CFLAGS	ft_printf/printfTester/Makefile	/^CFLAGS			= -g3 -ldl -std=c++11 -I utils\/ -I.. $(addprefix -I, $(shell find .. -regex ".*\/.*\\.h" | grep -oh ".*\\\/"))$/;"	m
 CFLAGS	libft-unit-test/Makefile	/^CFLAGS		=	-Werror -Wall -Wextra# -g3 -fsanitize=address$/;"	m
 CFLAGS	libftTester/Makefile	/^CFLAGS	= -g3 -ldl -std=c++11 -I utils\/ -I$(LIBFT_PATH) $/;"	m
 CHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR /;"	d	file:
@@ -97,7 +73,6 @@ CHAR__MAX	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR__MAX /;"	d
 CHAR__MAX	libft-unit-test/hardcore-mode/utils.h	/^# define CHAR__MAX /;"	d
 CHAR__MIN	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define CHAR__MIN /;"	d	file:
 CHAR__MIN	libft-unit-test/hardcore-mode/utils.h	/^# define CHAR__MIN /;"	d
-CHECK_HPP	ft_printf/printfTester/utils/check.hpp	/^# define CHECK_HPP$/;"	d
 CHECK_HPP	libftTester/utils/check.hpp	/^# define CHECK_HPP$/;"	d
 CLEAN_COLOR	libft-unit-test/Makefile	/^CLEAN_COLOR		=	9$/;"	m
 CLEAN_COLOR_T	libft-unit-test/Makefile	/^CLEAN_COLOR_T	=	196$/;"	m
@@ -110,7 +85,6 @@ COLOR_BENCH_VERSUS	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_V
 COLOR_BENCH_WINNER	libft-unit-test/include/libft_test.h	/^# define	COLOR_BENCH_WINNER /;"	d
 COLOR_CLEAR	libft-unit-test/include/libft_test.h	/^# define	COLOR_CLEAR	/;"	d
 COLOR_FAILED	libft-unit-test/include/libft_test.h	/^# define	COLOR_FAILED	/;"	d
-COLOR_HPP	ft_printf/printfTester/utils/color.hpp	/^# define COLOR_HPP$/;"	d
 COLOR_HPP	libftTester/utils/color.hpp	/^# define COLOR_HPP$/;"	d
 COLOR_INFO	libft-unit-test/include/libft_test.h	/^# define	COLOR_INFO	/;"	d
 COLOR_INTERUPT	libft-unit-test/include/libft_test.h	/^# define	COLOR_INTERUPT	/;"	d
@@ -135,49 +109,29 @@ COLOR_TIMEOUT	libft-unit-test/include/libft_test.h	/^# define	COLOR_TIMEOUT	/;"	
 COLOR_WARNING	libft-unit-test/include/libft_test.h	/^# define	COLOR_WARNING	/;"	d
 CSOFLAGS	libft-unit-test/Makefile	/^CSOFLAGS	=	-shared -fPIC$/;"	m
 CSOFLAGS2	libft-unit-test/Makefile	/^CSOFLAGS2	=	$/;"	m
-Color	ft_printf/printfTester/utils/color.hpp	/^enum Color$/;"	g
 Color	libftTester/utils/color.hpp	/^enum Color$/;"	g
 DIFF_FILE	libft-unit-test/include/libft_test.h	/^# define	DIFF_FILE	/;"	d
-DIM	ft_printf/printfTester/utils/color.hpp	/^	DIM					= 2,$/;"	e	enum:Color
 DIM	libftTester/utils/color.hpp	/^	DIM					= 2,$/;"	e	enum:Color
 DYLD_INTERPOSE	libft-unit-test/assets/malloc.c	/^# define DYLD_INTERPOSE(/;"	d	file:
 DYLIBFLAG	libft-unit-test/Makefile	/^	DYLIBFLAG = -dynamiclib$/;"	m
 DYLIBFLAG	libft-unit-test/Makefile	/^	DYLIBFLAG = -fPIC -shared -ldl$/;"	m
-ENDL	ft_printf/printfTester/utils/color.hpp	/^# define ENDL /;"	d
 ENDL	libftTester/utils/color.hpp	/^# define ENDL /;"	d
-FG_BLACK	ft_printf/printfTester/utils/color.hpp	/^	FG_BLACK			= 30,$/;"	e	enum:Color
 FG_BLACK	libftTester/utils/color.hpp	/^	FG_BLACK			= 30,$/;"	e	enum:Color
-FG_BLUE	ft_printf/printfTester/utils/color.hpp	/^	FG_BLUE				= 34,$/;"	e	enum:Color
 FG_BLUE	libftTester/utils/color.hpp	/^	FG_BLUE				= 34,$/;"	e	enum:Color
-FG_CYAN	ft_printf/printfTester/utils/color.hpp	/^	FG_CYAN				= 36,$/;"	e	enum:Color
 FG_CYAN	libftTester/utils/color.hpp	/^	FG_CYAN				= 36,$/;"	e	enum:Color
-FG_DEFAULT	ft_printf/printfTester/utils/color.hpp	/^	FG_DEFAULT			= 39,$/;"	e	enum:Color
 FG_DEFAULT	libftTester/utils/color.hpp	/^	FG_DEFAULT			= 39,$/;"	e	enum:Color
-FG_DGRAY	ft_printf/printfTester/utils/color.hpp	/^	FG_DGRAY			= 90,$/;"	e	enum:Color
 FG_DGRAY	libftTester/utils/color.hpp	/^	FG_DGRAY			= 90,$/;"	e	enum:Color
-FG_GREEN	ft_printf/printfTester/utils/color.hpp	/^	FG_GREEN			= 32,$/;"	e	enum:Color
 FG_GREEN	libftTester/utils/color.hpp	/^	FG_GREEN			= 32,$/;"	e	enum:Color
-FG_LBLUE	ft_printf/printfTester/utils/color.hpp	/^	FG_LBLUE			= 94,$/;"	e	enum:Color
 FG_LBLUE	libftTester/utils/color.hpp	/^	FG_LBLUE			= 94,$/;"	e	enum:Color
-FG_LCYAN	ft_printf/printfTester/utils/color.hpp	/^	FG_LCYAN			= 96,$/;"	e	enum:Color
 FG_LCYAN	libftTester/utils/color.hpp	/^	FG_LCYAN			= 96,$/;"	e	enum:Color
-FG_LGRAY	ft_printf/printfTester/utils/color.hpp	/^	FG_LGRAY			= 37,$/;"	e	enum:Color
 FG_LGRAY	libftTester/utils/color.hpp	/^	FG_LGRAY			= 37,$/;"	e	enum:Color
-FG_LGREEN	ft_printf/printfTester/utils/color.hpp	/^	FG_LGREEN			= 92,$/;"	e	enum:Color
 FG_LGREEN	libftTester/utils/color.hpp	/^	FG_LGREEN			= 92,$/;"	e	enum:Color
-FG_LMAGENTA	ft_printf/printfTester/utils/color.hpp	/^	FG_LMAGENTA			= 95,$/;"	e	enum:Color
 FG_LMAGENTA	libftTester/utils/color.hpp	/^	FG_LMAGENTA			= 95,$/;"	e	enum:Color
-FG_LRED	ft_printf/printfTester/utils/color.hpp	/^	FG_LRED				= 91,$/;"	e	enum:Color
 FG_LRED	libftTester/utils/color.hpp	/^	FG_LRED				= 91,$/;"	e	enum:Color
-FG_LYELLOW	ft_printf/printfTester/utils/color.hpp	/^	FG_LYELLOW			= 93,$/;"	e	enum:Color
 FG_LYELLOW	libftTester/utils/color.hpp	/^	FG_LYELLOW			= 93,$/;"	e	enum:Color
-FG_MAGENTA	ft_printf/printfTester/utils/color.hpp	/^	FG_MAGENTA			= 35,$/;"	e	enum:Color
 FG_MAGENTA	libftTester/utils/color.hpp	/^	FG_MAGENTA			= 35,$/;"	e	enum:Color
-FG_RED	ft_printf/printfTester/utils/color.hpp	/^	FG_RED				= 31,$/;"	e	enum:Color
 FG_RED	libftTester/utils/color.hpp	/^	FG_RED				= 31,$/;"	e	enum:Color
-FG_WHITE	ft_printf/printfTester/utils/color.hpp	/^	FG_WHITE			= 97,$/;"	e	enum:Color
 FG_WHITE	libftTester/utils/color.hpp	/^	FG_WHITE			= 97,$/;"	e	enum:Color
-FG_YELLOW	ft_printf/printfTester/utils/color.hpp	/^	FG_YELLOW 			= 33,$/;"	e	enum:Color
 FG_YELLOW	libftTester/utils/color.hpp	/^	FG_YELLOW 			= 33,$/;"	e	enum:Color
 FOR_EACH_IMPL	libft-unit-test/hardcore-mode/utils.h	/^#define FOR_EACH_IMPL(/;"	d
 FRAMEWORK	libft-unit-test/Makefile	/^FRAMEWORK	=	$/;"	m
@@ -188,7 +142,6 @@ GET_NEXT_LINE_H	get_next_line/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
 GET_STDERR	libft-unit-test/include/libft_test.h	/^# define	GET_STDERR(/;"	d
 GET_STDOUT	libft-unit-test/include/libft_test.h	/^# define	GET_STDOUT(/;"	d
 GIGABYTE	libft-unit-test/src/bench_functions.c	/^#define GIGABYTE	/;"	d	file:
-HIDDEN	ft_printf/printfTester/utils/color.hpp	/^	HIDDEN				= 8,$/;"	e	enum:Color
 HIDDEN	libftTester/utils/color.hpp	/^	HIDDEN				= 8,$/;"	e	enum:Color
 HIMAGIC	libft-unit-test/hardcore-mode/hardcore-main.c	/^# define HIMAGIC /;"	d	file:
 HP_TIMING_AVAIL	libft-unit-test/hardcore-mode/utils.h	/^# define HP_TIMING_AVAIL /;"	d
@@ -204,7 +157,6 @@ KO_INDEX	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define KO_INDEX	/;"	
 KO_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define KO_SIZE	/;"	d	file:
 L	libft-unit-test/hardcore-mode/test-strcmp.c	/^# define L(/;"	d	file:
 LARGECHAR	libft-unit-test/hardcore-mode/utils.h	/^# define LARGECHAR /;"	d
-LEAK_HPP	ft_printf/printfTester/utils/leaks.hpp	/^# define LEAK_HPP$/;"	d
 LEAK_HPP	libftTester/utils/leaks.hpp	/^# define LEAK_HPP$/;"	d
 LIBDIR	libft-unit-test/Makefile	/^LIBDIR		=	$/;"	m
 LIBFTDIR	libft-unit-test/Makefile	/^LIBFTDIR	=	..\/libft$/;"	m
@@ -231,7 +183,6 @@ MALLOC_NULL	libft-unit-test/include/libft_test.h	/^# define	MALLOC_NULL	/;"	d
 MALLOC_RESET	libft-unit-test/include/libft_test.h	/^# define	MALLOC_RESET	/;"	d
 MALLOC_SET_BYTE	libft-unit-test/include/libft_test.h	/^# define	MALLOC_SET_BYTE(/;"	d
 MALLOC_SIZE	libft-unit-test/include/libft_test.h	/^# define	MALLOC_SIZE	/;"	d
-MANDATORY	ft_printf/printfTester/Makefile	/^MANDATORY		= c s p d i u x upperx percent mix$/;"	m
 MANDATORY	libftTester/Makefile	/^MANDATORY		= memset bzero memcpy memmove memchr memcmp strlen isalpha isdigit isalnum \\$/;"	m
 MAX	libft-unit-test/src/display_test_result.c	/^#define MAX(/;"	d	file:
 MAX_CHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define MAX_CHAR /;"	d	file:
@@ -288,27 +239,18 @@ PATH	gnl_tc/test.c	/^#define PATH /;"	d	file:
 PATH	libft_tc/Libft.c	/^#define PATH /;"	d	file:
 PATH	libft_tc/strnstr_null.c	/^#define PATH /;"	d	file:
 PRINT_DIFF_ASCII	libft-unit-test/include/libft_test.h	/^# define	PRINT_DIFF_ASCII(/;"	d
-PRINT_HPP	ft_printf/printfTester/utils/print.hpp	/^# define PRINT_HPP$/;"	d
 PROTECTED	libft-unit-test/include/libft_test.h	/^	PROTECTED,$/;"	e	enum:e_prot
 RAINBOW_INDEX	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define RAINBOW_INDEX	/;"	d	file:
 RAINBOW_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define RAINBOW_SIZE	/;"	d	file:
 REG	libft-unit-test/src/test_functions.c	/^#define		REG(/;"	d	file:
-RESET_ALL	ft_printf/printfTester/utils/color.hpp	/^	RESET_ALL			= 0,$/;"	e	enum:Color
 RESET_ALL	libftTester/utils/color.hpp	/^	RESET_ALL			= 0,$/;"	e	enum:Color
-RESET_BLINK	ft_printf/printfTester/utils/color.hpp	/^	RESET_BLINK			= 25,$/;"	e	enum:Color
 RESET_BLINK	libftTester/utils/color.hpp	/^	RESET_BLINK			= 25,$/;"	e	enum:Color
-RESET_BOLD	ft_printf/printfTester/utils/color.hpp	/^	RESET_BOLD			= 21,$/;"	e	enum:Color
 RESET_BOLD	libftTester/utils/color.hpp	/^	RESET_BOLD			= 21,$/;"	e	enum:Color
 RESET_DIFF	libft-unit-test/include/libft_test.h	/^# define	RESET_DIFF	/;"	d
-RESET_DIM	ft_printf/printfTester/utils/color.hpp	/^	RESET_DIM			= 22,$/;"	e	enum:Color
 RESET_DIM	libftTester/utils/color.hpp	/^	RESET_DIM			= 22,$/;"	e	enum:Color
-RESET_HIDDEN	ft_printf/printfTester/utils/color.hpp	/^	RESET_HIDDEN		= 28,$/;"	e	enum:Color
 RESET_HIDDEN	libftTester/utils/color.hpp	/^	RESET_HIDDEN		= 28,$/;"	e	enum:Color
-RESET_REVERSED	ft_printf/printfTester/utils/color.hpp	/^	RESET_REVERSED		= 27,$/;"	e	enum:Color
 RESET_REVERSED	libftTester/utils/color.hpp	/^	RESET_REVERSED		= 27,$/;"	e	enum:Color
-RESET_UNDERLINED	ft_printf/printfTester/utils/color.hpp	/^	RESET_UNDERLINED	= 24,$/;"	e	enum:Color
 RESET_UNDERLINED	libftTester/utils/color.hpp	/^	RESET_UNDERLINED	= 24,$/;"	e	enum:Color
-REVERSED	ft_printf/printfTester/utils/color.hpp	/^	REVERSED			= 7,$/;"	e	enum:Color
 REVERSED	libftTester/utils/color.hpp	/^	REVERSED			= 7,$/;"	e	enum:Color
 RUNT_COLR_T	libft-unit-test/Makefile	/^RUNT_COLR_T		=	7$/;"	m
 RUN_COLOR	libft-unit-test/Makefile	/^RUN_COLOR		=	147$/;"	m
@@ -341,8 +283,6 @@ SET_DIFF_PTR	libft-unit-test/include/libft_test.h	/^# define	SET_DIFF_PTR(/;"	d
 SET_EXPLANATION	libft-unit-test/include/libft_test.h	/^# define	SET_EXPLANATION(/;"	d
 SET_TEST_TEXT	libft-unit-test/include/libft_test.h	/^# define	SET_TEST_TEXT(/;"	d
 SHARED_MEM_FILE	libft-unit-test/include/libft_test.h	/^# define	SHARED_MEM_FILE	/;"	d
-SHELL	ft_printf/printfTester/Makefile	/^SHELL			= bash$/;"	m
-SIGSEGV_HPP	ft_printf/printfTester/utils/sigsegv.hpp	/^# define SIGSEGV_HPP$/;"	d
 SIGSEGV_HPP	libftTester/utils/sigsegv.hpp	/^# define SIGSEGV_HPP$/;"	d
 SIMPLE_COPY	libft-unit-test/hardcore-mode/test-strcpy.c	/^#define SIMPLE_COPY(/;"	d	file:
 SIMPLE_MEMCMP	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define SIMPLE_MEMCMP /;"	d	file:
@@ -371,10 +311,7 @@ STRING_3	libft-unit-test/src/test_functions.c	/^#define		STRING_3	/;"	d	file:
 STRING_4	libft-unit-test/src/test_functions.c	/^#define		STRING_4	/;"	d	file:
 STRLEN	libft-unit-test/hardcore-mode/utils.h	/^# define STRLEN /;"	d
 STRNCPY_RESULT	libft-unit-test/hardcore-mode/test-strncpy.c	/^# define STRNCPY_RESULT(/;"	d	file:
-SUBCATEGORY	ft_printf/printfTester/utils/print.hpp	/^# define SUBCATEGORY(/;"	d
 SUBTEST_SIZE	libft-unit-test/include/libft_test.h	/^# define	SUBTEST_SIZE	/;"	d
-TEST	ft_printf/printfTester/utils/print.hpp	/^# define TEST(/;"	d
-TESTS_PATH	ft_printf/printfTester/Makefile	/^TESTS_PATH		= tests\/$/;"	m
 TESTS_PATH	libftTester/Makefile	/^TESTS_PATH		= tests\/$/;"	m
 TEST_CRASH	libft-unit-test/include/libft_test.h	/^	TEST_CRASH,$/;"	e	enum:e_values
 TEST_FAILED	libft-unit-test/hardcore-mode/utils.h	/^	TEST_FAILED,$/;"	e	enum:e_tests
@@ -384,32 +321,14 @@ TEST_FUNCTION	libft-unit-test/hardcore-mode/utils.h	/^# define TEST_FUNCTION /;"
 TEST_INTERUPT	libft-unit-test/include/libft_test.h	/^	TEST_INTERUPT,$/;"	e	enum:e_values
 TEST_INVISIBLE	libft-unit-test/include/libft_test.h	/^	TEST_INVISIBLE,$/;"	e	enum:e_values
 TEST_KO	libft-unit-test/include/libft_test.h	/^	TEST_KO,$/;"	e	enum:e_values
-TEST_LIMIT	ft_printf/printfTester/tests/+_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/0_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/c_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/d_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/dot_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/i_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/minus_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/mix_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/p_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/percent_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/s_test.cpp	/^# define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/sharp_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/space_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/u_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/upperx_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	ft_printf/printfTester/tests/x_test.cpp	/^#define TEST_LIMIT /;"	d	file:
 TEST_MISSING	libft-unit-test/include/libft_test.h	/^	TEST_MISSING,$/;"	e	enum:e_values
 TEST_NOCRASH	libft-unit-test/include/libft_test.h	/^	TEST_NOCRASH,$/;"	e	enum:e_values
-TEST_NUMBER	ft_printf/printfTester/Makefile	/^TEST_NUMBER := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))$/;"	m
 TEST_PROT	libft-unit-test/include/libft_test.h	/^	TEST_PROT,$/;"	e	enum:e_values
 TEST_SPEED	libft-unit-test/include/libft_test.h	/^	TEST_SPEED,$/;"	e	enum:e_values
 TEST_SUCCESS	libft-unit-test/hardcore-mode/utils.h	/^	TEST_SUCCESS$/;"	e	enum:e_tests
 TEST_SUCCESS	libft-unit-test/include/libft_test.h	/^	TEST_SUCCESS,$/;"	e	enum:e_values
 TEST_TIMEOUT	libft-unit-test/include/libft_test.h	/^	TEST_TIMEOUT,$/;"	e	enum:e_values
 TIMEOUT_MILLIS	libft-unit-test/include/libft_test.h	/^# define	TIMEOUT_MILLIS	/;"	d
-TIMEOUT_US	ft_printf/printfTester/Makefile	/^TIMEOUT_US 		= 400000 #if you timeout you can try to increase this value$/;"	m
 TIME_BEGIN	libft-unit-test/include/libft_test.h	/^# define	TIME_BEGIN	/;"	d
 TIME_DIFF_LIB	libft-unit-test/include/libft_test.h	/^# define	TIME_DIFF_LIB	/;"	d
 TIME_DIFF_SYS	libft-unit-test/include/libft_test.h	/^# define	TIME_DIFF_SYS	/;"	d
@@ -422,14 +341,9 @@ TMPLIB	libft-unit-test/Makefile	/^TMPLIB		=	$(ASSETDIR)\/tmp$/;"	m
 TRIM_SET_PLACEHOLDER	libft-unit-test/src/test_functions.c	/^#define TRIM_SET_PLACEHOLDER /;"	d	file:
 UCHAR	libft-unit-test/hardcore-mode/test-memcmp.c	/^# define UCHAR /;"	d	file:
 UCHAR	libft-unit-test/hardcore-mode/utils.h	/^# define UCHAR /;"	d
-UNAME	ft_printf/printfTester/Makefile	/^UNAME = $(shell uname -s)$/;"	m
 UNAME	libftTester/Makefile	/^UNAME = $(shell uname -s)$/;"	m
-UNDERLINED	ft_printf/printfTester/utils/color.hpp	/^	UNDERLINED			= 4,$/;"	e	enum:Color
 UNDERLINED	libftTester/utils/color.hpp	/^	UNDERLINED			= 4,$/;"	e	enum:Color
-UTILS	ft_printf/printfTester/Makefile	/^UTILS			= $(addprefix $(UTILS_PATH), sigsegv.cpp color.cpp check.cpp leaks.cpp)$/;"	m
 UTILS	libftTester/Makefile	/^UTILS			= $(addprefix utils\/, sigsegv.cpp color.cpp check.cpp leaks.cpp)$/;"	m
-UTILS_PATH	ft_printf/printfTester/Makefile	/^UTILS_PATH		= utils\/$/;"	m
-VALGRIND	ft_printf/printfTester/Makefile	/^    VALGRIND = valgrind -q --leak-check=full --track-origins=yes$/;"	m
 VALGRIND	libftTester/Makefile	/^	VALGRIND = valgrind -q --leak-check=full$/;"	m
 VISIBLE	libft-unit-test/include/libft_test.h	/^	VISIBLE,$/;"	e	enum:e_prot
 VOID_STDERR	libft-unit-test/include/libft_test.h	/^# define	VOID_STDERR	/;"	d
@@ -553,7 +467,6 @@ bench_ft_strstr_smallbench	libft-unit-test/src/bench_functions.c	/^void			bench_
 buf1	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned char	*buf1, *buf2;$/;"	v
 buf2	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned char	*buf1, *buf2;$/;"	v
 butify	libft-unit-test/src/display_test_result.c	/^static char	*butify(char *code) {$/;"	f	file:
-check	ft_printf/printfTester/utils/check.cpp	/^void check(bool succes)$/;"	f
 check	libft-unit-test/hardcore-mode/test-utils.c	/^check (int thing, int number)$/;"	f
 check	libftTester/utils/check.cpp	/^void check(bool succes)$/;"	f
 check1	libft-unit-test/hardcore-mode/test-memcmp.c	/^check1 (void)$/;"	f	file:
@@ -563,7 +476,6 @@ check_result	libft-unit-test/hardcore-mode/test-memcmp.c	/^check_result (impl_t 
 check_result	libft-unit-test/hardcore-mode/test-strcmp.c	/^check_result (impl_t *impl,$/;"	f	file:
 check_result	libft-unit-test/hardcore-mode/test-strncmp.c	/^check_result (impl_t *impl, const char *s1, const char *s2, size_t n,$/;"	f	file:
 check_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^check_strcmp (void)$/;"	f	file:
-checkn	ft_printf/printfTester/utils/print.hpp	/^void checkn(const char * s, Args... args)$/;"	f
 code	libft-unit-test/include/libft_test.h	/^	char	*code;$/;"	m	struct:s_errs
 contains_forbidden_content	libft-unit-test/src/display_test_result.c	/^static bool	contains_forbidden_content(const char *code_line)$/;"	f	file:
 content	Libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
@@ -661,7 +573,6 @@ flags	libft-unit-test/include/libft_test.h	/^	int						flags;$/;"	m	struct:s_tes
 fn	libft-unit-test/hardcore-mode/utils.h	/^	void (*fn) (void);$/;"	m	struct:__anon2
 foo	printf_tc/tmp.c	/^void foo(void)$/;"	f
 forbidden_functions	libft-unit-test/src/display_test_result.c	/^const char		*forbidden_functions[] = {$/;"	v
-free	ft_printf/printfTester/utils/leaks.cpp	/^void free(void * p) throw()$/;"	f
 free	libftTester/utils/leaks.cpp	/^void free(void * p) throw()$/;"	f
 freeList	libftTester/tests/ft_lstadd_back_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
 freeList	libftTester/tests/ft_lstadd_front_test.cpp	/^void freeList(t_list *head) {if (head) freeList(head->next); free(head);}$/;"	f
@@ -847,22 +758,6 @@ gnl_substr	get_next_line/get_next_line_utils.c	/^char	*gnl_substr(t_line *line, 
 gnl_substr	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
 haiku_0	libft-unit-test/src/test_functions.c	/^wchar_t* haiku_0 = L"古池や蛙飛び込む水の音\\$/;"	v
 hardcore_main	libft-unit-test/hardcore-mode/hardcore-main.c	/^int		hardcore_main(void *libft_so_handler)$/;"	f
-iTest	ft_printf/printfTester/tests/+_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/0_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/c_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/d_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/dot_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/i_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/minus_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/mix_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/p_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/percent_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/s_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/sharp_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/space_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/u_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/upperx_test.cpp	/^int iTest = 1;$/;"	v
-iTest	ft_printf/printfTester/tests/x_test.cpp	/^int iTest = 1;$/;"	v
 iTest	libftTester/tests/ft_atoi_test.cpp	/^int iTest = 1;$/;"	v
 iTest	libftTester/tests/ft_bzero_test.cpp	/^int iTest = 1;$/;"	v
 iTest	libftTester/tests/ft_calloc_test.cpp	/^int iTest = 1;$/;"	v
@@ -933,22 +828,6 @@ lstiter_f	libft-unit-test/src/test_functions.c	/^void			lstiter_f(void *content)
 lstmap_f	libft-unit-test/src/test_functions.c	/^void *		lstmap_f(void *content) {$/;"	f
 lstmap_f	libft_tc/Libft.c	/^void	*lstmap_f(void *content)$/;"	f
 lstnew	libft-unit-test/src/test_functions.c	/^t_list			*lstnew(void *d) {$/;"	f
-main	ft_printf/printfTester/tests/+_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/0_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/c_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/d_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/dot_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/i_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/minus_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/mix_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/p_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/percent_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/s_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/sharp_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/space_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/u_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/upperx_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	ft_printf/printfTester/tests/x_test.cpp	/^int main(int ac, char ** av)$/;"	f
 main	gnl_tc/eof.c	/^int	main(void)$/;"	f
 main	gnl_tc/open_max.c	/^int	main(void){$/;"	f
 main	gnl_tc/static.c	/^int	main(void)$/;"	f
@@ -1012,15 +891,10 @@ main	printf_tc/err_len.c	/^int	main(void)$/;"	f
 main	printf_tc/error.c	/^int	main(void)$/;"	f
 main	printf_tc/hex.c	/^int	main(void)$/;"	f
 main	printf_tc/main.c	/^int	main(void)$/;"	f
-malloc	ft_printf/printfTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
 malloc	libftTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
-mallocList	ft_printf/printfTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
 mallocList	libftTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
-mallocListAdd	ft_printf/printfTester/utils/leaks.cpp	/^void mallocListAdd(void * p, size_t size)$/;"	f
 mallocListAdd	libftTester/utils/leaks.cpp	/^void mallocListAdd(void * p, size_t size)$/;"	f
-mallocListRemove	ft_printf/printfTester/utils/leaks.cpp	/^void mallocListRemove(void * p)$/;"	f
 mallocListRemove	libftTester/utils/leaks.cpp	/^void mallocListRemove(void * p)$/;"	f
-mcheck	ft_printf/printfTester/utils/check.cpp	/^void mcheck(void * p, size_t required_size)$/;"	f
 mcheck	libftTester/utils/check.cpp	/^void mcheck(void * p, size_t required_size)$/;"	f
 mid	libft-unit-test/include/libft_test.h	/^	uint64_t	mid;$/;"	m	struct:s_tdiff
 mtable	libft-unit-test/hardcore-mode/hardcore-main.c	/^const char *mtable[] = {$/;"	v
@@ -1031,38 +905,6 @@ nbr_bits	libft-unit-test/src/additional_functions.c	/^int     nbr_bits(unsigned 
 ncurses_deinit	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_deinit(void)$/;"	f
 ncurses_init	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_init(void)$/;"	f
 ncurses_loop	libft-unit-test/hardcore-mode/ncurses-display.c	/^void	ncurses_loop(void)$/;"	f
-new	ft_printf/printfTester/tests/+_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/+_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/0_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/0_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/c_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/c_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/d_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/d_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/dot_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/dot_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/i_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/i_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/minus_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/minus_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/mix_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/mix_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/p_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/p_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/percent_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/percent_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/s_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/s_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/sharp_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/sharp_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/space_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/space_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/u_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/u_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/upperx_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/upperx_test.cpp	/^#undef new$/;"	d	file:
-new	ft_printf/printfTester/tests/x_test.cpp	/^#define new /;"	d	file:
-new	ft_printf/printfTester/tests/x_test.cpp	/^#undef new$/;"	d	file:
 new	libftTester/tests/ft_atoi_test.cpp	/^#define new /;"	d	file:
 new	libftTester/tests/ft_atoi_test.cpp	/^#undef new$/;"	d	file:
 new	libftTester/tests/ft_bzero_test.cpp	/^#define new /;"	d	file:
@@ -1158,12 +1000,9 @@ nl_parse	get_next_line/bonus/get_next_line_bonus.c	/^static char	*nl_parse(t_lin
 num	libft-unit-test/assets/wrapper.c	/^	int		num;$/;"	m	struct:s_sig	file:
 olol	libft-unit-test/include/libft_test.h	/^	unsigned long long int	olol;$/;"	m	struct:s_tests
 one	libft-unit-test/hardcore-mode/test-strcpy.c	/^char one[50];$/;"	v
-operator <<	ft_printf/printfTester/utils/color.cpp	/^operator<<(std::ostream & os, Color c)$/;"	f
 operator <<	libftTester/utils/color.cpp	/^operator<<(std::ostream & os, Color c)$/;"	f
-operator ==	ft_printf/printfTester/utils/leaks.cpp	/^bool operator==(ptr const & p1, ptr const & p2)$/;"	f
 operator ==	libftTester/utils/leaks.cpp	/^bool operator==(ptr const & p1, ptr const & p2)$/;"	f
 options	libft-unit-test/src/main.c	/^static t_option options[] = {$/;"	v	file:
-p	ft_printf/printfTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
 p	libftTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
 page_size	libft-unit-test/hardcore-mode/hardcore-main.c	/^size_t			page_size;$/;"	v
 part	libft-unit-test/include/libft_test.h	/^	int		part;$/;"	m	struct:s_subtest
@@ -1173,9 +1012,6 @@ pf_itoa	ft_printf/ft_printf_utils.c	/^void	pf_itoa(int n, char str[])$/;"	f
 pf_itoa_hex	ft_printf/ft_printf_utils.c	/^void	pf_itoa_hex(unsigned long long n, char str[], char specifier)$/;"	f
 pf_itoa_u	ft_printf/ft_printf_utils.c	/^void	pf_itoa_u(unsigned int n, char str[])$/;"	f
 pf_len	ft_printf/ft_printf_utils.c	/^int	pf_len(int n)$/;"	f
-pipeOut	ft_printf/printfTester/utils/print.hpp	/^int pipeOut, stdOut;$/;"	v
-print	ft_printf/printfTester/utils/print.hpp	/^void print(const char * s, Args... args)$/;"	f
-printTestNumber	ft_printf/printfTester/utils/print.hpp	/^void printTestNumber(char * n, int limit)$/;"	f
 print_addr	ft_printf/ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
 print_char	ft_printf/ft_printf_str.c	/^int	print_char(char ch)$/;"	f
 print_decimal	ft_printf/ft_printf_numeric.c	/^int	print_decimal(int n)$/;"	f
@@ -1198,8 +1034,6 @@ proto_t	libft-unit-test/hardcore-mode/test-strncmp.c	/^typedef int (*proto_t) (c
 proto_t	libft-unit-test/hardcore-mode/test-strncpy.c	/^typedef char *(*proto_t) (char *, const char *, size_t);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-strrchr.c	/^typedef CHAR *(*proto_t) (const CHAR *, int);$/;"	t	file:
 proto_t	libft-unit-test/hardcore-mode/test-strstr.c	/^typedef char *(*proto_t) (const char *, const char *);$/;"	t	file:
-ptr	ft_printf/printfTester/utils/leaks.hpp	/^	ptr(void * _p = 0, size_t _size = 0) : p(_p), size(_size) {}$/;"	f	struct:ptr
-ptr	ft_printf/printfTester/utils/leaks.hpp	/^struct ptr$/;"	s
 ptr	libft-unit-test/include/libft_test.h	/^	void					*ptr;$/;"	m	struct:s_tests
 ptr	libftTester/utils/leaks.hpp	/^	ptr(void * _p = 0, size_t _size = 0) : p(_p), size(_size) {}$/;"	f	struct:ptr
 ptr	libftTester/utils/leaks.hpp	/^struct ptr$/;"	s
@@ -1234,27 +1068,8 @@ seed	libft-unit-test/hardcore-mode/hardcore-main.c	/^unsigned int	seed = 0x42;$/
 setup_rainbow	libft-unit-test/hardcore-mode/ncurses-display.c	/^static void		setup_rainbow(int shift)$/;"	f	file:
 sfmt	libft-unit-test/hardcore-mode/utils.h	/^# define sfmt /;"	d
 short_name	libft-unit-test/include/libft_test.h	/^	char	short_name;$/;"	m	struct:s_option
-showLeaks	ft_printf/printfTester/utils/leaks.cpp	/^void showLeaks(void)$/;"	f
 showLeaks	libftTester/utils/leaks.cpp	/^void showLeaks(void)$/;"	f
-showTest	ft_printf/printfTester/tests/+_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/0_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/c_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/d_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/dot_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/i_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/minus_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/mix_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/p_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/percent_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/s_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/sharp_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/space_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/u_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/upperx_test.cpp	/^bool showTest = false;$/;"	v
-showTest	ft_printf/printfTester/tests/x_test.cpp	/^bool showTest = false;$/;"	v
-showTestInfos	ft_printf/printfTester/utils/print.hpp	/^void showTestInfos(void)$/;"	f
 sigs	libft-unit-test/assets/wrapper.c	/^t_sig	sigs[] = {$/;"	v
-sigsegv	ft_printf/printfTester/utils/sigsegv.cpp	/^void sigsegv(int signal)$/;"	f
 sigsegv	libftTester/utils/sigsegv.cpp	/^void sigsegv(int signal)$/;"	f
 simple_STRLEN	libft-unit-test/hardcore-mode/test-strlen.c	/^simple_STRLEN (const CHAR *s)$/;"	f
 simple_memcmp	libft-unit-test/src/additional_functions.c	/^simple_memcmp (const char *s1, const char *s2, size_t n)$/;"	f
@@ -1262,11 +1077,9 @@ simple_memset	libft-unit-test/hardcore-mode/test-memset.c	/^simple_memset (char 
 simple_strcmp	libft-unit-test/hardcore-mode/test-strcmp.c	/^simple_strcmp (const char *s1, const char *s2)$/;"	f
 simple_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^simple_strncmp (const char *s1, const char *s2, size_t n)$/;"	f
 single_bracket_on_line	libft-unit-test/src/display_test_result.c	/^bool		single_bracket_on_line(char *line, int n)$/;"	f
-size	ft_printf/printfTester/utils/leaks.hpp	/^	size_t size;$/;"	m	struct:ptr
 size	libftTester/utils/leaks.hpp	/^	size_t size;$/;"	m	struct:ptr
 split_cmp_array	libft-unit-test/src/test_functions.c	/^void			split_cmp_array(char ** expected, char ** got)$/;"	f
 state	libft-unit-test/include/libft_test.h	/^	char		state;$/;"	m	struct:s_tdiff
-stdOut	ft_printf/printfTester/utils/print.hpp	/^int pipeOut, stdOut;$/;"	v
 str	get_next_line/bonus/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
 str	get_next_line/get_next_line.h	/^	char	*str;$/;"	m	struct:s_line
 str	get_next_line/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
@@ -1292,38 +1105,6 @@ t_str	gnl_tc/static.c	/^} t_str;$/;"	t	typeref:struct:s_str	file:
 t_tdiff	libft-unit-test/include/libft_test.h	/^}				t_tdiff;$/;"	t	typeref:struct:s_tdiff
 t_test	libft-unit-test/include/libft_test.h	/^}				t_test;$/;"	t	typeref:struct:s_tests
 test	libft-unit-test/hardcore-mode/utils.h	/^	long test;$/;"	m	struct:__anon2
-testName	ft_printf/printfTester/tests/+_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/0_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/c_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/d_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/dot_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/i_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/minus_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/mix_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/p_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/percent_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/s_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/sharp_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/space_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/u_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/upperx_test.cpp	/^char * testName;$/;"	v
-testName	ft_printf/printfTester/tests/x_test.cpp	/^char * testName;$/;"	v
-testNumber	ft_printf/printfTester/tests/+_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/0_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/c_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/d_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/dot_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/i_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/minus_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/mix_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/p_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/percent_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/s_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/sharp_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/space_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/u_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/upperx_test.cpp	/^int testNumber;$/;"	v
-testNumber	ft_printf/printfTester/tests/x_test.cpp	/^int testNumber;$/;"	v
 test_ft_atof	libft-unit-test/src/test_functions.c	/^void			test_ft_atof(void) {$/;"	f
 test_ft_atof_basic	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_basic(void *ptr) {$/;"	f
 test_ft_atof_blanks1	libft-unit-test/src/test_functions.c	/^void			test_ft_atof_blanks1(void *ptr) {$/;"	f
@@ -1888,7 +1669,6 @@ time_begin	libft-unit-test/include/libft_test.h	/^	size_t		time_begin;$/;"	m	str
 time_end	libft-unit-test/include/libft_test.h	/^	size_t		time_end;$/;"	m	struct:s_shared_mem_map
 time_mid	libft-unit-test/include/libft_test.h	/^	size_t		time_mid;$/;"	m	struct:s_shared_mem_map
 timer	libft-unit-test/src/main.c	/^void	*timer(void *t) {$/;"	f
-title	ft_printf/printfTester/utils/check.hpp	/^# define title(/;"	d
 title	libftTester/utils/check.hpp	/^#define title(/;"	d
 total_subtest	libft-unit-test/src/init.c	/^int				total_subtest = 0;$/;"	v
 two	libft-unit-test/hardcore-mode/test-strcpy.c	/^char two[50];$/;"	v
