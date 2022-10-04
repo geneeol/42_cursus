@@ -6,7 +6,7 @@
 #    By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 19:23:03 by dahkang           #+#    #+#              #
-#    Updated: 2022/10/03 19:32:44 by dahkang          ###   ########.fr        #
+#    Updated: 2022/10/04 17:31:39 by dahkang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,4 +44,4 @@ re:
 	make fclean
 	make all
 
-.PHONY: all clean fclean re lib
+.PHONY: all clean fclean re
