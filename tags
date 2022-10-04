@@ -493,6 +493,7 @@ current_subtest_id	libft-unit-test/src/init.c	/^int				current_subtest_id = 0;$/
 current_test	libft-unit-test/src/init.c	/^char			*current_test = "";$/;"	v
 current_test_code	libft-unit-test/src/init.c	/^char			*current_test_code = "";$/;"	v
 current_test_id	libft-unit-test/src/init.c	/^int				current_test_id = 0;$/;"	v
+daprintf	printf_tc/attribute.c	/^void daprintf(int error_level, char *fmt, ...)$/;"	f
 data	libft-unit-test/include/libft_test.h	/^	char					data[128];$/;"	m	struct:s_tests
 data	libft-unit-test/include/libft_test.h	/^	char	*data;$/;"	m	struct:s_errs
 diff	libft-unit-test/include/libft_test.h	/^	char	*diff;$/;"	m	struct:s_errs
@@ -571,6 +572,7 @@ fd_to_buffer	libft-unit-test/src/main.c	/^void	fd_to_buffer(int fd) {$/;"	f
 fg_color_to_bg	libft-unit-test/src/display_test_result.c	/^static char *fg_color_to_bg(char *color, int buffer)$/;"	f	file:
 flags	libft-unit-test/include/libft_test.h	/^	int						flags;$/;"	m	struct:s_tests
 fn	libft-unit-test/hardcore-mode/utils.h	/^	void (*fn) (void);$/;"	m	struct:__anon2
+foo	printf_tc/attribute.c	/^void foo()$/;"	f
 foo	printf_tc/tmp.c	/^void foo(void)$/;"	f
 forbidden_functions	libft-unit-test/src/display_test_result.c	/^const char		*forbidden_functions[] = {$/;"	v
 free	libftTester/utils/leaks.cpp	/^void free(void * p) throw()$/;"	f
@@ -712,6 +714,7 @@ func	gnl_tc/static_param.c	/^void	func(int num)$/;"	f
 func2	gnl_tc/static.c	/^void	func2(void)$/;"	f
 func2	gnl_tc/static_param.c	/^int	func2()$/;"	f
 g_bench	libft-unit-test/src/init.c	/^char			g_bench = 0;$/;"	v
+g_debug_level	printf_tc/attribute.c	/^int g_debug_level = 0;$/;"	v
 g_delone_called	libft-unit-test/src/test_functions.c	/^static bool		g_delone_called;$/;"	v	file:
 g_diff_fd	libft-unit-test/src/init.c	/^int				g_diff_fd = 0;$/;"	v
 g_hardcore	libft-unit-test/src/main.c	/^bool	g_hardcore = false;$/;"	v
@@ -887,6 +890,7 @@ main	libft_tc/strlcpy_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strncmp_null.c	/^int	main(void)$/;"	f
 main	libft_tc/strnstr_null.c	/^int	main(void)$/;"	f
 main	libft_tc/test.c	/^int main()$/;"	f
+main	printf_tc/attribute.c	/^int	main(void)$/;"	f
 main	printf_tc/err_len.c	/^int	main(void)$/;"	f
 main	printf_tc/error.c	/^int	main(void)$/;"	f
 main	printf_tc/hex.c	/^int	main(void)$/;"	f

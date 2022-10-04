@@ -14,7 +14,6 @@ int	main(void)
 	null_ptr = 0;
 	str = "I'm dahkang";
 	
-	/*
 	printf(">============'c' specifier===========<\n");
 	ft_printf("hello 42 world\n");
 	printf("\n\n\n");
@@ -22,7 +21,7 @@ int	main(void)
 	printf("\n\n\n");
 	printf("ret2: %d\n", ft_printf("hello %c world\n", 'I'));
 	//컴파일 단계에서 에러를 띄우려면 특정 속성을 상속받아야 한다 (어셈블리) 허용함수가 아님
-	printf("char: %c\n", "a");
+	//printf("char: %c\n", "a");
 	printf(">============'s' specifier===========<\n");
 	printf("com null_ptr ret: %d\n", (printf("null ptr: %s\n", null_ptr)));
 	printf("mine null_ptr ret: %d\n", (ft_printf("null ptr: %s\n", null_ptr)));
@@ -49,10 +48,11 @@ int	main(void)
 	printf("mine ret: %d\n", ft_printf("mine hex int max: %x\n", 2147483647));
 	printf("com ret: %d\n", printf("com hex u_int max: %x\n", num));
 	printf("mine ret: %d\n", ft_printf("mine hex u_int max: %x\n", num));
-	*/
+	/*
 	printf("com -1?: %d\n", printf("hex over int: %x\n", 555555555555));
 	ft_printf("mine -1?: %d\n", ft_printf("hex over int: %x\n", 555555555555));
 	ft_printf("10: %d\n", 10);
+	*/
 	printf(">==========='d'specifier===========<\n");
 	printf("mine ret: %d\n", ft_printf("-10: %d\n", -10));;
 	return (0);

@@ -4,114 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.DEFAULT_GOAL	printfTester/Makefile	/^.DEFAULT_GOAL	:= m$/;"	m
 ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS) $(OBJS_BONUS)$/;"	m
 ALL_OBJS	Libft/Makefile	/^	ALL_OBJS = $(OBJS)$/;"	m
-BG_BLACK	printfTester/utils/color.hpp	/^	BG_BLACK			= 40,$/;"	e	enum:Color
-BG_BLUE	printfTester/utils/color.hpp	/^	BG_BLUE				= 44,$/;"	e	enum:Color
-BG_CYAN	printfTester/utils/color.hpp	/^	BG_CYAN				= 46,$/;"	e	enum:Color
-BG_DEFAULT	printfTester/utils/color.hpp	/^	BG_DEFAULT			= 49,$/;"	e	enum:Color
-BG_DGRAY	printfTester/utils/color.hpp	/^	BG_DGRAY			= 100,$/;"	e	enum:Color
-BG_GREEN	printfTester/utils/color.hpp	/^	BG_GREEN			= 42,$/;"	e	enum:Color
-BG_LBLUE	printfTester/utils/color.hpp	/^	BG_LBLUE			= 104,$/;"	e	enum:Color
-BG_LCYAN	printfTester/utils/color.hpp	/^	BG_LCYAN			= 106,$/;"	e	enum:Color
-BG_LGRAY	printfTester/utils/color.hpp	/^	BG_LGRAY			= 47,$/;"	e	enum:Color
-BG_LGREEN	printfTester/utils/color.hpp	/^	BG_LGREEN			= 102,$/;"	e	enum:Color
-BG_LMAGENTA	printfTester/utils/color.hpp	/^	BG_LMAGENTA			= 105,$/;"	e	enum:Color
-BG_LRED	printfTester/utils/color.hpp	/^	BG_LRED				= 101,$/;"	e	enum:Color
-BG_LYELLOW	printfTester/utils/color.hpp	/^	BG_LYELLOW			= 103,$/;"	e	enum:Color
-BG_MAGENTA	printfTester/utils/color.hpp	/^	BG_MAGENTA			= 45,$/;"	e	enum:Color
-BG_RED	printfTester/utils/color.hpp	/^	BG_RED				= 41,$/;"	e	enum:Color
-BG_WHITE	printfTester/utils/color.hpp	/^	BG_WHITE			= 107$/;"	e	enum:Color
-BG_YELLOW	printfTester/utils/color.hpp	/^	BG_YELLOW 			= 43,$/;"	e	enum:Color
-BLINK	printfTester/utils/color.hpp	/^	BLINK				= 5,$/;"	e	enum:Color
-BOLD	printfTester/utils/color.hpp	/^	BOLD				= 1,$/;"	e	enum:Color
-BONUS	printfTester/Makefile	/^BONUS			= minus 0 dot sharp space +$/;"	m
-B_SIZE	printfTester/utils/print.hpp	/^# define B_SIZE /;"	d
 CC	Libft/Makefile	/^CC = cc$/;"	m
 CC	Makefile	/^CC = cc$/;"	m
-CC	printfTester/Makefile	/^CC				= clang++ -std=c11 -Wno-everything$/;"	m
 CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
 CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
-CFLAGS	printfTester/Makefile	/^CFLAGS			= -g3 -ldl -std=c++11 -I utils\/ -I.. $(addprefix -I, $(shell find .. -regex ".*\/.*\\.h" | grep -oh ".*\\\/"))$/;"	m
-CHECK_HPP	printfTester/utils/check.hpp	/^# define CHECK_HPP$/;"	d
-COLOR_HPP	printfTester/utils/color.hpp	/^# define COLOR_HPP$/;"	d
-Color	printfTester/utils/color.hpp	/^enum Color$/;"	g
-DIM	printfTester/utils/color.hpp	/^	DIM					= 2,$/;"	e	enum:Color
-ENDL	printfTester/utils/color.hpp	/^# define ENDL /;"	d
-FG_BLACK	printfTester/utils/color.hpp	/^	FG_BLACK			= 30,$/;"	e	enum:Color
-FG_BLUE	printfTester/utils/color.hpp	/^	FG_BLUE				= 34,$/;"	e	enum:Color
-FG_CYAN	printfTester/utils/color.hpp	/^	FG_CYAN				= 36,$/;"	e	enum:Color
-FG_DEFAULT	printfTester/utils/color.hpp	/^	FG_DEFAULT			= 39,$/;"	e	enum:Color
-FG_DGRAY	printfTester/utils/color.hpp	/^	FG_DGRAY			= 90,$/;"	e	enum:Color
-FG_GREEN	printfTester/utils/color.hpp	/^	FG_GREEN			= 32,$/;"	e	enum:Color
-FG_LBLUE	printfTester/utils/color.hpp	/^	FG_LBLUE			= 94,$/;"	e	enum:Color
-FG_LCYAN	printfTester/utils/color.hpp	/^	FG_LCYAN			= 96,$/;"	e	enum:Color
-FG_LGRAY	printfTester/utils/color.hpp	/^	FG_LGRAY			= 37,$/;"	e	enum:Color
-FG_LGREEN	printfTester/utils/color.hpp	/^	FG_LGREEN			= 92,$/;"	e	enum:Color
-FG_LMAGENTA	printfTester/utils/color.hpp	/^	FG_LMAGENTA			= 95,$/;"	e	enum:Color
-FG_LRED	printfTester/utils/color.hpp	/^	FG_LRED				= 91,$/;"	e	enum:Color
-FG_LYELLOW	printfTester/utils/color.hpp	/^	FG_LYELLOW			= 93,$/;"	e	enum:Color
-FG_MAGENTA	printfTester/utils/color.hpp	/^	FG_MAGENTA			= 35,$/;"	e	enum:Color
-FG_RED	printfTester/utils/color.hpp	/^	FG_RED				= 31,$/;"	e	enum:Color
-FG_WHITE	printfTester/utils/color.hpp	/^	FG_WHITE			= 97,$/;"	e	enum:Color
-FG_YELLOW	printfTester/utils/color.hpp	/^	FG_YELLOW 			= 33,$/;"	e	enum:Color
 FT_PRINTF_H	ft_printf.h	/^# define FT_PRINTF_H$/;"	d
-HIDDEN	printfTester/utils/color.hpp	/^	HIDDEN				= 8,$/;"	e	enum:Color
-LEAK_HPP	printfTester/utils/leaks.hpp	/^# define LEAK_HPP$/;"	d
 LIBFT_H	Libft/libft.h	/^# define LIBFT_H$/;"	d
 LL_MAX	Libft/libft.h	/^# define LL_MAX /;"	d
-MANDATORY	printfTester/Makefile	/^MANDATORY		= c s p d i u x upperx percent mix$/;"	m
 NAME	Libft/Makefile	/^NAME = libft.a$/;"	m
 NAME	Makefile	/^NAME = libftprintf.a$/;"	m
 OBJS	Libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
 OBJS	Makefile	/^OBJS = $(SRCS:c=o) $/;"	m
 OBJS_BONUS	Libft/Makefile	/^OBJS_BONUS = $(SRCS_BONUS:.c=.o)$/;"	m
-PRINT_HPP	printfTester/utils/print.hpp	/^# define PRINT_HPP$/;"	d
-RESET_ALL	printfTester/utils/color.hpp	/^	RESET_ALL			= 0,$/;"	e	enum:Color
-RESET_BLINK	printfTester/utils/color.hpp	/^	RESET_BLINK			= 25,$/;"	e	enum:Color
-RESET_BOLD	printfTester/utils/color.hpp	/^	RESET_BOLD			= 21,$/;"	e	enum:Color
-RESET_DIM	printfTester/utils/color.hpp	/^	RESET_DIM			= 22,$/;"	e	enum:Color
-RESET_HIDDEN	printfTester/utils/color.hpp	/^	RESET_HIDDEN		= 28,$/;"	e	enum:Color
-RESET_REVERSED	printfTester/utils/color.hpp	/^	RESET_REVERSED		= 27,$/;"	e	enum:Color
-RESET_UNDERLINED	printfTester/utils/color.hpp	/^	RESET_UNDERLINED	= 24,$/;"	e	enum:Color
-REVERSED	printfTester/utils/color.hpp	/^	REVERSED			= 7,$/;"	e	enum:Color
-SHELL	printfTester/Makefile	/^SHELL			= bash$/;"	m
-SIGSEGV_HPP	printfTester/utils/sigsegv.hpp	/^# define SIGSEGV_HPP$/;"	d
 SRCS	Libft/Makefile	/^SRCS = ft_isalpha.c 	\\$/;"	m
 SRCS	Makefile	/^SRCS = ft_printf.c \\$/;"	m
 SRCS_BONUS	Libft/Makefile	/^SRCS_BONUS = ft_lstnew.c \\$/;"	m
-SUBCATEGORY	printfTester/utils/print.hpp	/^# define SUBCATEGORY(/;"	d
-TEST	printfTester/utils/print.hpp	/^# define TEST(/;"	d
-TESTS_PATH	printfTester/Makefile	/^TESTS_PATH		= tests\/$/;"	m
-TEST_LIMIT	printfTester/tests/+_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/0_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/c_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/d_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/dot_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/i_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/minus_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/mix_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/p_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/percent_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/s_test.cpp	/^# define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/sharp_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/space_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/u_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/upperx_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_LIMIT	printfTester/tests/x_test.cpp	/^#define TEST_LIMIT /;"	d	file:
-TEST_NUMBER	printfTester/Makefile	/^TEST_NUMBER := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))$/;"	m
-TIMEOUT_US	printfTester/Makefile	/^TIMEOUT_US 		= 400000 #if you timeout you can try to increase this value$/;"	m
-UNAME	printfTester/Makefile	/^UNAME = $(shell uname -s)$/;"	m
-UNDERLINED	printfTester/utils/color.hpp	/^	UNDERLINED			= 4,$/;"	e	enum:Color
-UTILS	printfTester/Makefile	/^UTILS			= $(addprefix $(UTILS_PATH), sigsegv.cpp color.cpp check.cpp leaks.cpp)$/;"	m
-UTILS_PATH	printfTester/Makefile	/^UTILS_PATH		= utils\/$/;"	m
-VALGRIND	printfTester/Makefile	/^    VALGRIND = valgrind -q --leak-check=full --track-origins=yes$/;"	m
 assign_ret	Libft/ft_itoa.c	/^static void	assign_ret(char *str, int n, int is_neg)$/;"	f	file:
-check	printfTester/utils/check.cpp	/^void check(bool succes)$/;"	f
-checkn	printfTester/utils/print.hpp	/^void checkn(const char * s, Args... args)$/;"	f
 content	Libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
-free	printfTester/utils/leaks.cpp	/^void free(void * p) throw()$/;"	f
 free_alloc	Libft/ft_lstmap.c	/^static t_list	*free_alloc(t_list **lst, void (*del)(void *))$/;"	f	file:
 free_alloc	Libft/ft_split.c	/^static char	**free_alloc(char **ptr, int i)$/;"	f	file:
 ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
@@ -160,150 +71,19 @@ ft_substr	Libft/ft_substr.c	/^char	*ft_substr(char const *str, unsigned int star
 ft_tolower	Libft/ft_tolower.c	/^int	ft_tolower(int ch)$/;"	f
 ft_toupper	Libft/ft_toupper.c	/^int	ft_toupper(int ch)$/;"	f
 ft_word_cnt	Libft/ft_split.c	/^static int	ft_word_cnt(char const *str, char ch)$/;"	f	file:
-iTest	printfTester/tests/+_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/0_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/c_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/d_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/dot_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/i_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/minus_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/mix_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/p_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/percent_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/s_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/sharp_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/space_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/u_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/upperx_test.cpp	/^int iTest = 1;$/;"	v
-iTest	printfTester/tests/x_test.cpp	/^int iTest = 1;$/;"	v
 is_space	Libft/ft_atoi.c	/^static int	is_space(char ch)$/;"	f	file:
-main	printfTester/tests/+_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/0_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/c_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/d_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/dot_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/i_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/minus_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/mix_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/p_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/percent_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/s_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/sharp_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/space_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/u_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/upperx_test.cpp	/^int main(int ac, char ** av)$/;"	f
-main	printfTester/tests/x_test.cpp	/^int main(int ac, char ** av)$/;"	f
-malloc	printfTester/utils/leaks.cpp	/^void * malloc(size_t size) throw()$/;"	f
-mallocList	printfTester/utils/leaks.cpp	/^std::vector<ptr> mallocList;$/;"	v
-mallocListAdd	printfTester/utils/leaks.cpp	/^void mallocListAdd(void * p, size_t size)$/;"	f
-mallocListRemove	printfTester/utils/leaks.cpp	/^void mallocListRemove(void * p)$/;"	f
-mcheck	printfTester/utils/check.cpp	/^void mcheck(void * p, size_t required_size)$/;"	f
-new	printfTester/tests/+_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/+_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/0_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/0_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/c_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/c_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/d_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/d_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/dot_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/dot_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/i_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/i_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/minus_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/minus_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/mix_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/mix_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/p_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/p_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/percent_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/percent_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/s_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/s_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/sharp_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/sharp_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/space_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/space_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/u_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/u_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/upperx_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/upperx_test.cpp	/^#undef new$/;"	d	file:
-new	printfTester/tests/x_test.cpp	/^#define new /;"	d	file:
-new	printfTester/tests/x_test.cpp	/^#undef new$/;"	d	file:
 next	Libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
-operator <<	printfTester/utils/color.cpp	/^operator<<(std::ostream & os, Color c)$/;"	f
-operator ==	printfTester/utils/leaks.cpp	/^bool operator==(ptr const & p1, ptr const & p2)$/;"	f
-p	printfTester/utils/leaks.hpp	/^	void * p;$/;"	m	struct:ptr
 pf_conversion	ft_printf.c	/^static int	pf_conversion(const char *format, va_list ap)$/;"	f	file:
 pf_itoa	ft_printf_utils.c	/^void	pf_itoa(int n, char str[])$/;"	f
 pf_itoa_hex	ft_printf_utils.c	/^void	pf_itoa_hex(unsigned long long n, char str[], char specifier)$/;"	f
 pf_itoa_u	ft_printf_utils.c	/^void	pf_itoa_u(unsigned int n, char str[])$/;"	f
 pf_len	ft_printf_utils.c	/^int	pf_len(int n)$/;"	f
-pipeOut	printfTester/utils/print.hpp	/^int pipeOut, stdOut;$/;"	v
-print	printfTester/utils/print.hpp	/^void print(const char * s, Args... args)$/;"	f
-printTestNumber	printfTester/utils/print.hpp	/^void printTestNumber(char * n, int limit)$/;"	f
 print_addr	ft_printf.c	/^static int	print_addr(void *ptr)$/;"	f	file:
 print_char	ft_printf_str.c	/^int	print_char(char ch)$/;"	f
 print_decimal	ft_printf_numeric.c	/^int	print_decimal(int n)$/;"	f
 print_hex	ft_printf_numeric.c	/^int	print_hex(unsigned int n, char button)$/;"	f
 print_str	ft_printf_str.c	/^int	print_str(char *str)$/;"	f
 print_udecimal	ft_printf_numeric.c	/^int	print_udecimal(unsigned int n)$/;"	f
-ptr	printfTester/utils/leaks.hpp	/^	ptr(void * _p = 0, size_t _size = 0) : p(_p), size(_size) {}$/;"	f	struct:ptr
-ptr	printfTester/utils/leaks.hpp	/^struct ptr$/;"	s
 rec	Libft/ft_putnbr_fd.c	/^static void	rec(int n, int fd)$/;"	f	file:
 s_list	Libft/libft.h	/^typedef struct s_list$/;"	s
-showLeaks	printfTester/utils/leaks.cpp	/^void showLeaks(void)$/;"	f
-showTest	printfTester/tests/+_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/0_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/c_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/d_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/dot_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/i_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/minus_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/mix_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/p_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/percent_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/s_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/sharp_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/space_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/u_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/upperx_test.cpp	/^bool showTest = false;$/;"	v
-showTest	printfTester/tests/x_test.cpp	/^bool showTest = false;$/;"	v
-showTestInfos	printfTester/utils/print.hpp	/^void showTestInfos(void)$/;"	f
-sigsegv	printfTester/utils/sigsegv.cpp	/^void sigsegv(int signal)$/;"	f
-size	printfTester/utils/leaks.hpp	/^	size_t size;$/;"	m	struct:ptr
-stdOut	printfTester/utils/print.hpp	/^int pipeOut, stdOut;$/;"	v
 t_list	Libft/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
-testName	printfTester/tests/+_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/0_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/c_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/d_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/dot_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/i_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/minus_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/mix_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/p_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/percent_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/s_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/sharp_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/space_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/u_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/upperx_test.cpp	/^char * testName;$/;"	v
-testName	printfTester/tests/x_test.cpp	/^char * testName;$/;"	v
-testNumber	printfTester/tests/+_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/0_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/c_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/d_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/dot_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/i_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/minus_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/mix_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/p_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/percent_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/s_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/sharp_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/space_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/u_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/upperx_test.cpp	/^int testNumber;$/;"	v
-testNumber	printfTester/tests/x_test.cpp	/^int testNumber;$/;"	v
-title	printfTester/utils/check.hpp	/^# define title(/;"	d
