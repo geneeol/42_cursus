@@ -51,6 +51,8 @@ BSIZE	libft-unit-test/include/libft_test.h	/^# define	BSIZE	/;"	d
 BUF1PAGES	libft-unit-test/hardcore-mode/utils.h	/^# define BUF1PAGES /;"	d
 BUFFER_SIZE	get_next_line/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
 BUFFER_SIZE	get_next_line/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	get_next_line_upd/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	get_next_line_upd/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
 CALL	libft-unit-test/hardcore-mode/utils.h	/^#define CALL(/;"	d
 CC	Libft/Makefile	/^CC = cc$/;"	m
 CC	ft_printf/Libft/Makefile	/^CC = cc$/;"	m
@@ -138,7 +140,10 @@ FRAMEWORK	libft-unit-test/Makefile	/^FRAMEWORK	=	$/;"	m
 FT_PRINTF_H	ft_printf/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
 GET_NEXT_LINE_BONUS_H	get_next_line/bonus/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
 GET_NEXT_LINE_BONUS_H	get_next_line/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GET_NEXT_LINE_BONUS_H	get_next_line_upd/bonus/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GET_NEXT_LINE_BONUS_H	get_next_line_upd/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
 GET_NEXT_LINE_H	get_next_line/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GET_NEXT_LINE_H	get_next_line_upd/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
 GET_STDERR	libft-unit-test/include/libft_test.h	/^# define	GET_STDERR(/;"	d
 GET_STDOUT	libft-unit-test/include/libft_test.h	/^# define	GET_STDOUT(/;"	d
 GIGABYTE	libft-unit-test/src/bench_functions.c	/^#define GIGABYTE	/;"	d	file:
@@ -229,6 +234,9 @@ OK_SIZE	libft-unit-test/hardcore-mode/ncurses-display.c	/^#define OK_SIZE	/;"	d	
 OPEN_FD_MAX	get_next_line/bonus/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
 OPEN_FD_MAX	get_next_line/get_next_line.h	/^# define OPEN_FD_MAX /;"	d
 OPEN_FD_MAX	get_next_line/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
+OPEN_FD_MAX	get_next_line_upd/bonus/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
+OPEN_FD_MAX	get_next_line_upd/get_next_line.h	/^# define OPEN_FD_MAX /;"	d
+OPEN_FD_MAX	get_next_line_upd/get_next_line_bonus.h	/^# define OPEN_FD_MAX /;"	d
 OPTFLAGS	libft-unit-test/Makefile	/^OPTFLAGS	=	-O2 -funroll-loops$/;"	m
 OPT_ITERATIONS	libft-unit-test/hardcore-mode/utils.h	/^# define OPT_ITERATIONS /;"	d
 OPT_RANDOM	libft-unit-test/hardcore-mode/utils.h	/^# define OPT_RANDOM /;"	d
@@ -602,6 +610,9 @@ ft_exit	libft-unit-test/src/main.c	/^void	ft_exit(char *str, ...) {$/;"	f
 ft_free	get_next_line/bonus/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
 ft_free	get_next_line/get_next_line.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
 ft_free	get_next_line/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_free	get_next_line_upd/bonus/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_free	get_next_line_upd/get_next_line.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
+ft_free	get_next_line_upd/get_next_line_bonus.c	/^static char	*ft_free(t_line *line)$/;"	f	file:
 ft_isalnum	Libft/ft_isalnum.c	/^int	ft_isalnum(int ch)$/;"	f
 ft_isalnum	ft_printf/Libft/ft_isalnum.c	/^int	ft_isalnum(int ch)$/;"	f
 ft_isalpha	Libft/ft_isalpha.c	/^int	ft_isalpha(int ch)$/;"	f
@@ -731,34 +742,57 @@ g_time	libft-unit-test/src/init.c	/^t_tdiff			g_time;$/;"	v
 g_versus	libft-unit-test/src/init.c	/^char			*g_versus = NULL;$/;"	v
 get_diff	libft-unit-test/src/display_test_result.c	/^static char	*get_diff(void) {$/;"	f	file:
 get_eof	get_next_line/bonus/get_next_line_bonus.c	/^char	*get_eof(t_line *line)$/;"	f
+get_eof	get_next_line_upd/bonus/get_next_line_bonus.c	/^char	*get_eof(t_line *line)$/;"	f
 get_eof_line	get_next_line/get_next_line.c	/^char	*get_eof_line(t_line *line)$/;"	f
 get_eof_line	get_next_line/get_next_line_bonus.c	/^static char	*get_eof_line(t_line *line)$/;"	f	file:
+get_eof_line	get_next_line_upd/get_next_line.c	/^char	*get_eof_line(t_line *line)$/;"	f
+get_eof_line	get_next_line_upd/get_next_line_bonus.c	/^static char	*get_eof_line(t_line *line)$/;"	f	file:
 get_fd_buffer	libft-unit-test/src/main.c	/^char	*get_fd_buffer(int fd, char *buff, size_t size) {$/;"	f
 get_last_malloc_size	libft-unit-test/src/main.c	/^int		get_last_malloc_size(void) {$/;"	f
 get_next_code_line	libft-unit-test/src/display_test_result.c	/^char		*get_next_code_line(char **code, bool reset)$/;"	f
 get_next_line	get_next_line/bonus/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
 get_next_line	get_next_line/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
 get_next_line	get_next_line/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	get_next_line_upd/bonus/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	get_next_line_upd/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	get_next_line_upd/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
 get_next_position	libft-unit-test/hardcore-mode/ncurses-display.c	/^static void get_next_position(int *ret_x, int *ret_y)$/;"	f	file:
 get_nl_line	get_next_line/get_next_line.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
 get_nl_line	get_next_line/get_next_line_bonus.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
+get_nl_line	get_next_line_upd/get_next_line.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
+get_nl_line	get_next_line_upd/get_next_line_bonus.c	/^static char	*get_nl_line(t_line *line)$/;"	f	file:
 get_options	libft-unit-test/src/main.c	/^char	**get_options(char **av)$/;"	f
 get_speed_color	libft-unit-test/src/display_test_result.c	/^static char	*get_speed_color(_Bool inverted) {$/;"	f	file:
 gnl_get_idx	get_next_line/get_next_line_utils.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
 gnl_get_idx	get_next_line/get_next_line_utils_bonus.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
+gnl_get_idx	get_next_line_upd/get_next_line_utils.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
+gnl_get_idx	get_next_line_upd/get_next_line_utils_bonus.c	/^ssize_t	gnl_get_idx(const char *str, char ch)$/;"	f
 gnl_strchr	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strchr(const char *str, int ch)$/;"	f
+gnl_strchr	get_next_line_upd/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strchr(const char *str, int ch)$/;"	f
 gnl_strdup	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
 gnl_strdup	get_next_line/get_next_line_utils.c	/^char	*gnl_strdup(const char *str)$/;"	f
 gnl_strdup	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strdup	get_next_line_upd/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strdup	get_next_line_upd/get_next_line_utils.c	/^char	*gnl_strdup(const char *str)$/;"	f
+gnl_strdup	get_next_line_upd/get_next_line_utils_bonus.c	/^char	*gnl_strdup(const char *str)$/;"	f
 gnl_strjoin	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, char *buf)$/;"	f
 gnl_strjoin	get_next_line/get_next_line_utils.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
 gnl_strjoin	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
+gnl_strjoin	get_next_line_upd/bonus/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, char *buf)$/;"	f
+gnl_strjoin	get_next_line_upd/get_next_line_utils.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
+gnl_strjoin	get_next_line_upd/get_next_line_utils_bonus.c	/^char	*gnl_strjoin(t_line *line, const char *buf)$/;"	f
 gnl_strlen	get_next_line/bonus/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
 gnl_strlen	get_next_line/get_next_line_utils.c	/^size_t	gnl_strlen(const char *str)$/;"	f
 gnl_strlen	get_next_line/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_strlen	get_next_line_upd/bonus/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_strlen	get_next_line_upd/get_next_line_utils.c	/^size_t	gnl_strlen(const char *str)$/;"	f
+gnl_strlen	get_next_line_upd/get_next_line_utils_bonus.c	/^size_t	gnl_strlen(const char *str)$/;"	f
 gnl_substr	get_next_line/bonus/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
 gnl_substr	get_next_line/get_next_line_utils.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
 gnl_substr	get_next_line/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+gnl_substr	get_next_line_upd/bonus/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+gnl_substr	get_next_line_upd/get_next_line_utils.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
+gnl_substr	get_next_line_upd/get_next_line_utils_bonus.c	/^char	*gnl_substr(t_line *line, size_t start, size_t len)$/;"	f
 haiku_0	libft-unit-test/src/test_functions.c	/^wchar_t* haiku_0 = L"古池や蛙飛び込む水の音\\$/;"	v
 hardcore_main	libft-unit-test/hardcore-mode/hardcore-main.c	/^int		hardcore_main(void *libft_so_handler)$/;"	f
 iTest	libftTester/tests/ft_atoi_test.cpp	/^int iTest = 1;$/;"	v
@@ -816,9 +850,15 @@ iter	libftTester/tests/ft_striteri_test.cpp	/^iter(unsigned int i, char * s) {$/
 len	get_next_line/bonus/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
 len	get_next_line/get_next_line.h	/^	size_t	len;$/;"	m	struct:s_line
 len	get_next_line/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
+len	get_next_line_upd/bonus/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
+len	get_next_line_upd/get_next_line.h	/^	size_t	len;$/;"	m	struct:s_line
+len	get_next_line_upd/get_next_line_bonus.h	/^	size_t	len;$/;"	m	struct:s_line
 line_join	get_next_line/bonus/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
 line_join	get_next_line/get_next_line.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
 line_join	get_next_line/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+line_join	get_next_line_upd/bonus/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+line_join	get_next_line_upd/get_next_line.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
+line_join	get_next_line_upd/get_next_line_bonus.c	/^static char	*line_join(t_line *line, char *buf)$/;"	f	file:
 load_bench	libft-unit-test/src/main.c	/^void	load_bench(char **function_list)$/;"	f
 load_test	libft-unit-test/src/main.c	/^void	load_test(char **function_list) {$/;"	f
 load_timer	libft-unit-test/src/main.c	/^void	load_timer(void) {$/;"	f
@@ -1001,6 +1041,7 @@ next	Libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_
 next	ft_printf/Libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 next	libft-unit-test/include/libft_test.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 nl_parse	get_next_line/bonus/get_next_line_bonus.c	/^static char	*nl_parse(t_line *line, char *buf, ssize_t buf_len)$/;"	f	file:
+nl_parse	get_next_line_upd/bonus/get_next_line_bonus.c	/^static char	*nl_parse(t_line *line, char *buf, ssize_t buf_len)$/;"	f	file:
 num	libft-unit-test/assets/wrapper.c	/^	int		num;$/;"	m	struct:s_sig	file:
 olol	libft-unit-test/include/libft_test.h	/^	unsigned long long int	olol;$/;"	m	struct:s_tests
 one	libft-unit-test/hardcore-mode/test-strcpy.c	/^char one[50];$/;"	v
@@ -1053,6 +1094,9 @@ s_errs	libft-unit-test/include/libft_test.h	/^typedef struct	s_errs {$/;"	s
 s_line	get_next_line/bonus/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
 s_line	get_next_line/get_next_line.h	/^typedef struct s_line$/;"	s
 s_line	get_next_line/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
+s_line	get_next_line_upd/bonus/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
+s_line	get_next_line_upd/get_next_line.h	/^typedef struct s_line$/;"	s
+s_line	get_next_line_upd/get_next_line_bonus.h	/^typedef struct s_line$/;"	s
 s_line	gnl_tc/static.c	/^typedef struct s_line	$/;"	s	file:
 s_list	Libft/libft.h	/^typedef struct s_list$/;"	s
 s_list	ft_printf/Libft/libft.h	/^typedef struct s_list$/;"	s
@@ -1087,6 +1131,9 @@ state	libft-unit-test/include/libft_test.h	/^	char		state;$/;"	m	struct:s_tdiff
 str	get_next_line/bonus/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
 str	get_next_line/get_next_line.h	/^	char	*str;$/;"	m	struct:s_line
 str	get_next_line/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
+str	get_next_line_upd/bonus/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
+str	get_next_line_upd/get_next_line.h	/^	char	*str;$/;"	m	struct:s_line
+str	get_next_line_upd/get_next_line_bonus.h	/^	char	*str;$/;"	m	struct:s_line
 str	libft-unit-test/assets/wrapper.c	/^	char	*str;$/;"	m	struct:s_sig	file:
 str_find_array	libft-unit-test/src/main.c	/^_Bool	str_find_array(char **array, char *str)$/;"	f
 stupid_strncmp	libft-unit-test/hardcore-mode/test-strncmp.c	/^stupid_strncmp (const char *s1, const char *s2, size_t n)$/;"	f
@@ -1098,6 +1145,9 @@ t_libft_test	libft-unit-test/include/libft_test.h	/^}				t_libft_test;$/;"	t	typ
 t_line	get_next_line/bonus/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
 t_line	get_next_line/get_next_line.h	/^}	t_line;$/;"	t	typeref:struct:s_line
 t_line	get_next_line/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	get_next_line_upd/bonus/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	get_next_line_upd/get_next_line.h	/^}	t_line;$/;"	t	typeref:struct:s_line
+t_line	get_next_line_upd/get_next_line_bonus.h	/^}	t_line;$/;"	t	typeref:struct:s_line
 t_line	gnl_tc/static.c	/^} t_line;$/;"	t	typeref:struct:s_line	file:
 t_list	Libft/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
 t_list	ft_printf/Libft/libft.h	/^}	t_list;$/;"	t	typeref:struct:s_list
