@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:57:52 by dahkang           #+#    #+#             */
-/*   Updated: 2022/10/04 17:21:11 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/08 22:58:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
+// strlen return type: int or size_t?
 int		ft_strlen(char *str);
 int		ft_printf(const char *format, ...);
 int		print_char(char ch);
