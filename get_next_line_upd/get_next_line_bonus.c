@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:05:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/16 22:25:12 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/12 23:24:11 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,14 @@ static char	*get_nl_line(t_line *line)
 		return (ft_free(line));
 	}
 	free(line->str);
-	line->str = left;
 	line->len = gnl_strlen(left);
+	if (left[0] == 0)
+	{
+		free(left);
+		line->str = 0;
+	}
+	else
+		line->str = left;
 	return (ret);
 }
 
