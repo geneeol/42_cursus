@@ -6,35 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:45:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/14 14:18:39 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/16 12:45:50 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-
-#include <stdlib.h>
-#include <stdio.h>
-
-
-typedef int t_bool;
-
-#define FALSE 0
-#define TRUE 1
-
-typedef struct s_node
-{
-	int				data;
-	struct s_node	*next;
-	struct s_node	*prev;
-}	t_node;
-
-typedef struct s_stack
-{
-	t_node		*front;
-	t_node		*rear;
-	size_t		size;
-}	t_stack;
+#include "ft.h"
 
 t_node	*ft_creat_node(int data)
 {
@@ -97,6 +73,7 @@ int	pop_front(t_stack *stk)
 {
 	t_node	*tmp;
 
+	//Should I delete this if statment?
 	if (stk->size == 0)
 		return (-1);
 	tmp = stk->front;
@@ -114,6 +91,7 @@ int	pop_rear(t_stack *stk)
 {
 	t_node	*tmp;
 
+	//Should I delete this if statment?
 	if (stk->size == 0)
 		return (-1);
 	tmp = stk->rear;
@@ -151,7 +129,9 @@ void	stk_clear(t_stack *stk)
 	{
 		tmp = curr;
 		curr = curr->next;
+		printf("tmp addr: %p\n", tmp);
 		free(tmp);
+		printf("tmp->data: %d\n", tmp->data);
 	}
 	stk->size = 0;
 }
