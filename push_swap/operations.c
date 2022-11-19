@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation.c                                        :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:40:43 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/18 15:03:59 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/19 14:52:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,25 @@ t_bool	push_b(t_stack *stk_b, t_stack *stk_a)
 t_bool	rotate(t_stack *stk)
 {
 	t_node	*head;
-	t_node	*tail;
-	int		tmp;
+	int		val;
 
 	if (stk->size <= 1)
-		return (FALSE);
+		return (TRUE);
 	head = stk->front;
+	val = stk->front->data;
+	pop_front(stk);
+	return (push_rear(stk, val));
+}
+
+t_bool reverse_rotate(t_stack *stk)
+{
+	t_node	*tail;
+	int		val;
+
+	if (stk->size <= 1)
+		return (TRUE);
 	tail = stk->rear;
-	tmp = stk->front->data;
-	head->data = tail->data;
-	tail->data = tmp;
-	return (TRUE);
+	val = stk->front->data;
+	pop_rear(stk);
+	return (push_front(stk, val));
 }
