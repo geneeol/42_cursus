@@ -1,44 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 12:45:25 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/25 17:26:06 by dahkang          ###   ########.fr       */
+/*   Created: 2022/11/25 17:51:51 by dahkang           #+#    #+#             */
+/*   Updated: 2022/11/25 19:10:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include "ft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef int	t_bool;
-
-# define FALSE 0
-# define TRUE 1
-
-typedef struct s_node
+t_info	*input_parser(int argc, char **argv)
 {
-	int				data;
-	struct s_node	*next;
-	struct s_node	*prev;
-}	t_node;
+	t_info	*ret;
 
-typedef struct s_stack
-{
-	t_node		*front;
-	t_node		*rear;
-	size_t		size;
-}	t_stack;
-
-typedef struct s_info
-{
-	t_stack	*st_a;
-	t_stack	*st_b;
-}	t_info;
-
-#endif
+	if (argc < 2)
+		return (0);
+	if (argc == 2)
+		ret = par 

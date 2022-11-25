@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:45:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/16 12:45:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/25 18:16:55 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int	pop_rear(t_stack *stk)
 }
 
 //if stk is an empty stack what happend?
-//I can't tell if ret=-1 is real value.
+//I can't tell if ret=-1 is real value or not.
 //because it can be also from the err value
 //so this function should be called when stack isn't empty
 int	get_front(t_stack *stk)
@@ -141,6 +141,8 @@ t_stack	*init_stack()
 	t_stack	*ret;
 
 	ret = (t_stack *)malloc(sizeof(t_stack));
+	if (!ret)
+		return (0);
 	ret->front = 0;
 	ret->rear = 0;
 	ret->size = 0;
