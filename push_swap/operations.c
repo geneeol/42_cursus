@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:40:43 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/19 14:52:13 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/26 19:50:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ t_bool	swap(t_stack *stk)
 	return (TRUE);
 }
 
-t_bool	swap_a(t_stack *stk_a)
+t_bool	swap_a(t_info *set)
 {
-	return (swap(stk_a));
+	return (swap(set->st_a));
 }
 
-t_bool	swap_b(t_stack *stk_b)
+t_bool	swap_b(t_info *set)
 {
-	return (swap(stk_b));
+	return (swap(set->st_b));
 }
 
 t_bool	push(t_stack *stk1, t_stack *stk2)
@@ -50,14 +50,14 @@ t_bool	push(t_stack *stk1, t_stack *stk2)
 	return (TRUE);
 }
 
-t_bool	push_a(t_stack *stk_a, t_stack *stk_b)
+t_bool	push_a(t_info *set)
 {
-	return (push(stk_a, stk_b));
+	return (push(set->st_a, set->st_b));
 }
 
-t_bool	push_b(t_stack *stk_b, t_stack *stk_a)
+t_bool	push_b(t_info *set)
 {
-	return (push(stk_b, stk_a));
+	return (push(set->st_a, set->st_b));
 }
 
 t_bool	rotate(t_stack *stk)
@@ -66,22 +66,42 @@ t_bool	rotate(t_stack *stk)
 	int		val;
 
 	if (stk->size <= 1)
-		return (TRUE);
+		return (FALSE);
 	head = stk->front;
 	val = stk->front->data;
 	pop_front(stk);
 	return (push_rear(stk, val));
 }
 
-t_bool reverse_rotate(t_stack *stk)
+t_bool	reverse_rotate(t_stack *stk)
 {
 	t_node	*tail;
 	int		val;
 
 	if (stk->size <= 1)
-		return (TRUE);
+		return (FALSE);
 	tail = stk->rear;
 	val = stk->front->data;
 	pop_rear(stk);
 	return (push_front(stk, val));
+}
+
+t_bool	rotate_a(t_info *set)
+{
+	return (rotate(set->st_a));
+}
+
+t_bool	rotate_b(t_info *set)
+{
+	return (rotate(set->st_b));
+}
+
+t_bool reverse_rotate_a(t_info *set)
+{
+	return (reverse_rotate(set->st_a));
+}
+
+t_bool reverse_rotate_b(t_info *set)
+{
+	return (reverse_rotate(set->st_b));
 }

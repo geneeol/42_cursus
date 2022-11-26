@@ -6,11 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:45:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/25 18:16:55 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/26 17:38:41 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
+#include <stdlib.h>
 
 t_node	*ft_creat_node(int data)
 {
@@ -18,7 +19,7 @@ t_node	*ft_creat_node(int data)
 
 	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
-		return (0);
+		ft_err_exit(EXIT_FAILURE);
 	node->data = data;
 	node->next = 0;
 	node->prev = 0;
@@ -31,7 +32,7 @@ t_bool	push_front(t_stack *stk, int data)
 
 	new_node = ft_creat_node(data); 
 	if (!new_node)
-		return (FALSE);
+		ft_err_exit(EXIT_FAILURE);
 	if (stk->size == 0)
 	{
 		stk->front = new_node;
@@ -53,7 +54,7 @@ t_bool	push_rear(t_stack *stk, int data)
 
 	new_node = ft_creat_node(data); 
 	if (!new_node)
-		return (FALSE);
+		ft_err_exit(EXIT_FAILURE);
 	if (stk->size == 0)
 	{
 		stk->rear = new_node;
@@ -129,9 +130,7 @@ void	stk_clear(t_stack *stk)
 	{
 		tmp = curr;
 		curr = curr->next;
-		printf("tmp addr: %p\n", tmp);
 		free(tmp);
-		printf("tmp->data: %d\n", tmp->data);
 	}
 	stk->size = 0;
 }
@@ -142,9 +141,21 @@ t_stack	*init_stack()
 
 	ret = (t_stack *)malloc(sizeof(t_stack));
 	if (!ret)
-		return (0);
+		ft_err_exit(EXIT_FAILURE);
 	ret->front = 0;
 	ret->rear = 0;
 	ret->size = 0;
+	return (ret);
+}
+
+t_info	*init_info()
+{
+	t_info	*ret;
+
+	ret = (t_info *)malloc(sizeof(t_info));
+	if (!ret)
+		ft_err_exit(EXIT_FAILURE);
+	ret->st_a = init_stack();
+	ret->st_b = init_stack();
 	return (ret);
 }

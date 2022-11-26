@@ -43,7 +43,6 @@ int	main(void)
 		curr = curr->next;
 	}
 	*/
-	system("leaks a.out");
 	
 	return (0);
 }
