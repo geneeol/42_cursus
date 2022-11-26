@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 12:45:25 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/26 19:52:13 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/26 22:32:22 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FT_H
 
 # include <stdlib.h>
+# include <unistd.h>
+
+
+
 # include <stdio.h>
 
 typedef int	t_bool;
@@ -25,6 +29,21 @@ typedef int	t_bool;
 
 # define FALSE 0
 # define TRUE 1
+
+enum e_op
+{
+	SA = 0,
+	SB,
+	SS,
+	PA,
+	PB,
+	RA,
+	RB,
+	RR,
+	RRA,
+	RRB,
+	RRR,
+};
 
 typedef struct s_node
 {
@@ -44,6 +63,7 @@ typedef struct s_info
 {
 	t_stack	*st_a;
 	t_stack	*st_b;
+	t_stack	*op_queue;
 }	t_info;
 
 void	ft_err_exit(int err_status);
@@ -71,9 +91,11 @@ t_bool	rotate(t_stack *stk);
 t_bool	swap(t_stack *stk);
 t_bool	swap_a(t_info *set);
 t_bool	swap_b(t_info *set);
+t_bool	ss(t_info *set);
 t_bool	rotate_a(t_info *set);
 t_bool	rotate_b(t_info *set);
+t_bool	rr(t_info *set);
 t_bool	reverse_rotate_a(t_info *set);
 t_bool	reverse_rotate_b(t_info *set);
-
+t_bool	rrr(t_info *set);
 #endif

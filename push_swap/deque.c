@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:45:05 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/26 17:38:41 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/26 21:35:45 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,5 +157,6 @@ t_info	*init_info()
 		ft_err_exit(EXIT_FAILURE);
 	ret->st_a = init_stack();
 	ret->st_b = init_stack();
+	ret->op_queue = init_stack();
 	return (ret);
 }
