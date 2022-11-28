@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/27 23:03:29 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/28 21:01:43 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	insert_to_b_in_order(t_info *set, int target)
 		cur = cur->next;
 	}
 	// 이걸 넣어야 하나?
-	return (idx);
+	return (-5000);
 }
 
 int	insert_to_b_out_order(t_info *set, int target)
@@ -64,7 +64,8 @@ int	insert_to_b_out_order(t_info *set, int target)
 			if (target < cur->prev->data || target > cur->data)
 				return (idx * (2 * (idx >= set->st_b->size / 2) - 1));
 	}
-	return (idx);
+	//이거 넣어야 하나?
+	return (-5000);
 }
 
 // b가 전부 정렬되어있느냐, 중간에 역순인 부분이 있느냐에 따라 또 나뉨
@@ -88,8 +89,10 @@ int	insert_to_b_loc(t_info *set, int target)
 	return (idx);
 }
 
-//최소 연산은 스택a, 스택b 두가지에 해당하는 변수가 필요하므로 인자로 포인터를 넘겨주는게 나음
-int	get_min_operations(int *a_op, int *b_op, t_info *set)
+//함수명 바꾸는게 좋을듯??
+
+//최소 연산은 스택a, 스택b 두가지에 해당하는 변수가 필요하므로 인자두개를 포인터를 넘겨주는게 나음
+void	get_min_operations(int *a_op, int *b_op, t_info *set)
 {
 	t_node	*cur;
 	int		idx;
@@ -119,20 +122,185 @@ int	get_min_operations(int *a_op, int *b_op, t_info *set)
 	}
 }
 
-void	sort(t_info *set)
+//is_sorted 만들어야 하나?
+//
+//
+//
+void	sort_a_2(t_info *set)	
 {
 	t_node	*cur;
+
+	cur = set->st_a->front;
+	if (cur->data > cur->next->data)
+		sa(set);
+}
+
+
+void	sort_a_3(t_info *set)
+{
+	const int	top = set->st_a->front->data;
+	const int	mid = set->st_a->front->next->data;
+	const int	bot = set->st_a->front->next->next->data;
+
+	if (top < mid && mid < bot)
+		return ;
+	else if (top < bot && bot < mid)
+	{
+		rra(set);
+		sa(set);
+	}
+	else if (mid < top && top < bot)
+		sa(set);
+	else if (bot < top && top < mid)
+		rra(set);
+	else if (mid < bot && bot < top)
+		ra(set);
+	else if (bot < mid && mid < top)
+	{
+		sa(set);
+		rra(set);
+	}
+}
+
+void	exec_same_rotation(int *a_op, int *b_op, t_info *set)
+{
+	while (*a_op && *b_op && (*a_op > 0 && *b_op > 0))
+	{
+		rr(set);
+		(*a_op)--;
+		(*b_op)--;
+	}
+	while (*a_op && *b_op && (*a_op < 0 && *b_op < 0))
+	{
+		rrr(set);
+		(*a_op)++;
+		(*b_op)++;
+	}
+}
+
+void	ft_rotate_a(int a_op, t_info *set)
+{
+	while (a_op)
+	{
+		if (a_op > 0)
+		{
+			ra(set);
+			a_op--;
+		}
+		else
+		{
+			rra(set);
+			a_op++;
+		
+		}
+	}
+}
+
+void	ft_rotate_b(int b_op, t_info *set)
+{
+	while (b_op)
+	{
+		if (b_op > 0)
+		{
+			ra(set);
+			b_op--;
+		}
+		else
+		{
+			rra(set);
+			b_op++;
+		
+		}
+	}
+}
+
+void	exec_rotation(int a_op, int b_op, t_info *set)
+{
+	exec_same_rotation(&a_op, &b_op, set);
+	ft_rotate_a(a_op, set);
+	ft_rotate_b(b_op, set);
+}
+
+void	sort_b_to_a(set)
+{
+}
+
+void	sort_big(t_info *set)
+{
 	int		a_op;
 	int		b_op;
-	int		target;
-	int		b_location;
 
 	pb(set);
 	pb(set);
-	while (set->st_a->size >= 3)
+	while (set->st_a->size > 3)
 	{
 		a_op = 0;
 		b_op = 0;
 		get_min_operations(&a_op, &b_op, set);
+		exec_rotation(a_op, b_op, set);
+		pb(set);
+	}
+	sort_a_3(set);
+	sort_b(set);
+	sort_b_to_a(set);
+}
+
+// 처음 값들을 다 인덱스로 바꾸기?
+//
+
+int	get_target_idx(int target, t_stack *st)
+{
+	int		idx;
+	t_node	*cur;
+
+	idx = 0;
+	cur = st->front;
+	while (cur)
+	{
+		if (target < cur->data) 
+			return (idx);
+		cur = cur->next;
+		idx++;
+	}
+	return (idx);
+}
+
+void	insert_left_to_a(t_info *set)	
+{
+	int	left_idx;
+
+	left_idx = get_target_idx(get_front(set->st_b), set->st_a);
+	if (left_idx == 0)
+		pa(set);
+	else if (left_idx == 1)
+	{
+		pa(set);
+		sa(set);
+	}
+	else if (left_idx == 2)
+	{
+		ra(set);
+		pa(set);
+		sa(set);
+		rra(set);
+	}
+	else if (left_idx == 3)
+	{
+		pa(set);
+		ra(set);
+	}
+}
+
+void	sort_small(t_info *set)
+{
+	if (set->st_a->size == 2)
+		sort_a_2(set);
+	else if (set->st_a->size == 3)
+		sort_a_3(set);
+	else if (set->st_a->size == 4)
+	{
+		pb(set);
+		sort_a_3(set);
+		insert_left_to_a(set);
 	}
 }
