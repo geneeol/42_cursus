@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/29 21:38:42 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 22:58:32 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,40 @@ int	is_sorted(t_stack *st)
 	return (status);
 }
 
-int	abs_diff(int a, int b)
+int	abs_max(int a, int b)
 {
-	int	diff;
-
-	diff = a - b;
-	if (diff < 0)
-		return (-diff);
+	if (a < 0 && b < 0)
+	{
+		if (a > b)
+			return (-b);
+		else
+			return (-a);
+	}
 	else
-		return (diff);
+	{
+		if (a > b)
+			return (a);
+		else
+			return (b);
+	}
+}
+
+int	abs(int n)
+{
+	if (n > 0)
+		return (n);
+	else
+		return (-n);
+}
+
+int	op_tot(int a, int b)
+{
+	if (a > 0 && b > 0)
+		return (abs_max(a, b));
+	else if (a < 0 && b < 0)
+		return (abs_max(a,b));
+	else
+		return (abs(a-b));
 }
 
 int	get_proper_idx(int idx, int st_size)
@@ -82,7 +107,7 @@ int	get_insertion_loc_sorted(t_info *set, int target)
 		cur = cur->next;
 	}
 	// 이걸 넣어야 하나?
-	return (-5000);
+	return (-100000);
 }
 
 
@@ -111,7 +136,7 @@ int	get_insertion_loc_unsorted(t_info *set, int target)
 		cur = cur->next;
 	}
 	//이거 넣어야 하나?
-	return (-5000);
+	return (-100000);
 }
 
 // b가 전부 정렬되어있느냐, 중간에 역순인 부분이 있느냐에 따라 또 나뉨
@@ -149,7 +174,7 @@ void	get_min_operations(int *a_op, int *b_op, t_info *set)
 		//결국 리턴한 인덱스 값이 rb 또는 rrb 연산 횟수가 된다.
 		b_idx = get_insertion_loc(set, cur->data);
 		a_idx = get_proper_idx(idx, set->st_a->size);
-		if (idx == 0 || abs_diff(a_idx, b_idx) < abs_diff(*a_op, *b_op))
+		if (idx == 0 || op_tot(a_idx, b_idx) < op_tot(*a_op, *b_op))
 		{
 			*a_op = a_idx;
 			*b_op = b_idx;
