@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 12:45:25 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/26 22:32:22 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 18:45:39 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,19 +83,19 @@ t_bool	push_rear(t_stack *stk, int data);
 void	stk_clear(t_stack *stk);
 
 //operations.c
-t_bool	push(t_stack *stk1, t_stack *stk2);
-t_bool	push_a(t_info *set);
-t_bool	push_b(t_info *set);
-t_bool	reverse_rotate(t_stack *stk);
-t_bool	rotate(t_stack *stk);
 t_bool	swap(t_stack *stk);
-t_bool	swap_a(t_info *set);
-t_bool	swap_b(t_info *set);
+t_bool	sa(t_info *set);
+t_bool	sb(t_info *set);
 t_bool	ss(t_info *set);
-t_bool	rotate_a(t_info *set);
-t_bool	rotate_b(t_info *set);
+t_bool	push(t_stack *stk1, t_stack *stk2);
+t_bool	pa(t_info *set);
+t_bool	pb(t_info *set);
+t_bool	rotate(t_stack *stk);
+t_bool	ra(t_info *set);
+t_bool	rb(t_info *set);
 t_bool	rr(t_info *set);
-t_bool	reverse_rotate_a(t_info *set);
-t_bool	reverse_rotate_b(t_info *set);
+t_bool	reverse_rotate(t_stack *stk);
+t_bool	rra(t_info *set);
+t_bool	rrb(t_info *set);
 t_bool	rrr(t_info *set);
 #endif

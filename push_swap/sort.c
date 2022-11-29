@@ -6,12 +6,38 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/28 21:03:22 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 18:42:50 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
-#include "operations.c"
+
+int	is_sorted(t_stack *st)
+{
+	t_node	*cur;
+	int		status;
+
+	cur = st->front;
+	status = 0;
+	while (cur)
+	{
+		if (cur->data < cur->next->data)
+		{
+			if (status == 2)
+				return (0);
+			status = 1;
+
+		}
+		else
+		{
+			if (status == 1)
+				return (0);
+			status = 2;
+		}
+		cur = cur->next;
+	}
+	return (status);
+}
 
 int	abs_diff(int a, int b)
 {
@@ -24,7 +50,19 @@ int	abs_diff(int a, int b)
 		return (diff);
 }
 
-int	insert_to_b_in_order(t_info *set, int target)
+int	get_proper_idx(int idx, int st_size)
+{
+	int	ret;
+
+	if (idx > st_size / 2)
+		ret = (st_size - idx) * -1;
+	else
+		ret = idx;
+	return (ret);
+}
+
+//고쳐야 함
+int	get_insertion_loc_sorted(t_info *set, int target)
 {
 	t_node	*cur;
 	int		idx;
@@ -35,16 +73,18 @@ int	insert_to_b_in_order(t_info *set, int target)
 	cur = set->st_b->front->next;
 	while (++idx < set->st_b->size)
 	{
+		// 이렇게 하면 안댐...
 		if (cur->data < target && target < cur->prev->data)
-			if (cur->data < target && target < cur->prev->data)
-				return (idx * (2 * (idx >= set->st_b->size / 2) - 1));
+			return (get_proper_idx(idx, set->st_b->size));
 		cur = cur->next;
 	}
 	// 이걸 넣어야 하나?
 	return (-5000);
 }
 
-int	insert_to_b_out_order(t_info *set, int target)
+
+//고쳐야 함
+int	get_insertion_loc_unsorted(t_info *set, int target)
 {
 	t_node	*cur;
 	int		idx;
@@ -58,11 +98,11 @@ int	insert_to_b_out_order(t_info *set, int target)
 		if (cur->prev->data > cur->data)
 		{
 			if (cur->data < target && target < cur->prev->data)
-				return (idx * (2 * (idx >= set->st_b->size / 2) - 1));
+				return (get_proper_idx(idx, set->st_b->size));
 		}
 		else
 			if (target < cur->prev->data || target > cur->data)
-				return (idx * (2 * (idx >= set->st_b->size / 2) - 1));
+				return (get_proper_idx(idx, set->st_b->size));
 	}
 	//이거 넣어야 하나?
 	return (-5000);
@@ -70,23 +110,19 @@ int	insert_to_b_out_order(t_info *set, int target)
 
 // b가 전부 정렬되어있느냐, 중간에 역순인 부분이 있느냐에 따라 또 나뉨
 // 몇번째 인덱스에 넣을지 찾는게 생각보다 까다로움.........
-int	insert_to_b_loc(t_info *set, int target)
+int	get_insertion_loc(t_info *set, int target)
 {
-	t_node	*cur;
-	int		idx;
+	int		b_idx;
 
-	cur = set->st_b->front;
-	idx = 0;
 	//0번 인덱스는 맨위값과 맨 아래값을 비교해야함
 	//나머지 인덱스는 현재값과 그 이전값.
 	//만약 이전값이 현재값보다 크다면 그 경우를 예외처리 해주어야함
 	//
-
 	if (get_front(set->st_b) > get_rear(set->st_b))
-		idx = insert_to_b_in_order(set, target);
+		b_idx = get_insertion_loc_sorted(set, target);
 	else
-		idx = insert_to_b_out_order(set, target);
-	return (idx);
+		b_idx = get_insertion_loc_unsorted(set, target);
+	return (b_idx);
 }
 
 //함수명 바꾸는게 좋을듯??
@@ -105,13 +141,8 @@ void	get_min_operations(int *a_op, int *b_op, t_info *set)
 	{
 		//리턴한 인덱스값의 윗부분에 a원소를 삽입한다고 하자.
 		//결국 리턴한 인덱스 값이 rb 또는 rrb 연산 횟수가 된다.
-		b_idx = insert_to_b_loc(set, cur->data);
-		//if (b_idx >= set->st_b->size / 2)
-		//	b_idx = (set->st_b->size - b_idx - 1) * -1;
-		if (idx > set->st_a->size / 2)
-			a_idx = (set->st_a->size - idx) * -1;
-		else
-			a_idx = idx;
+		b_idx = get_insertion_loc(set, cur->data);
+		a_idx = get_proper_idx(idx, set->st_a->size);
 		if (idx == 0 || abs_diff(a_idx, b_idx) < abs_diff(*a_op, *b_op))
 		{
 			*a_op = a_idx;
@@ -162,7 +193,7 @@ void	sort_a_3(t_info *set)
 	}
 }
 
-void	exec_same_rotation(int *a_op, int *b_op, t_info *set)
+void	exec_rotation_same(int *a_op, int *b_op, t_info *set)
 {
 	while (*a_op && *b_op && (*a_op > 0 && *b_op > 0))
 	{
@@ -178,7 +209,7 @@ void	exec_same_rotation(int *a_op, int *b_op, t_info *set)
 	}
 }
 
-void	ft_rotate_a(int a_op, t_info *set)
+void	exec_rotation_a(int a_op, t_info *set)
 {
 	while (a_op)
 	{
@@ -196,7 +227,7 @@ void	ft_rotate_a(int a_op, t_info *set)
 	}
 }
 
-void	ft_rotate_b(int b_op, t_info *set)
+void	exec_rotation_b(int b_op, t_info *set)
 {
 	while (b_op)
 	{
@@ -214,15 +245,36 @@ void	ft_rotate_b(int b_op, t_info *set)
 	}
 }
 
-void	exec_rotation(int a_op, int b_op, t_info *set)
+void	sort_b(t_info *set)
 {
-	exec_same_rotation(&a_op, &b_op, set);
-	ft_rotate_a(a_op, set);
-	ft_rotate_b(b_op, set);
+	t_node	*cur;
+	int		idx;
+
+	if (get_front(set->st_b) > get_rear(set->st_b))
+		return ;
+	cur = set->st_b->front;
+	idx = 1;
+	while (cur)
+	{
+		if (cur->data < cur->next->data)
+			break ;
+		idx++;
+		cur = cur->next;
+	}
+	idx = get_proper_idx(idx, set->st_b->size);
+	exec_rotation_b(idx, set);
 }
 
-void	sort_b_to_a(set)
+void	sort_b_to_a(t_info *set)
 {
+	while (get_front(set->st_b) < get_rear(set->st_a))
+		rra(set);
+	while (set->st_b->size)
+	{
+		pa(set);
+		while (set->st_b->size && get_front(set->st_b) < get_rear(set->st_a) && get_rear(set->st_a) < get_front(set->st_a)) 
+			rra(set);
+	}
 }
 
 //a에서 b로 넘긴 이후 b에서 정렬하는 것이 필요한가?
@@ -239,7 +291,9 @@ void	sort_big(t_info *set)
 		a_op = 0;
 		b_op = 0;
 		get_min_operations(&a_op, &b_op, set);
-		exec_rotation(a_op, b_op, set);
+		exec_rotation_same(&a_op, &b_op, set);
+		exec_rotation_a(a_op, set);
+		exec_rotation_b(b_op, set);
 		pb(set);
 	}
 	sort_a_3(set);
