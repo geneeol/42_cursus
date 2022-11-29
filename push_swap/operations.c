@@ -6,12 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:40:43 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/26 22:42:56 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 19:37:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
-#include "deque.c"
 
 //1. 가독성을 위해 pop, push 연산 사용
 //이 경우 malloc실패에 대한 별도의 분기처리가 필요함
@@ -76,12 +75,10 @@ t_bool	pb(t_info *set)
 
 t_bool	rotate(t_stack *stk)
 {
-	t_node	*head;
 	int		val;
 
 	if (stk->size <= 1)
 		return (FALSE);
-	head = stk->front;
 	val = stk->front->data;
 	pop_front(stk);
 	return (push_rear(stk, val));
@@ -111,13 +108,11 @@ t_bool	rr(t_info *set)
 
 t_bool	reverse_rotate(t_stack *stk)
 {
-	t_node	*tail;
 	int		val;
 
 	if (stk->size <= 1)
 		return (FALSE);
-	tail = stk->rear;
-	val = stk->front->data;
+	val = stk->rear->data;
 	pop_rear(stk);
 	return (push_front(stk, val));
 }

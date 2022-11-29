@@ -6,13 +6,15 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:56:33 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/29 18:37:37 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 21:42:10 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
-#include "sort.c"
 #include <stdlib.h>
+
+
+#include <stdio.h>
 
 void	print_exec(t_info *set)
 {
@@ -49,20 +51,37 @@ void	print_exec(t_info *set)
 
 int	main(int argc, char **argv)
 {
+	t_node	*cur;
 	t_info	*set;
 
 	set = input_parser(argc, argv);
+
+	cur = set->st_a->front;
+	/*
+	printf("size: %lu\n", set->st_a->size);
+	while (cur)
+	{
+		printf("data: %d\n", cur->data);
+		cur = cur->next;
+	}
+	*/
 	if (set->st_a->size <= 1 || is_sorted(set->st_a) == 1)
 		return (0);
-	else if (is_sorted(set->st_a) == 2)
+	/*else if (is_sorted(set->st_a) == 2)
 		exec_rotation_a(-(set->st_a->size - 1), set);
+	*/
 	else if (set->st_a->size <= 4)
 		sort_small(set);
 	else
 		sort_big(set);
 	//노드가 없으면 출력 x
-	
 	print_exec(set);
+	cur = set->st_a->front;
+	while (cur)
+	{
+		printf("data: %d\n", cur->data);
+		cur = cur->next;
+	}
 	//free_alloc(set);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 12:45:25 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/29 18:45:39 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 18:59:47 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,11 @@ t_bool	reverse_rotate(t_stack *stk);
 t_bool	rra(t_info *set);
 t_bool	rrb(t_info *set);
 t_bool	rrr(t_info *set);
+
+//sort
+int	is_sorted(t_stack *st);
+void	exec_rotation_a(int a_op, t_info *set);
+void	sort_small(t_info *set);
+void	sort_big(t_info *set);
+
 #endif

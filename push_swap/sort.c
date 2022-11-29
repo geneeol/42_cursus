@@ -6,11 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/29 18:42:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/11/29 21:38:42 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
+
+
+#include <stdio.h>
 
 int	is_sorted(t_stack *st)
 {
@@ -19,7 +22,7 @@ int	is_sorted(t_stack *st)
 
 	cur = st->front;
 	status = 0;
-	while (cur)
+	while (cur->next)
 	{
 		if (cur->data < cur->next->data)
 		{
@@ -101,8 +104,11 @@ int	get_insertion_loc_unsorted(t_info *set, int target)
 				return (get_proper_idx(idx, set->st_b->size));
 		}
 		else
+		{
 			if (target < cur->prev->data || target > cur->data)
 				return (get_proper_idx(idx, set->st_b->size));
+		}
+		cur = cur->next;
 	}
 	//이거 넣어야 하나?
 	return (-5000);
@@ -233,12 +239,12 @@ void	exec_rotation_b(int b_op, t_info *set)
 	{
 		if (b_op > 0)
 		{
-			ra(set);
+			rb(set);
 			b_op--;
 		}
 		else
 		{
-			rra(set);
+			rrb(set);
 			b_op++;
 		
 		}
@@ -275,6 +281,8 @@ void	sort_b_to_a(t_info *set)
 		while (set->st_b->size && get_front(set->st_b) < get_rear(set->st_a) && get_rear(set->st_a) < get_front(set->st_a)) 
 			rra(set);
 	}
+	while (get_front(set->st_a) > get_rear(set->st_a))
+		rra(set);
 }
 
 //a에서 b로 넘긴 이후 b에서 정렬하는 것이 필요한가?
