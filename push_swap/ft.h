@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 12:45:25 by dahkang           #+#    #+#             */
-/*   Updated: 2022/11/29 18:59:47 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/01 16:36:29 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-
-
-# include <stdio.h>
 
 typedef int	t_bool;
 
@@ -73,14 +69,23 @@ char	**ft_split(char const *str, char ch);
 t_node	*ft_creat_node(int data);
 int		get_front(t_stack *stk);
 int		get_rear(t_stack *stk);
-t_stack	*init_stack(void);
-t_info	*init_info(void);
-t_info	*input_parser(int argc, char **argv);
 int		pop_front(t_stack *stk);
 int		pop_rear(t_stack *stk);
 t_bool	push_front(t_stack *stk, int data);
 t_bool	push_rear(t_stack *stk, int data);
 void	stk_clear(t_stack *stk);
+
+//init
+t_stack	*init_stack(void);
+t_info	*init_info(void);
+
+
+
+//parser
+t_info	*input_parser(int argc, char **argv);
+t_bool	atoi_is_valid(char const *str, int *res);
+t_bool	is_duplicate(t_stack *stk, int res);
+void	free_args(char **args);
 
 //operations.c
 t_bool	swap(t_stack *stk);
@@ -99,10 +104,34 @@ t_bool	rra(t_info *set);
 t_bool	rrb(t_info *set);
 t_bool	rrr(t_info *set);
 
-//sort
-int	is_sorted(t_stack *st);
+/********sort*********/
+
+//sort_utils.c
+int		is_asc_sorted(t_stack *st);
+int		abs(int n);
+int		abs_max(int a, int b);
+int		calc_total_op(int a, int b);
+
 void	exec_rotation_a(int a_op, t_info *set);
 void	sort_small(t_info *set);
+
+//sort.c
+void	align_b(t_info *set);
+void	sort_b_to_a(t_info *set);
 void	sort_big(t_info *set);
+
+void	sort_a_3(t_info *set);
+
+//sort_exec_rotation.c
+void	exec_rotation_same(int *a_op, int *b_op, t_info *set);
+void	exec_rotation_a(int a_op, t_info *set);
+void	exec_rotation_b(int b_op, t_info *set);
+
+//sort_algorithm.c
+int		calc_proper_idx(int idx, int st_size);
+int		calc_idx_sorted(t_info *set, int target);
+int		calc_idx_unsorted(t_info *set, int target);
+int		calc_insertion_idx(t_info *set, int target);
+void	calc_min_operations(int *a_op, int *b_op, t_info *set);
 
 #endif

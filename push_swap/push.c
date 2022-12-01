@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_err_exit.c                                      :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 19:12:15 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 11:46:23 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/01 10:40:20 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/01 10:44:17 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	ft_err_exit(int err_status)
+t_bool	push(t_stack *st1, t_stack *st2)
 {
-	write(1, "ERROR\n", 6);
-	exit(err_status);
+	if (st2->size == 0)
+		return (FALSE);
+	push_front(st1, st2->front->data);
+	pop_front(st2);
+	return (TRUE);
+}
+
+t_bool	pa(t_info *set)
+{
+	push_rear(set->op_queue, PA);
+	return (push(set->st_a, set->st_b));
+}
+
+t_bool	pb(t_info *set)
+{
+	push_rear(set->op_queue, PB);
+	return (push(set->st_b, set->st_a));
 }
