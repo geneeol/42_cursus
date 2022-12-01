@@ -6,13 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 14:09:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 16:12:12 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/01 19:30:52 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	calc_proper_idx(int idx, int st_size)
+static int	calc_proper_idx(int idx, int st_size)
 {
 	int	ret;
 
@@ -24,7 +24,7 @@ int	calc_proper_idx(int idx, int st_size)
 }
 
 //고쳐야 함
-int	calc_idx_sorted(t_info *set, int target)
+static int	calc_idx_sorted(t_info *set, int target)
 {
 	t_node	*cur;
 	int		idx;
@@ -45,7 +45,7 @@ int	calc_idx_sorted(t_info *set, int target)
 }
 
 //고쳐야 함
-int	calc_idx_unsorted(t_info *set, int target)
+static int	calc_idx_unsorted(t_info *set, int target)
 {
 	t_node	*cur;
 	int		idx;
@@ -72,7 +72,7 @@ int	calc_idx_unsorted(t_info *set, int target)
 	return (-100000);
 }
 
-int	calc_insertion_idx(t_info *set, int target)
+static int	calc_insertion_idx(t_info *set, int target)
 {
 	int		b_idx;
 

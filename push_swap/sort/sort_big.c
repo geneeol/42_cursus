@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 16:14:31 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/01 19:25:27 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // b가 전부 정렬되어있느냐, 중간에 역순인 부분이 있느냐에 따라 또 나뉨
 // 몇번째 인덱스에 넣을지 찾는게 생각보다 까다로움.........
 
-void	align_b(t_info *set)
+static void	align_b(t_info *set)
 {
 	t_node	*cur;
 	int		idx;
@@ -38,7 +38,7 @@ void	align_b(t_info *set)
 
 //여기서 가독성 에바
 
-void	sort_b_to_a(t_info *set)
+static void	sort_b_to_a(t_info *set)
 {
 	while (get_front(set->st_b) < get_rear(set->st_a))
 		rra(set);

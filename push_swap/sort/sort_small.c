@@ -6,19 +6,62 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 13:09:21 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 14:03:38 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/01 19:24:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	sort_a_2(t_info *set)
+static void	sort_a_2(t_info *set)
 {
 	t_node	*cur;
 
 	cur = set->st_a->front;
 	if (cur->data > cur->next->data)
 		sa(set);
+}
+
+static int	get_target_idx(int target, t_stack *st)
+{
+	int		idx;
+	t_node	*cur;
+
+	idx = 0;
+	cur = st->front;
+	while (cur)
+	{
+		if (target < cur->data)
+			return (idx);
+		cur = cur->next;
+		idx++;
+	}
+	return (idx);
+}
+
+static void	insert_left_to_a(t_info *set)
+{
+	int	left_idx;
+
+	left_idx = get_target_idx(get_front(set->st_b), set->st_a);
+	if (left_idx == 0)
+		pa(set);
+	else if (left_idx == 1)
+	{
+		pa(set);
+		sa(set);
+	}
+	else if (left_idx == 2)
+	{
+		ra(set);
+		pa(set);
+		sa(set);
+		rra(set);
+	}
+	else if (left_idx == 3)
+	{
+		pa(set);
+		ra(set);
+	}
 }
 
 void	sort_a_3(t_info *set)
@@ -44,49 +87,6 @@ void	sort_a_3(t_info *set)
 	{
 		sa(set);
 		rra(set);
-	}
-}
-
-int	get_target_idx(int target, t_stack *st)
-{
-	int		idx;
-	t_node	*cur;
-
-	idx = 0;
-	cur = st->front;
-	while (cur)
-	{
-		if (target < cur->data)
-			return (idx);
-		cur = cur->next;
-		idx++;
-	}
-	return (idx);
-}
-
-void	insert_left_to_a(t_info *set)
-{
-	int	left_idx;
-
-	left_idx = get_target_idx(get_front(set->st_b), set->st_a);
-	if (left_idx == 0)
-		pa(set);
-	else if (left_idx == 1)
-	{
-		pa(set);
-		sa(set);
-	}
-	else if (left_idx == 2)
-	{
-		ra(set);
-		pa(set);
-		sa(set);
-		rra(set);
-	}
-	else if (left_idx == 3)
-	{
-		pa(set);
-		ra(set);
 	}
 }
 
