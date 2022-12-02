@@ -6,11 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 10:42:30 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 10:55:15 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:04:42 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../includes/data_structure.h"
+#include "../../includes/operations.h"
 
 t_bool	rotate(t_stack *st)
 {

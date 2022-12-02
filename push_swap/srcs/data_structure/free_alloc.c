@@ -6,11 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:08:15 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 17:09:02 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 13:55:19 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../includes/data_structure.h"
 
 void	free_deque(t_stack *st)
 {

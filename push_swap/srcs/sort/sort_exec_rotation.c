@@ -6,11 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 14:18:09 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 16:10:54 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:48:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../includes/data_structure.h"
+#include "../../includes/operations.h"
+#include "../../includes/sort.h"
 
 void	exec_rotation_same(int *a_op, int *b_op, t_info *set)
 {

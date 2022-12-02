@@ -6,9 +6,10 @@ BONUS = checker
 LIBFT = libft.a
 
 INC_DIR 	= includes
+SRC_DIR		= srcs
 LIBFT_DIR	= libft
 
-SRCS = push_swap.c \
+SRCS = push_swap.c	\
 	   \
 	   data_structure/deque_get_data.c	\
 	   data_structure/deque_op.c	\
@@ -29,14 +30,17 @@ SRCS = push_swap.c \
 	   sort/sort_small.c	\
 	   sort_utils.c	\
 	   
-OBJS = $(SRCS:.c=.o)
+OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 
-$(NAME): $(OBJS) $(LIBFT)
+$(info$(SRCS))
+$(info$(OBJS))
+
+$(NAME): $(OBJS)
 
 all: $(NAME) $(BONUS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(LIBFT_DIR)/$(LIBFT)
+	$(CC) $(CFLAGS) -c $< -o $@ $(LIBFT_DIR)/$(LIBFT) -I$(INC_DIR)
 
 $(NAME): $(OBJS)
 	make -C libft
@@ -52,5 +56,7 @@ fclean: clean
 re: 
 	make fclean
 	make all
+
+$(info$(OBJS))
 
 .PHONY: clean fclean re all bonus

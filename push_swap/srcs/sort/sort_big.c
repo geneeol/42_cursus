@@ -6,15 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 20:27:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 19:25:27 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:47:22 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
-
-
-// b가 전부 정렬되어있느냐, 중간에 역순인 부분이 있느냐에 따라 또 나뉨
-// 몇번째 인덱스에 넣을지 찾는게 생각보다 까다로움.........
+#include "../../includes/data_structure.h"
+#include "../../includes/operations.h"
+#include "../../includes/sort.h"
 
 static void	align_b(t_info *set)
 {
@@ -36,8 +34,6 @@ static void	align_b(t_info *set)
 	exec_rotation_b(idx, set);
 }
 
-//여기서 가독성 에바
-
 static void	sort_b_to_a(t_info *set)
 {
 	while (get_front(set->st_b) < get_rear(set->st_a))
@@ -53,10 +49,6 @@ static void	sort_b_to_a(t_info *set)
 		rra(set);
 }
 
-//a에서 b로 넘긴 이후 b에서 정렬하는 것이 필요한가?
-//만약 연산횟수가 똑같다면 rb 혹은 rrb로 정렬해두는 것이 좋을듯
-//
-//sort_a_3에 대한 분류
 void	sort_big(t_info *set)
 {
 	int		a_op;

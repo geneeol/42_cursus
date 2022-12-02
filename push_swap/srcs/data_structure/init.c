@@ -6,11 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:23:44 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 11:24:16 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 13:58:03 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../libft/includes/libft.h"
+#include "../../includes/data_structure.h"
 
 t_node	*ft_creat_node(int data)
 {
@@ -18,7 +19,7 @@ t_node	*ft_creat_node(int data)
 
 	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
-		ft_err_exit(EXIT_FAILURE);
+		ft_err_exit(0, EXIT_FAILURE);
 	node->data = data;
 	node->next = 0;
 	node->prev = 0;
@@ -31,7 +32,7 @@ t_stack	*init_stack(void)
 
 	ret = (t_stack *)malloc(sizeof(t_stack));
 	if (!ret)
-		ft_err_exit(EXIT_FAILURE);
+		ft_err_exit(0, EXIT_FAILURE);
 	ret->front = 0;
 	ret->rear = 0;
 	ret->size = 0;
@@ -44,7 +45,7 @@ t_info	*init_info(void)
 
 	ret = (t_info *)malloc(sizeof(t_info));
 	if (!ret)
-		ft_err_exit(EXIT_FAILURE);
+		ft_err_exit(0, EXIT_FAILURE);
 	ret->st_a = init_stack();
 	ret->st_b = init_stack();
 	ret->op_queue = init_stack();

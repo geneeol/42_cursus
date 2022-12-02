@@ -6,13 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 14:09:50 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 19:30:52 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:46:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../includes/data_structure.h"
+#include "../../includes/sort.h"
 
-static int	calc_proper_idx(int idx, int st_size)
+int	calc_proper_idx(int idx, int st_size)
 {
 	int	ret;
 
@@ -23,7 +24,10 @@ static int	calc_proper_idx(int idx, int st_size)
 	return (ret);
 }
 
-//고쳐야 함
+//This function must and will return while it's in the while loop
+//If not, some error occur
+//
+//Just finding proper idx to insert target
 static int	calc_idx_sorted(t_info *set, int target)
 {
 	t_node	*cur;
@@ -35,16 +39,18 @@ static int	calc_idx_sorted(t_info *set, int target)
 	cur = set->st_b->front->next;
 	while (++idx < set->st_b->size)
 	{
-		// 이렇게 하면 안댐...
 		if (cur->data < target && target < cur->prev->data)
 			return (calc_proper_idx(idx, set->st_b->size));
 		cur = cur->next;
 	}
-	// 이걸 넣어야 하나?
-	return (-100000);
+	return (-4242);
 }
 
-//고쳐야 함
+//This function must and will return in while loop
+//If not, there is some error occur
+//
+//Just finding proper idx to insert target
+//There are the two case 1.sorted intervals, 2.unsorted intervals.
 static int	calc_idx_unsorted(t_info *set, int target)
 {
 	t_node	*cur;
@@ -68,18 +74,14 @@ static int	calc_idx_unsorted(t_info *set, int target)
 		}
 		cur = cur->next;
 	}
-	//이거 넣어야 하나?
-	return (-100000);
+	return (-4242);
 }
 
-static int	calc_insertion_idx(t_info *set, int target)
+//If first value is bigger than the last one, then st_b is unsorted
+int	calc_insertion_idx(t_info *set, int target)
 {
 	int		b_idx;
 
-	//0번 인덱스는 맨위값과 맨 아래값을 비교해야함
-	//나머지 인덱스는 현재값과 그 이전값.
-	//만약 이전값이 현재값보다 크다면 그 경우를 예외처리 해주어야함
-	//
 	if (get_front(set->st_b) > get_rear(set->st_b))
 		b_idx = calc_idx_sorted(set, target);
 	else
@@ -87,7 +89,16 @@ static int	calc_insertion_idx(t_info *set, int target)
 	return (b_idx);
 }
 
-//최소 연산은 스택a, 스택b 두가지에 해당하는 변수가 필요하므로 인자두개를 포인터를 넘겨주는게 나음
+//Minimum-operation count is cacluated with two values
+//So, it would be better to pass the two value to calculation function
+//
+//a_idx means location of current node
+//b_idx means location where current node should be inserted
+//Consequently idx means the number of rotation-operations required
+//
+//idx has a positive or negative value. 
+//if idx is positive then ra or rb will be chosen
+//else rra or rrb will be chosen
 void	calc_min_operations(int *a_op, int *b_op, t_info *set)
 {
 	t_node	*cur;
@@ -99,8 +110,6 @@ void	calc_min_operations(int *a_op, int *b_op, t_info *set)
 	idx = 0;
 	while (idx < set->st_a->size)
 	{
-		//리턴한 인덱스값의 윗부분에 a원소를 삽입한다고 하자.
-		//결국 리턴한 인덱스 값이 rb 또는 rrb 연산 횟수가 된다.
 		b_idx = calc_insertion_idx(set, cur->data);
 		a_idx = calc_proper_idx(idx, set->st_a->size);
 		if (idx == 0

@@ -6,11 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:06:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 11:13:43 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 13:54:58 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../libft/includes/libft.h"
+#include "../../includes/data_structure.h"
 
 t_bool	push_front(t_stack *st, int data)
 {
@@ -18,7 +19,7 @@ t_bool	push_front(t_stack *st, int data)
 
 	new_node = ft_creat_node(data);
 	if (!new_node)
-		ft_err_exit(EXIT_FAILURE);
+		ft_err_exit(0, EXIT_FAILURE);
 	if (st->size == 0)
 	{
 		st->front = new_node;
@@ -40,7 +41,7 @@ t_bool	push_rear(t_stack *st, int data)
 
 	new_node = ft_creat_node(data);
 	if (!new_node)
-		ft_err_exit(EXIT_FAILURE);
+		ft_err_exit(0, EXIT_FAILURE);
 	if (st->size == 0)
 	{
 		st->rear = new_node;

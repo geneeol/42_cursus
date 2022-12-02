@@ -6,11 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 10:40:20 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 10:44:17 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:04:05 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../includes/data_structure.h"
+#include "../../includes/operations.h"
 
 t_bool	push(t_stack *st1, t_stack *st2)
 {

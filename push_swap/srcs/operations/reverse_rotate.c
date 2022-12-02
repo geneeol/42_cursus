@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:40:43 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 11:26:30 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:04:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
-
-//1. 가독성을 위해 pop, push 연산 사용
-//이 경우 malloc실패에 대한 별도의 분기처리가 필요함
-//2. 새로운 동적할당 없이 기존 노드를 이용해서 재배열
-//malloc실패애 대한 예외처리는 필요 없지만 코드가 지저분해짐
+#include "../../includes/data_structure.h"
+#include "../../includes/operations.h"
 
 t_bool	reverse_rotate(t_stack *st)
 {

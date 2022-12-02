@@ -6,25 +6,17 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 11:37:21 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 11:38:22 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 14:07:27 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../../libft/includes/libft.h"
+#include "../../includes/parser.h"
 
 static int	is_space(char ch)
 {
 	if (ch == '\t' || ch == '\n' || ch == '\v'
 		|| ch == '\f' || ch == '\r' || ch == ' ')
-		return (1);
-	else
-		return (0);
-}
-
-//libft에 있음
-int	ft_isdigit(int ch)
-{
-	if ('0' <= ch && ch <= '9')
 		return (1);
 	else
 		return (0);
