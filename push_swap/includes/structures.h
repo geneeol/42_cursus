@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 18:17:41 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 19:11:45 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 17:07:15 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ typedef struct s_node
 
 typedef struct s_stack
 {
-	t_node			*front;
-	t_node			*rear;
-	unsigned int	size;
+	t_node	*front;
+	t_node	*rear;
+	int		size;
 }	t_stack;
 
 typedef struct s_info

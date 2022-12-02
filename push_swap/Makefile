@@ -15,6 +15,7 @@ SRCS = push_swap.c	\
 	   data_structure/deque_op.c	\
 	   data_structure/free_alloc.c \
 	   data_structure/init.c \
+	   data_structure/print_operations.c	\
 	   \
 	   operations/push.c	\
 	   operations/reverse_rotate.c	\
@@ -43,8 +44,6 @@ all: $(NAME) $(BONUS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
-$(LIBFT_DIR)/$(LIBFT) 
-
 clean:
 	make -C Libft clean
 	rm -f $(OBJS)
@@ -56,7 +55,5 @@ fclean: clean
 re: 
 	make fclean
 	make all
-
-$(info$(OBJS))
 
 .PHONY: clean fclean re all bonus
