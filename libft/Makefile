@@ -3,7 +3,12 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-SRCS = ft_isalpha.c 	\
+INCLUDES_DIR	= includes
+LIBFT_DIR		= srcs/libft
+GNL_DIR			= srcs/get_next_line
+FT_PRINTF_DIR	= srcs/ft_printf
+
+LIBFT = ft_isalpha.c 	\
 	   ft_isdigit.c 	\
 	   ft_isalnum.c 	\
 	   ft_isascii.c 	\
@@ -42,40 +47,43 @@ SRCS = ft_isalpha.c 	\
 	   ft_putstr_fd.c	\
 	   ft_putendl_fd.c	\
 	   ft_putnbr_fd.c	\
+	   \
+	   ft_lstnew.c	\
+	   ft_lstadd_front.c \
+	   ft_lstsize.c \
+	   ft_lstlast.c \
+	   ft_lstadd_back.c \
+	   ft_lstdelone.c \
+	   ft_lstclear.c \
+	   ft_lstiter.c \
+	   ft_lstmap.c \
+	   \
+	   ft_err_exit.c
 
-SRCS_BONUS = ft_lstnew.c \
-             ft_lstadd_front.c \
-             ft_lstsize.c \
-             ft_lstlast.c \
-             ft_lstadd_back.c \
-             ft_lstdelone.c \
-             ft_lstclear.c \
-             ft_lstiter.c \
-             ft_lstmap.c
+GNL = get_next_line_bonus.c \
+	  get_next_line_utils_bonus.c
 
-ifdef WITH_BONUS
-	ALL_OBJS = $(OBJS) $(OBJS_BONUS)
-else
-	ALL_OBJS = $(OBJS)
-endif
+FT_PRINTF = ft_printf.c \
+			ft_printf_numeric.c \
+			ft_printf_str.c \
+			ft_printf_utils.c \
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(addprefix $(LIBFT_DIR)/, $(LIBFT:.c=.o))\
+		$(addprefix $(GNL_DIR)/, $(GNL:.c=.o)) \
+		$(addprefix $(FT_PRINTF_DIR)/, $(FT_PRINTF:.c=.o))\
 
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
-$(NAME): $(ALL_OBJS)
+$(NAME): $(OBJS)
 	ar rcs $@ $?
 	
-all: bonus 
-
-bonus: 
-	make WITH_BONUS=1
+all: $(NAME) 
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDES_DIR)
 
 clean: 
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(addprefix $(LIBFT_DIR)/, $(LIBFT:.c=.o))
+	rm -f $(addprefix $(FT_PRINTF_DIR)/, $(FT_PRINTF:.c=.o))
+	rm -f $(addprefix $(GNL_DIR)/, $(GNL:.c=.o))
 
 fclean: clean
 	rm -f $(NAME)
@@ -84,4 +92,4 @@ re:
 	make fclean
 	make all
 
-.PHONY: clean fclean re all bonus
+.PHONY: clean fclean re all

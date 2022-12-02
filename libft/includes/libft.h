@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 19:19:46 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/07 16:50:28 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 10:33:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+/*******Standard libary**********/
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
 int		ft_isalnum(int ch);
@@ -52,6 +53,7 @@ int		ft_atoi(const char *str);
 char	*ft_strdup(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 
+/*******Additional funcs**********/
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -63,7 +65,9 @@ void	ft_putchar_fd(char ch, int fd);
 void	ft_putstr_fd(char *str, int fd);
 void	ft_putendl_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_err_exit(char *err_msg, int err_status);
 
+/*******Linked list**********/
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
