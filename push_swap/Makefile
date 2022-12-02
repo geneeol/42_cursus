@@ -18,7 +18,7 @@ SRCS = push_swap.c	\
 	   \
 	   operations/push.c	\
 	   operations/reverse_rotate.c	\
-	   operations/roate.c	\
+	   operations/rotate.c	\
 	   operations/swap.c	\
 	   \
 	   parser/parser.c	\
@@ -28,22 +28,22 @@ SRCS = push_swap.c	\
 	   sort/sort_big.c	\
 	   sort/sort_exec_rotation.c	\
 	   sort/sort_small.c	\
-	   sort_utils.c	\
+	   sort/sort_utils.c	\
 	   
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 
-$(info$(SRCS))
-$(info$(OBJS))
+$(NAME): $(LIBFT) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_DIR)/$(LIBFT) -o $@
 
-$(NAME): $(OBJS)
+$(LIBFT):
+	make -C $(LIBFT_DIR)
 
 all: $(NAME) $(BONUS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(LIBFT_DIR)/$(LIBFT) -I$(INC_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
-$(NAME): $(OBJS)
-	make -C libft
+$(LIBFT_DIR)/$(LIBFT) 
 
 clean:
 	make -C Libft clean

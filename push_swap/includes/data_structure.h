@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:14:18 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/01 18:23:03 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/02 15:30:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ t_info	*init_info(void);
 
 void	free_deque(t_stack *st);
 void	free_info(t_info *set);
+
+void	print_op(t_info *set);
 
 #endif
