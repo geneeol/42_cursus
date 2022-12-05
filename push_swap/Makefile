@@ -30,27 +30,49 @@ SRCS = push_swap.c	\
 	   sort/sort_exec_rotation.c	\
 	   sort/sort_small.c	\
 	   sort/sort_utils.c	\
-	   
+
+SRCS_BONUS = srcs_bonus/checker_bonus.c \
+			 srcs/data_structure/deque_get_data.c	\
+			 srcs/data_structure/deque_op.c	\
+			 srcs/data_structure/free_alloc.c \
+			 srcs/data_structure/init.c \
+			 \
+			 srcs/operations/push.c	\
+			 srcs/operations/reverse_rotate.c	\
+			 srcs/operations/rotate.c	\
+			 srcs/operations/swap.c	\
+			 \
+			 srcs/parser/parser.c \
+			 srcs/parser/parser_utils.c	\
+			 \
+			 srcs/sort/sort_utils.c	\
+
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 
-$(NAME): $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_DIR)/$(LIBFT) -o $@
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
-$(LIBFT):
-	make -C $(LIBFT_DIR)
+$(NAME): $(OBJS)
+	make all -C $(LIBFT_DIR)
+	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
+
+$(BONUS): $(OBJS_BONUS) 
+	make all -C $(LIBFT_DIR)
+	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
 all: $(NAME) $(BONUS)
+
+bonus: $(BONUS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
 clean:
 	make -C Libft clean
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	make -C Libft fclean
-	rm -f $(NAME)
+	rm -f $(NAME) $(BONUS)
 
 re: 
 	make fclean

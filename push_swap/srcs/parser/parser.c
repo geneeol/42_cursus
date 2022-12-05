@@ -6,14 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 17:51:51 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/02 22:31:30 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/05 13:58:00 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/includes/libft.h"
 #include "../../includes/data_structure.h"
 #include "../../includes/parser.h"
-#include <stdlib.h>
 
 static void	push_args(char **args, t_info *set)
 {
