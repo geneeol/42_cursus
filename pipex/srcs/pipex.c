@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:11 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/13 15:52:14 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/13 20:31:09 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,33 +91,31 @@ void	exec_cmd(t_proc *cmd_info, int argc)
 
 int	main(int argc, char *argv[], char *envp[])
 {
-	t_proc	*p_unit;
+	t_proc	*proc_info;
 
-	if (argc < 5 ||
-		(!ft_strncmp("here_doc", argv[1], ft_strlen(argv[1])) && argc < 6))
+	if (argc < 5 || (!ft_strncmp("here_doc", argv[1], 9) && argc < 6))
 		return (0);
-	if (ft_strncmp("here_doc", argv[1], ft_strlen(argv[1])) == 0)
-	{
-	}
-	p_unit = init_info(argc, argv, envp);
+	proc_info = init_info(argc, argv, envp);
+	if (!proc_info)
+		return (0);
+	exec_cmds(proc_info);
 
-	while (p_unit.cmd_idx < argc - 3)
+	while (proc_info->cur_idx < proc_info->cmd_cnt)
 	{
-		if (pipe(p_unit.new_pipe) < 0)
+		if (pipe(proc_info.new_pipe) < 0)
 			ft_perror_exit("Failed to create pipe");
-		p_unit.pid = fork();
-		if (p_unit.pid < 0)
+		proc_info.pid = fork();
+		if (proc_info.pid < 0)
 			ft_perror_exit("Failed to fork");
-		else if (p_unit.pid > 0)
+		else if (proc_info.pid > 0)
 		{
-			close(p_unit.new_pipe[0]);
-			close(p_unit.new_pipe[1]);
+			close(proc_info.new_pipe[0]);
+			close(proc_info.new_pipe[1]);
 		}
 		else
-			exec_cmd(&p_unit, argc);
-		ft_memcpy(p_unit.old_pipe, p_unit.new_pipe, 8);
-		p_unit.cmd_idx++;
+			exec_cmd(&proc_info, argc);
+		ft_memcpy(proc_info.old_pipe, proc_info.new_pipe, 8);
+		proc_info.cmd_idx++;
 	}
-	wait(0);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/13 14:53:23 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/13 20:08:03 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ typedef struct s_proc
 {
 	char *const	*envp;
 	t_cmd		*cmd_table;
-	int			cmd_idx;
+	int			cur_idx;
+	int			cmd_cnt;
 	char		*file_name[2];
 	int			new_pipe[2];
 	int			old_pipe[2];
