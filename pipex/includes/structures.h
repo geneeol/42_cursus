@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/12 19:44:41 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/13 14:53:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ typedef struct s_cmd
 {
 	const char	*cmd_paths;
 	char *const	*cmd_args;
-	char *const	*envp;
 	t_bool		is_executable;
 }	t_cmd;
 
-typedef struct s_execution
+typedef struct s_proc
 {
-	t_cmd	*cmd_table;
-	int		cmd_idx;
-	char	*file_name[2];
-	int		new_pipe[2];
-	int		old_pipe[2];
-	pid_t	pid;
-}	t_execs;
+	char *const	*envp;
+	t_cmd		*cmd_table;
+	int			cmd_idx;
+	char		*file_name[2];
+	int			new_pipe[2];
+	int			old_pipe[2];
+	pid_t		pid;
+}	t_proc;
 
 #endif

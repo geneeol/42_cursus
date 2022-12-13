@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:11 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/12 19:35:36 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/13 15:52:14 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 void		ft_perror_exit(char *err_msg);
 const char	**cmd_parser(int argc, char *argv[], char *const *envp);
 
-void	exec_first_cmd(t_execs *cmd_info)
+void	exec_first_cmd(t_proc *cmd_info)
 {
 	const int		cmd_idx = cmd_info->cmd_idx;	
 	const t_cmd		cmd = cmd_info->cmd_table[cmd_idx];
@@ -42,7 +42,7 @@ void	exec_first_cmd(t_execs *cmd_info)
 	exit(EXIT_FAILURE);
 }
 
-void	exec_last_cmd(t_execs *cmd_info)
+void	exec_last_cmd(t_proc *cmd_info)
 {
 	const int		cmd_idx = cmd_info->cmd_idx;	
 	const t_cmd		cmd = cmd_info->cmd_table[cmd_idx];
@@ -63,7 +63,7 @@ void	exec_last_cmd(t_execs *cmd_info)
 	exit(EXIT_FAILURE);
 }
 
-void	exec_middle_cmd(t_execs *cmd_info)
+void	exec_middle_cmd(t_proc *cmd_info)
 {
 	const int		cmd_idx = cmd_info->cmd_idx;	
 	const t_cmd		cmd = cmd_info->cmd_table[cmd_idx];
@@ -77,7 +77,7 @@ void	exec_middle_cmd(t_execs *cmd_info)
 	exit(EXIT_FAILURE);
 }
 
-void	exec_cmd(t_execs *cmd_info, int argc)
+void	exec_cmd(t_proc *cmd_info, int argc)
 {
 	if (cmd_info->cmd_idx == 1)
 		exec_first_cmd(cmd_info);
@@ -91,27 +91,32 @@ void	exec_cmd(t_execs *cmd_info, int argc)
 
 int	main(int argc, char *argv[], char *envp[])
 {
-	t_execs	cmd_info;
+	t_proc	*p_unit;
 
-	if (argc < 5)
+	if (argc < 5 ||
+		(!ft_strncmp("here_doc", argv[1], ft_strlen(argv[1])) && argc < 6))
 		return (0);
-	init_info(&cmd_info, argc, argv, envp);
-	while (cmd_info.cmd_idx < argc - 3)
+	if (ft_strncmp("here_doc", argv[1], ft_strlen(argv[1])) == 0)
 	{
-		if (pipe(cmd_info.new_pipe) < 0)
+	}
+	p_unit = init_info(argc, argv, envp);
+
+	while (p_unit.cmd_idx < argc - 3)
+	{
+		if (pipe(p_unit.new_pipe) < 0)
 			ft_perror_exit("Failed to create pipe");
-		cmd_info.pid = fork();
-		if (cmd_info.pid < 0)
+		p_unit.pid = fork();
+		if (p_unit.pid < 0)
 			ft_perror_exit("Failed to fork");
-		else if (cmd_info.pid > 0)
+		else if (p_unit.pid > 0)
 		{
-			close(cmd_info.new_pipe[0]);
-			close(cmd_info.new_pipe[1]);
+			close(p_unit.new_pipe[0]);
+			close(p_unit.new_pipe[1]);
 		}
 		else
-			exec_cmd(&cmd_info, argc);
-		ft_memcpy(cmd_info.old_pipe, cmd_info.new_pipe, 8);
-		cmd_info.cmd_idx++;
+			exec_cmd(&p_unit, argc);
+		ft_memcpy(p_unit.old_pipe, p_unit.new_pipe, 8);
+		p_unit.cmd_idx++;
 	}
 	wait(0);
 	return (0);
