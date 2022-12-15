@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:11 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/15 00:44:56 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/15 18:43:56 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 #include "../includes/ft_syscalls.h"
 #include "../libft/includes/libft.h"
 
-
-const char	**cmd_parser(int argc, char *argv[], char *const *envp);
 
 /*
 void	exec_first_cmd(t_proc *proc_info)

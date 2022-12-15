@@ -6,23 +6,52 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 02:25:48 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/15 03:41:28 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/15 18:30:37 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "../libft/includes/libft.h"
 
-char	*find_cmd_path(char *cmd, char **paths)
+char	**get_envp_paths(char *envp[])
 {
-	char	*cmd_path
+	char	**envp_paths;
 	int		i;
 
-	if (ft_strchr(cmd, '/') && !access(cmd, X_OK))
-		return (cmd);
 	i = -1;
-	while (paths[++i])
+	while (envp[++i])
 	{
-		ft_strjoin(paths, "/");
+		if (ft_strncmp(envp[i], "PATH=", 5 == 0))
+			return (ft_split(envp[i] + 5, ':'));
 	}
+	return (0);
+}
+
+static char	*join_path_cmd(char *path, char *cmd)
+{
+	char	*path_prefix;
+	char	*whole_path;
+
+	path_prefix = ft_strjoin(path, "/");
+	whole_path = ft_strjoin(path_prefix, cmd);
+	free(path_prefix);
+	return (whole_path);
+}
+
+char	*find_cmd_path(char *cmd, char **envp_paths)
+{
+	char	*cmd_path;
+	int		i;
+
+	if (ft_strchr(cmd, '/') && access(cmd, X_OK) == 0)
+		return (ft_strdup(cmd));
+	i = -1;
+	while (envp_paths && envp_paths[++i])
+	{
+		cmd_path = join_path_cmd(envp_paths[i], cmd);
+		if (access(cmd_path, X_OK) == 0)
+			return (cmd_path);
+		free(cmd_path);
+	}
+	return (0);
 }
