@@ -6,18 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 00:28:02 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/15 22:19:24 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:49:26 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/fcntl.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/wait.h>
 
-#include "../includes/structures.h"
+
+#include "../includes/pipex.h"
 #include "../includes/ft_syscalls.h"
 #include "../libft/includes/libft.h"
 
@@ -42,7 +38,7 @@ static void	set_fd_stream(t_proc *proc_info)
 		file_fd = ft_open(proc_info->infile, O_RDONLY);
 		if (proc_info->limiter)
 			if (unlink(proc_info->infile) < 0)
-				perror("unlink failed");
+				ft_perror_exit("unlink failed");
 		ft_dup2_close(file_fd, STDIN_FILENO);
 		ft_dup2_close(proc_info->new_pipe[WRITE], STDOUT_FILENO);
 	}
@@ -89,6 +85,7 @@ void	fork_exec(t_proc *proc_info)
 {
 	while (proc_info->cur_cmd_idx < proc_info->cmd_cnt)
 	{
+		printf("here\n");
 		if (proc_info->cur_cmd_idx < proc_info->cmd_cnt - 1)
 			ft_pipe(proc_info->new_pipe);
 		proc_info->pid = fork();

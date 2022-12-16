@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 02:25:48 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/15 18:30:37 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/16 23:02:35 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 char	**get_envp_paths(char *envp[])
 {
-	char	**envp_paths;
 	int		i;
 
 	i = -1;
-	while (envp[++i])
+	while (envp && envp[++i])
 	{
-		if (ft_strncmp(envp[i], "PATH=", 5 == 0))
+		if (ft_strncmp(envp[i], "PATH=", 5) == 0)
 			return (ft_split(envp[i] + 5, ':'));
 	}
 	return (0);

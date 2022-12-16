@@ -6,13 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 23:48:07 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/15 00:44:10 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:33:30 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "../includes/pipex.h"
 
 void	*ft_malloc(size_t size)
 {
@@ -24,7 +25,7 @@ void	*ft_malloc(size_t size)
 	return (ret);
 }
 
-int	ft_pipe(int fd[2])
+void	ft_pipe(int fd[2])
 {
 	if (pipe(fd) < 0)
 		ft_perror_exit("Failed to create pipe");

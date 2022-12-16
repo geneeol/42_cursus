@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_syscalls.h                                      :+:      :+:    :+:   */
+/*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 00:25:04 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/16 21:12:03 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/16 21:10:07 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/16 21:40:06 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SYSCALLS_H
-# define FT_SYSCALLS_H
+#ifndef PIPEX_H
+# define PIPEX_H
 
-# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include "structures.h"
 
-void	*ft_malloc(size_t size);
-int		ft_pipe(int fd[2]);
-int		ft_open(const char *path, int oflag);
-void	ft_close(int fd);
-void	ft_dup2_close(int fd1, int fd2);
+# include <sys/fcntl.h>
+# include <sys/wait.h>
+
+void	ft_perror_exit(char *err_msg);
+t_proc	*init_info(int argc, char *argv[], char *envp[]);
+void	fork_exec(t_proc *proc_info);
 
 #endif
