@@ -6,12 +6,9 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:26:03 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/16 23:12:02 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 03:01:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-#include <stdio.h>
 
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line_bonus.h"
@@ -23,14 +20,16 @@ static void	free_strs(char *strs[])
 {
 	int	i;
 
+	if (!strs)
+		return ;
 	i = -1;
 	while (strs[++i])
 		free(strs[i]);
 	free(strs);
 }
 
-//gnl should check whether return value is null or not.
-//When stdin get C-d, gnl return null. But in that case here_doc is still alive.
+//should check return value of gnl whether it is null or not.
+//When stdin get C-d, gnl return null. it can cause seg-fault problem
 static void	create_tmp_file(char *limiter)
 {
 	const int	limiter_len = ft_strlen(limiter);
@@ -44,39 +43,48 @@ static void	create_tmp_file(char *limiter)
 	{
 		ft_putstr_fd("heredoc> ", STDOUT_FILENO);
 		line = get_next_line(0);
-		if (line && ft_strncmp(line, limiter, limiter_len) != 0
-			&& line[limiter_len] != '\n')
+		if (line && ft_strncmp(line, limiter, limiter_len) == 0
+			&& line[limiter_len] == '\n')
 			break ;
-		write(fd, line, ft_strlen(line));
+		if (line)
+			write(fd, line, ft_strlen(line));
 		free(line);
 	}
 	free(line);
 	ft_close(fd);
 }
 
+static void	set_cmd_table(t_proc *proc_info, char *argv[], char **envp_paths)
+{
+	t_cmd	*cmd_table;
+	int		i;
+
+	cmd_table = proc_info->cmd_table;
+	i = -1;
+	while (++i < proc_info->cmd_cnt)
+	{
+		cmd_table[i].argv = ft_split(argv[i], ' ');
+		cmd_table[i].path = find_cmd_path(cmd_table[i].argv[0], envp_paths);
+		cmd_table[i].is_executable = cmd_table[i].path != 0;
+	}
+}
+
 static t_proc	*init_heredoc(int argc, char *argv[], char *envp[])
 {
 	char	**envp_paths;
 	t_proc	*proc_info;
-	t_cmd	*cmd_table;
-	int		i;
 
 	envp_paths = get_envp_paths(envp);
 	proc_info = (t_proc *)ft_malloc(sizeof(t_proc));
 	proc_info->cmd_table = (t_cmd *)ft_malloc((argc - 3) * sizeof(t_cmd));
-	cmd_table = proc_info->cmd_table;
+	proc_info->envp = envp;
 	proc_info->cur_cmd_idx = 0;
+	proc_info->cmd_cnt = argc - 4;
 	proc_info->limiter = argv[2];
 	proc_info->infile = ".here_doc_tmp";
 	create_tmp_file(argv[2]);
 	proc_info->outfile = argv[argc - 1];
-	i = -1;
-	while (++i < argc - 4)
-	{
-		cmd_table[i].argv = ft_split(argv[i + 3], ' ');
-		cmd_table[i].path = find_cmd_path(cmd_table[i].argv[0], envp_paths);
-		cmd_table[i].is_executable = cmd_table[i].path != 0;
-	}	
+	set_cmd_table(proc_info, argv + 3, envp_paths);
 	free_strs(envp_paths);
 	return (proc_info);
 }
@@ -85,36 +93,19 @@ t_proc	*init_info(int argc, char *argv[], char *envp[])
 {
 	char	**envp_paths;
 	t_proc	*proc_info;
-	t_cmd	*cmd_table;
-	int		i;
 
 	if (!ft_strncmp("here_doc", argv[1], 9))
 		return (init_heredoc(argc, argv, envp));
 	envp_paths = get_envp_paths(envp);
 	proc_info = (t_proc *)ft_malloc(sizeof(t_proc));
 	proc_info->cmd_table = (t_cmd *)ft_malloc((argc - 3) * sizeof(t_cmd));
-	cmd_table = proc_info->cmd_table;
+	proc_info->envp = envp;
 	proc_info->cur_cmd_idx = 0;
+	proc_info->cmd_cnt = argc - 3;
 	proc_info->limiter = 0;
 	proc_info->infile = argv[1];
 	proc_info->outfile = argv[argc - 1];
-	i = -1;
-	while (++i < argc - 3)
-	{
-		cmd_table[i].argv = ft_split(argv[i + 2], ' ');
-		cmd_table[i].path = find_cmd_path(cmd_table[i].argv[0], envp_paths);
-		cmd_table[i].is_executable = cmd_table[i].path != 0;
-	}	
-
-	int j;
-	i = -1;
-	while (++i < argc - 3)
-	{
-		j = -1;
-		while (cmd_table[i].argv[++j])
-			printf("i_cmd: %d, argv[%d]: %s\n", i, j, cmd_table[i].argv[j]);
-		printf("i_cmd: %d, %s\n",i ,cmd_table[i].path);
-	}
+	set_cmd_table(proc_info, argv + 2, envp_paths);
 	free_strs(envp_paths);
 	return (proc_info);
 }

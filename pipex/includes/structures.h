@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/16 21:38:35 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/17 20:14:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_proc
 	int			new_pipe[2];
 	int			old_pipe[2];
 	pid_t		pid;
+	int			exit_status;
 }	t_proc;
 
 #endif
