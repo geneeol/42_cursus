@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 00:28:02 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/18 03:23:57 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 06:02:38 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ static void	parent_close_fd(t_proc *proc_info)
 	}
 }
 
+//여기서 인자파싱을 하는게 자연스러울지도
 static void	child_exec_cmd(t_proc *proc_info)
 {
 	const t_cmd	cur_cmd = proc_info->cmd_table[proc_info->cur_cmd_idx];
@@ -91,12 +92,22 @@ static void	child_exec_cmd(t_proc *proc_info)
 	*/
 	//while (proc_info->envp[++i])
 //		dprintf(2, "envp[%d]: %s\n", i, proc_info->envp[i]);
-	//if (cur_cmd.is_executable)
-	execve(cur_cmd.path, cur_cmd.argv, proc_info->envp);
+
+	if (cur_cmd.is_executable)
+		execve(cur_cmd.path, cur_cmd.argv, proc_info->envp);
 	//dprintf(2, "execve fail\n");
-	ft_putstr_fd("pipex: command not found: ", 2);
-	ft_putendl_fd(cur_cmd.argv[0], 2);
-	exit(127);
+	if (access(cur_cmd.path, F_OK) != 0)
+	{
+		ft_putstr_fd("command not found: ", 2);
+		ft_putendl_fd(cur_cmd.argv[0], 2);
+		exit(127);
+	}
+	else if (access(cur_cmd.path, X_OK) != 0)
+	{
+		ft_putstr_fd("Permission denied: ", 2);
+		ft_putendl_fd(cur_cmd.argv[0], 2);
+		exit(126);
+	}
 }
 
 void	fork_exec(t_proc *proc_info)

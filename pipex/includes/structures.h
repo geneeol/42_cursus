@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/17 20:14:33 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 06:07:29 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ typedef int	t_bool;
 
 typedef struct s_cmd
 {
-	const char	*path;
-	char *const	*argv;
-	t_bool		is_executable;
+	char	*path;
+	char	**argv;
+	t_bool	is_executable;
 }	t_cmd;
 
 typedef struct s_proc
 {
 	char *const	*envp;
-	char		**envp_paths;
+	//char		**envp_paths;
 	t_cmd		*cmd_table;
 	int			cur_cmd_idx;
 	int			cmd_cnt;
