@@ -6,12 +6,9 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 00:28:02 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/18 06:02:38 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 19:14:06 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
 
 #include "../includes/pipex.h"
 #include "../includes/ft_syscalls.h"
@@ -71,31 +68,13 @@ static void	parent_close_fd(t_proc *proc_info)
 	}
 }
 
-//여기서 인자파싱을 하는게 자연스러울지도
+//maybe it would be better to parse excution_info in this function
 static void	child_exec_cmd(t_proc *proc_info)
 {
 	const t_cmd	cur_cmd = proc_info->cmd_table[proc_info->cur_cmd_idx];
 
-	//dprintf(2, "cmd_idx: %d\n", proc_info->cur_cmd_idx);
 	set_fd_stream(proc_info);
-	/*
-	dprintf(2, "af stream\n");
-	dprintf(2, "is_executable: %d\n", cur_cmd.is_executable);
-	dprintf(2, "cur_cmd.path: %s\n", cur_cmd.path);
-	int	i;
-
-	i = -1;
-	while (cur_cmd.argv[++i])
-		dprintf(2, "cur_cmd.argv[%d]: %s\n", i, cur_cmd.argv[i]);
-	dprintf(2, "envp: %p\n", proc_info->envp);
-	i = -1;
-	*/
-	//while (proc_info->envp[++i])
-//		dprintf(2, "envp[%d]: %s\n", i, proc_info->envp[i]);
-
-	if (cur_cmd.is_executable)
-		execve(cur_cmd.path, cur_cmd.argv, proc_info->envp);
-	//dprintf(2, "execve fail\n");
+	execve(cur_cmd.path, cur_cmd.argv, proc_info->envp);
 	if (access(cur_cmd.path, F_OK) != 0)
 	{
 		ft_putstr_fd("command not found: ", 2);
@@ -108,30 +87,23 @@ static void	child_exec_cmd(t_proc *proc_info)
 		ft_putendl_fd(cur_cmd.argv[0], 2);
 		exit(126);
 	}
+	else
+		exit(EXIT_FAILURE);
 }
 
 void	fork_exec(t_proc *proc_info)
 {
 	while (proc_info->cur_cmd_idx < proc_info->cmd_cnt)
 	{
-		//printf(">====parent 1=======<\n\n");
 		if (proc_info->cur_cmd_idx < proc_info->cmd_cnt - 1)
 			ft_pipe(proc_info->new_pipe);
-		//printf("old_pipe[0]:%d, old_pipe[1]: %d\n", proc_info->old_pipe[0], proc_info->old_pipe[1]);
-		//printf("new_pipe[0]:%d, new_pipe[1]: %d\n\n", proc_info->new_pipe[0], proc_info->new_pipe[1]);
 		proc_info->pid = fork();
 		if (proc_info->pid < 0)
 			ft_perror_exit("Failed to fork");
 		else if (proc_info->pid > 0)
-		{
-			//printf(">====parent 2=======<\n\n");
 			parent_close_fd(proc_info);
-		}
 		else
-		{
-		//	printf(">======child=======<\n\n");
 			child_exec_cmd(proc_info);
-		}
 		ft_memcpy(proc_info->old_pipe, proc_info->new_pipe, 8);
 		proc_info->cur_cmd_idx++;
 	}

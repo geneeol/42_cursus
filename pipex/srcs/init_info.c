@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:26:03 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/18 05:04:47 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 19:14:59 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,16 +63,22 @@ static void	set_cmd_table(t_proc *proc_info, char *argv[], char **envp_paths)
 	i = -1;
 	while (++i < proc_info->cmd_cnt)
 	{
-		if (access(argv[i], X_OK) == 0)
+		if (ft_strchr(argv[i], '/') && access(argv[i], F_OK) == 0)
 		{
 			cmd_table[i].argv = ft_malloc(sizeof(char *) * 2);
 			cmd_table[i].argv[0] = ft_strdup(argv[i]);
 			cmd_table[i].argv[1] = 0;
+			cmd_table[i].path = ft_strdup(cmd_table[i].argv[0]);
+			if (!cmd_table[i].argv[0] || !cmd_table[i].path)
+				ft_perror_exit("ft_strdup failed");
 		}
 		else
+		{
 			cmd_table[i].argv = ft_split(argv[i], ' ');
-		cmd_table[i].path = find_cmd_path(cmd_table[i].argv[0], envp_paths);
-		cmd_table[i].is_executable = cmd_table[i].path != 0;
+			if (!cmd_table[i].argv)
+				ft_perror_exit("ft_split failed");
+			cmd_table[i].path = find_cmd_path(cmd_table[i].argv[0], envp_paths);
+		}
 	}
 }
 

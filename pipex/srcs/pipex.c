@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:11 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/18 04:54:59 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 19:11:06 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static int	wait_children(t_proc *proc_info)
 	int	status;
 	int	exit_status;
 
+	exit_status = 1;
 	i = -1;
 	while (++i < proc_info->cmd_cnt)
 	{
@@ -36,9 +37,6 @@ int	main(int argc, char *argv[], char *envp[])
 	if (argc < 5 || (!ft_strncmp("here_doc", argv[1], 9) && argc < 6))
 		return (1);
 	proc_info = init_info(argc, argv, envp);
-	if (!proc_info)
-		return (0);
 	fork_exec(proc_info);
-	//system("leaks pipex");
 	return (wait_children(proc_info));
 }

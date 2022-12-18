@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/18 06:07:29 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/18 16:55:34 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_cmd
 {
 	char	*path;
 	char	**argv;
-	t_bool	is_executable;
+	//t_bool	is_executable;
 }	t_cmd;
 
 typedef struct s_proc
