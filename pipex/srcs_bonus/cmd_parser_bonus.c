@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmd_parser.c                                       :+:      :+:    :+:   */
+/*   cmd_parser_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 02:25:48 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/19 16:31:35 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/19 16:39:09 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/includes/libft.h"
-#include "../includes/pipex.h"
+#include "../includes/pipex_bonus.h"
 
 char	**get_envp_paths(char *envp[])
 {

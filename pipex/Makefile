@@ -1,13 +1,14 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = pipex
-BONUS = pipex
-LIBFT = libft.a
+NAME	= pipex
+BONUS	= pipex_bonus
+LIBFT	= libft.a
 
-INC_DIR 	= includes
-SRC_DIR		= srcs
-LIBFT_DIR	= libft
+INC_DIR 		= includes
+SRC_DIR			= srcs
+SRCS_BONUS_DIR	= srcs_bonus
+LIBFT_DIR		= libft
 
 SRCS = cmd_parser.c \
 	   fork_exec.c\
@@ -16,30 +17,34 @@ SRCS = cmd_parser.c \
 	   init_info.c\
 	   pipex.c\
 
+SRCS_BONUS = cmd_parser_bonus.c\
+			 fork_exec_bonus.c\
+			 ft_perror_exit_bonus.c \
+			 ft_syscalls_bonus.c\
+			 init_info_bonus.c\
+			 pipex_bonus.c
+
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
-
-OBJS_BONUS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
-
-#$(SRCS_BONUS:.c=.o)
+OBJS_BONUS = $(addprefix $(SRCS_BONUS_DIR)/, $(SRCS_BONUS:.c=.o))
 
 $(NAME): $(OBJS)
 	make all -C $(LIBFT_DIR)
 	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
-#$(BONUS): $(OBJS) 
-#	make all -C $(LIBFT_DIR)
-#	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
+$(BONUS): $(OBJS_BONUS) 
+	make all -C $(LIBFT_DIR)
+	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
 all: $(NAME)
 
-bonus: $(NAME)
+bonus: $(BONUS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
 clean:
 	make -C Libft clean
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	make -C Libft fclean

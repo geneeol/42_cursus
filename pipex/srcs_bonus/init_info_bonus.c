@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_info.c                                        :+:      :+:    :+:   */
+/*   init_info_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:26:03 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/19 16:42:20 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/19 16:39:28 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line_bonus.h"
-#include "../includes/pipex.h"
-#include "../includes/ft_syscalls.h"
-#include "../includes/cmd_parser.h"
+#include "../includes/pipex_bonus.h"
+#include "../includes/ft_syscalls_bonus.h"
+#include "../includes/cmd_parser_bonus.h"
 
 static void	free_strs(char *strs[])
 {

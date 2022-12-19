@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 21:10:07 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/16 21:40:06 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/19 16:29:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include "structures.h"
-
-# include <sys/fcntl.h>
-# include <sys/wait.h>
 
 void	ft_perror_exit(char *err_msg);
 t_proc	*init_info(int argc, char *argv[], char *envp[]);

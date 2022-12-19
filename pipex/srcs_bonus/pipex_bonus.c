@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   pipex_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 22:50:11 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/19 16:42:40 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/19 16:39:35 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pipex.h"
-#include "../includes/ft_syscalls.h"
+#include "../includes/pipex_bonus.h"
+#include "../includes/ft_syscalls_bonus.h"
 #include "../libft/includes/libft.h"
 
 static int	wait_children(t_proc *proc_info)

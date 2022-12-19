@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   structures.h                                       :+:      :+:    :+:   */
+/*   pipex_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 14:32:16 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/19 16:29:06 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/16 21:10:07 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/19 16:29:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCTURES_H
-# define STRUCTURES_H
+#ifndef PIPEX_BONUS_H
+# define PIPEX_BONUS_H
 
-# include <sys/wait.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include "structures_bonus.h"
 
-# define WRITE 1
-# define READ 0
-
-typedef struct s_cmd
-{
-	char	*path;
-	char	**argv;
-}	t_cmd;
-
-typedef struct s_proc
-{
-	char *const	*envp;
-	t_cmd		*cmd_table;
-	int			cur_cmd_idx;
-	int			cmd_cnt;
-	char		*limiter;
-	char		*infile;
-	char		*outfile;
-	int			new_pipe[2];
-	int			old_pipe[2];
-	pid_t		pid;
-	int			exit_status;
-}	t_proc;
+void	ft_perror_exit(char *err_msg);
+t_proc	*init_info(int argc, char *argv[], char *envp[]);
+void	fork_exec(t_proc *proc_info);
 
 #endif
