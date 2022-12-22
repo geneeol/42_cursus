@@ -6,35 +6,68 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:18:31 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/20 21:41:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/23 01:41:31 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 #include <fcntl.h>
-#include <sys/fcntl.h>
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line_bonus.h"
+#include "../includes/ft_syscalls.h"
+#include "../includes/structures.h"
 
-static int**	map_init(int width, int height, char *file_name)
+static void	free_strs(char *strs[])
 {
-	int	**map;
-	int	fd;
-	int	y;
-	int	x;
-	
-	map = (int **)ft_malloc(sizeof(int *) * height);
-	y = -1;
-	while (++y < height)
-		map[y] = (int *)ft_malloc(sizeof(int) * width);
-	fd = open(file_name, O_RDONLY);
-	if (fd < 0)
-		ft_perror_exit("Failed to open file");
+	int	i;
+
+	if (!strs)
+		return ;
+	i = -1;
+	while (strs[++i])
+		free(strs[i]);
+	free(strs);
+}
+
+static void fill_map(int **map, int width, int height, char *file_name) 
+{
+	const int	fd = ft_open(file_name, O_RDONLY);
+	char		*line;
+	char		**strs;
+	int			y;
+	int			x;
+
 	y = -1;
 	while (++y < height)
 	{
 		x = -1;
+		line = get_next_line(fd);
+		strs = ft_split(line, ' ');
+		if (!strs)
+			ft_perror_exit("Failed to split");
 		while (++x < width)
+			map[y][x] = ft_atoi(strs[x]);
+		free(line);
+		free_strs(strs);
 	}
+	close(fd);
+}
+
+static t_map	*map_init(int width, int height, char *file_name)
+{
+	t_map	*map_info;
+	int		y;
+
+	map_info = ft_malloc(sizeof(t_map));
+	map_info->width = width;
+	map_info->height = height;
+	map_info->map = (int **)ft_malloc(sizeof(int *) * height);
+	y = -1;
+	while (++y < height)
+		map_info->map[y] = (int *)ft_malloc(sizeof(int) * width);
+	fill_map(map_info->map, width, height, file_name);
+	return (map_info);
 }
 
 static int	ft_calc_width(char *line)
@@ -49,26 +82,23 @@ static int	ft_calc_width(char *line)
 	while (strs[width])
 		width++;
 	if (strs[width - 1][0] == '\n')
-		ft_perror_exit("Map error");
+		width--;
 	free_strs(strs);
 	return (width);
 }
 
-static int	get_map_size(char *file_name, int *width, int *height)
+static void	get_map_size(char *file_name, int *width, int *height)
 {
-	char	*line;
-	int		fd;
+	const int	fd = ft_open(file_name, O_RDONLY);
+	char		*line;
 
-	fd = open(file_name, O_RDONLY);
-	if (fd < 0)
-		ft_perror_exit("Failed to open file");
 	while (1)
 	{
 		line = get_next_line(fd);
 		if (!line)
 			break ;
-		if (*width == 0)
-			*width = ft_width(line);
+		if (*height == 0)
+			*width = ft_calc_width(line);
 		else
 			if (*width != ft_calc_width(line))
 				ft_perror_exit("Map error");
@@ -78,13 +108,15 @@ static int	get_map_size(char *file_name, int *width, int *height)
 	close(fd);
 }
 
-int	**map_parser(char *file_name)
+t_map	*map_parser(char *file_name)
 {
-	int	**map;
+	t_map	*map_info;
 	int	width;
 	int	height;
 
 	width = 0;
 	height = 0;
 	get_map_size(file_name, &width, &height);
-	map = map_init(width, height, file_name);
+	map_info = map_init(width, height, file_name);
+	return (map_info);
+}

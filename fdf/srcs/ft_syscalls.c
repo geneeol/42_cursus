@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   structures.h                                       :+:      :+:    :+:   */
+/*   ft_syscalls.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 16:29:22 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/23 00:56:42 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/14 23:48:07 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/22 21:24:58 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCTURES_H
-# define STRUCTURES_H
+#include "../includes/ft_syscalls.h"
 
-typedef struct s_map
+void	*ft_malloc(size_t size)
 {
-	int	width;
-	int	height;
-	int	**map;
-}	t_map;
+	void	*ret;
 
-#endif
+	ret = malloc(size);
+	if (!ret)
+		ft_perror_exit("malloc failed");
+	return (ret);
+}
+
+int	ft_open(const char *path, int oflag)
+{
+	int	fd;
+
+	fd = open(path, oflag);
+	if (fd < 0)
+		ft_perror_exit("Failed to open file");
+	return (fd);
+}
+
+void	ft_close(int fd)
+{
+	if (close(fd) < 0)
+		ft_perror_exit("Failed to close file");
+}
