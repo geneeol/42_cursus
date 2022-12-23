@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:18:31 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/23 01:41:31 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/23 16:50:33 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static t_map	*map_init(int width, int height, char *file_name)
 	t_map	*map_info;
 	int		y;
 
-	map_info = ft_malloc(sizeof(t_map));
+	map_info = (t_map *)ft_malloc(sizeof(t_map));
 	map_info->width = width;
 	map_info->height = height;
 	map_info->map = (int **)ft_malloc(sizeof(int *) * height);
