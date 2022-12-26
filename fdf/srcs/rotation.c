@@ -6,23 +6,12 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 02:47:06 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/26 02:57:00 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 05:37:01 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "../includes/fdf.h"
-
-void	rotate_y(t_vertex *v, double beta)
-{
-	const int	prev_x = v->x;
-	const int	prev_y = v->y;
-	const int	prev_z = v->z;
-
-	v->x = cos(beta) * prev_x - sin(beta) * prev_z; 
-	v->y = prev_y;
-	v->z = sin(beta) * prev_x + cos(beta) * prev_z;
-}
 
 void	rotate_x(t_vertex *v, double alpha)
 {
@@ -30,9 +19,20 @@ void	rotate_x(t_vertex *v, double alpha)
 	const int	prev_y = v->y;
 	const int	prev_z = v->z;
 
-	v->x = prev_x; 
+	v->x = prev_x;
 	v->y = cos(alpha) * prev_y - sin(alpha) * prev_z;
 	v->z = sin(alpha) * prev_y + cos(alpha) * prev_z;
+}
+
+void	rotate_y(t_vertex *v, double beta)
+{
+	const int	prev_x = v->x;
+	const int	prev_y = v->y;
+	const int	prev_z = v->z;
+
+	v->x = cos(beta) * prev_x - sin(beta) * prev_z;
+	v->y = prev_y;
+	v->z = sin(beta) * prev_x + cos(beta) * prev_z;
 }
 
 void	rotate_z(t_vertex *v, double gamma)

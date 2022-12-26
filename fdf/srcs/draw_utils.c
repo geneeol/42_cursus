@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 00:49:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 05:15:52 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 05:51:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "../includes/ft_syscalls.h"
 #include "../libft/includes/libft.h"
 
-int	ft_abs(int n)
+static int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
@@ -32,7 +32,7 @@ static void	my_put_pixel(int x, int y, int z, t_mlx *mlx_info)
 	*(unsigned int *)dst = 0x00FFFFFF;
 }
 
-//줄 수 줄여야돼...
+//too many lines
 static void	plot_line(t_point *p1, t_point *p2, t_mlx *mlx_info)
 {
 	const int	dx = ft_abs(p1->x - p2->x);
