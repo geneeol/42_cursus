@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -L./ -lmlx -framework OpenGL -framework AppKit 
+CFLAGS = -fsanitize=address -L./ -lmlx -framework OpenGL -framework AppKit -g3
 #-Wall -Wextra -Werror
 
 NAME	= fdf
@@ -17,6 +17,9 @@ SRCS = draw_utils.c\
 	   main.c\
 	   map_parser.c\
 	   mlx_interface.c\
+	   rotation.c\
+	   key_hook.c\
+	   projection.c\
 
 #SRCS_BONUS = cmd_parser_bonus.c\
 			 fork_exec_bonus.c\

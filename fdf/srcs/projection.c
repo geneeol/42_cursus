@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   projection.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 14:02:23 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 05:23:37 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/27 04:08:06 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/27 04:09:10 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
-#include "../libft/includes/libft.h"
-#include "../includes/mlx.h"
 
-int	main(int argc, char *argv[])
+void	iso_proj(t_vars *vars)
 {
-	t_mlx	*mlx_info;
+	vars->alpha = M_PI_4;
+	vars->beta = asin(tan(M_PI / 6));
+	vars->gamma = 0;
+	vars->x_scale = 1;
+	vars->y_scale = 1;
+	vars->z_scale = 1;
+	vars->x_translate = 0;
+	vars->y_translate = 0;
+}
 
-	if (argc != 2)
-	{
-		ft_putendl_fd("The number of arguments must be 2", 2);
-		return (0);
-	}
-	mlx_info = ft_mlx_init();
-	mlx_info->map = map_input_parser(argv[1]);
-	draw_img(mlx_info);
-	mlx_key_hook(mlx_info->win_ptr, key_hook, mlx_info);
-	mlx_loop(mlx_info->mlx_ptr);
+void	parellel_proj(t_vars *vars)
+{
+	vars->alpha = M_PI_2;
+	vars->beta = 0;
+	vars->gamma = 0;
+	vars->x_scale = 1;
+	vars->y_scale = 1;
+	vars->z_scale = 1;
+	vars->x_translate = 0;
+	vars->y_translate = 0;
 }

@@ -14,7 +14,7 @@ int	main()
 	void	*win_ptr;
 
 	mlx_ptr = mlx_init();
-	win_ptr = mlx_new_window(mlx_ptr, 500, 500, "mlx 42");
+	win_ptr = mlx_new_window(mlx_ptr, 1200, 720, "mlx 42");
 	mlx_pixel_put(mlx_ptr, win_ptr, 250, 250, 0xFF0000);
 	mlx_pixel_put(mlx_ptr, win_ptr, 251, 250, 0xFF0000);
 	mlx_pixel_put(mlx_ptr, win_ptr, 250, 251, 0xFF0000);

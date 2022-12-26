@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 16:29:22 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/25 22:54:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 03:15:43 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ typedef struct s_point
 
 typedef struct s_vertex
 {
-	int	x;
-	int	y;
-	int	z;
+	double	x;
+	double	y;
+	double	z;
 }	t_vertex;
 
 typedef struct s_map
@@ -33,7 +33,6 @@ typedef struct s_map
 	int		height;
 	int		dist;
 	int		**map_org;
-	t_vertex	**map_proj;
 }	t_map;
 
 typedef struct s_vars
@@ -41,9 +40,9 @@ typedef struct s_vars
 	double	alpha;
 	double	beta;
 	double	gamma;
-	int		x_scale;
-	int		y_scale;
-	int		z_scale;
+	double	x_scale;
+	double	y_scale;
+	double	z_scale;
 	int		x_translate;
 	int		y_translate;
 }	t_vars;
@@ -67,11 +66,5 @@ typedef struct s_transed_map
 	int			height;
 	t_vertex	**v_arr;
 }	t_transed_map;
-
-
-typedef struct s_mat33
-{
-	double	m[3][3];
-}	t_mat33;
 
 #endif

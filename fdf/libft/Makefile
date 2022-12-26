@@ -58,7 +58,8 @@ LIBFT = ft_isalpha.c 	\
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 	   \
-	   ft_err_exit.c
+	   ft_err_exit.c\
+	   free_strs.c
 
 GNL = get_next_line_bonus.c \
 	  get_next_line_utils_bonus.c
