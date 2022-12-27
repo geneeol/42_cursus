@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:06:40 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 04:08:51 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 22:04:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_map	*map_input_parser(char *file_name);
 t_mlx	*ft_mlx_init(void);
 void	set_mlx_img(t_mlx *mlx_info);
 int		key_hook(int key_code, t_mlx *mlx_info);
+int		render_frame(t_mlx *mlx_info);
 
 void	iso_proj(t_vars *vars);
 void	parellel_proj(t_vars *vars);

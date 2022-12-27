@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 00:49:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 05:51:13 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 23:31:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,19 @@ static void	my_put_pixel(int x, int y, int z, t_mlx *mlx_info)
 //too many lines
 static void	plot_line(t_point *p1, t_point *p2, t_mlx *mlx_info)
 {
+	//t_point	d = {ft_abs(p1->x - p2->x), ft_abs(p1->x - p2->x), 0};
 	const int	dx = ft_abs(p1->x - p2->x);
 	const int	dy = -ft_abs(p1->y - p2->y);
 	const int	sx = 2 * (p1->x < p2->x) - 1;
 	const int	sy = 2 * (p1->y < p2->y) - 1;
 	int			err[2];
+	int			mask[2];
 
+	mask[0] = (p1->y < 0) << 3 || (p1->y >= WIN_HEIGHT) << 2 || (p1->x >= WIN_WIDTH) << 1 || (p1->x < 0);
+	mask[1] = (p2->y < 0) << 3 || (p2->y >= WIN_HEIGHT) << 2 || (p2->x >= WIN_WIDTH) << 1 || (p2->x < 0);
+
+	if ((mask[0] & mask[1]) != 0)
+		return ;
 	err[0] = dx + dy;
 	while (1)
 	{
@@ -70,22 +77,25 @@ static void	plot_line(t_point *p1, t_point *p2, t_mlx *mlx_info)
 static t_point	*transform(int x, int y, t_mlx *mlx_info)
 {
 	const t_map		*map = mlx_info->map;
-	const t_vars	*vars = mlx_info->vars;
+	t_vars *const	vars = mlx_info->vars;
 	t_vertex		v;
 	t_point			*p;
 
 	p = ft_malloc(sizeof(t_point));
-	v.x = x * map->dist * vars->x_scale;
-	v.y = y * map->dist * vars->y_scale;
-	v.z = map->map_org[y][x] * map->dist * vars->z_scale;
+	vars->px_scale = 0.9997 * vars->px_scale + 0.0003 * vars->x_scale;
+	vars->py_scale = 0.9997 * vars->py_scale + 0.0003 * vars->y_scale;
+	vars->pz_scale = 0.9997 * vars->pz_scale + 0.0003 * vars->z_scale;
+	v.x = x * map->dist * vars->px_scale;
+	v.y = y * map->dist * vars->py_scale;
+	v.z = map->map_org[y][x] * map->dist * vars->pz_scale;
 	rotate_x(&v, vars->alpha);
 	rotate_y(&v, vars->beta);
 	rotate_z(&v, vars->gamma);
 	v.x += vars->x_translate + WIN_WIDTH / 2.0;
 	v.y += vars->y_translate + WIN_HEIGHT / 2.0;
-	p->x = v.x;
-	p->y = v.y;
-	p->z = v.z;
+	p->x = lround(v.x);
+	p->y = lround(v.y);
+	p->z = lround(v.z);
 	return (p);
 }
 

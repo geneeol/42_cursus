@@ -20,6 +20,7 @@ SRCS = draw_utils.c\
 	   rotation.c\
 	   key_hook.c\
 	   projection.c\
+	   render_frame.c
 
 #SRCS_BONUS = cmd_parser_bonus.c\
 			 fork_exec_bonus.c\

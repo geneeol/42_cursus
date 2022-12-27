@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:33:03 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 04:09:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 22:03:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,6 @@ int	key_hook(int key, t_mlx *mlx_info)
 	else if (key == R || key == T || key == F \
 				|| key == G || key == V || key == B)
 		scaling(key, mlx_info->vars);
-	draw_img(mlx_info);
+	//draw_img(mlx_info);
 	return (1);
 }

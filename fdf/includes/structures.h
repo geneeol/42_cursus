@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 16:29:22 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 03:15:43 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 21:35:23 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ typedef struct s_vars
 	double	x_scale;
 	double	y_scale;
 	double	z_scale;
+	double	px_scale;
+	double	py_scale;
+	double	pz_scale;
 	int		x_translate;
 	int		y_translate;
 }	t_vars;

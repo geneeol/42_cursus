@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 04:08:06 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 04:09:10 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/27 21:36:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ void	iso_proj(t_vars *vars)
 	vars->x_scale = 1;
 	vars->y_scale = 1;
 	vars->z_scale = 1;
+	vars->px_scale = 1;
+	vars->py_scale = 1;
+	vars->pz_scale = 1;
 	vars->x_translate = 0;
 	vars->y_translate = 0;
 }

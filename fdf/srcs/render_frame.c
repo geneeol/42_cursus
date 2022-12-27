@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   render_frame.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 14:02:23 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 20:32:18 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/27 20:37:07 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/27 20:43:00 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
-#include "../libft/includes/libft.h"
-#include "../includes/mlx.h"
 
-int	main(int argc, char *argv[])
+int	render_frame(t_mlx *mlx_info)
 {
-	t_mlx	*mlx_info;
-
-	if (argc != 2)
-	{
-		ft_putendl_fd("The number of arguments must be 2", 2);
-		return (0);
-	}
-	mlx_info = ft_mlx_init();
-	mlx_info->map = map_input_parser(argv[1]);
 	draw_img(mlx_info);
-	mlx_key_hook(mlx_info->win_ptr, key_hook, mlx_info);
-	mlx_loop_hook(mlx_info->mlx_ptr, render_frame, mlx_info);
-	mlx_loop(mlx_info->mlx_ptr);
+	return (1);
 }
