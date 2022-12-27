@@ -6,13 +6,19 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:02:23 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 20:32:18 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 03:39:51 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 #include "../libft/includes/libft.h"
 #include "../includes/mlx.h"
+
+static int	close_win(void)
+{
+	exit(0);
+	return (0);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -27,6 +33,7 @@ int	main(int argc, char *argv[])
 	mlx_info->map = map_input_parser(argv[1]);
 	draw_img(mlx_info);
 	mlx_key_hook(mlx_info->win_ptr, key_hook, mlx_info);
+	mlx_hook(mlx_info->win_ptr, 17, 0, close_win, mlx_info);
 	mlx_loop_hook(mlx_info->mlx_ptr, render_frame, mlx_info);
 	mlx_loop(mlx_info->mlx_ptr);
 }
