@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 00:49:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 23:31:54 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 02:31:00 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static void	plot_line(t_point *p1, t_point *p2, t_mlx *mlx_info)
 
 static t_point	*transform(int x, int y, t_mlx *mlx_info)
 {
-	const t_map		*map = mlx_info->map;
+	t_map *const	map = mlx_info->map;
 	t_vars *const	vars = mlx_info->vars;
 	t_vertex		v;
 	t_point			*p;

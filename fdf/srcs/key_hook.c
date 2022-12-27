@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 21:33:03 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 22:03:57 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 02:37:41 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,18 @@ static void	translation(int key, t_vars *vars)
 
 static void	zoom(int key, t_vars *vars)
 {
-	if (key == PLUS)
+	if (key == PLUS && vars->x_scale <= 500 \
+		&& vars->y_scale <= 500 && vars->z_scale <= 500)
 	{
-		vars->x_scale += 0.1;
+		vars->x_scale += 0.05;
+		vars->y_scale += 0.05;
+		vars->z_scale += 0.05;
 		vars->x_scale *= 1.3;
-		vars->y_scale += 0.1;
 		vars->y_scale *= 1.3;
-		vars->z_scale += 0.1;
 		vars->z_scale *= 1.3;
 	}
-	else if (key == MINUS)
+	else if (key == MINUS && vars->x_scale >= 0.002 \
+			&& vars->y_scale >= 0.002 && vars->z_scale >= 0.002)
 	{
 		vars->x_scale *= 0.7;
 		vars->y_scale *= 0.7;
@@ -63,26 +65,26 @@ static void	rotate(int key, t_vars *vars)
 
 static void	scaling(int key, t_vars *vars)
 {
-	if (key == R)
+	if (key == R && vars->x_scale <= 500)
 	{
-		vars->x_scale += 0.1;
+		vars->x_scale += 0.05;
 		vars->x_scale *= 1.3;
 	}
-	else if (key == T)
+	else if (key == T && vars->x_scale >= 0.002)
 		vars->x_scale *= 0.7;
-	else if (key == F)
+	else if (key == F && vars->y_scale <= 500)
 	{
-		vars->y_scale += 0.1;
+		vars->y_scale += 0.05;
 		vars->y_scale *= 1.3;
 	}
-	else if (key == G)
+	else if (key == G && vars->y_scale >= 0.002)
 		vars->y_scale *= 0.7;
-	else if (key == V)
+	else if (key == V && vars->z_scale <= 500)
 	{
-		vars->z_scale += 0.1;
+		vars->z_scale += 0.05;
 		vars->z_scale *= 1.3;
 	}
-	else if (key == B)
+	else if (key == B && vars->z_scale >= 0.002)
 		vars->z_scale *= 0.7;
 }
 
@@ -104,6 +106,5 @@ int	key_hook(int key, t_mlx *mlx_info)
 	else if (key == R || key == T || key == F \
 				|| key == G || key == V || key == B)
 		scaling(key, mlx_info->vars);
-	//draw_img(mlx_info);
 	return (1);
 }

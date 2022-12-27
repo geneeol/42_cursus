@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:20:53 by dahkang           #+#    #+#             */
-/*   Updated: 2022/08/16 22:25:25 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 01:40:14 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 2048
 # endif
 
 # define OPEN_FD_MAX 65535
