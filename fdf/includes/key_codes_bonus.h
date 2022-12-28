@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_err_exit.c                                      :+:      :+:    :+:   */
+/*   key_codes_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 19:12:15 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/28 19:32:35 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/26 23:15:25 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/28 17:00:19 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef KEY_CODES_BONUS_H
+# define KEY_CODES_BONUS_H
 
-void	ft_err_exit(char *err_msg, int err_status)
+enum e_key
 {
-	ft_putendl_fd("Error", 2);
-	if (err_msg)
-		ft_putendl_fd(err_msg, 2);
-	exit(err_status);
-}
+	ESC = 53,
+	P = 35,
+	I = 34,
+	UP = 126,
+	DOWN = 125,
+	LEFT = 123,
+	RIGHT = 124,
+	PLUS = 24,
+	MINUS = 27,
+	Q = 12,
+	W = 13,
+	A = 0,
+	S = 1,
+	Z = 6,
+	X = 7,
+	R = 15,
+	T = 17,
+	F = 3,
+	G = 5,
+	V = 9,
+	B = 11
+};
+
+#endif

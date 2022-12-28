@@ -24,12 +24,16 @@ SRCS = draw_utils.c\
 	   projection.c\
 	   render_frame.c
 
-#SRCS_BONUS = cmd_parser_bonus.c\
-			 fork_exec_bonus.c\
-			 ft_perror_exit_bonus.c \
+SRCS_BONUS = draw_utils_bonus.c\
+			 ft_perror_exit_bonus.c\
 			 ft_syscalls_bonus.c\
-			 init_info_bonus.c\
-			 pipex_bonus.c
+			 key_hook_bonus.c\
+			 main_bonus.c\
+			 map_parser_bonus.c\
+			 mlx_interface_bonus.c\
+			 projection_bonus.c\
+			 render_frame_bonus.c\
+			 rotation_bonus.c\
 
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 OBJS_BONUS = $(addprefix $(SRCS_BONUS_DIR)/, $(SRCS_BONUS:.c=.o))
@@ -44,7 +48,7 @@ $(BONUS): $(OBJS_BONUS)
 	make all -C $(LIBFT_DIR)
 	make all -C $(MLX_DIR)
 	cp $(MLX_DIR)/$(LIBMLX) ./
-	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
+	$(CC) $(CFLAGS) $(MLXFLAG) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
 all: $(NAME)
 
@@ -56,12 +60,12 @@ bonus: $(BONUS)
 clean:
 	make clean -C $(LIBFT_DIR) 
 	make clean -C $(MLX_DIR)
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS) $(OBJS_BONUS) $(LIBMLX)
 
 fclean: clean
 	make fclean -C $(LIBFT_DIR)
 	make clean -C $(MLX_DIR)
-	rm -f $(NAME) $(BONUS)
+	rm -f $(NAME) $(BONUS) $(LIBMLX)
 
 re: 
 	make fclean

@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_err_exit.c                                      :+:      :+:    :+:   */
+/*   ft_perror_exit_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 19:12:15 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/28 19:32:35 by dahkang          ###   ########.fr       */
+/*   Created: 2022/12/16 20:58:50 by dahkang           #+#    #+#             */
+/*   Updated: 2022/12/19 16:32:31 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_err_exit(char *err_msg, int err_status)
+void	ft_perror_exit(char *err_msg)
 {
-	ft_putendl_fd("Error", 2);
-	if (err_msg)
-		ft_putendl_fd(err_msg, 2);
-	exit(err_status);
+	perror(err_msg);
+	exit(EXIT_FAILURE);
 }

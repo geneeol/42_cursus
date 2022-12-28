@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_parser.c                                       :+:      :+:    :+:   */
+/*   map_parser_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:18:31 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/28 19:31:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 19:34:55 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
-#include <stdlib.h>
-#include "../includes/fdf.h"
+#include "../includes/fdf_bonus.h"
 #include "../libft/includes/libft.h"
 #include "../libft/includes/get_next_line_bonus.h"
-#include "../includes/ft_syscalls.h"
+#include "../includes/ft_syscalls_bonus.h"
 
 static void	fill_map(int **map_org, int width, int height, char *file_name)
 {
