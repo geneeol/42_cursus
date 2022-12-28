@@ -1,15 +1,17 @@
 CC = cc
-CFLAGS = -fsanitize=address -L./ -lmlx -framework OpenGL -framework AppKit -g3
-#-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
+MLXFLAG = -L./ -lmlx -framework OpenGL -framework AppKit
 
 NAME	= fdf
 BONUS	= fdf_bonus
 LIBFT	= libft.a
+LIBMLX	= libmlx.dylib
 
 INC_DIR 		= includes
 SRC_DIR			= srcs
 SRCS_BONUS_DIR	= srcs_bonus
 LIBFT_DIR		= libft
+MLX_DIR			= minilibx_mms_20210621
 
 SRCS = draw_utils.c\
 	   ft_perror_exit.c\
@@ -34,10 +36,14 @@ OBJS_BONUS = $(addprefix $(SRCS_BONUS_DIR)/, $(SRCS_BONUS:.c=.o))
 
 $(NAME): $(OBJS)
 	make all -C $(LIBFT_DIR)
-	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
+	make all -C $(MLX_DIR)
+	cp $(MLX_DIR)/$(LIBMLX) ./
+	$(CC) $(CFLAGS) $(MLXFLAG) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
 $(BONUS): $(OBJS_BONUS) 
 	make all -C $(LIBFT_DIR)
+	make all -C $(MLX_DIR)
+	cp $(MLX_DIR)/$(LIBMLX) ./
 	$(CC) $(CFLAGS) $^ $(LIBFT_DIR)/$(LIBFT) -o $@
 
 all: $(NAME)
@@ -48,11 +54,13 @@ bonus: $(BONUS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
 clean:
-	make -C Libft clean
+	make clean -C $(LIBFT_DIR) 
+	make clean -C $(MLX_DIR)
 	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	make -C Libft fclean
+	make fclean -C $(LIBFT_DIR)
+	make clean -C $(MLX_DIR)
 	rm -f $(NAME) $(BONUS)
 
 re: 

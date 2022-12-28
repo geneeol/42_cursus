@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 00:49:55 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/28 02:31:00 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 16:57:08 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,7 @@
 #include "../includes/ft_syscalls.h"
 #include "../libft/includes/libft.h"
 
-static int	ft_abs(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
-static void	my_put_pixel(int x, int y, int z, t_mlx *mlx_info)
+static void	my_put_pixel(int x, int y, t_mlx *mlx_info)
 {
 	char	*dst;
 
@@ -32,59 +25,61 @@ static void	my_put_pixel(int x, int y, int z, t_mlx *mlx_info)
 	*(unsigned int *)dst = 0x00FFFFFF;
 }
 
-//too many lines
-static void	plot_line(t_point *p1, t_point *p2, t_mlx *mlx_info)
+static void	plot_line2(t_point *p1, t_point *p2, t_aider *aid, t_mlx *mlx_info)
 {
-	//t_point	d = {ft_abs(p1->x - p2->x), ft_abs(p1->x - p2->x), 0};
-	const int	dx = ft_abs(p1->x - p2->x);
-	const int	dy = -ft_abs(p1->y - p2->y);
-	const int	sx = 2 * (p1->x < p2->x) - 1;
-	const int	sy = 2 * (p1->y < p2->y) - 1;
-	int			err[2];
-	int			mask[2];
-
-	mask[0] = (p1->y < 0) << 3 || (p1->y >= WIN_HEIGHT) << 2 || (p1->x >= WIN_WIDTH) << 1 || (p1->x < 0);
-	mask[1] = (p2->y < 0) << 3 || (p2->y >= WIN_HEIGHT) << 2 || (p2->x >= WIN_WIDTH) << 1 || (p2->x < 0);
-
-	if ((mask[0] & mask[1]) != 0)
-		return ;
-	err[0] = dx + dy;
+	aid->err[0] = aid->dx + aid->dy;
 	while (1)
 	{
-		my_put_pixel(p1->x, p1->y, p1->z, mlx_info);
+		my_put_pixel(p1->x, p1->y, mlx_info);
 		if (p1->x == p2->x && p1->y == p2->y)
 			break ;
-		err[1] = 2 * err[0];
-		if (err[1] >= dy)
+		aid->err[1] = 2 * aid->err[0];
+		if (aid->err[1] >= aid->dy)
 		{
 			if (p1->x == p2->x)
 				break ;
-			err[0] += dy;
-			p1->x += sx;
+			aid->err[0] += aid->dy;
+			p1->x += aid->sx;
 		}
-		if (err[1] <= dx)
+		if (aid->err[1] <= aid->dx)
 		{
 			if (p1->y == p2->y)
 				break ;
-			err[0] += dx;
-			p1->y += sy;
+			aid->err[0] += aid->dx;
+			p1->y += aid->sy;
 		}
 	}
-	free(p1);
-	free(p2);
 }
 
-static t_point	*transform(int x, int y, t_mlx *mlx_info)
+static void	plot_line(t_point p1, t_point p2, t_mlx *mlx_info)
+{
+	t_aider	aid;
+	int		mask[2];
+
+	aid.dx = ft_abs(p1.x - p2.x);
+	aid.dy = -ft_abs(p1.y - p2.y);
+	aid.sx = 2 * (p1.x < p2.x) - 1;
+	aid.sy = 2 * (p1.y < p2.y) - 1;
+	aid.err[0] = aid.dx + aid.dy;
+	mask[0] = (p1.y < 0) << 3 | (p1.y >= WIN_HEIGHT) << 2
+		| (p1.x >= WIN_WIDTH) << 1 | (p1.x < 0);
+	mask[1] = (p2.y < 0) << 3 | (p2.y >= WIN_HEIGHT) << 2
+		| (p2.x >= WIN_WIDTH) << 1 | (p2.x < 0);
+	if ((mask[0] & mask[1]) != 0)
+		return ;
+	plot_line2(&p1, &p2, &aid, mlx_info);
+}
+
+static t_point	transform(int x, int y, t_mlx *mlx_info)
 {
 	t_map *const	map = mlx_info->map;
 	t_vars *const	vars = mlx_info->vars;
 	t_vertex		v;
-	t_point			*p;
+	t_point			p;
 
-	p = ft_malloc(sizeof(t_point));
-	vars->px_scale = 0.9997 * vars->px_scale + 0.0003 * vars->x_scale;
-	vars->py_scale = 0.9997 * vars->py_scale + 0.0003 * vars->y_scale;
-	vars->pz_scale = 0.9997 * vars->pz_scale + 0.0003 * vars->z_scale;
+	vars->px_scale = RATIO * vars->px_scale + (1 - RATIO) * vars->x_scale;
+	vars->py_scale = RATIO * vars->py_scale + (1 - RATIO) * vars->y_scale;
+	vars->pz_scale = RATIO * vars->pz_scale + (1 - RATIO) * vars->z_scale;
 	v.x = x * map->dist * vars->px_scale;
 	v.y = y * map->dist * vars->py_scale;
 	v.z = map->map_org[y][x] * map->dist * vars->pz_scale;
@@ -93,9 +88,9 @@ static t_point	*transform(int x, int y, t_mlx *mlx_info)
 	rotate_z(&v, vars->gamma);
 	v.x += vars->x_translate + WIN_WIDTH / 2.0;
 	v.y += vars->y_translate + WIN_HEIGHT / 2.0;
-	p->x = lround(v.x);
-	p->y = lround(v.y);
-	p->z = lround(v.z);
+	p.x = lround(v.x);
+	p.y = lround(v.y);
+	p.z = lround(v.z);
 	return (p);
 }
 

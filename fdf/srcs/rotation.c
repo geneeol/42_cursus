@@ -6,11 +6,10 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 02:47:06 by dahkang           #+#    #+#             */
-/*   Updated: 2022/12/27 05:37:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2022/12/28 17:29:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <math.h>
 #include "../includes/fdf.h"
 
 void	rotate_x(t_vertex *v, double alpha)

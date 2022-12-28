@@ -43,11 +43,11 @@ bonus: $(BONUS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
 
 clean:
-	make -C Libft clean
+	make clean -C $(LIBFT_DIR)
 	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	make -C Libft fclean
+	make fclean -C $(LIBFT_DIR)
 	rm -f $(NAME) $(BONUS)
 
 re: 
