@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 int main(int argc, char **argv) {
   // Create an array of strings that contains the "awk" command and its arguments.
   char *awk_cmd[] = {
-    "awk",
+    "/usr/bin/awk",
     "{ print $1 }",
     "input.txt",
     NULL
