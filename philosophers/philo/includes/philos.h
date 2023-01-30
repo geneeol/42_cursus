@@ -6,35 +6,18 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 00:10:43 by dahkang           #+#    #+#             */
-/*   Updated: 2023/01/30 02:49:57 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/01/31 04:13:24 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOS_H
 # define PHILOS_H
 
-# include <pthread.h>
-# include "t_input.h"
+# include "structures.h"
 
-typedef struct s_args
-{
-	t_input				*input;
-	pthread_mutex_t		*fork;
-	int					start_flag;
-	int					done;
-	int					start_time;
-}	t_args;
-
-typedef struct s_philo
-{
-	t_args		*args;
-	pthread_t	thread;
-	int			id;
-	int			left;
-	int			right;
-	int			n_eat;
-}	t_philo;
-
+# define TIME 0
+# define ORIGIN 1
+# define INT_MAX 2147483647
 
 enum	e_returncode
 {
@@ -46,8 +29,7 @@ enum	e_returncode
 	CODE_ERROR_DATA = -5
 };
 
-typedef int	t_bool;
-
-int	parse_input(t_input *info, int argc, char **argv);
+int	parse_input(t_rules *info, int argc, char **argv);
+int	init(t_philo **philos, t_args *args, t_rules *rules);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jiychoi <jiychoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 15:02:52 by jiychoi           #+#    #+#             */
-/*   Updated: 2023/01/29 00:42:27 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/01/31 04:05:51 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ int	main(void)
 	index = 0;
 	while (index < 10)
 	{
-		pthread_join(threads[index].thread_id,
-			(void **)&(threads[index].value));
-//		pthread_detach(threads[index].thread_id);
+//		pthread_join(threads[index].thread_id,
+//			(void **)&(threads[index].value));
+		pthread_detach(threads[index].thread_id);
 		printf("\n\n\nThread index %d joined\n\n\n", index);
 		usleep(500000);
 		index++;

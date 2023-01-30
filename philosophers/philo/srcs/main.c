@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/01/30 03:28:42 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/01/31 05:45:11 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,32 +17,37 @@
 
 void	odd_routine(t_philo *philo)
 {
-	while (!philo->args->done)
+	while (!is_done(philo))
 	{
-		eat();
-		think();
-		sleep();
+		eating();
+		thinking();
+		sleeping();
+		//필요시 잠깐 재우기 usleep()
 	}
 }
 
+// TODO: 몇초 자야되지..?
 void	even_routine(t_philo *philo)
 {
-	while (!philo->args->done)
+	usleep(800);
+	while (!is_done(philo))
 	{
-		eat();
-		think();
-		sleep();
+		eating();
+		thinking();
+		sleeping();
+		//필요시 잠깐 재우기 usleep()
 	}
 }
 
-// args를 여러 쓰레드가 동시에 읽는 경우 발생 가능. 데이터레이스인지 아닌지는 모르겠음
-void	*routine(void *p)
+void	*routine(void *arg)
 {
 	t_philo	*philo;
 
 	philo = (t_philo *)philo;
-	while (philo->args->start_flag == 0)
+	pthread_mutex_lock(&philo->args->mt_lock);
+	while (philo->args->is_start == 0)
 		;
+	pthread_mutex_unlock(&philo->args->mt_lock);
 	if ((philo->id & 1) == 1)
 		odd_routine(philo);
 	else
@@ -50,61 +55,54 @@ void	*routine(void *p)
 	return (NULL);
 }
 
-// 이 분기에서 바로 main에서 리턴한다면, 굳이 동적할당 해제하지 않아도 될 것 같은데
-int	abort_while_creating(pthread_t *philo, int n, int err)
+static int	abort_create_threads(t_philo *philos, int err_code)
 {
 	int	i;
 
-	i = -1;
-	while (++i < n - 1)
-		pthread_detach(philo[i]);
-	return (err);
+	i = 0;
+	while (++i <= philos->args->rules->n_philo)
+		pthread_detach((philos + i)->thread);
+	return (err_code);
 }
 
-// 각 철학자 아이디 1~n까지, 누가 죽었는지 확인해야함
-// 출력도 별도로 처리애햐함
-static int	set_dining(t_input *input)
+// TODO: args 초기화 안해도 값이 0인지 확인. (static이라 0일 것임)
+static int	create_threads(t_philo *philos)
 {
-	static t_args	args;	
-	t_philo			*philo;
-	int				i;
+	int	i;
 
-	philo = (t_philo *)malloc(sizeof(t_philo) * (input->n_philo + 1));
-	if (!philo || init_args(&args) == CODE_ERROR_MALLOC)
-		return (free_with_fail(philo, &args));
 	i = 0;
-	while (++i <= input->n_philo)
-	{
-		philo[i].id = i;
-		philo[i].args = &args;
-		philo[i].left = (i + 1) % input->n_philo;
-		philo[i].right = i;
-		if (pthread_create((philo + i)->thread, NULL, routine, philo + i))
-			return (abort_while_creating(philo, i, CODE_ERROR_GENERIC));
-	}
-	args.start_flag = 1;
-	i = 0;
-	while (++i < input->n_philo)
-		pthread_join((philo + i)->thread, NULL);
+	pthread_mutex_lock(&philos->args->mt_lock);
+	while (++i <= philos->args->rules->n_philo)
+		if (pthread_create(&(philos + i)->thread, NULL, routine, philos + i))
+			return (abort_create_threads(philos, CODE_ERROR_GENERIC));
+	philos->args->is_start = 1;
+	pthread_mutex_unlock(&philos->args->mt_lock);
 	return (CODE_OK);
 }
 
+// TODO: 에러메시지 + 리턴코드 합친 함수 만들지 고민
 int	main(int argc, char **argv)
 {
-	t_input	input;
-	int		stat;
+	static t_args	args;
+	t_philo			*philos;
+	t_rules			rules;
 
 	if (!(argc == 5 || argc == 6))
 	{
 		printf("Invalid number of arguments\n");
 		return (1);
 	}
-	stat = parse_input(&input, argc, argv);
-	if (stat != CODE_OK)
+	if (parse_input(&rules, argc, argv) != CODE_OK)
 	{
 		printf("Invalid argument\n");
 		return (1);
 	}
-	set_dining(&input);
+	if (init(&philos, &args, &rules) != CODE_OK
+		|| create_threads(philos) != CODE_OK)
+	{
+		printf("Failed to start simulation\n");
+		return (1);
+	}
+	monitoring_until_done(&args);
 	return (0);
 }
