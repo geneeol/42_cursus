@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 20:32:38 by dahkang           #+#    #+#             */
-/*   Updated: 2023/01/31 05:47:06 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/02 02:58:34 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ typedef struct s_args
 	t_rules				*rules;
 	pthread_mutex_t		*fork;
 	pthread_mutex_t		msg_lock;
-	pthread_mutex_t		mt_lock;
-	int					is_start;
-	int					is_done;
+	pthread_mutex_t		info_lock;
+	int					done;
 	int					start_time;
 }	t_args;
 
@@ -42,8 +41,9 @@ typedef struct s_philo
 	int				id;
 	pthread_mutex_t	*lfork;
 	pthread_mutex_t	*rfork;
-	pthread_t		thread;
+	pthread_t		tid;
 	int				eat_cnt;
+	int				last_eat_time;
 	int				done;
 }	t_philo;
 

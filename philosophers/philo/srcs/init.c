@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 04:11:29 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/01 22:17:32 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/02 02:24:11 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	destroy_mutexs(t_args *args, int n_philo)
 	int	i;
 
 	pthread_mutex_destroy(&args->msg_lock);
-	pthread_mutex_destroy(&args->mt_lock);
+	pthread_mutex_destroy(&args->info_lock);
 	i = -1;
 	while (++i < n_philo)
 		pthread_mutex_destroy(args->fork + i);
@@ -41,7 +41,7 @@ static int	init_mutexs(t_args *args, int n_philo)
 	int	i;
 
 	if (pthread_mutex_init(&args->msg_lock, NULL) != 0
-		|| pthread_mutex_init(&args->mt_lock, NULL) != 0)
+		|| pthread_mutex_init(&args->info_lock, NULL) != 0)
 		return (destroy_mutexs(args, n_philo));
 	i = -1;
 	while (++i < n_philo)
@@ -63,8 +63,6 @@ int	init(t_philo **philos, t_args *args, t_rules *rules)
 	memset(*philos, 0, sizeof(t_philo) * (rules->n_philo + 1));
 	memset(args->fork, 0, sizeof(pthread_mutex_t) * (rules->n_philo + 1));
 	args->rules = rules;
-	printf("%s, addr rules: %p\n", __func__, rules);
-	printf("%s, addr args %p\n", __func__, args);
 	if (init_mutexs(args, rules->n_philo) != CODE_OK)
 		return (abort_init(*philos, args->fork, CODE_ERROR_GENERIC));
 	i = 0;
