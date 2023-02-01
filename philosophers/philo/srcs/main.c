@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/01 20:05:34 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/01 22:23:09 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	*routine(void *arg)
 {
 	t_philo	*philo;
 
-	philo = (t_philo *)philo;
+	philo = (t_philo *)arg;
 	pthread_mutex_lock(&philo->args->mt_lock);
 	while (philo->args->is_start == 0)
 		;
@@ -71,20 +71,26 @@ static int	abort_create_threads(t_philo *philos, int err_code)
 }
 
 // TODO: args 초기화 안해도 값이 0인지 확인. (static이라 0일 것임)
+// TODO: 긴급, philos[1], philos[2]만 초기화 돼있는 상태라... 코드 조정이 필요함
 static int	create_threads(t_philo *philos)
 {
 	int	i;
 
 	i = 0;
-	pthread_mutex_lock(&philos->args->mt_lock);
-	while (++i <= philos->args->rules->n_philo)
+	printf("before lock\n");
+	printf("%s, addr rules: %p\n", __func__, philos);
+	printf("%s, addr args %p\n", __func__, philos[1].args);
+//	pthread_mutex_lock(&philos->args->mt_lock);
+	printf("after lock\n");
+	while (++i <= philos[1].args->rules->n_philo)
 	{
+		printf("how many\n");
 		if (pthread_create(&(philos + i)->thread, NULL, routine, philos + i))
 			return (abort_create_threads(philos, CODE_ERROR_GENERIC));
 		sleep(1);
 	}
 	philos->args->is_start = 1;
-	pthread_mutex_unlock(&philos->args->mt_lock);
+	//pthread_mutex_unlock(&philos->args->mt_lock);
 	return (CODE_OK);
 }
 
@@ -105,6 +111,8 @@ int	main(int argc, char **argv)
 		printf("Invalid: At least one argument is incorrect\n");
 		return (1);
 	}
+	printf("%s, addr rules: %p\n", __func__, &rules);
+	printf("%s, addr args %p\n", __func__, &args);
 	if (init(&philos, &args, &rules) != CODE_OK
 		|| create_threads(philos) != CODE_OK)
 	{

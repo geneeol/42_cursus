@@ -20,8 +20,10 @@ $(BONUS): $(OBJS_BONUS)
 
 all: $(NAME)
 
-debug: CFLAGS += $(ACFLAGS) -g3
+export ACFLAGS
 
+debug: CFLAGS += $(ACFLAGS) -g3
+debug: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I$(INC_DIR)
