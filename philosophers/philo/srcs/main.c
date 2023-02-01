@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/01/31 05:45:11 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/01 20:05:34 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <pthread.h>
 #include "philos.h"
 
+/*
 void	odd_routine(t_philo *philo)
 {
 	while (!is_done(philo))
@@ -38,6 +39,7 @@ void	even_routine(t_philo *philo)
 		//필요시 잠깐 재우기 usleep()
 	}
 }
+*/
 
 void	*routine(void *arg)
 {
@@ -48,10 +50,13 @@ void	*routine(void *arg)
 	while (philo->args->is_start == 0)
 		;
 	pthread_mutex_unlock(&philo->args->mt_lock);
+	printf("%dth philo is created\n", philo->id);
+	/*
 	if ((philo->id & 1) == 1)
 		odd_routine(philo);
 	else
 		even_routine(philo);
+	*/
 	return (NULL);
 }
 
@@ -73,8 +78,11 @@ static int	create_threads(t_philo *philos)
 	i = 0;
 	pthread_mutex_lock(&philos->args->mt_lock);
 	while (++i <= philos->args->rules->n_philo)
+	{
 		if (pthread_create(&(philos + i)->thread, NULL, routine, philos + i))
 			return (abort_create_threads(philos, CODE_ERROR_GENERIC));
+		sleep(1);
+	}
 	philos->args->is_start = 1;
 	pthread_mutex_unlock(&philos->args->mt_lock);
 	return (CODE_OK);
@@ -89,20 +97,20 @@ int	main(int argc, char **argv)
 
 	if (!(argc == 5 || argc == 6))
 	{
-		printf("Invalid number of arguments\n");
+		printf("Invalid: The number of arguments should be 5 or 6\n");
 		return (1);
 	}
 	if (parse_input(&rules, argc, argv) != CODE_OK)
 	{
-		printf("Invalid argument\n");
+		printf("Invalid: At least one argument is incorrect\n");
 		return (1);
 	}
 	if (init(&philos, &args, &rules) != CODE_OK
 		|| create_threads(philos) != CODE_OK)
 	{
-		printf("Failed to start simulation\n");
+		printf("Critical: Failed to start simulation\n");
 		return (1);
 	}
-	monitoring_until_done(&args);
+	//monitoring_until_done(&args);
 	return (0);
 }
