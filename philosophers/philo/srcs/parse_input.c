@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 22:24:53 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/02 02:21:45 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/03 03:47:37 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,15 @@ static int	atoi_if_valid(int *res, char *str, int mode)
 int	parse_input(t_rules *rules, int argc, char **argv)
 {
 	memset(rules, 0, sizeof(t_rules));
-	if (atoi_if_valid(&(rules->n_philo), argv[1], ORIGIN) \
-		|| atoi_if_valid((int *)&(rules->time_die), argv[2], TIME) \
-		|| atoi_if_valid((int *)&(rules->time_eat), argv[3], TIME) \
-		|| atoi_if_valid((int *)&(rules->time_sleep), argv[4], TIME))
+	if (atoi_if_valid(&(rules->n_philo), argv[1], ORIGIN) != CODE_OK \
+		|| atoi_if_valid(&(rules->time_die), argv[2], TIME) != CODE_OK \
+		|| atoi_if_valid(&(rules->time_eat), argv[3], TIME) != CODE_OK \
+		|| atoi_if_valid(&(rules->time_sleep), argv[4], TIME) != CODE_OK)
 		return (CODE_ERROR_GENERIC);
 	rules->n_must_eat = -1;
 	if (argc == 6)
 	{
-		if (!atoi_if_valid(&(rules->n_must_eat), argv[5], ORIGIN))
+		if (atoi_if_valid(&(rules->n_must_eat), argv[5], ORIGIN) != CODE_OK)
 			return (CODE_ERROR_GENERIC);
 	}
 	return (CODE_OK);
