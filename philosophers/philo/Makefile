@@ -6,9 +6,12 @@ NAME = philo
 INC_DIR = includes
 SRC_DIR = srcs
 
-SRCS = init.c \
+SRCS = create_threads.c \
+	   init.c \
 	   main.c \
-	   parse_input.c
+	   parse_input.c \
+	   philo_behavior.c \
+	   utils.c \
 
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 
