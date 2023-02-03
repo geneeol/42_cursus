@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:58:35 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 17:08:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:16:55 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 uint64_t	get_cur_time(void)
 {
 	struct timeval	tp;
-	uint64_t	cur_time;
+	uint64_t		cur_time;
 
 	gettimeofday(&tp, NULL);
 	cur_time = tp.tv_sec * 1000000 + tp.tv_usec;
@@ -43,7 +43,7 @@ void	ft_usleep(uint64_t time)
 	while (time - (get_elapsed_time(start_time)) > 1000)
 		usleep(300);
 	while (get_elapsed_time(start_time) < time)
-		usleep(100);
+		usleep(300);
 }
 
 // TODO: all_done에 대한 별도 뮤텍스 필요한지 고민
@@ -51,11 +51,9 @@ void	print_msg(char *str, int id, t_args *args)
 {
 	int	time;
 
-	time = get_elapsed_time(args->start_time) / 1000;
-	//pthread_mutex_lock(&args->msg_lock);
 	pthread_mutex_lock(&args->common);
+	time = get_elapsed_time(args->start_time) / 1000;
 	if (args->all_done == FALSE)
 		printf("%d %d %s\n", time, id, str);
-	//pthread_mutex_unlock(&args->msg_lock);
 	pthread_mutex_unlock(&args->common);
 }

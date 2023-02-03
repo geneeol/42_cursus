@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/03 15:47:38 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 04:27:58 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,16 @@ static t_bool	check_if_done(t_philo *philos, t_args *args)
 	while (++i <= args->rules->n_philo)
 	{
 		pthread_mutex_lock(args->personal + i);
+		printf("%s, monitoring consumtion removal\n", __func__);
 		if (get_elapsed_time(philos[i].last_eat_time) \
 			> args->rules->time_die)
 		{
-			pthread_mutex_unlock(args->personal + i);
 			print_msg("died", i, args);
+			pthread_mutex_unlock(args->personal + i);
 			return (set_all_done_if_true(args, TRUE));
 		}
-		if (args->rules->n_must_eat != -1)
-		{
-			if (philos[i].eat_cnt < args->rules->n_must_eat)
-				eat_enough = FALSE;
-		}
-		else
+		if (args->rules->n_must_eat == -1 \
+			|| philos[i].eat_cnt < args->rules->n_must_eat)
 			eat_enough = FALSE;
 		pthread_mutex_unlock(args->personal + i);
 	}
@@ -63,7 +60,7 @@ static void	monitoring(t_philo *philos, t_args *args)
 	{
 		if (check_if_done(philos, args) == TRUE)
 			return ;
-		usleep(300);
+		usleep(10000);
 	}
 }
 
@@ -81,8 +78,8 @@ static void	join_all_thread(t_philo *philos, t_rules *rules)
 int	main(int argc, char **argv)
 {
 	static t_args	args;
+	static t_rules	rules;
 	t_philo			*philos;
-	t_rules			rules;
 
 	if (!(argc == 5 || argc == 6))
 	{

@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 15:03:34 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 04:23:01 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,17 @@
 
 #include <stdio.h>
 
+// TODO: common락을 너무 동시에 많이 사용함
+// 1. 각 쓰레드 지속 여부 감지
+// 2. 프린트 출력할 때
+// 3. 모니터링 쓰레드에서 죽음 감지
 t_bool	is_done(t_philo *philo)
 {
 	t_bool	is_done;	
 
 	pthread_mutex_lock(&philo->args->common);
 	is_done = philo->args->all_done;
+	printf("%s, thread consumtion removal\n", __func__);
 	pthread_mutex_unlock(&philo->args->common);
 	return (is_done);
 }

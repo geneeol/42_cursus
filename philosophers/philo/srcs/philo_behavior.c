@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:41:05 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 16:10:51 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 02:25:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,17 @@ int	thinking(t_philo *philo)
 
 int	eating(t_philo *philo)
 {
+	print_msg("is eating", philo->id, philo->args);
 	pthread_mutex_lock(philo->args->personal + philo->id);
 	philo->last_eat_time = get_cur_time();
 	pthread_mutex_unlock(philo->args->personal + philo->id);
-	print_msg("is eating", philo->id, philo->args);
 	ft_usleep(philo->args->rules->time_eat);
-	pthread_mutex_lock(philo->args->personal + philo->id);
 	if (philo->args->rules->n_must_eat != -1)
+	{
+		pthread_mutex_lock(philo->args->personal + philo->id);
 		philo->eat_cnt++;
-	pthread_mutex_unlock(philo->args->personal + philo->id);
+		pthread_mutex_unlock(philo->args->personal + philo->id);
+	}
 	return (CODE_OK);
 }
 
