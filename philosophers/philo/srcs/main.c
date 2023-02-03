@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/03 03:42:24 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/03 15:47:38 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ static void	monitoring(t_philo *philos, t_args *args)
 	{
 		if (check_if_done(philos, args) == TRUE)
 			return ;
+		usleep(300);
 	}
 }
 

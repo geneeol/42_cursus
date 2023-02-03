@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 00:10:43 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 03:03:10 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/03 14:09:18 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHILOS_H
 
 # include "structures.h"
+#include <sys/_types/_u_int64_t.h>
 
 int			parse_input(t_rules *info, int argc, char **argv);
 int			init(t_philo **philos, t_args *args, t_rules *rules);
@@ -26,10 +27,10 @@ int			sleeping(t_philo *philo);
 
 int			create_threads(t_philo *philos, t_args *args);
 
-int			get_cur_time(void);
-int			get_elapsed_time(int start_time);
+u_int64_t	get_cur_time(void);
+u_int64_t	get_elapsed_time(u_int64_t start_time);
 void		print_msg(char *str, int id, t_args *args);
-void		ft_usleep(int time);
+void		ft_usleep(uint64_t time);
 
 #endif
 

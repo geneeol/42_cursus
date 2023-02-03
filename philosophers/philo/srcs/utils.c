@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:58:35 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 03:55:45 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/03 17:08:01 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,35 @@
 
 
 #include <sys/time.h>
+#include <unistd.h>
 #include "philos.h"
 
 // retrun value: unit of time is micro
-int	get_cur_time(void)
+uint64_t	get_cur_time(void)
 {
 	struct timeval	tp;
-	int				cur_time;
+	uint64_t	cur_time;
 
 	gettimeofday(&tp, NULL);
 	cur_time = tp.tv_sec * 1000000 + tp.tv_usec;
 	return (cur_time);
 }
 
-int	get_elapsed_time(int time_from)
+uint64_t	get_elapsed_time(uint64_t time_from)
 {
 	return (get_cur_time() - time_from);
 }
 
 // unit of param is microsec
-void	ft_usleep(int time)
+void	ft_usleep(uint64_t time)
 {
-	// int	start_time;
-	// int	wait;
+	uint64_t	start_time;
 
-	printf("%s, time: %d\n", __func__, time);
-	usleep(time);
-	// wait = 0.3 * time;
-	// start_time = get_cur_time();
-	// while (get_elapsed_time(start_time) < wait)
-		// usleep(200);
+	start_time = get_cur_time();
+	while (time - (get_elapsed_time(start_time)) > 1000)
+		usleep(300);
+	while (get_elapsed_time(start_time) < time)
+		usleep(100);
 }
 
 // TODO: all_done에 대한 별도 뮤텍스 필요한지 고민

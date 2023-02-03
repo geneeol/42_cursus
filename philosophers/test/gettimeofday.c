@@ -7,7 +7,7 @@ int	get_cur_time(void)
 	int				cur_time;
 
 	gettimeofday(&tp, NULL);
-	cur_time = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+	cur_time = tp.tv_sec * 1000000 + tp.tv_usec;
 	return (cur_time);
 }
 

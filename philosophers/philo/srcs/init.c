@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 04:11:29 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/02 21:16:19 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/03 14:39:35 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	destroy_mutexs(t_args *args, int n_philo)
 	return (CODE_ERROR_GENERIC);
 }
 
-static int	init_mutexs(t_args *args, int n_philo)
+static int	init_mutexes(t_args *args, int n_philo)
 {
 	int	i;
 
@@ -58,6 +58,9 @@ static int	init_mutexs(t_args *args, int n_philo)
 	return (CODE_OK);
 }
 
+// 필로 각각이 마지마긍로 먹은 시간을 기억해야함
+// 그 시간에 접근하는게 필로 자기자신이 있고, 모니터링 쓰레드가 있음
+//
 int	init(t_philo **philos, t_args *args, t_rules *rules)
 {
 	int				i;
@@ -72,14 +75,18 @@ int	init(t_philo **philos, t_args *args, t_rules *rules)
 	memset(args->personal, 0, \
 			sizeof(pthread_mutex_t) * (rules->n_philo + 1));
 	args->rules = rules;
-	if (init_mutexs(args, rules->n_philo) != CODE_OK)
+	if (init_mutexes(args, rules->n_philo) != CODE_OK)
 		return (abort_init(*philos, args, CODE_ERROR_GENERIC));
 	i = 0;
+	// TODO: n_philo 
 	while (++i <= rules->n_philo)
 	{
 		(*philos)[i].id = i;
 		(*philos)[i].args = args;
-		(*philos)[i].lfork = args->fork + ((i + 1) % rules->n_philo);
+		if (i >= rules->n_philo)
+			(*philos)[i].lfork = args->fork + 1;
+		else
+			(*philos)[i].lfork = args->fork + i + 1;
 		(*philos)[i].rfork = args->fork + i;
 	}
 	return (CODE_OK);
