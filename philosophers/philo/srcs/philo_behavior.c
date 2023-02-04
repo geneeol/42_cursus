@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:41:05 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 23:40:39 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 00:34:04 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	thinking(t_philo *philo)
 	print_state("is thinking", philo->id, philo->args);
 }
 
+// TODO: print_state랑 mutex_lock 순서 바꿔서 테스트
 void	eating(t_philo *philo)
 {
 	pthread_mutex_lock(philo->args->personal + philo->id);
