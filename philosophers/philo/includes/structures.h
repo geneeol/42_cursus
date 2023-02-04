@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 20:32:38 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 00:22:05 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 06:47:50 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 # define INT_MAX 2147483647
 
 # define OPTION_OFF -1 
+
+# define USAGE_MSG "Usage: <philo_cnt> <time_to_die> <time_to_eat> \
+<time_to_sleep> [number_of_times_each_philosopher_must_eat]\n"
+# define CRITICAL_ERR_MSG "Critical: Failed to start simulation\n"
 
 typedef int			t_bool;
 typedef uint64_t	t_msec;

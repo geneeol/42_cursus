@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 22:24:53 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 06:05:53 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 06:53:04 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static int	atoi_if_valid(int *res, char *str, int mode)
 
 int	parse_input(t_rules *rules, int argc, char **argv)
 {
+	if (!(argc == 5 || argc == 6))
+		return (CODE_ERROR_GENERIC);
 	memset(rules, 0, sizeof(t_rules));
 	if (atoi_if_valid(&(rules->n_philo), argv[1], ORIGIN) != CODE_OK \
 		|| atoi_if_valid((int *)&(rules->time_die), argv[2], TIME) != CODE_OK \

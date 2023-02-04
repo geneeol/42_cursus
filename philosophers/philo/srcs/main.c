@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/05 06:05:43 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 06:52:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,20 +67,17 @@ int	main(int argc, char **argv)
 	static t_rules	rules;
 	t_philo			*philos;
 
-	if (!(argc == 5 || argc == 6))
-	{
-		printf("Invalid: The number of arguments should be 5 or 6\n");
-		return (1);
-	}
 	if (parse_input(&rules, argc, argv) != CODE_OK)
 	{
-		printf("Invalid: At least one argument is incorrect\n");
+		printf(USAGE_MSG);
 		return (1);
 	}
+	if (rules.n_must_eat == 0)
+		return (0);
 	if (init(&philos, &args, &rules) != CODE_OK
 		|| create_threads(philos, &args) != CODE_OK)
 	{
-		printf("Critical: Failed to start simulation\n");
+		printf(CRITICAL_ERR_MSG);
 		return (1);
 	}
 	monitoring(philos, &args);
