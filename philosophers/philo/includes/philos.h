@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 00:10:43 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 23:47:54 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 05:56:07 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ void	print_state(char *str, int id, t_args *args);
 void	ft_usleep(t_msec time);
 
 #endif
-

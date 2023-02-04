@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/05 04:38:58 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 06:05:43 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ static t_bool	check_if_done(t_philo *philos, t_args *args)
 
 static void	monitoring(t_philo *philos, t_args *args)
 {
-
 	while (TRUE)
 	{
 		if (check_if_done(philos, args) == TRUE)

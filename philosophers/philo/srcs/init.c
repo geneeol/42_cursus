@@ -6,14 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 04:11:29 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 05:28:57 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 06:03:42 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 #include "philos.h"
-#include "structures.h"
 
 static int	abort_init(t_philo *philos, t_args *args, int err_code)
 {
