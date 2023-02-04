@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:58:35 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 23:47:54 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 05:31:37 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_usleep(t_msec time)
 	start_time = get_cur_time();
 	usleep(time * 0.9);
 	while (get_elapsed_time(start_time) < time)
-		usleep(100);
+		usleep(500);
 }
 
 void	print_die_and_mark_done(char *str, int id, t_args *args)

@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 04:11:29 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 22:39:25 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 05:28:57 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,13 @@ static int	init_mutexes(t_args *args, int n_philo)
 {
 	int	i;
 
-	if (pthread_mutex_init(&args->msg_lock, NULL) != 0
-		|| pthread_mutex_init(&args->common, NULL) != 0)
+	if (pthread_mutex_init(&args->common, NULL) != 0)
 		return (destroy_mutexes(args, n_philo));
 	i = 0;
 	while (++i <= n_philo)
 	{
-		if (pthread_mutex_init(args->fork + i, NULL) != 0
-			|| pthread_mutex_init(args->personal + i, NULL) != 0)
+		if (pthread_mutex_init(args->fork + i, NULL) != 0 \
+				|| pthread_mutex_init(args->personal + i, NULL) != 0)
 			return (destroy_mutexes(args, n_philo));
 	}
 	return (CODE_OK);
