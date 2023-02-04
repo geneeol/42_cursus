@@ -6,48 +6,52 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:58:35 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 02:16:55 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 23:47:54 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-
-
-#include <sys/time.h>
 #include <unistd.h>
+#include <sys/time.h>
 #include "philos.h"
 
-// retrun value: unit of time is micro
-uint64_t	get_cur_time(void)
+t_msec	get_cur_time(void)
 {
 	struct timeval	tp;
-	uint64_t		cur_time;
+	t_msec			cur_time;
 
 	gettimeofday(&tp, NULL);
 	cur_time = tp.tv_sec * 1000000 + tp.tv_usec;
 	return (cur_time);
 }
 
-uint64_t	get_elapsed_time(uint64_t time_from)
+t_msec	get_elapsed_time(t_msec time_from)
 {
 	return (get_cur_time() - time_from);
 }
 
-// unit of param is microsec
-void	ft_usleep(uint64_t time)
+void	ft_usleep(t_msec time)
 {
-	uint64_t	start_time;
+	t_msec	start_time;
 
 	start_time = get_cur_time();
-	while (time - (get_elapsed_time(start_time)) > 1000)
-		usleep(300);
+	usleep(time * 0.9);
 	while (get_elapsed_time(start_time) < time)
-		usleep(300);
+		usleep(100);
 }
 
-// TODO: all_done에 대한 별도 뮤텍스 필요한지 고민
-void	print_msg(char *str, int id, t_args *args)
+void	print_die_and_mark_done(char *str, int id, t_args *args)
+{
+	int	time;
+
+	pthread_mutex_lock(&args->common);
+	time = get_elapsed_time(args->start_time) / 1000;
+	printf("%d %d %s\n", time, id, str);
+	args->all_done = TRUE;
+	pthread_mutex_unlock(&args->common);
+}
+
+void	print_state(char *str, int id, t_args *args)
 {
 	int	time;
 

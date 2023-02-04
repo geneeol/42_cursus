@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 20:32:38 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/03 14:06:07 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 00:22:05 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 # define STRUCTURES_H
 
 # include <pthread.h>
-# include <unistd.h>
 # include <stdint.h>
 
 # define TIME 0
 # define ORIGIN 1
 # define INT_MAX 2147483647
 
-typedef int	t_bool;
+# define OPTION_OFF -1 
+
+typedef int			t_bool;
+typedef uint64_t	t_msec;
 
 enum	e_returncode
 {
@@ -39,14 +41,13 @@ enum	e_bool
 	TRUE
 };
 
-// unit of time is microsec
 typedef struct s_rules
 {
-	int			n_philo;
-	uint64_t	time_die;		
-	uint64_t	time_eat;		
-	uint64_t	time_sleep;		
-	int			n_must_eat;
+	int		n_philo;
+	t_msec	time_die;		
+	t_msec	time_eat;		
+	t_msec	time_sleep;		
+	int		n_must_eat;
 }	t_rules;
 
 typedef struct s_args
@@ -57,7 +58,7 @@ typedef struct s_args
 	pthread_mutex_t		msg_lock;
 	pthread_mutex_t		common;
 	t_bool				all_done;
-	uint64_t			start_time;
+	t_msec				start_time;
 }	t_args;
 
 typedef struct s_philo
@@ -68,7 +69,7 @@ typedef struct s_philo
 	pthread_mutex_t	*rfork;
 	pthread_t		tid;
 	int				eat_cnt;
-	uint64_t		last_eat_time;
+	t_msec			last_eat_time;
 	int				done;
 }	t_philo;
 

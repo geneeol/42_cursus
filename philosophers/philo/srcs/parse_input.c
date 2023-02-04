@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 22:24:53 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 03:37:07 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 00:05:44 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int	atoi_if_valid(int *res, char *str, int mode)
 	i = 0;
 	while ('0' <= str[i] && str[i] <= '9')
 	{
-		if (*res > INT_MAX / 10
-			|| (*res == INT_MAX / 10 && str[i] > INT_MAX % 10))
+		if (*res > INT_MAX / 10 \
+				|| (*res == INT_MAX / 10 && str[i] > INT_MAX % 10))
 			return (CODE_ERROR_GENERIC);
 		*res *= 10;
 		*res += str[i] - '0';

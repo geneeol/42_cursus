@@ -6,26 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/04 04:27:58 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 00:04:07 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "philos.h"
-#include "structures.h"
-
-// TODO:
-// 1. info_lock 하나로 메시지 출력, last_eat_time, all_done 관리 (엄청 느릴듯)
-// 2. last_eat_time만큼 뮤텍스 생성, all_done은 별도 뮤텍스로 관리
-
-static t_bool	set_all_done_if_true(t_args *args, t_bool bool)
-{
-	pthread_mutex_lock(&args->common);
-	if (bool == TRUE)
-		args->all_done = TRUE;
-	pthread_mutex_unlock(&args->common);
-	return (bool);
-}
 
 static t_bool	check_if_done(t_philo *philos, t_args *args)
 {
@@ -37,20 +25,18 @@ static t_bool	check_if_done(t_philo *philos, t_args *args)
 	while (++i <= args->rules->n_philo)
 	{
 		pthread_mutex_lock(args->personal + i);
-		printf("%s, monitoring consumtion removal\n", __func__);
-		if (get_elapsed_time(philos[i].last_eat_time) \
-			> args->rules->time_die)
+		if (get_elapsed_time(philos[i].last_eat_time) > args->rules->time_die)
 		{
-			print_msg("died", i, args);
+			print_die_and_mark_done("died", i, args);
 			pthread_mutex_unlock(args->personal + i);
-			return (set_all_done_if_true(args, TRUE));
+			return (TRUE);
 		}
-		if (args->rules->n_must_eat == -1 \
-			|| philos[i].eat_cnt < args->rules->n_must_eat)
+		if (args->rules->n_must_eat == OPTION_OFF \
+				|| philos[i].eat_cnt < args->rules->n_must_eat)
 			eat_enough = FALSE;
 		pthread_mutex_unlock(args->personal + i);
 	}
-	return (set_all_done_if_true(args, eat_enough));
+	return (eat_enough);
 }
 
 static void	monitoring(t_philo *philos, t_args *args)
@@ -59,22 +45,24 @@ static void	monitoring(t_philo *philos, t_args *args)
 	while (TRUE)
 	{
 		if (check_if_done(philos, args) == TRUE)
-			return ;
-		usleep(10000);
+			break ;
+		usleep(1000);
 	}
+	pthread_mutex_lock(&args->common);
+	args->all_done = TRUE;
+	pthread_mutex_unlock(&args->common);
 }
 
-static void	join_all_thread(t_philo *philos, t_rules *rules)
+static void	retrieve_resources(t_philo *philos, t_args *args, t_rules *rules)
 {
 	int	i;
 
 	i = 0;
 	while (++i <= rules->n_philo)
-		pthread_detach(philos->tid);
-		//pthread_join(philos->tid, NULL);
+		pthread_join(philos->tid, NULL);
+	destroy_mutexes(args, rules->n_philo);
 }
 
-// TODO: 에러메시지 + 리턴코드 합친 함수 만들지 고민
 int	main(int argc, char **argv)
 {
 	static t_args	args;
@@ -98,6 +86,6 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	monitoring(philos, &args);
-	join_all_thread(philos, &rules);
+	retrieve_resources(philos, &args, &rules);
 	return (0);
 }

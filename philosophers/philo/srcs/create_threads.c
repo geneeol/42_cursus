@@ -6,31 +6,23 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 04:23:01 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 00:23:40 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "philos.h"
 
-
-#include <stdio.h>
-
-// TODO: common락을 너무 동시에 많이 사용함
-// 1. 각 쓰레드 지속 여부 감지
-// 2. 프린트 출력할 때
-// 3. 모니터링 쓰레드에서 죽음 감지
 t_bool	is_done(t_philo *philo)
 {
 	t_bool	is_done;	
 
 	pthread_mutex_lock(&philo->args->common);
 	is_done = philo->args->all_done;
-	printf("%s, thread consumtion removal\n", __func__);
 	pthread_mutex_unlock(&philo->args->common);
 	return (is_done);
 }
 
-// TODO: 먼저 잠자는 철학자들 상태를 다르게 표기해야하나?
 static void	*routine(void *arg)
 {
 	t_philo	*philo;
@@ -61,7 +53,6 @@ static int	abort_create_threads(t_philo *philos, int err_code)
 	return (err_code);
 }
 
-// TODO: last_eat_time data_race 발생하지 않는지 체크
 int	create_threads(t_philo *philos, t_args *args)
 {
 	int	i;

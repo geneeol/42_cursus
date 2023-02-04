@@ -12,6 +12,7 @@ SRCS = create_threads.c \
 	   parse_input.c \
 	   philo_behavior.c \
 	   utils.c \
+	   destroy_mutexes.c
 
 OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 

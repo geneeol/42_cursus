@@ -6,56 +6,50 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:41:05 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/04 02:25:48 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/04 23:40:39 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philos.h"
 
-
-#include <stdio.h>
-
-int	pick_fork(t_philo *philo)
+void	pick_fork(t_philo *philo)
 {
 	pthread_mutex_lock(philo->lfork);
-	print_msg("has taken a fork", philo->id, philo->args);
+	print_state("has taken a fork", philo->id, \
+							philo->args);
 	pthread_mutex_lock(philo->rfork);
-	print_msg("has taken a fork", philo->id, philo->args);
-	return (CODE_OK);
+	print_state("has taken a fork", philo->id, \
+							philo->args);
 }
 
-int	put_fork(t_philo *philo)
+void	put_fork(t_philo *philo)
 {
 	pthread_mutex_unlock(philo->lfork);
 	pthread_mutex_unlock(philo->rfork);
-	return (CODE_OK);
 }
 
-int	thinking(t_philo *philo)
+void	thinking(t_philo *philo)
 {
-	print_msg("is thinking", philo->id, philo->args);
-	return (CODE_OK);
+	print_state("is thinking", philo->id, philo->args);
 }
 
-int	eating(t_philo *philo)
+void	eating(t_philo *philo)
 {
-	print_msg("is eating", philo->id, philo->args);
 	pthread_mutex_lock(philo->args->personal + philo->id);
 	philo->last_eat_time = get_cur_time();
 	pthread_mutex_unlock(philo->args->personal + philo->id);
-	ft_usleep(philo->args->rules->time_eat);
+	print_state("is eating", philo->id, philo->args);
 	if (philo->args->rules->n_must_eat != -1)
 	{
 		pthread_mutex_lock(philo->args->personal + philo->id);
 		philo->eat_cnt++;
 		pthread_mutex_unlock(philo->args->personal + philo->id);
 	}
-	return (CODE_OK);
+	ft_usleep(philo->args->rules->time_eat);
 }
 
-int	sleeping(t_philo *philo)
+void	sleeping(t_philo *philo)
 {
-	print_msg("is sleeping", philo->id, philo->args);
+	print_state("is sleeping", philo->id, philo->args);
 	ft_usleep(philo->args->rules->time_sleep);
-	return (CODE_OK);
 }
