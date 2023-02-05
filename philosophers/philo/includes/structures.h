@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 20:32:38 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 06:47:50 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 15:44:12 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,25 @@ typedef struct s_rules
 	int		n_must_eat;
 }	t_rules;
 
-typedef struct s_args
+typedef struct s_shared
 {
 	t_rules				*rules;
 	pthread_mutex_t		*fork;
 	pthread_mutex_t		*personal;
-	pthread_mutex_t		msg_lock;
 	pthread_mutex_t		common;
 	t_bool				all_done;
 	t_msec				start_time;
-}	t_args;
+}	t_shared;
 
 typedef struct s_philo
 {
-	t_args			*args;
+	t_shared		*shared;
 	int				id;
 	pthread_mutex_t	*lfork;
 	pthread_mutex_t	*rfork;
 	pthread_t		tid;
 	int				eat_cnt;
+	t_msec			_each_start_time;
 	t_msec			last_eat_time;
 	int				done;
 }	t_philo;

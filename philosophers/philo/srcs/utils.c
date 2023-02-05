@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:58:35 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 06:06:31 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 16:53:07 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,24 +40,24 @@ void	ft_usleep(t_msec time)
 		usleep(500);
 }
 
-void	print_die_and_mark_done(char *str, int id, t_args *args)
+void	print_die_and_mark_done(char *str, t_philo *philo)
 {
 	int	time;
 
-	pthread_mutex_lock(&args->common);
-	time = get_elapsed_time(args->start_time) / 1000;
-	printf("%d %d %s\n", time, id, str);
-	args->all_done = TRUE;
-	pthread_mutex_unlock(&args->common);
+	pthread_mutex_lock(&philo->shared->common);
+	time = get_elapsed_time(philo->shared->start_time) / 1000;
+	printf("%d %d %s\n", time, philo->id, str);
+	philo->shared->all_done = TRUE;
+	pthread_mutex_unlock(&philo->shared->common);
 }
 
-void	print_state(char *str, int id, t_args *args)
+void	print_state(char *str, t_philo *philo)
 {
 	int	time;
 
-	pthread_mutex_lock(&args->common);
-	time = get_elapsed_time(args->start_time) / 1000;
-	if (args->all_done == FALSE)
-		printf("%d %d %s\n", time, id, str);
-	pthread_mutex_unlock(&args->common);
+	pthread_mutex_lock(&philo->shared->common);
+	time = get_elapsed_time(philo->shared->start_time) / 1000;
+	if (philo->shared->all_done == FALSE)
+		printf("%d %d %s\n", time, philo->id, str);
+	pthread_mutex_unlock(&philo->shared->common);
 }

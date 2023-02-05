@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/05 12:23:11 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 17:35:38 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,56 +14,58 @@
 #include <unistd.h>
 #include "philos.h"
 
-static t_bool	check_if_done(t_philo *philos, t_args *args)
+static t_bool	check_if_done(t_philo *philos, t_shared *shared)
 {
 	int		i;
 	t_bool	eat_enough;
 
 	i = 0;
 	eat_enough = TRUE;
-	while (++i <= args->rules->n_philo)
+	while (++i <= shared->rules->n_philo)
 	{
-		pthread_mutex_lock(args->personal + i);
-		if (get_elapsed_time(philos[i].last_eat_time) > args->rules->time_die)
+		pthread_mutex_lock(shared->personal + i);
+		if (get_elapsed_time(philos[i].last_eat_time) > shared->rules->time_die)
 		{
-			print_die_and_mark_done("died", i, args);
-			pthread_mutex_unlock(args->personal + i);
+			print_die_and_mark_done("died", philos + i);
+			pthread_mutex_unlock(shared->personal + i);
 			return (TRUE);
 		}
-		if (args->rules->n_must_eat == OPTION_OFF \
-				|| philos[i].eat_cnt < args->rules->n_must_eat)
+		if (shared->rules->n_must_eat == OPTION_OFF \
+				|| philos[i].eat_cnt < shared->rules->n_must_eat)
 			eat_enough = FALSE;
-		pthread_mutex_unlock(args->personal + i);
+		pthread_mutex_unlock(shared->personal + i);
 	}
 	return (eat_enough);
 }
 
-static void	monitoring(t_philo *philos, t_args *args)
+static void	monitoring(t_philo *philos, t_shared *shared)
 {
 	while (TRUE)
 	{
-		if (check_if_done(philos, args) == TRUE)
+		if (check_if_done(philos, shared) == TRUE)
 			break ;
 		usleep(7000);
 	}
-	pthread_mutex_lock(&args->common);
-	args->all_done = TRUE;
-	pthread_mutex_unlock(&args->common);
+	pthread_mutex_lock(&shared->common);
+	shared->all_done = TRUE;
+	pthread_mutex_unlock(&shared->common);
 }
 
-static void	retrieve_resources(t_philo *philos, t_args *args, t_rules *rules)
+static void	retrieve_resources(t_philo *philos, \
+								t_shared *shared, \
+								t_rules *rules)
 {
 	int	i;
 
 	i = 0;
 	while (++i <= rules->n_philo)
 		pthread_join((philos + i)->tid, NULL);
-	destroy_mutexes(args, rules->n_philo);
+	destroy_mutexes(shared, rules->n_philo);
 }
 
 int	main(int argc, char **argv)
 {
-	static t_args	args;
+	static t_shared	shared;
 	static t_rules	rules;
 	t_philo			*philos;
 
@@ -74,13 +76,13 @@ int	main(int argc, char **argv)
 	}
 	if (rules.n_must_eat == 0)
 		return (0);
-	if (init(&philos, &args, &rules) != CODE_OK
-		|| create_threads(philos, &args) != CODE_OK)
+	if (init(&philos, &shared, &rules) != CODE_OK
+		|| create_threads(philos, &shared) != CODE_OK)
 	{
 		printf(CRITICAL_ERR_MSG);
 		return (1);
 	}
-	monitoring(philos, &args);
-	retrieve_resources(philos, &args, &rules);
+	monitoring(philos, &shared);
+	retrieve_resources(philos, &shared, &rules);
 	return (0);
 }
