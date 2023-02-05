@@ -6,10 +6,11 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 06:52:49 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 12:11:46 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <pthread.h>
 #include <unistd.h>
 #include "philos.h"
 
@@ -28,6 +29,9 @@ static void	*routine(void *arg)
 	t_philo	*philo;
 
 	philo = (t_philo *)arg;
+	usleep(10);
+	pthread_mutex_lock(&philo->args->common);
+	pthread_mutex_unlock(&philo->args->common);
 	if ((philo->id & 1) == 1)
 		usleep(philo->args->rules->time_eat / 2);
 	while (is_done(philo) != TRUE)
@@ -56,6 +60,7 @@ int	create_threads(t_philo *philos, t_args *args)
 	int	i;
 
 	i = 0;
+	pthread_mutex_lock(&args->common);
 	args->start_time = get_cur_time();
 	while (++i <= args->rules->n_philo)
 	{
@@ -65,5 +70,6 @@ int	create_threads(t_philo *philos, t_args *args)
 	i = 0;
 	while (++i <= args->rules->n_philo)
 		philos[i].last_eat_time = args->start_time;
+	pthread_mutex_unlock(&args->common);
 	return (CODE_OK);
 }
