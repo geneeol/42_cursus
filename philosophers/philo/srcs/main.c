@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 18:55:09 by kkab              #+#    #+#             */
-/*   Updated: 2023/02/05 06:52:57 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/05 12:23:11 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	retrieve_resources(t_philo *philos, t_args *args, t_rules *rules)
 
 	i = 0;
 	while (++i <= rules->n_philo)
-		pthread_join(philos->tid, NULL);
+		pthread_join((philos + i)->tid, NULL);
 	destroy_mutexes(args, rules->n_philo);
 }
 
