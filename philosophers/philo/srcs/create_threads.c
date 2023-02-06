@@ -6,13 +6,14 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/05 17:21:31 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/06 13:17:13 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <pthread.h>
 #include <unistd.h>
 #include "philos.h"
+#include "structures.h"
 
 t_bool	is_done(t_philo *philo)
 {
@@ -24,6 +25,17 @@ t_bool	is_done(t_philo *philo)
 	return (is_done);
 }
 
+static void	*only_one_philo(t_philo *philo)
+{
+	// TODO: 점검 추가로 할 것
+	print_state("is thinking", philo);
+	pthread_mutex_lock(philo->lfork);
+	print_state("has taken a fork", philo);
+	ft_usleep(philo->shared->rules->time_die);
+	pthread_mutex_unlock(philo->lfork);
+	return (NULL);
+}
+
 static void	*routine(void *arg)
 {
 	t_philo	*philo;
@@ -33,6 +45,8 @@ static void	*routine(void *arg)
 	pthread_mutex_unlock(&philo->shared->common);
 	philo->_each_start_time = get_cur_time();
 	philo->last_eat_time = philo->_each_start_time;
+	if (philo->shared->rules->n_philo == 1)
+		return (only_one_philo(philo));
 	if ((philo->id & 1) == 1)
 		usleep(philo->shared->rules->time_eat / 2);
 	while (is_done(philo) != TRUE)
