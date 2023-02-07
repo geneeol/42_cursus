@@ -6,14 +6,13 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/06 13:17:13 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:55:43 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <pthread.h>
 #include <unistd.h>
 #include "philos.h"
-#include "structures.h"
 
 t_bool	is_done(t_philo *philo)
 {
@@ -27,7 +26,6 @@ t_bool	is_done(t_philo *philo)
 
 static void	*only_one_philo(t_philo *philo)
 {
-	// TODO: 점검 추가로 할 것
 	print_state("is thinking", philo);
 	pthread_mutex_lock(philo->lfork);
 	print_state("has taken a fork", philo);
