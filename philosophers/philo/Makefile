@@ -19,9 +19,6 @@ OBJS = $(addprefix $(SRC_DIR)/, $(SRCS:.c=.o))
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(BONUS): $(OBJS_BONUS) 
-	$(CC) $(CFLAGS) $^ -o $@
-
 all: $(NAME)
 
 export ACFLAGS

@@ -6,7 +6,7 @@
 /*   By: dahkang <dahkang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 03:54:04 by dahkang           #+#    #+#             */
-/*   Updated: 2023/02/07 14:55:43 by dahkang          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:26:48 by dahkang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,10 @@ static void	*routine(void *arg)
 	philo = (t_philo *)arg;
 	pthread_mutex_lock(&philo->shared->common);
 	pthread_mutex_unlock(&philo->shared->common);
+	pthread_mutex_lock(philo->shared->personal + philo->id);
 	philo->_each_start_time = get_cur_time();
 	philo->last_eat_time = philo->_each_start_time;
+	pthread_mutex_unlock(philo->shared->personal + philo->id);
 	if (philo->shared->rules->n_philo == 1)
 		return (only_one_philo(philo));
 	if ((philo->id & 1) == 1)
